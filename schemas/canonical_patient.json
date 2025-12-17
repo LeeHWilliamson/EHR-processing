@@ -1,0 +1,53 @@
+{
+    "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+    "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+    "patient": {
+        "id": "string",
+        "firstName": "string",
+        "lastName": "string",
+        "dob": "YYYY-MM-DD",
+        "gender": "string"
+    },
+
+"allergies": [
+    "string"
+],
+"encounters":[
+    {
+        "type": "string",
+        "description": "string | null",
+        "reason": "string",
+        "startDate": "YYYY-MM-DD",
+        "endDate": "YYYY-MM-DD"
+    }
+],
+"conditions": [
+    {
+        "condition": "string",
+        "startDate": "YYYY-MM-DD",
+        "endDate": "YYYY-MM-DD | null"
+    }
+],
+"immunizations":[
+    {
+        "name": "string",
+        "date": "YYYY-MM-DD"
+    }
+],
+"medications":[
+    {
+        "description": "string",
+        "reason": "string | null",
+        "startDate": "YYYY-MM-DD",
+        "endDate": "YYYY-MM-DD | null"
+    }
+],
+"procedures":[
+    {
+        "description": "string",
+        "reason": "string | null",
+        "date": "YYYY-MM-DD",
+        "time": "string"
+    }
+]
+}
