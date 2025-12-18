@@ -14,18 +14,21 @@
 ],
 "encounters":[
     {
+        "id": "string",
         "type": "string",
-        "description": "string | null",
-        "reason": "string",
-        "startDate": "YYYY-MM-DD",
-        "endDate": "YYYY-MM-DD"
+        "description": {"type": ["string", "null"]},
+        "reason": {"type": ["string", "null"]},
+        "date": "YYYY-MM-DD",
+        "startTime": "string",
+        "endTime": "string"
     }
 ],
 "conditions": [
     {
         "condition": "string",
+        "encounter": "string",
         "startDate": "YYYY-MM-DD",
-        "endDate": "YYYY-MM-DD | null"
+        "endDate": {"type": ["YYYY-MM-DD", "null"]}
     }
 ],
 "immunizations":[
@@ -37,17 +40,27 @@
 "medications":[
     {
         "description": "string",
-        "reason": "string | null",
+        "encounter": "string",
+        "reason": {"type": ["string", "null"]},
         "startDate": "YYYY-MM-DD",
-        "endDate": "YYYY-MM-DD | null"
+        "endDate": {"type": ["YYYY-MM-DD", "null"]}
     }
 ],
 "procedures":[
     {
         "description": "string",
-        "reason": "string | null",
+        "encounter": "string",
+        "reason": {"type": ["string", "null"]},
         "date": "YYYY-MM-DD",
         "time": "string"
+    }
+],
+"observations":[
+    {
+    "description": "string",
+    "value": "string",
+    "units": "string",
+    "date": "YYYY-MM-DD"
     }
 ]
 }

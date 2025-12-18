@@ -17,7 +17,7 @@ encounters_csv = 'sample_data/encounters.csv'
 immunizations_csv = 'sample_data/immunizations.csv'
 medications_csv = 'sample_data/medications.csv'
 procedures_csv = 'sample_data/procedures.csv'
-
+observations_csv = "sample_data/observations.csv"
 
 
 '''
@@ -50,29 +50,60 @@ for row in allergies_df.itertuples(index=True):
 #load encounters
 encounters_df = pandas.read_csv(encounters_csv)
 for row in encounters_df.itertuples(index=True):
-    patients[row.PATIENT]["encounters"].append({"type" : row.ENCOUNTERCLASS, "description" : row.DESCRIPTION, "reason" : row.REASONDESCRIPTION, "startDate" : row.START, "endDate" : row.STOP})
+    startDateTime = row.START.split("T")
+    startTime = startDateTime[1][:-1] #omit the z in the time
+    endDateTime = row.STOP.split("T")
+    endTime = endDateTime[1][:-1]
+    patients[row.PATIENT]["encounters"].append({"id" : row.Id, "type" : row.ENCOUNTERCLASS, "description" : row.DESCRIPTION, "reason" : row.REASONDESCRIPTION, "date" : startDateTime[0], "startTime" : startTime, "endTime" : endTime})
 
 #load conditions
 conditions_df = pandas.read_csv(conditions_csv)
+conditions_df = conditions_df.dropna(how="all")
+
 for row in conditions_df.itertuples(index=True):
-    patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "startDate" : row.START, "endDate" : row.STOP})
+    startDateTime = row.START.split("T")
+    print(row.STOP)
+    if pandas.notna(row.STOP):
+        endDateTime = row.STOP.split("T")
+    else:
+        endDateTime = [None]
+    patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
 
 #load immunizations
 immunizations_df = pandas.read_csv(immunizations_csv)
 for row in immunizations_df.itertuples(index=True):
-    patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "date" : row.DATE})
+    dateTime = row.DATE.split("T")
+    patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "date" : dateTime[0]})
 
 #load medications
 medications_df = pandas.read_csv(medications_csv)
+medications_df = medications_df.dropna(how="all")
+
 for row in medications_df.itertuples(index=True):
-    patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "reason" : row.REASONDESCRIPTION, "startDate" : row.START, "endDate" : row.STOP})
+    startDateTime = row.START.split("T")
+    if pandas.notna(row.STOP):
+        endDateTime = row.STOP.split("T")
+    else:
+        endDateTime = [None]
+    patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
 
 #load procedures
 procedures_df = pandas.read_csv(procedures_csv)
 for row in procedures_df.itertuples(index=True):
     dateTime = row.DATE.split('T')
-    patients[row.PATIENT]["procedures"].append({"description" : row.DESCRIPTION, "reason" : row.REASONDESCRIPTION, "date" : dateTime[0], "time" : dateTime[1]})
+    patients[row.PATIENT]["procedures"].append({"description" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "date" : dateTime[0], "time" : dateTime[1]})
 
-with open(patients_output_path, 'w') as file:
-    for key, value in patients.items():
-        json.dump(value, file)
+#load observations
+observations_df = pandas.read_csv(observations_csv)
+for row in observations_df.itertuples(index=True):
+    dateTime = row.DATE.split("T")
+    patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "value" : row.VALUE, "units" : row.UNITS, "date" : dateTime[0]})
+
+for key, value in patients.items():
+    os.mkdir(f"patients/{key}")
+    with open(f"patients/{key}/patient.json", 'w') as file:
+        json.dump(value, file, indent=1)
+
+# with open(patients_output_path, 'w') as file:
+#     for key, value in patients.items():
+#         json.dump(value, file, indent=1)
