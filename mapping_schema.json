@@ -1,12 +1,27 @@
 {
-  "patient_id" : "string",
-  "documents" : [
-    {
-      "document_id" : "string",
-      "document_type" : "string",
-      "document_template" : "string",
-      "degrading_mode" : "enum",
-      "entity_ids" : ["string", ...]
+  "log_id": "string",
+
+  "patient_id": "string",
+
+  "document_id": "string",
+  "doc_category": "string",
+  "template_id": "string",
+
+  "generation_context": {
+    "degrading_mode": "enum | null",
+    "generation_timestamp": "YYYY-MM-DDTHH:MM:SS",
+    "source": "synthea | ocr | hybrid"
+  },
+
+  "entity_expectations": {
+    "<entity_type>": {
+      "expected_ids": ["string", "..."],
+      "realized_ids": ["string", "..."]
     }
-  ]
+  },
+
+  "generation_outcome": {
+    "status": "success | partial | failed",
+    "notes": "string | null"
+  }
 }
