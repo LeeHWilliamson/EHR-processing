@@ -1,10 +1,16 @@
-{   "_comment": "date will correspond to latest date of encounter associated with document, if no encounter is associated with a document (patient demographics or observations) the date of the labs or patients birthdate will be used",
-    "doc_id": "string",
-    "doc_category": "string",
-    "template_id": "string",
-    "patient": "string",
-    "date": "YYYY-MM-DD",
-    "entities_present": {
-        "<entity_type>": ["<instance_id>", "..."]
-    }
+{
+  "doc_id": "string",
+  "doc_category": "string",
+  "template_id": "string",
+  "patient_id": "string",
+  "date": "YYYY-MM-DD",
+
+  "entities_provided": {
+    "<entity_type>": [
+      {
+        "entity_id": "string",
+        "fields": ["string", "..."]
+      }
+    ]
+  }
 }
