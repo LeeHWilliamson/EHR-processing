@@ -44,8 +44,12 @@ def load_patients(directory = None, clinical_datasets = None): #each clinical_da
         dataframe_dicts[dataset] = csv_to_record(dataset_filepath)
     return dataframe_dicts
 
-
-
+#trackers for incrementing instance ids
+med_count = 1
+proc_count = 1
+obs_count = 1
+cond_count = 1
+immu_count = 1
 
 with open(f"schemas/canonical_patient.json") as file:
     patient_schema = json.load(file) #create dict for each patient, key is patient id, val is all other data
@@ -110,13 +114,15 @@ for row in conditions_df.itertuples(index=True):
         endDateTime = row.STOP.split("T")
     else:
         endDateTime = [None]
-    patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+    patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "id" : "cond_"f"{cond_count:05d}", "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+    cond_count += 1
 
 #load immunizations
 immunizations_df = pandas.read_csv(immunizations_csv)
 for row in immunizations_df.itertuples(index=True):
     dateTime = row.DATE.split("T")
-    patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "date" : dateTime[0], "encounter" : row.ENCOUNTER})
+    patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "id" : "immu_"f"{immu_count:05d}", "date" : dateTime[0], "encounter" : row.ENCOUNTER})
+    immu_count += 1
 
 #load medications
 medications_df = pandas.read_csv(medications_csv)
@@ -128,20 +134,21 @@ for row in medications_df.itertuples(index=True):
         endDateTime = row.STOP.split("T")
     else:
         endDateTime = [None]
-    patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
-
+    patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "id" : "med_"f"{med_count:05d}", "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+    med_count += 1
 #load procedures
 procedures_df = pandas.read_csv(procedures_csv)
 for row in procedures_df.itertuples(index=True):
     dateTime = row.DATE.split('T')
-    patients[row.PATIENT]["procedures"].append({"description" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "date" : dateTime[0], "time" : dateTime[1]})
+    patients[row.PATIENT]["procedures"].append({"description" : row.DESCRIPTION, "id" : "proc_"f"{proc_count:05d}", "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "date" : dateTime[0], "time" : dateTime[1]})
+    proc_count += 1
 
 #load observations
 observations_df = pandas.read_csv(observations_csv)
 for row in observations_df.itertuples(index=True):
     dateTime = row.DATE.split("T")
-    patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "encounter" : row.ENCOUNTER, "value" : row.VALUE, "units" : row.UNITS, "date" : dateTime[0]})
-
+    patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "id" : "obs_"f"{obs_count:05d}", "encounter" : row.ENCOUNTER, "value" : row.VALUE, "units" : row.UNITS, "date" : dateTime[0]})
+    obs_count += 1
 
 for key, value in patients.items():
     # os.mkdir(f"patients/{key}")

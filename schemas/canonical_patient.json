@@ -63,6 +63,7 @@
 "conditions": [
     {
         "condition": "string",
+        "id": "string",
         "encounter": "string",
         "startDate": "YYYY-MM-DD",
         "endDate": {"type": ["YYYY-MM-DD", "null"]}
@@ -72,6 +73,7 @@
 "immunizations":[
     {
         "name": "string",
+        "id": "string",
         "date": "YYYY-MM-DD",
         "encounter": "string"
     }
@@ -80,6 +82,7 @@
 "medications":[
     {
         "description": "string",
+        "id": "string",
         "encounter": "string",
         "reason": {"type": ["string", "null"]},
         "startDate": "YYYY-MM-DD",
@@ -90,6 +93,7 @@
 "procedures":[
     {
         "description": "string",
+        "id": "string",
         "encounter": "string",
         "reason": {"type": ["string", "null"]},
         "date": "YYYY-MM-DD",
@@ -99,6 +103,7 @@
 "observations":[
     {
     "description": "string",
+    "id": "string",
     "encounter": "string",
     "value": "string",
     "units": "string",
