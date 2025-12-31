@@ -1,6 +1,7 @@
 import json
 import uuid
 import os
+import random
 doc_template = 'schemas/document_instance.json'
 '''
 template and omitting mode will be randomly selected from what is available
@@ -20,6 +21,11 @@ def select_template(type = None):
     return OBS_TABLE_V1
 
 def select_omit_mode():
+    mode_selection = random.randint(0, 1)
+    if mode_selection == 0:
+        return "NO OMISSION"
+    elif mode_selection == 1:
+        return "HEIGHT-WEIGHT"
     return "PLACEHOLDER_OMIT_MODE"
 
 def select_obs(patient=None, template = "obs_v1"):
@@ -32,11 +38,24 @@ def select_obs(patient=None, template = "obs_v1"):
             obs.append(observation) #build list of entity ids to include
     return obs
 
-def omit_entities(obs = [], mode = None):
-    if mode is None:
+def omit_entities(obs=None, mode=None):
+    if obs is None:
+        return []
+
+    if mode != "HEIGHT-WEIGHT":
         return obs
-    else:
-        return obs
+
+    realized = []
+    BODY_TERMS = {"Mass", "Weight", "Height"}
+    for observation in obs:
+        desc = observation["description"]
+        if "Body" in desc and any(term in desc for term in BODY_TERMS):
+            print("removing", desc)
+            continue
+        realized.append(observation)
+
+    return realized
+
 
 def group_obs(observations = None, grouping = "date"):
     entity_groups = {} #each key need be a grouping value (e.g. a date or encounterID), each value need be a list of entities
@@ -49,19 +68,6 @@ def group_obs(observations = None, grouping = "date"):
     return entity_groups
 
 def build_and_log_doc(patient = None, date = None, expected_obs = None, realized_obs = None, template = None, omitting_mode = None):
-    # dates = {} #create dict of dates so we can make doc for each one
-    # documents = []
-    # for obs_entity in patient["observations"]:
-    #     if obs_entity["date"] not in dates: 
-    #         dates[obs_entity["date"]] = [obs_entity]
-    #     else:
-    #         dates[obs_entity["date"]].append(obs_entity)
-    # print(dates.keys())
-    # for date, entities in dates.items(): #make doc for each encounter
-    #     expected = []
-    #     expected_ids = []
-    #     realized = []
-    #     realized_ids= []
     document = {
         "doc_id": f"doc_{uuid.uuid4()}",
         "doc_category": "obs_table",
@@ -78,19 +84,6 @@ def build_and_log_doc(patient = None, date = None, expected_obs = None, realized
             ]
         }
     }
-    # for entity in entities: #add entity corresponding to this encounter to doc
-    #     # document["entities_provided"]["observations"].append(entity)
-    #     expected.append(entity)
-    #     expected_ids.append(entity["id"])
-    # realized = omit_entities(expected, omitting_mode)
-    # for entity in realized:
-    #     document["entities_provided"]["observations"].append(entity)
-    #     realized_ids.append(entity["id"])
-    # with open(f"documents/{document["doc_id"]}", "w") as file: #create doc
-    #     json.dump(document, file, indent = 2)
-    # documents.append(document)
-    #now create a log
-    # log_doc(document, patient, expected_ids, realized_ids, omitting_mode)
 
     log = {
         "log_id": f"log_{uuid.uuid4()}",
@@ -126,13 +119,17 @@ def write_log(log):
 
 def generate_observation_table(patient): #patient will be a json style dict
     template = select_template("observations")
-    omit_mode = select_omit_mode()
+    # omit_mode = select_omit_mode()
+    # print(omit_mode)
     expected_obs = select_obs(patient, template)
     grouped_obs = group_obs(expected_obs, grouping="date")
     documents = []
     for date, obs_for_date in grouped_obs.items():
+        omit_mode = select_omit_mode()
+        print(omit_mode)
         realized_obs = omit_entities(obs_for_date, omit_mode)
         document, log = build_and_log_doc(patient, date, obs_for_date, realized_obs, template, omit_mode)
+        # print(document["doc_id"])
         write_doc(document)
         write_log(log)
         documents.append(document)
