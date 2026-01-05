@@ -2,7 +2,49 @@ import json
 import uuid
 import os
 import random
+
+'''
+refactor
+start by grouping patient obs by date/encounterID (create a dict of lists), each grouping should result in >= 1 docs
+then convert each list to a grouping by obs category (e.g. body measurements vs blood tests) pass nested grouping to generate_doc
+generate_doc will generate a doc object for each category for each date
+    for each category_date_grouping:
+        pass category to select_template to return random relevant template
+        select omit mode for doc
+        apply omission for doc
+        build and log the doc
+'''
+class Entity_Grouping:
+    def __init__(self):
+        self.grouping = {} #each grouping will be a dict(grouping_category : [entities])
+        
 doc_template = 'schemas/document_instance.json'
+
+'''
+for obs, we want to build a singly-nested dict that groups by date or encounterID at the top level, and observation category at the second level
+'''
+def group_obs(patient = None, grouping = "date"): #default to date for top level grouping
+    entity_grouping = Entity_Grouping()
+    for obs_entity in patient["observations"]:
+        if obs_entity[grouping] not in entity_grouping.grouping: #if we don't have a grouping for this date, make one
+            entity_grouping.grouping[obs_entity[grouping]] = Entity_Grouping()
+        top_level_group = entity_grouping.grouping[obs_entity[grouping]]
+        if obs_entity["category"] not in top_level_group.grouping:
+            top_level_group.grouping[obs_entity["category"]] = []
+        top_level_group.grouping[obs_entity["category"]].append(obs_entity)  #sort entity into its proper date and obs category
+    
+    # entity_groups = {} #each key need be a grouping value (e.g. a date or encounterID), each value need be a list of entities
+    # for obs in observations: #observations == [] of obs entities
+    #     if obs[grouping] not in entity_groups:
+    #         entity_groups[obs[grouping]] = [obs]
+    #     else:
+    #         entity_groups[obs[grouping]].append(obs)
+    # print(entity_groups.keys())
+    print(entity_grouping.grouping.keys())
+    for date, category in entity_grouping.grouping.items():
+        for cat_label in category.grouping.keys():
+            print(cat_label)
+    return grouping, entity_grouping
 '''
 template and omitting mode will be randomly selected from what is available
 '''
@@ -10,24 +52,57 @@ debug_patient_path = "/home/leeha/Projects/EHR-processing/patients/0aaa2164-8de6
 with open(debug_patient_path) as f:
     debug_patient = json.load(f)
 
-def select_template(type = None):
-    OBS_TABLE_V1 = {
+'''
+Each doc type will have multiple templates, templates will differ in layout, fields rendered, and what entities are included
+(e.g. a lab template allows blood work obs but not height and weight)
+'''
 
-        "template_id": "obs_v1",
-        "entity_type": ["observations"],
-        "fields": ["description", "encounter", "value", "units"],
-        "group_by": "date"
-    }
-    return OBS_TABLE_V1
+def select_template(group_cat = "date", obs_cat = "other", entity_list = []):
+    if obs_cat == "body_measurement":
+        if group_cat == "date":
+            OBS_TABLE_BODY_MEASUREMENTS = {
 
-def select_omit_mode():
-    mode_selection = random.randint(0, 1)
-    if mode_selection == 0:
-        return "NO OMISSION"
-    elif mode_selection == 1:
-        return "HEIGHT-WEIGHT"
-    return "PLACEHOLDER_OMIT_MODE"
+                "template_id": "obs_date_body_measurements_v1",
+                "entity_type": ["observations"],
+                "fields": set(["description", "encounter", "value", "units"]),
+                "grouped_by": group_cat,
+                "category" : obs_cat
+            }
+        elif group_cat == "encounter":
+            OBS_TABLE_BODY_MEASUREMENTS = {
 
+                "template_id": "obs_encounter_body_measurements_v1",
+                "entity_type": ["observations"],
+                "fields": set(["description", "date", "value", "units"]),
+                "grouped_by": group_cat,
+                "category" : obs_cat
+            }            
+
+        return OBS_TABLE_BODY_MEASUREMENTS
+    else:
+        if group_cat == "date":
+            OBS_TABLE_OTHER_V1 = {
+
+                "template_id": "obs__date_table_other_v1",
+                "entity_type": ["observations"],
+                "fields": set(["description", "encounter", "value", "units"]),
+                "grouped_by": group_cat,
+                "category" : obs_cat
+            }
+        elif group_cat == "encounter":
+            OBS_TABLE_OTHER_V1 = {
+
+                "template_id": "obs_encounter_table_other_v1",
+                "entity_type": ["observations"],
+                "fields": set(["description", "date", "value", "units"]),
+                "grouped_by": group_cat,
+                "category" : obs_cat
+            }
+        return OBS_TABLE_OTHER_V1
+
+'''
+Select patients entities and fields based on doc template
+'''
 def select_obs(patient=None, template = "obs_v1"):
     obs = [] #store obs entities by id
     print(patient.keys())
@@ -38,42 +113,65 @@ def select_obs(patient=None, template = "obs_v1"):
             obs.append(observation) #build list of entity ids to include
     return obs
 
-def omit_entities(obs=None, mode=None):
-    if obs is None:
+'''
+Omit modes simulate recorder error by selecting entity fields to not be realized on final document render
+'''
+def select_omit_mode():
+    mode_selection = random.randint(0, 1)
+    if mode_selection == 0:
+        return "NO_OMISSION"
+    elif mode_selection == 1:
+        return "FORGOT_UNITS"
+    return "PLACEHOLDER_OMIT_MODE"
+
+
+def omit_entities(entity_list=None, mode=None, template = None):
+    if entity_list is None:
         return []
-
-    if mode != "HEIGHT-WEIGHT":
-        return obs
-
     realized = []
-    BODY_TERMS = {"Mass", "Weight", "Height"}
-    for observation in obs:
-        desc = observation["description"]
-        if "Body" in desc and any(term in desc for term in BODY_TERMS):
-            print("removing", desc)
-            continue
-        realized.append(observation)
+    removed = []
+    #first we need to omit fields that simply don't aren't placed on this template
+    for entity in entity_list:
+        for field, value in entity.items():
+            if field not in template["fields"]:
+                omitted = entity.pop(field, None)
+                omitted_tuple = (field, omitted)
+                removed.append(omitted_tuple)
+    if mode == "NO_OMISSION":
+        return entity_list
+    
+    if mode == "FORGOT_UNITS":
+        for observation in entity_list:
+            omitted = observation.pop("units", None)
+            omitted_tuple = ("units", omitted)
+            realized.append(observation)
+            removed.append(omitted_tuple)
 
-    return realized
+    return realized, removed
 
 
-def group_obs(observations = None, grouping = "date"):
-    entity_groups = {} #each key need be a grouping value (e.g. a date or encounterID), each value need be a list of entities
-    for obs in observations: #observations == [] of obs entities
-        if obs[grouping] not in entity_groups:
-            entity_groups[obs[grouping]] = [obs]
-        else:
-            entity_groups[obs[grouping]].append(obs)
-    print(entity_groups.keys())
-    return entity_groups
+def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, second_level_grouping = None):
+    #pass a top_level_key (usually either a date or encounterID) and a grouping of observations (dict{obs_category : entity_list})
+    #for each grouping of obs_entities, we generate a doc
+    for obs_cat, entity_list in second_level_grouping.grouping.items():
+        #select template for doc
+        template = select_template(group_cat, obs_cat, entity_list)
+        template_fields = template["fields"]
+        #select omit_mode for doc
+        omit_mode = select_omit_mode()
+        realized_obs, omitted = omit_entities(entity_list, omit_mode, template)
+        omitted_fields = []
+        for tup in omitted:
+            if tup[0] in template_fields: #tup[0] will be a field name
+                omitted_fields.append(tup[1])
 
-def build_and_log_doc(patient = None, date = None, expected_obs = None, realized_obs = None, template = None, omitting_mode = None):
-    document = {
+        #create doc
+        document = {
         "doc_id": f"doc_{uuid.uuid4()}",
         "doc_category": "obs_table",
         "template_id": template["template_id"],
         "patient_id": patient["patient"]["id"],
-        "date": date,
+        "grouping": top_level_key,
         "entities_provided": {
             "observations": [
                 {
@@ -84,15 +182,19 @@ def build_and_log_doc(patient = None, date = None, expected_obs = None, realized
             ]
         }
     }
+        #create log
+        #return doc, log
+    
 
     log = {
         "log_id": f"log_{uuid.uuid4()}",
         "patient_id" : patient["patient"]["id"],
         "doc_id" : document["doc_id"],
         "template_id" : document["template_id"],
-        "expected" : [obs["id"] for obs in expected_obs],
+        "expected" : [obs["id"] for obs in entity_list],
         "realized" : [obs["id"] for obs in realized_obs],
-        "omitting_mode" : omitting_mode
+        "omitted_fields" : omitted_fields,
+        "omitting_mode" : omit_mode
     }
 
     return document, log
@@ -118,17 +220,17 @@ def write_log(log):
         json.dump(log, file, indent = 2)
 
 def generate_observation_table(patient): #patient will be a json style dict
-    template = select_template("observations")
+    group_cat, grouped_obs = group_obs(patient, grouping="date")
+    # template = select_template("observations")
     # omit_mode = select_omit_mode()
     # print(omit_mode)
-    expected_obs = select_obs(patient, template)
-    grouped_obs = group_obs(expected_obs, grouping="date")
+    # expected_obs = select_obs(patient, template)
+
     documents = []
-    for date, obs_for_date in grouped_obs.items():
-        omit_mode = select_omit_mode()
-        print(omit_mode)
-        realized_obs = omit_entities(obs_for_date, omit_mode)
-        document, log = build_and_log_doc(patient, date, obs_for_date, realized_obs, template, omit_mode)
+    for top_level_key, second_level_grouping in grouped_obs.grouping.items():
+        # omit_mode = select_omit_mode()
+        # realized_obs = omit_entities(second_level_grouping, omit_mode)
+        document, log = build_and_log_doc(patient, group_cat, top_level_key, second_level_grouping)
         # print(document["doc_id"])
         write_doc(document)
         write_log(log)

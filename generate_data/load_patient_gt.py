@@ -164,11 +164,16 @@ for row in procedures_df.itertuples(index=True):
 
 #load observations
 observations_df = pandas.read_csv(observations_csv)
+BODY_TERMS = {"Mass", "Weight", "Height"}
 for row in observations_df.itertuples(index=True):
     dateTime = row.DATE.split("T")
     observationsID = f"obs_{uuid.uuid1()}"
     # patients[row.PATIENT]["patient"]["entities"].append(observationsID)
-    patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "id" : observationsID, "encounter" : row.ENCOUNTER, "value" : row.VALUE, "units" : row.UNITS, "date" : dateTime[0]})
+    if "Body" in row.DESCRIPTION and any(term in row.DESCRIPTION for term in BODY_TERMS): #entity type + entity category will be used to select document template
+        category = "body_measurement"
+    else:
+        category = "other"
+    patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "id" : observationsID, "encounter" : row.ENCOUNTER, "value" : row.VALUE, "units" : row.UNITS, "date" : dateTime[0], "category" : category})
     obs_count += 1
 
 for key, value in patients.items():
