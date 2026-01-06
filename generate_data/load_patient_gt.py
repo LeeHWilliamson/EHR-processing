@@ -181,3 +181,4 @@ for key, value in patients.items():
     os.makedirs(f"patients/{key}", exist_ok=True)
     with open(f"patients/{key}/patient.json", 'w') as file:
         json.dump(value, file, indent=2)
+        
