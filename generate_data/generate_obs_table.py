@@ -132,19 +132,19 @@ def omit_entities(entity_list=None, mode=None, template = None):
         return []
     realized = []
     omitted = []
-    #first we need to omit fields that simply don't aren't placed on this template
-    for entity in entity_list:
-        entity_copy = copy.deepcopy(entity)
-        for field, value in entity.items():
-            to_omit = [] #list of fields to omit
-            if field not in template["fields"]:
-                # omitted = entity.pop(field, None)
-                to_omit.append((field, value))
-                # omitted_tuple = (field, entity["field"])
-                # removed.append(omitted_tuple)
-        # for tup in to_omit: #OMITS FIELDS THAT ARE NOT COMPATIBLE WITH TEMPLATE, MOVE TO TEMPLATE SELECTION AND ADD AS FIELD IN LOG
-        #     entity_copy[tup[0]] = "OMITTED"
-        omitted = omitted + to_omit
+    #first we need to omit fields that simply aren't placed on this template
+    # for entity in entity_list:
+    #     entity_copy = copy.deepcopy(entity)
+    #     for field, value in entity.items():
+    #         to_omit = [] #list of fields to omit
+    #         if field not in template["fields"]:
+    #             # omitted = entity.pop(field, None)
+    #             to_omit.append((field, value))
+    #             # omitted_tuple = (field, entity["field"])
+    #             # removed.append(omitted_tuple)
+    #     # for tup in to_omit: #OMITS FIELDS THAT ARE NOT COMPATIBLE WITH TEMPLATE, MOVE TO TEMPLATE SELECTION AND ADD AS FIELD IN LOG
+    #     #     entity_copy[tup[0]] = "OMITTED"
+    #     omitted = omitted + to_omit
     if mode == "NO_OMISSION":
         return entity_list, []
     
@@ -155,7 +155,6 @@ def omit_entities(entity_list=None, mode=None, template = None):
             omitted_tuple = ("units", omitted_field)
             realized.append(entity_copy)
             omitted.append(omitted_tuple)
-
     return realized, omitted
 
 
@@ -174,7 +173,8 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
         realized_obs, omitted = omit_entities(entity_list, omit_mode, template) #we return obs_that were rendered and fields+obs that were omitted 
         omitted_fields = []
         for tup in omitted:
-            if tup[0] in template_fields: #tup[0] will be a field name, if it's a field that would have otherwise been rendered on template, this info must be included in log
+            if tup[0] in template["fields"]: #tup[0] will be a field name, if it's a field that would have otherwise been rendered on template, this info must be included in log
+                template["fields"].remove(tup[0])
                 omitted_fields.append(tup[1])
 
         #create doc
@@ -183,6 +183,7 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
         "doc_category": "obs_table",
         "template_id": template["template_id"],
         "patient_id": patient["patient"]["id"],
+        "grouping_type": group_cat,
         "grouping": top_level_key,
         "entities_provided": {
             "observations": [
@@ -202,18 +203,18 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
         #return doc, log
     
 
-    log = {
-        "log_id": f"log_{uuid.uuid4()}",
-        "patient_id" : patient["patient"]["id"],
-        "doc_id" : document["doc_id"],
-        "template_id" : document["template_id"],
-        "expected" : [obs["id"] for obs in entity_list],
-        "realized" : [obs["id"] for obs in realized_obs],
-        "omitted_fields" : omitted_fields,
-        "omitting_mode" : omit_mode
-    }
-    logs.append(log)
-    write_log(log)
+        log = {
+            "log_id": f"log_{uuid.uuid4()}",
+            "patient_id" : patient["patient"]["id"],
+            "doc_id" : document["doc_id"],
+            "template_id" : document["template_id"],
+            "expected" : [obs["id"] for obs in entity_list],
+            "realized" : [obs["id"] for obs in realized_obs],
+            "omitted_fields" : omitted_fields,
+            "omitting_mode" : omit_mode
+        }
+        logs.append(log)
+        write_log(log)
 
     return documents, logs
 # def log_doc(document = None, patient = None, expected_obs = None, realized_obs = None, omitting_mode = None):
@@ -230,7 +231,8 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
     with open(f"logs/{log["log_id"]}", "w") as file:
         json.dump(log, file, indent = 2)
 def write_doc(document):
-    with open(f"documents/{document['doc_id']}", "w") as file:
+    os.makedirs(f"documents/{document["doc_id"]}", exist_ok=True)
+    with open(f"documents/{document["doc_id"]}/document.json", 'w') as file:
         json.dump(document, file, indent=2) 
 
 def write_log(log):
