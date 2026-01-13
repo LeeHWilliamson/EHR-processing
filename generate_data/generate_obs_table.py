@@ -171,11 +171,13 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
         #select omit_mode for doc
         omit_mode = select_omit_mode()
         realized_obs, omitted = omit_entities(entity_list, omit_mode, template) #we return obs_that were rendered and fields+obs that were omitted 
-        omitted_fields = []
+        omitted_fields = set()
+        omitted_field_values = []
         for tup in omitted:
             if tup[0] in template["fields"]: #tup[0] will be a field name, if it's a field that would have otherwise been rendered on template, this info must be included in log
                 template["fields"].remove(tup[0])
-                omitted_fields.append(tup[1])
+                omitted_fields.add(tup[0])
+                omitted_field_values.append(tup[1])
 
         #create doc
         document = {
@@ -207,10 +209,21 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
             "log_id": f"log_{uuid.uuid4()}",
             "patient_id" : patient["patient"]["id"],
             "doc_id" : document["doc_id"],
+            "doc_category" : document["doc_category"],
             "template_id" : document["template_id"],
-            "expected" : [obs["id"] for obs in entity_list],
-            "realized" : [obs["id"] for obs in realized_obs],
-            "omitted_fields" : omitted_fields,
+            "expected_entities" : [obs["id"] for obs in entity_list],
+            "realized_entities" : [obs["id"] for obs in realized_obs],
+            "omitted_entities" : "none",
+            "field_expectations": {
+                "observations": {
+                    obs["id"]: {
+                    "expected_fields": list(template_fields),
+                    "realized_fields": template["fields"],
+                    "omitted_fields": list(omitted_fields),
+                    "omission_mode": omit_mode
+                    } for obs in realized_obs
+                }
+            },
             "omitting_mode" : omit_mode
         }
         logs.append(log)
