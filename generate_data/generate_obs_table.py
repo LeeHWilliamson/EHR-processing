@@ -65,7 +65,7 @@ def select_template(group_cat = "date", obs_cat = "other", entity_list = []):
 
                 "template_id": "obs_date_body_measurements_v1",
                 "entity_type": ["observations"],
-                "fields": set(["description", "encounter", "value", "units"]),
+                "fields": ["description", "encounter", "value", "units"],
                 "grouped_by": group_cat,
                 "category" : obs_cat
             }
@@ -74,7 +74,7 @@ def select_template(group_cat = "date", obs_cat = "other", entity_list = []):
 
                 "template_id": "obs_encounter_body_measurements_v1",
                 "entity_type": ["observations"],
-                "fields": set(["description", "date", "value", "units"]),
+                "fields": ["description", "date", "value", "units"],
                 "grouped_by": group_cat,
                 "category" : obs_cat
             }            
@@ -85,7 +85,7 @@ def select_template(group_cat = "date", obs_cat = "other", entity_list = []):
 
                 "template_id": "obs__date_table_other_v1",
                 "entity_type": ["observations"],
-                "fields": set(["description", "encounter", "value", "units"]),
+                "fields": ["description", "encounter", "value", "units"],
                 "grouped_by": group_cat,
                 "category" : obs_cat
             }
@@ -94,7 +94,7 @@ def select_template(group_cat = "date", obs_cat = "other", entity_list = []):
 
                 "template_id": "obs_encounter_table_other_v1",
                 "entity_type": ["observations"],
-                "fields": set(["description", "date", "value", "units"]),
+                "fields": ["description", "date", "value", "units"],
                 "grouped_by": group_cat,
                 "category" : obs_cat
             }
@@ -166,17 +166,17 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
         documents = []
         logs = []
         template = select_template(group_cat, obs_cat, entity_list)
-        template_fields = template["fields"]
-        template["fields"] = list(template["fields"]) #convert set back to list to make json serializable
+        template_fields = template["fields"].copy()
+        template["fields"] = template["fields"] #convert set back to list to make json serializable
         #select omit_mode for doc
         omit_mode = select_omit_mode()
         realized_obs, omitted = omit_entities(entity_list, omit_mode, template) #we return obs_that were rendered and fields+obs that were omitted 
-        omitted_fields = set()
+        omitted_fields = []
         omitted_field_values = []
         for tup in omitted:
             if tup[0] in template["fields"]: #tup[0] will be a field name, if it's a field that would have otherwise been rendered on template, this info must be included in log
                 template["fields"].remove(tup[0])
-                omitted_fields.add(tup[0])
+                omitted_fields.append(tup[0])
                 omitted_field_values.append(tup[1])
 
         #create doc
