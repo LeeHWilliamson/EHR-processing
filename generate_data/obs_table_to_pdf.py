@@ -8,7 +8,8 @@ we pass document
 we write to text file
 '''
 def write_obs_table_pdf(document, patient):
-    c= canvas.Canvas(f"documents/{document["doc_id"]}/test_obs_render.pdf", pagesize=(595.27, 841.89))
+    dest_filepath = f"documents/{document["doc_id"]}/test_obs_render.pdf"
+    c= canvas.Canvas(dest_filepath, pagesize=(595.27, 841.89))
     xCoord = 50
     yCoord = 780
     for key, value in document.items():
@@ -33,13 +34,14 @@ def write_obs_table_pdf(document, patient):
             yCoord -= 16
     c.showPage()
     c.save()
+    return dest_filepath
 
 with open("documents/doc_2a568192-03e6-4521-a092-f38b911358ba/document.json") as file:
     debug_doc = json.load(file)
 debug_patient_id = debug_doc["patient_id"].split('_')[1]
 with open(f"patients/{debug_patient_id}/patient.json") as file:
     debug_patient = json.load(file)
-write_obs_table_pdf(debug_doc, debug_patient)
+pdf_filepath = write_obs_table_pdf(debug_doc, debug_patient)
 
 # c = canvas.Canvas("bork.pdf", pagesize=(595.27, 841.89)) #A4 pagesize
 

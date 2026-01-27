@@ -22,13 +22,13 @@ def config_degredation():
 
 def read_pdf(pdf_path):
     ocr_text = []
-    degredations = []
+    degredations = {}
     text = ""
     degredation_settings = config_degredation()
     for degredation in degredation_settings:
         if degredation_settings[degredation] > 0:
-            degredations.append(degredation)
-    dpi = 100
+            degredations[degredation] = degredation_settings[degredation]
+    dpi = 150 #300 - degredation_settings["dpi_reduction"]
     psm = "--psm 6"
     image_batch = convert_from_path(pdf_path, dpi) #create image
     for image in image_batch:
@@ -40,13 +40,17 @@ def read_pdf(pdf_path):
     # print(pytesseract.image_to_osd(image[0]))
     print(text)
     fileName = pdf_path.split("/")
+    source_doc_id = fileName[1]
     fileName = fileName[-1].split(".")
     fileName = fileName[0]
-    with open(f"ocr/{fileName}.txt", "w") as file:
+    ocr_output_path = f"ocr/{source_doc_id}.txt"
+    with open(ocr_output_path, "w") as file:
         file.write(text)
     ocr_id = f"ocr_{uuid.uuid4()}"
     ocr_log = {
         "ocr_id" : ocr_id,
+        "source_doc_id" : source_doc_id,
+        "output_local" : ocr_output_path,
         "source_file": fileName,
         "num_pages" : len(image_batch),
         "dpi": dpi,
@@ -57,5 +61,53 @@ def read_pdf(pdf_path):
     }
     with open(f"logs/ocr/{ocr_id}", "w") as file:
         json.dump(ocr_log, file, indent = 2)
+    return ocr_log
 
-read_pdf("documents/doc_2a568192-03e6-4521-a092-f38b911358ba/test_obs_render.pdf")                
+def score_ocr(ocr_log):
+    ocr_file = ocr_log["output_local"]
+    with open(f"documents/{ocr_log["source_doc_id"]}/document.json", "r") as file: #get document so we can know what entities and fields should be present
+        doc_instance = json.load(file)
+    patient_directory = doc_instance["patient_id"].split("_") #FORMAT PATIENT DIRECTORY NAME BECAUSE I DIDNT SAVE THEM WITH PROPER NAME
+    patient_directory = patient_directory[1]
+    with open(f"patients/{patient_directory}/patient.json", "r") as file: #get patient so we know what exact values should be present
+        patient_instance = json.load(file)
+    with open(ocr_file, 'r') as file: #get ocr output
+        ocr_output = file.read()
+    processed_output = " ".join(ocr_output.lower().split()) #convert to processed string
+    print(processed_output)
+    checks = {}
+    for entity_class, entity_list in doc_instance["entities_provided"].items(): #entity_class is observations, encounters, etc, entity_list is the associated list of entity dicts
+        for entity in entity_list: #iterate thru each entity dict
+            checks[entity["entity_id"]] = {}
+            for realized_field in entity["fields"]: #iterate thru list of fields in doc for this entity
+                checks[entity["entity_id"]][realized_field] = "no match found" #default to 'no_match_found'
+                for entity_patient in patient_instance[entity_class]: #iterate thru all entities in patient to try and match field
+                    if str(entity_patient[realized_field]).lower() in processed_output:
+                        checks[entity["entity_id"]][realized_field] = "match found"
+                    else:
+                        # checks[entity["entity_id"]][realized_field] = "no match found"
+                        continue
+    matches = 0
+    misses = 0
+    for entity, checkDict in checks.items():
+        for field, result in checkDict.items():
+            if result == "match found":
+                matches += 1
+            else:
+                misses += 1
+    ocr_eval = {
+        "eval_id" : f"eval_f{uuid.uuid4()}",
+        "doc_id" : doc_instance["doc_id"],
+        "ocr_id" : ocr_log["ocr_id"],
+        "checks" : checks,
+
+        "fields_found": matches,
+        "fields_missed": misses
+    }
+    with open(f"logs/ocr_eval/{ocr_eval["eval_id"]}.json", "w") as file:
+        json.dump(ocr_eval, file, indent=2)          
+
+ocr_log = read_pdf("documents/doc_2a568192-03e6-4521-a092-f38b911358ba/test_obs_render.pdf")                
+#since we have the doc, we have the GT of the entities and fields that made it to the doc, connect this to the patient to get the exact values, and see if those values are in
+#output txt file
+score_ocr(ocr_log)

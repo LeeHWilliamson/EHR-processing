@@ -3,6 +3,7 @@ import uuid
 import os
 import random
 import copy
+from obs_table_to_pdf import write_obs_table_pdf
 
 '''
 refactor
@@ -200,6 +201,9 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
         
         documents.append(document)
         write_doc(document)
+        #once doc is written, create rendering, should save to same directory as doc
+        doc_filepath = write_obs_table_pdf(document, patient)
+
         
         #create log
         #return doc, log
@@ -224,7 +228,8 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
                     } for obs in realized_obs
                 }
             },
-            "omitting_mode" : omit_mode
+            "omitting_mode" : omit_mode,
+            "degredations" : []
         }
         logs.append(log)
         write_log(log)
@@ -261,10 +266,7 @@ def generate_observation_table(patient): #patient will be a json style dict
 
     documents = []
     for top_level_key, second_level_grouping in grouped_obs.grouping.items(): #top_level_key will be a string, often the date or an encounterID, second_level_grouping will be the grouping associated with that key
-        # omit_mode = select_omit_mode()
-        # realized_obs = omit_entities(second_level_grouping, omit_mode)
         docs_for_this_grouping, logs_for_this_grouping = build_and_log_doc(patient, group_cat, top_level_key, second_level_grouping)
-        # print(document["doc_id"])
         
         documents.append(docs_for_this_grouping)
 
