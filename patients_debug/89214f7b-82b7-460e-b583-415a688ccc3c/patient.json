@@ -1,0 +1,940 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_89214f7b-82b7-460e-b583-415a688ccc3c",
+    "firstName": "Kristina583",
+    "lastName": "Nitzsche158",
+    "dob": "1940-04-05",
+    "gender": "F",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [
+    {
+      "id": "care_e0f5d1ee-b97f-432d-97c1-604d8207589a",
+      "startDate": "1976-05-05",
+      "endDate": "1976-05-12",
+      "encounter": "c7218c76-2fa7-4cbe-bbca-e10bf6ed9a63",
+      "description": "Urinary tract infection care",
+      "reasonDescription": "Escherichia coli urinary tract infection"
+    },
+    {
+      "id": "care_c6bfd49b-2bee-45ab-bfe5-257d1f5e9aeb",
+      "startDate": "1978-05-05",
+      "endDate": "1980-04-11",
+      "encounter": "56c3d6b5-2394-44a6-a7b6-65ecadb102dd",
+      "description": "Respiratory therapy",
+      "reasonDescription": "Acute bronchitis (disorder)"
+    },
+    {
+      "id": "care_42777e93-6adb-4eaf-899a-10e173aeee6e",
+      "startDate": "1985-01-30",
+      "endDate": "1985-02-20",
+      "encounter": "0791e3d7-34ae-4ab8-bc3b-4bc2d71d81c2",
+      "description": "Burn care",
+      "reasonDescription": "Second degree burn"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_39c2a30f-ef1c-4619-98b0-41b256e37ab4",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "1963-09-13",
+      "endDate": "1963-09-13",
+      "startTime": "19:13:29",
+      "endTime": "19:58:29"
+    },
+    {
+      "id": "enc_9abb628d-28ee-4e98-ac99-9e8fc76d1a20",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bacterial sinusitis (disorder)",
+      "startDate": "1969-08-03",
+      "endDate": "1969-08-03",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_c7218c76-2fa7-4cbe-bbca-e10bf6ed9a63",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Escherichia coli urinary tract infection",
+      "startDate": "1976-03-27",
+      "endDate": "1976-05-05",
+      "startTime": "19:13:29",
+      "endTime": "19:13:29"
+    },
+    {
+      "id": "enc_8c1342ee-aa40-4b7d-9d90-3455e6305704",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "1976-12-20",
+      "endDate": "1976-12-20",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1977-06-24",
+      "endDate": "1977-06-24",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_a8d3d040-5b50-4537-b2df-fb7008835c44",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "1977-12-15",
+      "endDate": "1977-12-15",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_56c3d6b5-2394-44a6-a7b6-65ecadb102dd",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1978-05-05",
+      "endDate": "1978-05-05",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_dd114f79-4105-4628-be3e-aab12c84d233",
+      "type": "urgentcare",
+      "description": "Urgent care clinic (procedure)",
+      "reason": NaN,
+      "startDate": "1978-05-12",
+      "endDate": "1978-05-12",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_ee6474c1-8628-4448-9ac0-ee6b62595a37",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "1979-12-05",
+      "endDate": "1979-12-05",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_048d0841-6225-42e3-b700-fc75c5f4af19",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1980-04-11",
+      "endDate": "1980-04-11",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_54b18173-f73d-406e-ae7f-7e5a3309ade3",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute viral pharyngitis (disorder)",
+      "startDate": "1981-02-07",
+      "endDate": "1981-02-07",
+      "startTime": "19:13:29",
+      "endTime": "19:43:29"
+    },
+    {
+      "id": "enc_3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1982-04-16",
+      "endDate": "1982-04-16",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_821dab71-7a1d-4790-9560-eca8274607e2",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "1982-11-19",
+      "endDate": "1982-11-19",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_fc3dd268-d4ba-4972-a6c8-dc3c766edaa3",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "1983-11-14",
+      "endDate": "1983-11-14",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1984-04-20",
+      "endDate": "1984-04-20",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_1db0b759-8302-4c7c-9988-e1d7951b9251",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "1984-11-08",
+      "endDate": "1984-11-08",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_e5b17225-4d8d-4015-b08c-53d3b1346502",
+      "type": "outpatient",
+      "description": "Patient encounter procedure",
+      "reason": NaN,
+      "startDate": "1984-11-10",
+      "endDate": "1984-11-10",
+      "startTime": "19:13:29",
+      "endTime": "20:32:29"
+    },
+    {
+      "id": "enc_0791e3d7-34ae-4ab8-bc3b-4bc2d71d81c2",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "1985-01-30",
+      "endDate": "1985-01-30",
+      "startTime": "19:13:29",
+      "endTime": "20:13:29"
+    },
+    {
+      "id": "enc_58938316-c65c-4a3b-9afc-1886eeb1d9e7",
+      "type": "ambulatory",
+      "description": "Encounter for 'check-up'",
+      "reason": "Second degree burn",
+      "startDate": "1985-02-20",
+      "endDate": "1985-02-20",
+      "startTime": "19:13:29",
+      "endTime": "19:28:29"
+    },
+    {
+      "id": "enc_71268f3d-8f0a-43b0-a621-5fe8dddad8c0",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "1986-02-15",
+      "endDate": "1986-02-15",
+      "startTime": "19:13:29",
+      "endTime": "20:13:29"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Miscarriage in first trimester",
+      "id": "cond_2cf01fb4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39c2a30f-ef1c-4619-98b0-41b256e37ab4",
+      "startDate": "1963-09-13",
+      "endDate": null
+    },
+    {
+      "condition": "Chronic sinusitis (disorder)",
+      "id": "cond_2cf020b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9abb628d-28ee-4e98-ac99-9e8fc76d1a20",
+      "startDate": "1969-08-03",
+      "endDate": null
+    },
+    {
+      "condition": "Escherichia coli urinary tract infection",
+      "id": "cond_2cf021e4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c7218c76-2fa7-4cbe-bbca-e10bf6ed9a63",
+      "startDate": "1976-03-27",
+      "endDate": "1976-05-12"
+    },
+    {
+      "condition": "Acute bronchitis (disorder)",
+      "id": "cond_2cf022fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "56c3d6b5-2394-44a6-a7b6-65ecadb102dd",
+      "startDate": "1978-05-05",
+      "endDate": "1978-05-12"
+    },
+    {
+      "condition": "Acute viral pharyngitis (disorder)",
+      "id": "cond_2cf02432-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54b18173-f73d-406e-ae7f-7e5a3309ade3",
+      "startDate": "1981-02-07",
+      "endDate": "1981-02-17"
+    },
+    {
+      "condition": "Second degree burn",
+      "id": "cond_2cf0254a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0791e3d7-34ae-4ab8-bc3b-4bc2d71d81c2",
+      "startDate": "1985-01-30",
+      "endDate": "1985-02-20"
+    },
+    {
+      "condition": "Burn injury(morphologic abnormality)",
+      "id": "cond_2cf02676-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "71268f3d-8f0a-43b0-a621-5fe8dddad8c0",
+      "startDate": "1986-02-15",
+      "endDate": null
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d129562-5305-11f1-a6a5-00155d35d14f",
+      "date": "1977-06-24",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d129576-5305-11f1-a6a5-00155d35d14f",
+      "date": "1978-05-12",
+      "encounter": "dd114f79-4105-4628-be3e-aab12c84d233"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d12958a-5305-11f1-a6a5-00155d35d14f",
+      "date": "1980-04-11",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d129594-5305-11f1-a6a5-00155d35d14f",
+      "date": "1982-04-16",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1295a8-5305-11f1-a6a5-00155d35d14f",
+      "date": "1984-04-20",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Nitrofurantoin 5 MG/ML Oral Suspension",
+      "id": "med_2d22c482-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c7218c76-2fa7-4cbe-bbca-e10bf6ed9a63",
+      "reason": "Escherichia coli urinary tract infection",
+      "startDate": "1976-05-05",
+      "endDate": "1976-05-12"
+    },
+    {
+      "description": "Phenazopyridine hydrochloride 100 MG Oral Tablet",
+      "id": "med_2d22c496-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c7218c76-2fa7-4cbe-bbca-e10bf6ed9a63",
+      "reason": "Escherichia coli urinary tract infection",
+      "startDate": "1976-05-05",
+      "endDate": "1976-05-12"
+    },
+    {
+      "description": "Mestranol / Norethynodrel [Enovid]",
+      "id": "med_2d22c4aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8c1342ee-aa40-4b7d-9d90-3455e6305704",
+      "reason": NaN,
+      "startDate": "1976-12-20",
+      "endDate": "1977-12-15"
+    },
+    {
+      "description": "Mestranol / Norethynodrel [Enovid]",
+      "id": "med_2d22c4be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a8d3d040-5b50-4537-b2df-fb7008835c44",
+      "reason": NaN,
+      "startDate": "1977-12-15",
+      "endDate": "1978-12-10"
+    },
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d22c4d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "56c3d6b5-2394-44a6-a7b6-65ecadb102dd",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1978-05-05",
+      "endDate": "1978-05-12"
+    },
+    {
+      "description": "Mestranol / Norethynodrel [Enovid]",
+      "id": "med_2d22c4e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ee6474c1-8628-4448-9ac0-ee6b62595a37",
+      "reason": NaN,
+      "startDate": "1979-12-05",
+      "endDate": "1980-11-29"
+    },
+    {
+      "description": "Norinyl 1+50 28 Day Pack",
+      "id": "med_2d22c4fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "821dab71-7a1d-4790-9560-eca8274607e2",
+      "reason": NaN,
+      "startDate": "1982-11-19",
+      "endDate": "1983-11-14"
+    },
+    {
+      "description": "Norinyl 1+50 28 Day Pack",
+      "id": "med_2d22c50e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3dd268-d4ba-4972-a6c8-dc3c766edaa3",
+      "reason": NaN,
+      "startDate": "1983-11-14",
+      "endDate": "1984-11-08"
+    },
+    {
+      "description": "12 HR Cefaclor 500 MG Extended Release Oral Tablet",
+      "id": "med_2d22c522-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0791e3d7-34ae-4ab8-bc3b-4bc2d71d81c2",
+      "reason": NaN,
+      "startDate": "1985-01-30",
+      "endDate": "1985-02-20"
+    },
+    {
+      "description": "Acetaminophen 325 MG / HYDROcodone Bitartrate 7.5 MG Oral Tablet",
+      "id": "med_2d22c540-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0791e3d7-34ae-4ab8-bc3b-4bc2d71d81c2",
+      "reason": NaN,
+      "startDate": "1985-01-30",
+      "endDate": null
+    },
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d22c554-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0791e3d7-34ae-4ab8-bc3b-4bc2d71d81c2",
+      "reason": NaN,
+      "startDate": "1985-01-30",
+      "endDate": "1985-02-20"
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Throat culture (procedure)",
+      "id": "proc_2d3a9166-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54b18173-f73d-406e-ae7f-7e5a3309ade3",
+      "reason": "Acute viral pharyngitis (disorder)",
+      "date": "1981-02-07",
+      "time": "19:13:29Z"
+    },
+    {
+      "description": "Insertion of intrauterine contraceptive device",
+      "id": "proc_2d3a9170-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b17225-4d8d-4015-b08c-53d3b1346502",
+      "reason": NaN,
+      "date": "1984-11-10",
+      "time": "19:13:29Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2d65f734-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "160.7",
+      "units": "cm",
+      "date": "1977-06-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d65f748-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d65f75c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "74.6",
+      "units": "kg",
+      "date": "1977-06-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d65f770-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "28.9",
+      "units": "kg/m2",
+      "date": "1977-06-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d65f784-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d65f798-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d65f7a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "76.0",
+      "units": "/min",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d65f7b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "12.0",
+      "units": "/min",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Total Cholesterol",
+      "id": "obs_2d65f7ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "198.0",
+      "units": "mg/dL",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Triglycerides",
+      "id": "obs_2d65f7de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "127.7",
+      "units": "mg/dL",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Low Density Lipoprotein Cholesterol",
+      "id": "obs_2d65f7f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "101.5",
+      "units": "mg/dL",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "High Density Lipoprotein Cholesterol",
+      "id": "obs_2d65f806-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "70.9",
+      "units": "mg/dL",
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d65f810-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4dd26c1d-9a53-497e-a4d5-c228d65044f6",
+      "value": "Former smoker",
+      "units": NaN,
+      "date": "1977-06-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d65f824-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "160.7",
+      "units": "cm",
+      "date": "1980-04-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d65f838-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d65f842-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "71.4",
+      "units": "kg",
+      "date": "1980-04-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d65f856-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "27.7",
+      "units": "kg/m2",
+      "date": "1980-04-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d65f86a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d65f87e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d65f888-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "73.0",
+      "units": "/min",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d65f89c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "14.0",
+      "units": "/min",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d65f8b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "6.2",
+      "units": "10*3/uL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d65f8ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "5.5",
+      "units": "10*6/uL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d65f8ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "15.6",
+      "units": "g/dL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d65f8e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "47.2",
+      "units": "%",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d65f8ec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "90.6",
+      "units": "fL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d65f900-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "28.1",
+      "units": "pg",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d65f91e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "35.8",
+      "units": "g/dL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d65f932-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "40.0",
+      "units": "fL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d65f946-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "248.8",
+      "units": "10*3/uL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d65f950-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "368.4",
+      "units": "fL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d65f964-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "11.4",
+      "units": "fL",
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d65f978-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "048d0841-6225-42e3-b700-fc75c5f4af19",
+      "value": "Former smoker",
+      "units": NaN,
+      "date": "1980-04-11",
+      "category": "other"
+    },
+    {
+      "description": "Body temperature",
+      "id": "obs_2d65f982-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54b18173-f73d-406e-ae7f-7e5a3309ade3",
+      "value": "37.0",
+      "units": "Cel",
+      "date": "1981-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d65f996-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "160.7",
+      "units": "cm",
+      "date": "1982-04-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d65f9aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d65f9be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "73.4",
+      "units": "kg",
+      "date": "1982-04-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d65f9c8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "28.4",
+      "units": "kg/m2",
+      "date": "1982-04-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d65f9e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "82.0",
+      "units": "mm[Hg]",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d65f9f0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "116.0",
+      "units": "mm[Hg]",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d65fa04-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "71.0",
+      "units": "/min",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d65fa18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Total Cholesterol",
+      "id": "obs_2d65fa2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "183.3",
+      "units": "mg/dL",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Triglycerides",
+      "id": "obs_2d65fa40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "129.1",
+      "units": "mg/dL",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Low Density Lipoprotein Cholesterol",
+      "id": "obs_2d65fa54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "91.1",
+      "units": "mg/dL",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "High Density Lipoprotein Cholesterol",
+      "id": "obs_2d65fa68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "66.5",
+      "units": "mg/dL",
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d65fa7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3e07c7cd-0633-49de-ae11-ec89eb44f929",
+      "value": "Former smoker",
+      "units": NaN,
+      "date": "1982-04-16",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d65fa90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "160.7",
+      "units": "cm",
+      "date": "1984-04-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d65fa9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1984-04-20",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d65faae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "77.2",
+      "units": "kg",
+      "date": "1984-04-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d65fac2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "29.9",
+      "units": "kg/m2",
+      "date": "1984-04-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d65fad6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "1984-04-20",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d65fae0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "118.0",
+      "units": "mm[Hg]",
+      "date": "1984-04-20",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d65faf4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "98.0",
+      "units": "/min",
+      "date": "1984-04-20",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d65fb08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1984-04-20",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d65fb12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b214933c-5ca9-4959-bdf8-9000b5848a08",
+      "value": "Former smoker",
+      "units": NaN,
+      "date": "1984-04-20",
+      "category": "other"
+    }
+  ]
+}

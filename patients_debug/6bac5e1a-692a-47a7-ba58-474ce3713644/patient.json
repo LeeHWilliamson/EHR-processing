@@ -1,0 +1,813 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_6bac5e1a-692a-47a7-ba58-474ce3713644",
+    "firstName": "Timothy142",
+    "lastName": "Runolfsdottir785",
+    "dob": "1986-04-02",
+    "gender": "M",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1986-04-02",
+      "endDate": "1986-04-02",
+      "startTime": "23:32:25",
+      "endTime": "23:47:25"
+    },
+    {
+      "id": "enc_fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1986-05-07",
+      "endDate": "1986-05-07",
+      "startTime": "23:32:25",
+      "endTime": "23:47:25"
+    },
+    {
+      "id": "enc_3828663a-728a-4772-aa36-bbe244124f03",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1986-07-09",
+      "endDate": "1986-07-10",
+      "startTime": "23:32:25",
+      "endTime": "00:02:25"
+    },
+    {
+      "id": "enc_3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1986-09-10",
+      "endDate": "1986-09-11",
+      "startTime": "23:32:25",
+      "endTime": "00:02:25"
+    },
+    {
+      "id": "enc_e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1986-12-10",
+      "endDate": "1986-12-10",
+      "startTime": "23:32:25",
+      "endTime": "23:47:25"
+    },
+    {
+      "id": "enc_062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1987-03-11",
+      "endDate": "1987-03-11",
+      "startTime": "23:32:25",
+      "endTime": "23:47:25"
+    },
+    {
+      "id": "enc_7968daee-9dd0-4237-883b-00b470d0fc64",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "1987-03-28",
+      "endDate": "1987-03-29",
+      "startTime": "23:32:25",
+      "endTime": "00:32:25"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Bullet wound",
+      "id": "cond_2cfecd16-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7968daee-9dd0-4237-883b-00b470d0fc64",
+      "startDate": "1987-03-28",
+      "endDate": null
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Hep B  adolescent or pediatric",
+      "id": "immu_2d1493e4-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-04-02",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635"
+    },
+    {
+      "name": "Hep B  adolescent or pediatric",
+      "id": "immu_2d1493f8-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-05-07",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5"
+    },
+    {
+      "name": "Hib (PRP-OMP)",
+      "id": "immu_2d149402-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-07-09",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03"
+    },
+    {
+      "name": "IPV",
+      "id": "immu_2d149416-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-07-09",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03"
+    },
+    {
+      "name": "Hib (PRP-OMP)",
+      "id": "immu_2d149420-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-09-10",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc"
+    },
+    {
+      "name": "IPV",
+      "id": "immu_2d149434-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-09-10",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc"
+    },
+    {
+      "name": "IPV",
+      "id": "immu_2d14943e-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-12-10",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d149452-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-12-10",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2"
+    },
+    {
+      "name": "Hep B  adolescent or pediatric",
+      "id": "immu_2d14945c-5305-11f1-a6a5-00155d35d14f",
+      "date": "1986-12-10",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2"
+    }
+  ],
+  "medications": [],
+  "procedures": [
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e734e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "reason": NaN,
+      "date": "1986-07-09",
+      "time": "23:32:25Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e739e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "reason": NaN,
+      "date": "1986-09-10",
+      "time": "23:32:25Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2d8eca2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "50.0",
+      "units": "cm",
+      "date": "1986-04-02",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8eca7e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8eca92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "4.1",
+      "units": "kg",
+      "date": "1986-04-02",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2d8eca9c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "92.8",
+      "units": "%",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2d8ecab0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "33.6",
+      "units": "cm",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ecac4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "88.0",
+      "units": "mm[Hg]",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ecace-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "136.0",
+      "units": "mm[Hg]",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ecae2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "76.0",
+      "units": "/min",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ecaf6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8ecb0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "7.2",
+      "units": "10*3/uL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8ecb1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "4.2",
+      "units": "10*6/uL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d8ecb28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "16.5",
+      "units": "g/dL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d8ecb3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "38.8",
+      "units": "%",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d8ecb50-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "83.6",
+      "units": "fL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d8ecb5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "29.7",
+      "units": "pg",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d8ecb6e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "33.7",
+      "units": "g/dL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d8ecb82-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "41.0",
+      "units": "fL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d8ecb96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "368.8",
+      "units": "10*3/uL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8ecba0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "502.2",
+      "units": "fL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8ecbb4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "10.9",
+      "units": "fL",
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ecbc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ec714e0a-435c-4c13-8e18-a04cf5e30635",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1986-04-02",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ecbd2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "54.0",
+      "units": "cm",
+      "date": "1986-05-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ecbe6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ecbfa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "5.0",
+      "units": "kg",
+      "date": "1986-05-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2d8ecc0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "86.5",
+      "units": "%",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2d8ecc18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "37.4",
+      "units": "cm",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ecc2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "86.0",
+      "units": "mm[Hg]",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ecc40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "112.0",
+      "units": "mm[Hg]",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ecc4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "77.0",
+      "units": "/min",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ecc5e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "15.0",
+      "units": "/min",
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ecc7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fc3162b9-37d3-47ff-ab0f-a6f654d06de5",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1986-05-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ecc90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "59.5",
+      "units": "cm",
+      "date": "1986-07-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8eccae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8eccc2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "6.5",
+      "units": "kg",
+      "date": "1986-07-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2d8eccd6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "80.1",
+      "units": "%",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2d8ecce0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "40.2",
+      "units": "cm",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8eccf4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ecd08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "123.0",
+      "units": "mm[Hg]",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ecd12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "84.0",
+      "units": "/min",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ecd26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "15.0",
+      "units": "/min",
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ecd3a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3828663a-728a-4772-aa36-bbe244124f03",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1986-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ecd44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "63.5",
+      "units": "cm",
+      "date": "1986-09-10",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ecd58-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ecd6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "7.8",
+      "units": "kg",
+      "date": "1986-09-10",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2d8ecd80-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "87.1",
+      "units": "%",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2d8ecd8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "41.9",
+      "units": "cm",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ecd9e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ecdb2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "122.0",
+      "units": "mm[Hg]",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ecdc6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "77.0",
+      "units": "/min",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ecdda-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ecdee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3332043a-4f2c-4c3d-91a0-644b14a1b4dc",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1986-09-10",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ecdf8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "68.1",
+      "units": "cm",
+      "date": "1986-12-10",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ece0c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ece20-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "9.2",
+      "units": "kg",
+      "date": "1986-12-10",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2d8ece34-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "93.4",
+      "units": "%",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2d8ece3e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "43.7",
+      "units": "cm",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ece52-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "82.0",
+      "units": "mm[Hg]",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ece66-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "122.0",
+      "units": "mm[Hg]",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ece70-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "88.0",
+      "units": "/min",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ece84-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "15.0",
+      "units": "/min",
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ece98-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e2a02fc4-a122-4625-9cbf-75d8bc9321a2",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1986-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ecea2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "71.9",
+      "units": "cm",
+      "date": "1987-03-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ecec0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8eced4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "10.3",
+      "units": "kg",
+      "date": "1987-03-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2d8ecee8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "93.8",
+      "units": "%",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2d8ecef2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "44.8",
+      "units": "cm",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ecf06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "73.0",
+      "units": "mm[Hg]",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ecf1a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "107.0",
+      "units": "mm[Hg]",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ed03c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "95.0",
+      "units": "/min",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ed08c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "14.0",
+      "units": "/min",
+      "date": "1987-03-11",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ed0aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "062a6117-8718-4d64-8e79-ba34ec8212c6",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1987-03-11",
+      "category": "other"
+    }
+  ]
+}

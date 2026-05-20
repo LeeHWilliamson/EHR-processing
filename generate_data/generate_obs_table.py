@@ -4,6 +4,7 @@ import os
 import random
 import copy
 from obs_table_to_pdf import write_obs_table_pdf
+from write_obs_docs_to_text_files import write_text_file
 
 '''
 refactor
@@ -50,9 +51,9 @@ def group_obs(patient = None, grouping = "date"): #default to date for top level
 '''
 template and omitting mode will be randomly selected from what is available
 '''
-debug_patient_path = "/home/leeha/Projects/EHR-processing/patients/0aaa2164-8de6-4152-8674-14d254aae13a/patient.json"
-with open(debug_patient_path) as f:
-    debug_patient = json.load(f)
+# debug_patient_path = "/home/leeha/Projects/EHR-processing/patients/0aaa2164-8de6-4152-8674-14d254aae13a/patient.json"
+# with open(debug_patient_path) as f:
+#     debug_patient = json.load(f)
 
 '''
 Each doc type will have multiple templates, templates will differ in layout, fields rendered, and what entities are included
@@ -159,7 +160,7 @@ def omit_entities(entity_list=None, mode=None, template = None):
     return realized, omitted
 
 
-def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, second_level_grouping = None):
+def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, second_level_grouping = None, doc_json_path=None, mapping_json_path=None, render_path = None):
     #pass a top_level_key (usually either a date or encounterID) and a grouping of observations (dict{obs_category : entity_list})
     #for each grouping of obs_entities, we generate a doc
     for obs_cat, entity_list in second_level_grouping.grouping.items(): #the obs_cat (observation category) will be a str field in the observation entity. It will determine the possible obs_doc templates
@@ -200,10 +201,10 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
     }
         
         documents.append(document)
-        write_doc(document)
+        write_doc(document, doc_json_path)
         #once doc is written, create rendering, should save to same directory as doc
-        doc_filepath = write_obs_table_pdf(document, patient)
-
+        doc_filepath = write_obs_table_pdf(document, patient, render_path)
+        write_text_file(document, patient, doc_json_path) #text summary of contents doc contents
         
         #create log
         #return doc, log
@@ -232,7 +233,7 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
             "degredations" : []
         }
         logs.append(log)
-        write_log(log)
+        write_log(log, mapping_json_path)
 
     return documents, logs
 # def log_doc(document = None, patient = None, expected_obs = None, realized_obs = None, omitting_mode = None):
@@ -248,28 +249,31 @@ def build_and_log_doc(patient = None, group_cat = None, top_level_key = None, se
     }
     with open(f"logs/{log["log_id"]}", "w") as file:
         json.dump(log, file, indent = 2)
-def write_doc(document):
-    os.makedirs(f"documents/{document["doc_id"]}", exist_ok=True)
-    with open(f"documents/{document["doc_id"]}/document.json", 'w') as file:
+def write_doc(document, doc_json_path):
+    os.makedirs(f"{doc_json_path}/{document["doc_id"]}", exist_ok=True)
+    with open(f"{doc_json_path}/{document["doc_id"]}/document.json", 'w') as file:
         json.dump(document, file, indent=2) 
+    
 
-def write_log(log):
-    with open(f"logs/{log['log_id']}", "w") as file:
+def write_log(log, mapping_json_path):
+    with open(f"{mapping_json_path}/{log['log_id']}", "w") as file:
         json.dump(log, file, indent = 2)
 
-def generate_observation_table(patient): #patient will be a json style dict
+def generate_observation_table(patient_path, doc_json_path, mapping_json_path, render_path): #patient will be a json style dict
+    with open(patient_path) as f:
+        patient = json.load(f)
     group_cat, grouped_obs = group_obs(patient, grouping="date")
-    # template = select_template("observations")
-    # omit_mode = select_omit_mode()
-    # print(omit_mode)
-    # expected_obs = select_obs(patient, template)
+    template = select_template(group_cat, "body_measurement")
+    omit_mode = select_omit_mode()
+    print(omit_mode)
+    expected_obs = select_obs(patient, template)
 
     documents = []
     for top_level_key, second_level_grouping in grouped_obs.grouping.items(): #top_level_key will be a string, often the date or an encounterID, second_level_grouping will be the grouping associated with that key
-        docs_for_this_grouping, logs_for_this_grouping = build_and_log_doc(patient, group_cat, top_level_key, second_level_grouping)
+        docs_for_this_grouping, logs_for_this_grouping = build_and_log_doc(patient, group_cat, top_level_key, second_level_grouping, doc_json_path, mapping_json_path, render_path)
         
         documents.append(docs_for_this_grouping)
 
     return documents
 
-generate_observation_table(debug_patient)
+# generate_observation_table(debug_patient)

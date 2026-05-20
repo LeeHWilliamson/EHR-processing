@@ -6,6 +6,7 @@ from PIL import ImageFilter
 import pytesseract
 import random
 import uuid
+from pathlib import Path
 
 def config_degredation():
     possible_degredations = {"dpi_reduction" : [50, 100, 150], "gaussian_blur" : [0.5, 1.0, 1.5]}
@@ -28,7 +29,7 @@ def read_pdf(pdf_path):
     for degredation in degredation_settings:
         if degredation_settings[degredation] > 0:
             degredations[degredation] = degredation_settings[degredation]
-    dpi = 150 #300 - degredation_settings["dpi_reduction"]
+    dpi = 300 - degredation_settings["dpi_reduction"]
     psm = "--psm 6"
     image_batch = convert_from_path(pdf_path, dpi) #create image
     for image in image_batch:
@@ -65,11 +66,11 @@ def read_pdf(pdf_path):
 
 def score_ocr(ocr_log):
     ocr_file = ocr_log["output_local"]
-    with open(f"documents/{ocr_log["source_doc_id"]}/document.json", "r") as file: #get document so we can know what entities and fields should be present
+    with open(f"docs_debug/{ocr_log["source_doc_id"]}/document.json", "r") as file: #get document so we can know what entities and fields should be present
         doc_instance = json.load(file)
     patient_directory = doc_instance["patient_id"].split("_") #FORMAT PATIENT DIRECTORY NAME BECAUSE I DIDNT SAVE THEM WITH PROPER NAME
     patient_directory = patient_directory[1]
-    with open(f"patients/{patient_directory}/patient.json", "r") as file: #get patient so we know what exact values should be present
+    with open(f"patients_debug/{patient_directory}/patient.json", "r") as file: #get patient so we know what exact values should be present
         patient_instance = json.load(file)
     with open(ocr_file, 'r') as file: #get ocr output
         ocr_output = file.read()
@@ -107,7 +108,11 @@ def score_ocr(ocr_log):
     with open(f"logs/ocr_eval/{ocr_eval["eval_id"]}.json", "w") as file:
         json.dump(ocr_eval, file, indent=2)          
 
-ocr_log = read_pdf("documents/doc_2a568192-03e6-4521-a092-f38b911358ba/test_obs_render.pdf")                
-#since we have the doc, we have the GT of the entities and fields that made it to the doc, connect this to the patient to get the exact values, and see if those values are in
-#output txt file
-score_ocr(ocr_log)
+if __name__ == "__main__":
+    doc_directory = Path("docs_debug")
+    for doc_folder in doc_directory.iterdir():
+        for doc_file in doc_folder.glob("*.pdf"):
+            ocr_log = read_pdf(str(doc_file))                
+            #since we have the doc, we have the GT of the entities and fields that made it to the doc, connect this to the patient to get the exact values, and see if those values are in
+            #output txt file
+            score_ocr(ocr_log)

@@ -1,0 +1,3374 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_affb8a9e-4a9a-46e7-a94b-e9c90b25f444",
+    "firstName": "Phil587",
+    "lastName": "Mante251",
+    "dob": "2002-01-14",
+    "gender": "M",
+    "entities": []
+  },
+  "allergies": [
+    {
+      "id": "all_2cceb112-5305-11f1-a6a5-00155d35d14f",
+      "start": "2002-12-27",
+      "stop": "2019-09-12",
+      "encounter": "ad8b3be1-166c-44c9-abe4-dc5a0fc633e3",
+      "description": "Allergy to eggs"
+    }
+  ],
+  "careplans": [
+    {
+      "id": "care_f225839a-de15-4486-96b7-4c583b38e4d0",
+      "startDate": "2002-12-10",
+      "endDate": NaN,
+      "encounter": "0de1a4ee-377e-4a04-9325-aa16c503ea47",
+      "description": "Self-care interventions (procedure)",
+      "reasonDescription": NaN
+    },
+    {
+      "id": "care_4c02432f-ae68-404b-84ea-5ce14776ab46",
+      "startDate": "2013-12-22",
+      "endDate": "2013-12-29",
+      "encounter": "609391ed-c907-47e5-b4f0-e48206333ad2",
+      "description": "Respiratory therapy",
+      "reasonDescription": "Acute bronchitis (disorder)"
+    },
+    {
+      "id": "care_8188e4bf-5c4b-49cf-9570-2e8418d827bc",
+      "startDate": "2015-01-19",
+      "endDate": "2018-07-23",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "description": "Allergic disorder monitoring",
+      "reasonDescription": NaN
+    },
+    {
+      "id": "care_0e477cc7-d0da-4a45-a731-b6236b8077a9",
+      "startDate": "2020-03-09",
+      "endDate": NaN,
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "description": "Lifestyle education regarding hypertension",
+      "reasonDescription": "Hypertension"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_0de1a4ee-377e-4a04-9325-aa16c503ea47",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": NaN,
+      "startDate": "2002-12-10",
+      "endDate": "2002-12-10",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_ad8b3be1-166c-44c9-abe4-dc5a0fc633e3",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": NaN,
+      "startDate": "2002-12-27",
+      "endDate": "2002-12-27",
+      "startTime": "21:22:06",
+      "endTime": "21:58:06"
+    },
+    {
+      "id": "enc_ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2011-01-17",
+      "endDate": "2011-01-17",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2012-01-23",
+      "endDate": "2012-01-23",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_c637b50d-10cb-4216-9024-bf91bcda2240",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2012-03-01",
+      "endDate": "2012-03-01",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_915d3409-123d-4806-8ebe-75287d1d5acd",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2013-01-28",
+      "endDate": "2013-01-28",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_0c4f6dcb-e21f-4511-b89f-1bb569e4e61c",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bacterial sinusitis (disorder)",
+      "startDate": "2013-06-16",
+      "endDate": "2013-06-16",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_609391ed-c907-47e5-b4f0-e48206333ad2",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "2013-12-22",
+      "endDate": "2013-12-22",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2013-12-30",
+      "endDate": "2013-12-30",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2014-02-03",
+      "endDate": "2014-02-03",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "type": "ambulatory",
+      "description": "Allergic disorder initial assessment",
+      "reason": NaN,
+      "startDate": "2015-01-19",
+      "endDate": "2015-01-19",
+      "startTime": "21:22:06",
+      "endTime": "22:16:06"
+    },
+    {
+      "id": "enc_a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2015-02-09",
+      "endDate": "2015-02-09",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_466f6ba8-dd50-4eba-a4f3-c1ed91d2c6c4",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-02-09",
+      "endDate": "2015-02-09",
+      "startTime": "21:22:06",
+      "endTime": "22:22:06"
+    },
+    {
+      "id": "enc_ba438669-4b9a-4dd8-892e-d066db5eebe8",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-03-02",
+      "endDate": "2015-03-02",
+      "startTime": "21:22:06",
+      "endTime": "22:27:06"
+    },
+    {
+      "id": "enc_889b2e80-5c24-4ce9-88c1-cdabb56eb04f",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-03-23",
+      "endDate": "2015-03-23",
+      "startTime": "21:22:06",
+      "endTime": "21:56:06"
+    },
+    {
+      "id": "enc_a75c502e-7161-4cba-90b5-a083d4997bc1",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-04-13",
+      "endDate": "2015-04-13",
+      "startTime": "21:22:06",
+      "endTime": "21:56:06"
+    },
+    {
+      "id": "enc_d652d39e-3a69-434f-971a-f568672e4314",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-05-04",
+      "endDate": "2015-05-04",
+      "startTime": "21:22:06",
+      "endTime": "22:18:06"
+    },
+    {
+      "id": "enc_ab9bd940-ee54-43a7-81b9-42601a9e99e7",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-05-25",
+      "endDate": "2015-05-25",
+      "startTime": "21:22:06",
+      "endTime": "22:28:06"
+    },
+    {
+      "id": "enc_3ef47a1e-9f63-49d6-bb52-5f6a9c924b26",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-06-15",
+      "endDate": "2015-06-15",
+      "startTime": "21:22:06",
+      "endTime": "22:35:06"
+    },
+    {
+      "id": "enc_79b259df-e31a-4264-a0e0-788d7556e89b",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-07-06",
+      "endDate": "2015-07-06",
+      "startTime": "21:22:06",
+      "endTime": "22:20:06"
+    },
+    {
+      "id": "enc_f57b7753-9d3e-4405-8e37-da0b484ab097",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-07-27",
+      "endDate": "2015-07-27",
+      "startTime": "21:22:06",
+      "endTime": "21:55:06"
+    },
+    {
+      "id": "enc_49fac6c2-02f9-4cfd-a959-5101bf4691a5",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-08-17",
+      "endDate": "2015-08-17",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_070120f4-61a9-42ff-9a40-3ef8e393b191",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-09-07",
+      "endDate": "2015-09-07",
+      "startTime": "21:22:06",
+      "endTime": "22:05:06"
+    },
+    {
+      "id": "enc_a7431542-6276-4018-9756-ccfdedba9cd3",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-09-28",
+      "endDate": "2015-09-28",
+      "startTime": "21:22:06",
+      "endTime": "22:27:06"
+    },
+    {
+      "id": "enc_f87ac01c-7efd-40d9-9100-6909cfb31bba",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-10-19",
+      "endDate": "2015-10-19",
+      "startTime": "21:22:06",
+      "endTime": "22:35:06"
+    },
+    {
+      "id": "enc_d89f49e9-ba86-47d7-a92f-6894a82b5f11",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-11-09",
+      "endDate": "2015-11-09",
+      "startTime": "21:22:06",
+      "endTime": "22:33:06"
+    },
+    {
+      "id": "enc_90510d75-6119-4aeb-8d33-00da3727db7f",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-11-30",
+      "endDate": "2015-11-30",
+      "startTime": "21:22:06",
+      "endTime": "22:18:06"
+    },
+    {
+      "id": "enc_0f1d66ba-cf62-435d-9239-2b499ee46ddc",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2015-12-21",
+      "endDate": "2015-12-21",
+      "startTime": "21:22:06",
+      "endTime": "22:01:06"
+    },
+    {
+      "id": "enc_b012c54f-912d-4846-b42a-5696df035f81",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-01-11",
+      "endDate": "2016-01-11",
+      "startTime": "21:22:06",
+      "endTime": "22:27:06"
+    },
+    {
+      "id": "enc_7b3ab318-9c93-47c6-86bb-005588fc3bf2",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-02-01",
+      "endDate": "2016-02-01",
+      "startTime": "21:22:06",
+      "endTime": "22:16:06"
+    },
+    {
+      "id": "enc_ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2016-02-15",
+      "endDate": "2016-02-15",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_dc3ed426-00e6-49e5-a604-6fc3de139bea",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-02-22",
+      "endDate": "2016-02-22",
+      "startTime": "21:22:06",
+      "endTime": "22:35:06"
+    },
+    {
+      "id": "enc_a818a4ec-0d46-42a3-abc2-70db350e5721",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-03-14",
+      "endDate": "2016-03-14",
+      "startTime": "21:22:06",
+      "endTime": "22:04:06"
+    },
+    {
+      "id": "enc_b3bf8d07-2633-4983-b4f6-c890257745dd",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-04-04",
+      "endDate": "2016-04-04",
+      "startTime": "21:22:06",
+      "endTime": "22:17:06"
+    },
+    {
+      "id": "enc_8ac1bd01-7067-49dd-aaf2-4a5f9d5dd78c",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-04-25",
+      "endDate": "2016-04-25",
+      "startTime": "21:22:06",
+      "endTime": "22:26:06"
+    },
+    {
+      "id": "enc_9373d7cd-1b60-4b75-9d17-2a565acf8ea6",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-05-16",
+      "endDate": "2016-05-16",
+      "startTime": "21:22:06",
+      "endTime": "21:57:06"
+    },
+    {
+      "id": "enc_1af00681-c255-4849-96a3-de1587c6c05b",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-06-06",
+      "endDate": "2016-06-06",
+      "startTime": "21:22:06",
+      "endTime": "22:33:06"
+    },
+    {
+      "id": "enc_88e92e8d-b634-433f-a75a-f61e05dd77e1",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-06-27",
+      "endDate": "2016-06-27",
+      "startTime": "21:22:06",
+      "endTime": "22:12:06"
+    },
+    {
+      "id": "enc_099c2d1b-b033-4a86-adb8-9da0269bade1",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-07-18",
+      "endDate": "2016-07-18",
+      "startTime": "21:22:06",
+      "endTime": "22:16:06"
+    },
+    {
+      "id": "enc_16c49fa9-0b3b-49f0-a4cf-856f62b9865e",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-08-08",
+      "endDate": "2016-08-08",
+      "startTime": "21:22:06",
+      "endTime": "22:32:06"
+    },
+    {
+      "id": "enc_a60f632b-5266-4c4b-bd94-2b8e7a708dcd",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-08-29",
+      "endDate": "2016-08-29",
+      "startTime": "21:22:06",
+      "endTime": "22:13:06"
+    },
+    {
+      "id": "enc_bd8abfca-af62-4a97-8e25-62db36658da4",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-09-19",
+      "endDate": "2016-09-19",
+      "startTime": "21:22:06",
+      "endTime": "22:15:06"
+    },
+    {
+      "id": "enc_9cec96a8-3a9b-4f6c-ac25-d9e466167e32",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-10-10",
+      "endDate": "2016-10-10",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_99e8a6f7-84ba-48d8-86da-6d567bb19346",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-10-31",
+      "endDate": "2016-10-31",
+      "startTime": "21:22:06",
+      "endTime": "21:58:06"
+    },
+    {
+      "id": "enc_b46017c5-b809-4cbf-8ff5-730bdab604a8",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-11-21",
+      "endDate": "2016-11-21",
+      "startTime": "21:22:06",
+      "endTime": "22:33:06"
+    },
+    {
+      "id": "enc_d7c1690b-d793-4019-ac75-19bc0c935677",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2016-12-12",
+      "endDate": "2016-12-12",
+      "startTime": "21:22:06",
+      "endTime": "22:18:06"
+    },
+    {
+      "id": "enc_a5f2896f-9729-4b08-ac43-6a4cfc4b7577",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-01-02",
+      "endDate": "2017-01-02",
+      "startTime": "21:22:06",
+      "endTime": "22:25:06"
+    },
+    {
+      "id": "enc_ebbcf990-4724-4a8b-abe2-bdf558aa9c61",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-01-23",
+      "endDate": "2017-01-23",
+      "startTime": "21:22:06",
+      "endTime": "22:19:06"
+    },
+    {
+      "id": "enc_0ba7f2d6-483c-42b4-be59-acf1af9ca932",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-02-13",
+      "endDate": "2017-02-13",
+      "startTime": "21:22:06",
+      "endTime": "22:06:06"
+    },
+    {
+      "id": "enc_cd97567c-a953-4044-8172-ee961d6f62d8",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2017-02-20",
+      "endDate": "2017-02-20",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_74bc7993-8e43-42ed-b509-48599c2b6abd",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-03-06",
+      "endDate": "2017-03-06",
+      "startTime": "21:22:06",
+      "endTime": "22:08:06"
+    },
+    {
+      "id": "enc_1ad07c82-8fde-4f54-8b01-c628d88cb373",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-03-27",
+      "endDate": "2017-03-27",
+      "startTime": "21:22:06",
+      "endTime": "21:54:06"
+    },
+    {
+      "id": "enc_1a981a84-7342-4628-b21d-8882d9659553",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-04-17",
+      "endDate": "2017-04-17",
+      "startTime": "21:22:06",
+      "endTime": "22:23:06"
+    },
+    {
+      "id": "enc_9cf5917f-8c39-4c9f-a281-ac03a169a226",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-05-08",
+      "endDate": "2017-05-08",
+      "startTime": "21:22:06",
+      "endTime": "21:54:06"
+    },
+    {
+      "id": "enc_2090d76d-d16c-4bc2-a609-ca45eac31152",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-05-29",
+      "endDate": "2017-05-29",
+      "startTime": "21:22:06",
+      "endTime": "22:17:06"
+    },
+    {
+      "id": "enc_2f8f85e9-c6db-4c4a-85eb-86830ce3ad24",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-06-19",
+      "endDate": "2017-06-19",
+      "startTime": "21:22:06",
+      "endTime": "21:58:06"
+    },
+    {
+      "id": "enc_1f56d014-2da6-472c-9131-8643c298cd93",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-07-10",
+      "endDate": "2017-07-10",
+      "startTime": "21:22:06",
+      "endTime": "22:19:06"
+    },
+    {
+      "id": "enc_ea7a06e4-afe9-48d4-9b65-fd67be8da20b",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-07-31",
+      "endDate": "2017-07-31",
+      "startTime": "21:22:06",
+      "endTime": "22:19:06"
+    },
+    {
+      "id": "enc_85f3cca3-dd79-4ccf-824d-8a61d71504ad",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-08-21",
+      "endDate": "2017-08-21",
+      "startTime": "21:22:06",
+      "endTime": "22:03:06"
+    },
+    {
+      "id": "enc_114e4ba2-e42f-4e45-a5be-869faebcc592",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute viral pharyngitis (disorder)",
+      "startDate": "2017-09-09",
+      "endDate": "2017-09-09",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_29719f68-f39f-4db3-a369-6710cfd89172",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-09-11",
+      "endDate": "2017-09-11",
+      "startTime": "21:22:06",
+      "endTime": "22:01:06"
+    },
+    {
+      "id": "enc_389b7fd4-67d1-4ef8-a67a-3bb2abe3beb5",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-10-02",
+      "endDate": "2017-10-02",
+      "startTime": "21:22:06",
+      "endTime": "22:33:06"
+    },
+    {
+      "id": "enc_d34a30bb-f7cb-4ed6-90ef-e5ad42fd2cea",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-10-23",
+      "endDate": "2017-10-23",
+      "startTime": "21:22:06",
+      "endTime": "22:28:06"
+    },
+    {
+      "id": "enc_a0a7fef9-b16e-4446-bd57-fcc0e14441aa",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-11-13",
+      "endDate": "2017-11-13",
+      "startTime": "21:22:06",
+      "endTime": "22:19:06"
+    },
+    {
+      "id": "enc_aa570b3f-6f6c-4fc1-be0d-88cff7acdce2",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-12-04",
+      "endDate": "2017-12-04",
+      "startTime": "21:22:06",
+      "endTime": "22:23:06"
+    },
+    {
+      "id": "enc_73ee4f3b-b52b-4e63-96c0-8e9eb6a3fb52",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2017-12-25",
+      "endDate": "2017-12-25",
+      "startTime": "21:22:06",
+      "endTime": "22:29:06"
+    },
+    {
+      "id": "enc_e4533673-d4bb-4186-96b5-34dfffd9b91b",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-01-15",
+      "endDate": "2018-01-15",
+      "startTime": "21:22:06",
+      "endTime": "22:02:06"
+    },
+    {
+      "id": "enc_1d2b6c34-d588-4b7c-8bf7-7cc03bf035c0",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-02-05",
+      "endDate": "2018-02-05",
+      "startTime": "21:22:06",
+      "endTime": "22:28:06"
+    },
+    {
+      "id": "enc_e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2018-02-26",
+      "endDate": "2018-02-26",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_699a06ed-4a3d-4bc0-b697-adff06ba9b12",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-02-26",
+      "endDate": "2018-02-26",
+      "startTime": "21:22:06",
+      "endTime": "22:13:06"
+    },
+    {
+      "id": "enc_6536dba9-8f20-4d1c-917c-54953b84834b",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-03-19",
+      "endDate": "2018-03-19",
+      "startTime": "21:22:06",
+      "endTime": "22:23:06"
+    },
+    {
+      "id": "enc_a0bca63a-b17b-42de-a6ed-521307003d53",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-04-09",
+      "endDate": "2018-04-09",
+      "startTime": "21:22:06",
+      "endTime": "22:25:06"
+    },
+    {
+      "id": "enc_17420571-8dc9-46d4-946f-a26d2e1b5f3f",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-04-30",
+      "endDate": "2018-04-30",
+      "startTime": "21:22:06",
+      "endTime": "22:15:06"
+    },
+    {
+      "id": "enc_d17897fb-f0d9-4e03-adcc-25253731927e",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-05-21",
+      "endDate": "2018-05-21",
+      "startTime": "21:22:06",
+      "endTime": "22:35:06"
+    },
+    {
+      "id": "enc_19fdd05f-9b8b-4c74-b2bd-1f42df19a835",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-06-11",
+      "endDate": "2018-06-11",
+      "startTime": "21:22:06",
+      "endTime": "22:27:06"
+    },
+    {
+      "id": "enc_214676b3-650b-4f7c-8909-34f8880b3bbd",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2018-07-02",
+      "endDate": "2018-07-02",
+      "startTime": "21:22:06",
+      "endTime": "22:17:06"
+    },
+    {
+      "id": "enc_846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "type": "ambulatory",
+      "description": "Allergic disorder follow-up assessment",
+      "reason": NaN,
+      "startDate": "2018-07-23",
+      "endDate": "2018-07-23",
+      "startTime": "21:22:06",
+      "endTime": "22:12:06"
+    },
+    {
+      "id": "enc_53d51990-42a9-401d-b126-78c19a38475f",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2019-03-04",
+      "endDate": "2019-03-04",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    },
+    {
+      "id": "enc_5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2020-03-09",
+      "endDate": "2020-03-09",
+      "startTime": "21:22:06",
+      "endTime": "21:52:06"
+    },
+    {
+      "id": "enc_0bd7bd75-88f2-4d2e-988c-cb1a9bba76d4",
+      "type": "ambulatory",
+      "description": "Hypertension follow-up encounter",
+      "reason": NaN,
+      "startDate": "2020-04-08",
+      "endDate": "2020-04-08",
+      "startTime": "21:22:06",
+      "endTime": "21:37:06"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_2cf6db06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c637b50d-10cb-4216-9024-bf91bcda2240",
+      "startDate": "2012-03-01",
+      "endDate": "2012-03-15"
+    },
+    {
+      "condition": "Acute bacterial sinusitis (disorder)",
+      "id": "cond_2cf6dc3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c4f6dcb-e21f-4511-b89f-1bb569e4e61c",
+      "startDate": "2013-06-16",
+      "endDate": "2013-07-07"
+    },
+    {
+      "condition": "Acute bronchitis (disorder)",
+      "id": "cond_2cf6dd72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "609391ed-c907-47e5-b4f0-e48206333ad2",
+      "startDate": "2013-12-22",
+      "endDate": "2013-12-29"
+    },
+    {
+      "condition": "Acute viral pharyngitis (disorder)",
+      "id": "cond_2cf6de8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "114e4ba2-e42f-4e45-a5be-869faebcc592",
+      "startDate": "2017-09-09",
+      "endDate": "2017-09-16"
+    },
+    {
+      "condition": "Hypertension",
+      "id": "cond_2cf6dfc0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "startDate": "2020-03-09",
+      "endDate": null
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138f3a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-01-17",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138f4e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2012-01-23",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b"
+    },
+    {
+      "name": "Tdap",
+      "id": "immu_2d138f62-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-01-28",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138f6c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-01-28",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd"
+    },
+    {
+      "name": "HPV  quadrivalent",
+      "id": "immu_2d138f80-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-01-28",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd"
+    },
+    {
+      "name": "meningococcal MCV4P",
+      "id": "immu_2d138f8a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-01-28",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138f94-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-12-30",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b"
+    },
+    {
+      "name": "HPV  quadrivalent",
+      "id": "immu_2d138fa8-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-12-30",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b"
+    },
+    {
+      "name": "HPV  quadrivalent",
+      "id": "immu_2d138fb2-5305-11f1-a6a5-00155d35d14f",
+      "date": "2014-02-03",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138fc6-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-02-09",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138fda-5305-11f1-a6a5-00155d35d14f",
+      "date": "2016-02-15",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138fe4-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-02-20",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d138ff8-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-02-26",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760"
+    },
+    {
+      "name": "meningococcal MCV4P",
+      "id": "immu_2d13900c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-02-26",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d139016-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-04",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d13902a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2020-03-09",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Fexofenadine hydrochloride 30 MG Oral Tablet",
+      "id": "med_2d2536e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ad8b3be1-166c-44c9-abe4-dc5a0fc633e3",
+      "reason": NaN,
+      "startDate": "2002-12-27",
+      "endDate": null
+    },
+    {
+      "description": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+      "id": "med_2d2536fe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ad8b3be1-166c-44c9-abe4-dc5a0fc633e3",
+      "reason": NaN,
+      "startDate": "2002-12-27",
+      "endDate": null
+    },
+    {
+      "description": "Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",
+      "id": "med_2d253712-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c637b50d-10cb-4216-9024-bf91bcda2240",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2012-03-01",
+      "endDate": "2012-03-15"
+    },
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d253726-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "609391ed-c907-47e5-b4f0-e48206333ad2",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "2013-12-22",
+      "endDate": "2013-12-29"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d25373a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "reason": "Hypertension",
+      "startDate": "2020-03-09",
+      "endDate": "2020-04-08"
+    },
+    {
+      "description": "Atenolol 50 MG / Chlorthalidone 25 MG Oral Tablet",
+      "id": "med_2d25374e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0bd7bd75-88f2-4d2e-988c-cb1a9bba76d4",
+      "reason": "Hypertension",
+      "startDate": "2020-04-08",
+      "endDate": null
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3c4358-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "reason": NaN,
+      "date": "2011-01-17",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3c436c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "reason": NaN,
+      "date": "2012-01-23",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3c4376-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "reason": NaN,
+      "date": "2014-02-03",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Allergy screening test",
+      "id": "proc_2d3c438a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "reason": NaN,
+      "date": "2015-01-19",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c439e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "466f6ba8-dd50-4eba-a4f3-c1ed91d2c6c4",
+      "reason": NaN,
+      "date": "2015-02-09",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c43b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba438669-4b9a-4dd8-892e-d066db5eebe8",
+      "reason": NaN,
+      "date": "2015-03-02",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c43bc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "889b2e80-5c24-4ce9-88c1-cdabb56eb04f",
+      "reason": NaN,
+      "date": "2015-03-23",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c43d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a75c502e-7161-4cba-90b5-a083d4997bc1",
+      "reason": NaN,
+      "date": "2015-04-13",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c43da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d652d39e-3a69-434f-971a-f568672e4314",
+      "reason": NaN,
+      "date": "2015-05-04",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c43ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab9bd940-ee54-43a7-81b9-42601a9e99e7",
+      "reason": NaN,
+      "date": "2015-05-25",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4402-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ef47a1e-9f63-49d6-bb52-5f6a9c924b26",
+      "reason": NaN,
+      "date": "2015-06-15",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c440c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "79b259df-e31a-4264-a0e0-788d7556e89b",
+      "reason": NaN,
+      "date": "2015-07-06",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4420-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f57b7753-9d3e-4405-8e37-da0b484ab097",
+      "reason": NaN,
+      "date": "2015-07-27",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4434-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "49fac6c2-02f9-4cfd-a959-5101bf4691a5",
+      "reason": NaN,
+      "date": "2015-08-17",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4448-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "070120f4-61a9-42ff-9a40-3ef8e393b191",
+      "reason": NaN,
+      "date": "2015-09-07",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c445c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a7431542-6276-4018-9756-ccfdedba9cd3",
+      "reason": NaN,
+      "date": "2015-09-28",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4466-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f87ac01c-7efd-40d9-9100-6909cfb31bba",
+      "reason": NaN,
+      "date": "2015-10-19",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c447a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d89f49e9-ba86-47d7-a92f-6894a82b5f11",
+      "reason": NaN,
+      "date": "2015-11-09",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c448e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "90510d75-6119-4aeb-8d33-00da3727db7f",
+      "reason": NaN,
+      "date": "2015-11-30",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4498-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0f1d66ba-cf62-435d-9239-2b499ee46ddc",
+      "reason": NaN,
+      "date": "2015-12-21",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c44ac-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b012c54f-912d-4846-b42a-5696df035f81",
+      "reason": NaN,
+      "date": "2016-01-11",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c44b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7b3ab318-9c93-47c6-86bb-005588fc3bf2",
+      "reason": NaN,
+      "date": "2016-02-01",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3c44ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "reason": NaN,
+      "date": "2016-02-15",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c44d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dc3ed426-00e6-49e5-a604-6fc3de139bea",
+      "reason": NaN,
+      "date": "2016-02-22",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c44e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a818a4ec-0d46-42a3-abc2-70db350e5721",
+      "reason": NaN,
+      "date": "2016-03-14",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c44fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b3bf8d07-2633-4983-b4f6-c890257745dd",
+      "reason": NaN,
+      "date": "2016-04-04",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4510-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8ac1bd01-7067-49dd-aaf2-4a5f9d5dd78c",
+      "reason": NaN,
+      "date": "2016-04-25",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c451a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9373d7cd-1b60-4b75-9d17-2a565acf8ea6",
+      "reason": NaN,
+      "date": "2016-05-16",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c452e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1af00681-c255-4849-96a3-de1587c6c05b",
+      "reason": NaN,
+      "date": "2016-06-06",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4538-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "88e92e8d-b634-433f-a75a-f61e05dd77e1",
+      "reason": NaN,
+      "date": "2016-06-27",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c454c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "099c2d1b-b033-4a86-adb8-9da0269bade1",
+      "reason": NaN,
+      "date": "2016-07-18",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4560-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "16c49fa9-0b3b-49f0-a4cf-856f62b9865e",
+      "reason": NaN,
+      "date": "2016-08-08",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c456a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a60f632b-5266-4c4b-bd94-2b8e7a708dcd",
+      "reason": NaN,
+      "date": "2016-08-29",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c457e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bd8abfca-af62-4a97-8e25-62db36658da4",
+      "reason": NaN,
+      "date": "2016-09-19",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4592-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9cec96a8-3a9b-4f6c-ac25-d9e466167e32",
+      "reason": NaN,
+      "date": "2016-10-10",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c45a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "99e8a6f7-84ba-48d8-86da-6d567bb19346",
+      "reason": NaN,
+      "date": "2016-10-31",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c45b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b46017c5-b809-4cbf-8ff5-730bdab604a8",
+      "reason": NaN,
+      "date": "2016-11-21",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c45c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d7c1690b-d793-4019-ac75-19bc0c935677",
+      "reason": NaN,
+      "date": "2016-12-12",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c45ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5f2896f-9729-4b08-ac43-6a4cfc4b7577",
+      "reason": NaN,
+      "date": "2017-01-02",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c45e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ebbcf990-4724-4a8b-abe2-bdf558aa9c61",
+      "reason": NaN,
+      "date": "2017-01-23",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c45f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0ba7f2d6-483c-42b4-be59-acf1af9ca932",
+      "reason": NaN,
+      "date": "2017-02-13",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4600-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "74bc7993-8e43-42ed-b509-48599c2b6abd",
+      "reason": NaN,
+      "date": "2017-03-06",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4614-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1ad07c82-8fde-4f54-8b01-c628d88cb373",
+      "reason": NaN,
+      "date": "2017-03-27",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c461e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1a981a84-7342-4628-b21d-8882d9659553",
+      "reason": NaN,
+      "date": "2017-04-17",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4632-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9cf5917f-8c39-4c9f-a281-ac03a169a226",
+      "reason": NaN,
+      "date": "2017-05-08",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c463c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2090d76d-d16c-4bc2-a609-ca45eac31152",
+      "reason": NaN,
+      "date": "2017-05-29",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4650-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2f8f85e9-c6db-4c4a-85eb-86830ce3ad24",
+      "reason": NaN,
+      "date": "2017-06-19",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4664-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1f56d014-2da6-472c-9131-8643c298cd93",
+      "reason": NaN,
+      "date": "2017-07-10",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4678-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ea7a06e4-afe9-48d4-9b65-fd67be8da20b",
+      "reason": NaN,
+      "date": "2017-07-31",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4682-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "85f3cca3-dd79-4ccf-824d-8a61d71504ad",
+      "reason": NaN,
+      "date": "2017-08-21",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4696-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "29719f68-f39f-4db3-a369-6710cfd89172",
+      "reason": NaN,
+      "date": "2017-09-11",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c46a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "389b7fd4-67d1-4ef8-a67a-3bb2abe3beb5",
+      "reason": NaN,
+      "date": "2017-10-02",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c46b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d34a30bb-f7cb-4ed6-90ef-e5ad42fd2cea",
+      "reason": NaN,
+      "date": "2017-10-23",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c46c8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a0a7fef9-b16e-4446-bd57-fcc0e14441aa",
+      "reason": NaN,
+      "date": "2017-11-13",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c46dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "aa570b3f-6f6c-4fc1-be0d-88cff7acdce2",
+      "reason": NaN,
+      "date": "2017-12-04",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c46f0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "73ee4f3b-b52b-4e63-96c0-8e9eb6a3fb52",
+      "reason": NaN,
+      "date": "2017-12-25",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4704-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e4533673-d4bb-4186-96b5-34dfffd9b91b",
+      "reason": NaN,
+      "date": "2018-01-15",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c470e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1d2b6c34-d588-4b7c-8bf7-7cc03bf035c0",
+      "reason": NaN,
+      "date": "2018-02-05",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3c4722-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "reason": NaN,
+      "date": "2018-02-26",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c472c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "699a06ed-4a3d-4bc0-b697-adff06ba9b12",
+      "reason": NaN,
+      "date": "2018-02-26",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4740-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6536dba9-8f20-4d1c-917c-54953b84834b",
+      "reason": NaN,
+      "date": "2018-03-19",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c474a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a0bca63a-b17b-42de-a6ed-521307003d53",
+      "reason": NaN,
+      "date": "2018-04-09",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c475e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "17420571-8dc9-46d4-946f-a26d2e1b5f3f",
+      "reason": NaN,
+      "date": "2018-04-30",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4768-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d17897fb-f0d9-4e03-adcc-25253731927e",
+      "reason": NaN,
+      "date": "2018-05-21",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c477c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "19fdd05f-9b8b-4c74-b2bd-1f42df19a835",
+      "reason": NaN,
+      "date": "2018-06-11",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Subcutaneous immunotherapy",
+      "id": "proc_2d3c4790-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "214676b3-650b-4f7c-8909-34f8880b3bbd",
+      "reason": NaN,
+      "date": "2018-07-02",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Allergy screening test",
+      "id": "proc_2d3c479a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "reason": NaN,
+      "date": "2018-07-23",
+      "time": "21:22:06Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3c47ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "reason": NaN,
+      "date": "2020-03-09",
+      "time": "21:22:06Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2d782c2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "139.5",
+      "units": "cm",
+      "date": "2011-01-17",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d782c42-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d782c56-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "32.5",
+      "units": "kg",
+      "date": "2011-01-17",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d782c6a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "16.7",
+      "units": "kg/m2",
+      "date": "2011-01-17",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d782c7e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "61.1",
+      "units": "%",
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d782c92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "77.0",
+      "units": "mm[Hg]",
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d782ca6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "122.0",
+      "units": "mm[Hg]",
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d782cba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "90.0",
+      "units": "/min",
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d782cc4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d782cd8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ae812673-4d2b-4924-a20e-91a6a33c3d55",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2011-01-17",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d782cec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "144.9",
+      "units": "cm",
+      "date": "2012-01-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d782d00-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d782d0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "35.8",
+      "units": "kg",
+      "date": "2012-01-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d782d1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "17.0",
+      "units": "kg/m2",
+      "date": "2012-01-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d782d32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "57.4",
+      "units": "%",
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d782d46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d782d5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "117.0",
+      "units": "mm[Hg]",
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d782d64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "66.0",
+      "units": "/min",
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d782d78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d782d8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "69e44746-35e1-42ea-b88c-3e13f4643d3b",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2012-01-23",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d782daa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "150.2",
+      "units": "cm",
+      "date": "2013-01-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d782dbe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d782dd2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "39.3",
+      "units": "kg",
+      "date": "2013-01-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d782ddc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "17.4",
+      "units": "kg/m2",
+      "date": "2013-01-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d782dfa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "53.8",
+      "units": "%",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d782e0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d782e22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "134.0",
+      "units": "mm[Hg]",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d782e2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "66.0",
+      "units": "/min",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d782e40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "12.0",
+      "units": "/min",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d782e54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "7.7",
+      "units": "10*3/uL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d782e5e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "5.0",
+      "units": "10*6/uL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d782e72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "16.8",
+      "units": "g/dL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d782e86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "39.1",
+      "units": "%",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d782e90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "87.1",
+      "units": "fL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d782ea4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "30.7",
+      "units": "pg",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d782eb8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "35.7",
+      "units": "g/dL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d782ecc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "45.4",
+      "units": "fL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d782ee0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "177.9",
+      "units": "10*3/uL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d782eea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "151.3",
+      "units": "fL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d782f08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "11.7",
+      "units": "fL",
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d782f1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "915d3409-123d-4806-8ebe-75287d1d5acd",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2013-01-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d782f26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "155.7",
+      "units": "cm",
+      "date": "2013-12-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d782f3a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d782f4e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "42.6",
+      "units": "kg",
+      "date": "2013-12-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d783002-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "17.6",
+      "units": "kg/m2",
+      "date": "2013-12-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783048-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "47.0",
+      "units": "%",
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783066-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d78307a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "111.0",
+      "units": "mm[Hg]",
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d78308e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "84.0",
+      "units": "/min",
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d7830a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d7830b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "45ed7e1a-de45-4c35-8354-101cedd8123b",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2013-12-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d7830c0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "156.2",
+      "units": "cm",
+      "date": "2014-02-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7830d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d7830e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "43.0",
+      "units": "kg",
+      "date": "2014-02-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d7830fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "17.6",
+      "units": "kg/m2",
+      "date": "2014-02-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783110-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "46.5",
+      "units": "%",
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783124-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "71.0",
+      "units": "mm[Hg]",
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d78312e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "133.0",
+      "units": "mm[Hg]",
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d783142-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "84.0",
+      "units": "/min",
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d783174-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d783188-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "42002a2e-ea65-43aa-b71d-5b9ac080f87a",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2014-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Peanut IgE Ab in Serum",
+      "id": "obs_2d78319c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Walnut IgE Ab in Serum",
+      "id": "obs_2d7831a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Codfish IgE Ab in Serum",
+      "id": "obs_2d7831ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Shrimp IgE Ab in Serum",
+      "id": "obs_2d7831ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Wheat IgE Ab in Serum",
+      "id": "obs_2d7831d8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.1",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Egg white IgE Ab in Serum",
+      "id": "obs_2d7831f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "40.8",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Soybean IgE Ab in Serum",
+      "id": "obs_2d783214-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Cow milk IgE Ab in Serum",
+      "id": "obs_2d783228-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.1",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "White oak IgE Ab in Serum",
+      "id": "obs_2d783232-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Common Ragweed IgE Ab in Serum",
+      "id": "obs_2d783246-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Cat dander IgE Ab in Serum",
+      "id": "obs_2d78325a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.1",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "American house dust mite IgE Ab in Serum",
+      "id": "obs_2d783264-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.1",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Cladosporium herbarum IgE Ab in Serum",
+      "id": "obs_2d783278-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Honey bee IgE Ab in Serum",
+      "id": "obs_2d78328c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.1",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Latex IgE Ab in Serum",
+      "id": "obs_2d783296-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f88433f9-3b02-4dd6-9193-e207fd00678c",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2015-01-19",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d7832aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "163.6",
+      "units": "cm",
+      "date": "2015-02-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7832be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d7832dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "48.6",
+      "units": "kg",
+      "date": "2015-02-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d7832e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "18.2",
+      "units": "kg/m2",
+      "date": "2015-02-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d7832fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "44.8",
+      "units": "%",
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d78330e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "78.0",
+      "units": "mm[Hg]",
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d783322-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "112.0",
+      "units": "mm[Hg]",
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d783336-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "78.0",
+      "units": "/min",
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d783340-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d783354-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a71a818a-9c87-40c4-b54d-ec2d23d2495d",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2015-02-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d783368-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "172.0",
+      "units": "cm",
+      "date": "2016-02-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7833e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d783426-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "58.6",
+      "units": "kg",
+      "date": "2016-02-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d78344e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "19.8",
+      "units": "kg/m2",
+      "date": "2016-02-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783462-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "58.7",
+      "units": "%",
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783480-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "89.0",
+      "units": "mm[Hg]",
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d7834bc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "102.0",
+      "units": "mm[Hg]",
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d7834d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "65.0",
+      "units": "/min",
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d7834e4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d7834f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba0c5c20-ede3-4892-9f9c-064e843755a9",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2016-02-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d783552-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "177.5",
+      "units": "cm",
+      "date": "2017-02-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d783566-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d783598-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "64.9",
+      "units": "kg",
+      "date": "2017-02-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d7836f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "20.6",
+      "units": "kg/m2",
+      "date": "2017-02-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783728-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "59.6",
+      "units": "%",
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783746-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d78375a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "110.0",
+      "units": "mm[Hg]",
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d78376e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "61.0",
+      "units": "/min",
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d783782-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d783796-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd97567c-a953-4044-8172-ee961d6f62d8",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2017-02-20",
+      "category": "other"
+    },
+    {
+      "description": "Body temperature",
+      "id": "obs_2d7837aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "114e4ba2-e42f-4e45-a5be-869faebcc592",
+      "value": "37.4",
+      "units": "Cel",
+      "date": "2017-09-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d7837be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "180.5",
+      "units": "cm",
+      "date": "2018-02-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7837e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d7837fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "66.3",
+      "units": "kg",
+      "date": "2018-02-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d78380e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "20.4",
+      "units": "kg/m2",
+      "date": "2018-02-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783822-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "46.3",
+      "units": "%",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783836-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d783840-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "115.0",
+      "units": "mm[Hg]",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d783854-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "69.0",
+      "units": "/min",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d783868-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d783872-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "6.4",
+      "units": "10*3/uL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d783890-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "5.0",
+      "units": "10*6/uL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d78389a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "15.6",
+      "units": "g/dL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d7838ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "36.5",
+      "units": "%",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d7838c2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "93.8",
+      "units": "fL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d7838d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "29.3",
+      "units": "pg",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d7838e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "33.4",
+      "units": "g/dL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d7838f4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "43.8",
+      "units": "fL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d7838fe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "193.1",
+      "units": "10*3/uL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d783912-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "172.4",
+      "units": "fL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d783926-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "10.2",
+      "units": "fL",
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d783930-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e149354e-3ba2-4fb2-83fa-6e59b2f3d760",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Peanut IgE Ab in Serum",
+      "id": "obs_2d783944-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Walnut IgE Ab in Serum",
+      "id": "obs_2d783958-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.0",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Codfish IgE Ab in Serum",
+      "id": "obs_2d78396c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Shrimp IgE Ab in Serum",
+      "id": "obs_2d783980-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.0",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Wheat IgE Ab in Serum",
+      "id": "obs_2d783994-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Egg white IgE Ab in Serum",
+      "id": "obs_2d78399e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "61.5",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Soybean IgE Ab in Serum",
+      "id": "obs_2d7839b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.2",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Cow milk IgE Ab in Serum",
+      "id": "obs_2d7839c6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "White oak IgE Ab in Serum",
+      "id": "obs_2d7839d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Common Ragweed IgE Ab in Serum",
+      "id": "obs_2d7839ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.1",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Cat dander IgE Ab in Serum",
+      "id": "obs_2d7839f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "American house dust mite IgE Ab in Serum",
+      "id": "obs_2d783a0c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Cladosporium herbarum IgE Ab in Serum",
+      "id": "obs_2d783a20-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Honey bee IgE Ab in Serum",
+      "id": "obs_2d783a2a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.3",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Latex IgE Ab in Serum",
+      "id": "obs_2d783a3e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "846aed8f-95ca-4343-a9de-6fd4647c153e",
+      "value": "0.0",
+      "units": "kU/L",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d783a52-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "182.0",
+      "units": "cm",
+      "date": "2019-03-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d783a66-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d783a70-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "68.3",
+      "units": "kg",
+      "date": "2019-03-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d783a84-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "20.6",
+      "units": "kg/m2",
+      "date": "2019-03-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783a98-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "40.1",
+      "units": "%",
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783aac-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d783ac0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "115.0",
+      "units": "mm[Hg]",
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d783aca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "91.0",
+      "units": "/min",
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d783ae8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d783af2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "53d51990-42a9-401d-b126-78c19a38475f",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-03-04",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d783b06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "182.7",
+      "units": "cm",
+      "date": "2020-03-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d783b1a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d783b2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "70.4",
+      "units": "kg",
+      "date": "2020-03-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d783b4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "21.1",
+      "units": "kg/m2",
+      "date": "2020-03-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d783b60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "37.7",
+      "units": "%",
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783b74-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "95.0",
+      "units": "mm[Hg]",
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d783b88-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "188.0",
+      "units": "mm[Hg]",
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d783b92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "81.0",
+      "units": "/min",
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d783ba6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d783bba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5bee09fa-0275-4aaa-926d-8afc5087323e",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2020-03-09",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d783bce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0bd7bd75-88f2-4d2e-988c-cb1a9bba76d4",
+      "value": "100.0",
+      "units": "mm[Hg]",
+      "date": "2020-04-08",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d783be2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0bd7bd75-88f2-4d2e-988c-cb1a9bba76d4",
+      "value": "177.0",
+      "units": "mm[Hg]",
+      "date": "2020-04-08",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783bec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "7.0",
+      "units": "a",
+      "date": "2010-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c00-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "8.0",
+      "units": "a",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c14-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "9.0",
+      "units": "a",
+      "date": "2012-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "10.0",
+      "units": "a",
+      "date": "2013-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "11.0",
+      "units": "a",
+      "date": "2014-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "12.0",
+      "units": "a",
+      "date": "2015-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "13.0",
+      "units": "a",
+      "date": "2016-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "14.0",
+      "units": "a",
+      "date": "2017-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "15.0",
+      "units": "a",
+      "date": "2018-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "16.0",
+      "units": "a",
+      "date": "2019-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d783c96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "17.0",
+      "units": "a",
+      "date": "2020-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783cb4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2010-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783cbe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783cd2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2012-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783ce6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2013-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783cf0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2014-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783d04-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2015-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783d18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2016-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783d22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2017-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783d36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2018-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783d4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2019-01-14",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d783d54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2020-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783d68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2010-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783d7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783d86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2012-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783d9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2013-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783da4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2014-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783db8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2015-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783dcc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2016-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783de0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2017-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783e08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2018-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783e1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-01-14",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d783e26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2020-01-14",
+      "category": "other"
+    }
+  ]
+}

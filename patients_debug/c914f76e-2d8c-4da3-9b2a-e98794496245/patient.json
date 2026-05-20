@@ -1,0 +1,1781 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_c914f76e-2d8c-4da3-9b2a-e98794496245",
+    "firstName": "Nick779",
+    "lastName": "Doyle959",
+    "dob": "1970-01-18",
+    "gender": "M",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [
+    {
+      "id": "care_0e846223-18f6-4613-afe6-8fb02f7138be",
+      "startDate": "1975-09-20",
+      "endDate": "1976-01-04",
+      "encounter": "2a43c165-9f60-41ba-b263-673f8db355dc",
+      "description": "Respiratory therapy",
+      "reasonDescription": "Acute bronchitis (disorder)"
+    },
+    {
+      "id": "care_a5665c2d-f263-4d29-acd1-58905691171a",
+      "startDate": "1976-09-13",
+      "endDate": "1976-11-12",
+      "encounter": "0fcb535b-1f00-4352-a067-b5760a38e831",
+      "description": "Fracture care",
+      "reasonDescription": "Fracture of rib"
+    },
+    {
+      "id": "care_1c49ecd8-6eb1-4f6e-b4a6-eccc5359ed01",
+      "startDate": "1981-04-08",
+      "endDate": "1982-02-07",
+      "encounter": "1c3d2944-f4e4-4f62-b2a8-0aa2ccffb366",
+      "description": "Respiratory therapy",
+      "reasonDescription": "Acute bronchitis (disorder)"
+    },
+    {
+      "id": "care_e4bd03fc-52a5-4669-af2e-ae8b5a5bce73",
+      "startDate": "1981-06-19",
+      "endDate": "1981-07-26",
+      "encounter": "f47571a0-da6c-4b70-83eb-a75bb352abf3",
+      "description": "Physical therapy procedure",
+      "reasonDescription": "Rupture of patellar tendon"
+    },
+    {
+      "id": "care_ed6e010a-66e4-4a3a-a9a8-b7f477f281e0",
+      "startDate": "1984-10-08",
+      "endDate": "1984-10-29",
+      "encounter": "7c0e842e-edcb-417e-b538-7cd4c7fefef8",
+      "description": "Wound care",
+      "reasonDescription": "Laceration of thigh"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_2a43c165-9f60-41ba-b263-673f8db355dc",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1975-09-20",
+      "endDate": "1975-09-20",
+      "startTime": "19:09:49",
+      "endTime": "19:32:49"
+    },
+    {
+      "id": "enc_3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "1975-09-28",
+      "endDate": "1975-09-28",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_fee2b9bf-b790-4958-8b81-953686337fe0",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1976-01-04",
+      "endDate": "1976-01-04",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_0fcb535b-1f00-4352-a067-b5760a38e831",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "1976-09-13",
+      "endDate": "1976-09-13",
+      "startTime": "19:09:49",
+      "endTime": "21:11:49"
+    },
+    {
+      "id": "enc_cff551d8-a75a-41a4-bc05-659da17e0e8f",
+      "type": "ambulatory",
+      "description": "Encounter for 'check-up'",
+      "reason": "Fracture of rib",
+      "startDate": "1976-11-12",
+      "endDate": "1976-11-12",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1977-01-09",
+      "endDate": "1977-01-09",
+      "startTime": "19:09:49",
+      "endTime": "19:39:49"
+    },
+    {
+      "id": "enc_952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1978-01-15",
+      "endDate": "1978-01-15",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_a2b9c0a3-51e3-4436-9212-1c1da84bed90",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1979-01-21",
+      "endDate": "1979-01-21",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_245adde8-13e2-4f09-907a-d410351e3ca4",
+      "type": "emergency",
+      "description": "Emergency Room Admission",
+      "reason": "Seizure disorder",
+      "startDate": "1979-01-16",
+      "endDate": "1979-01-16",
+      "startTime": "19:09:49",
+      "endTime": "22:56:49"
+    },
+    {
+      "id": "enc_5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1980-01-27",
+      "endDate": "1980-01-27",
+      "startTime": "19:09:49",
+      "endTime": "19:39:49"
+    },
+    {
+      "id": "enc_bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1981-02-01",
+      "endDate": "1981-02-01",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_1c3d2944-f4e4-4f62-b2a8-0aa2ccffb366",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1981-04-08",
+      "endDate": "1981-04-08",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_f47571a0-da6c-4b70-83eb-a75bb352abf3",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "1981-06-19",
+      "endDate": "1981-06-19",
+      "startTime": "19:09:49",
+      "endTime": "20:39:49"
+    },
+    {
+      "id": "enc_fdae01ee-f844-441a-9792-91c85f7fe3f8",
+      "type": "inpatient",
+      "description": "Non-urgent orthopedic admission",
+      "reason": "Rupture of patellar tendon",
+      "startDate": "1981-06-26",
+      "endDate": "1981-06-27",
+      "startTime": "19:09:49",
+      "endTime": "22:09:49"
+    },
+    {
+      "id": "enc_0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1982-02-07",
+      "endDate": "1982-02-07",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1983-02-13",
+      "endDate": "1983-02-13",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    },
+    {
+      "id": "enc_bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1984-02-19",
+      "endDate": "1984-02-19",
+      "startTime": "19:09:49",
+      "endTime": "19:39:49"
+    },
+    {
+      "id": "enc_7c0e842e-edcb-417e-b538-7cd4c7fefef8",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "1984-10-08",
+      "endDate": "1984-10-08",
+      "startTime": "19:09:49",
+      "endTime": "20:32:49"
+    },
+    {
+      "id": "enc_b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1985-02-24",
+      "endDate": "1985-02-24",
+      "startTime": "19:09:49",
+      "endTime": "19:39:49"
+    },
+    {
+      "id": "enc_37c67d77-56c1-4a79-acc5-08e836f685c6",
+      "type": "wellness",
+      "description": "Death Certification",
+      "reason": NaN,
+      "startDate": "1985-06-23",
+      "endDate": "1985-06-23",
+      "startTime": "19:09:49",
+      "endTime": "19:24:49"
+    }
+  ],
+  "imaging_studies": [
+    {
+      "id": "img_e9542e0d-b55d-4694-add6-b0666ec4a55a",
+      "date": "1976-09-13",
+      "encounter": "0fcb535b-1f00-4352-a067-b5760a38e831",
+      "bodysite": "Chest",
+      "modality": "Digital Radiography"
+    },
+    {
+      "id": "img_0ee2b262-ec97-430b-965f-16c54d8555e8",
+      "date": "1981-06-19",
+      "encounter": "f47571a0-da6c-4b70-83eb-a75bb352abf3",
+      "bodysite": "Knee",
+      "modality": "Digital Radiography"
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "Acute bronchitis (disorder)",
+      "id": "cond_2d07ff62-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2a43c165-9f60-41ba-b263-673f8db355dc",
+      "startDate": "1975-09-20",
+      "endDate": "1975-10-04"
+    },
+    {
+      "condition": "Fracture of rib",
+      "id": "cond_2d080098-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0fcb535b-1f00-4352-a067-b5760a38e831",
+      "startDate": "1976-09-13",
+      "endDate": "1976-11-12"
+    },
+    {
+      "condition": "Seizure disorder",
+      "id": "cond_2d0801ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "startDate": "1979-01-16",
+      "endDate": null
+    },
+    {
+      "condition": "History of single seizure (situation)",
+      "id": "cond_2d0802e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "startDate": "1979-01-16",
+      "endDate": null
+    },
+    {
+      "condition": "Epilepsy",
+      "id": "cond_2d080412-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "startDate": "1979-01-16",
+      "endDate": null
+    },
+    {
+      "condition": "Acute bronchitis (disorder)",
+      "id": "cond_2d080638-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1c3d2944-f4e4-4f62-b2a8-0aa2ccffb366",
+      "startDate": "1981-04-08",
+      "endDate": "1981-04-15"
+    },
+    {
+      "condition": "Rupture of patellar tendon",
+      "id": "cond_2d080778-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f47571a0-da6c-4b70-83eb-a75bb352abf3",
+      "startDate": "1981-06-19",
+      "endDate": "1981-07-26"
+    },
+    {
+      "condition": "Laceration of thigh",
+      "id": "cond_2d0808b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7c0e842e-edcb-417e-b538-7cd4c7fefef8",
+      "startDate": "1984-10-08",
+      "endDate": "1984-10-29"
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c7f0-5305-11f1-a6a5-00155d35d14f",
+      "date": "1975-09-28",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c804-5305-11f1-a6a5-00155d35d14f",
+      "date": "1977-01-09",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c818-5305-11f1-a6a5-00155d35d14f",
+      "date": "1978-01-15",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c822-5305-11f1-a6a5-00155d35d14f",
+      "date": "1979-01-21",
+      "encounter": "a2b9c0a3-51e3-4436-9212-1c1da84bed90"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c836-5305-11f1-a6a5-00155d35d14f",
+      "date": "1980-01-27",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c840-5305-11f1-a6a5-00155d35d14f",
+      "date": "1981-02-01",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c854-5305-11f1-a6a5-00155d35d14f",
+      "date": "1982-02-07",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c85e-5305-11f1-a6a5-00155d35d14f",
+      "date": "1983-02-13",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c872-5305-11f1-a6a5-00155d35d14f",
+      "date": "1984-02-19",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d15c87c-5305-11f1-a6a5-00155d35d14f",
+      "date": "1985-02-24",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",
+      "id": "med_2d2edb3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2a43c165-9f60-41ba-b263-673f8db355dc",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1975-09-20",
+      "endDate": "1975-10-04"
+    },
+    {
+      "description": "Acetaminophen 160 MG Chewable Tablet",
+      "id": "med_2d2edb5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0fcb535b-1f00-4352-a067-b5760a38e831",
+      "reason": NaN,
+      "startDate": "1976-09-13",
+      "endDate": "1976-11-12"
+    },
+    {
+      "description": "Diazepam 5 MG Oral Tablet",
+      "id": "med_2d2edb6e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "reason": NaN,
+      "startDate": "1979-01-16",
+      "endDate": "1979-05-15"
+    },
+    {
+      "description": "Carbamazepine[Tegretol]",
+      "id": "med_2d2edb82-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "reason": NaN,
+      "startDate": "1980-01-27",
+      "endDate": "1980-06-22"
+    },
+    {
+      "description": "clonazePAM 0.25 MG Oral Tablet",
+      "id": "med_2d2edb96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "reason": NaN,
+      "startDate": "1981-02-01",
+      "endDate": "1981-07-26"
+    },
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d2edbaa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1c3d2944-f4e4-4f62-b2a8-0aa2ccffb366",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1981-04-08",
+      "endDate": "1981-04-15"
+    },
+    {
+      "description": "Acetaminophen 160 MG Chewable Tablet",
+      "id": "med_2d2edbbe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f47571a0-da6c-4b70-83eb-a75bb352abf3",
+      "reason": NaN,
+      "startDate": "1981-06-19",
+      "endDate": "1981-07-26"
+    },
+    {
+      "description": "Carbamazepine[Tegretol]",
+      "id": "med_2d2edbd2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "reason": NaN,
+      "startDate": "1982-02-07",
+      "endDate": "1982-10-10"
+    },
+    {
+      "description": "Diazepam 5 MG Oral Tablet",
+      "id": "med_2d2edbf0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "reason": NaN,
+      "startDate": "1983-02-13",
+      "endDate": "1983-05-08"
+    },
+    {
+      "description": "clonazePAM 0.25 MG Oral Tablet",
+      "id": "med_2d2edc04-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "reason": NaN,
+      "startDate": "1984-02-19",
+      "endDate": null
+    },
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d2edc18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7c0e842e-edcb-417e-b538-7cd4c7fefef8",
+      "reason": NaN,
+      "startDate": "1984-10-08",
+      "endDate": "1984-10-29"
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Sputum examination (procedure)",
+      "id": "proc_2d416ac2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2a43c165-9f60-41ba-b263-673f8db355dc",
+      "reason": "Acute bronchitis (disorder)",
+      "date": "1975-09-20",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d416ae0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "reason": NaN,
+      "date": "1975-09-28",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Chest X-ray",
+      "id": "proc_2d416aea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0fcb535b-1f00-4352-a067-b5760a38e831",
+      "reason": NaN,
+      "date": "1976-09-13",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Bone immobilization",
+      "id": "proc_2d416afe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0fcb535b-1f00-4352-a067-b5760a38e831",
+      "reason": "Fracture of rib",
+      "date": "1976-09-13",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d416b12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "reason": NaN,
+      "date": "1977-01-09",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Seizure Count Cerebral Cortex Electroencephalogram (EEG)",
+      "id": "proc_2d416b1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "reason": NaN,
+      "date": "1979-01-16",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d416b30-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "reason": NaN,
+      "date": "1980-01-27",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Knee X-ray",
+      "id": "proc_2d416b44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f47571a0-da6c-4b70-83eb-a75bb352abf3",
+      "reason": NaN,
+      "date": "1981-06-19",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Surgical manipulation of joint of knee",
+      "id": "proc_2d416b4e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fdae01ee-f844-441a-9792-91c85f7fe3f8",
+      "reason": "Rupture of patellar tendon",
+      "date": "1981-06-26",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d416b62-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "reason": NaN,
+      "date": "1984-02-19",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Suture open wound",
+      "id": "proc_2d416b76-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7c0e842e-edcb-417e-b538-7cd4c7fefef8",
+      "reason": "Laceration of thigh",
+      "date": "1984-10-08",
+      "time": "19:09:49Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d416b8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "reason": NaN,
+      "date": "1985-02-24",
+      "time": "19:09:49Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2698-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "117.6",
+      "units": "cm",
+      "date": "1975-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa26b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa26ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "21.8",
+      "units": "kg",
+      "date": "1975-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa26de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "15.8",
+      "units": "kg/m2",
+      "date": "1975-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa26f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "61.3",
+      "units": "%",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2706-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa281e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "126.0",
+      "units": "mm[Hg]",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2878-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "66.0",
+      "units": "/min",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa28a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "12.0",
+      "units": "/min",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2daa28b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "6.7",
+      "units": "10*3/uL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2daa28c8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "5.2",
+      "units": "10*6/uL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2daa28dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "13.7",
+      "units": "g/dL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2daa28e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "35.5",
+      "units": "%",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2daa28fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "85.5",
+      "units": "fL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2daa290e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "27.1",
+      "units": "pg",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2daa2922-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "34.4",
+      "units": "g/dL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2daa292c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "44.5",
+      "units": "fL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2daa2940-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "198.0",
+      "units": "10*3/uL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2daa2954-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "382.4",
+      "units": "fL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2daa295e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "11.1",
+      "units": "fL",
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2972-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3230c9b1-7261-4fbb-8b61-e2174e54d2ad",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1975-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2986-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "119.3",
+      "units": "cm",
+      "date": "1976-01-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa29a4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa29cc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "22.1",
+      "units": "kg",
+      "date": "1976-01-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa29ea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "15.5",
+      "units": "kg/m2",
+      "date": "1976-01-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa29fe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "53.5",
+      "units": "%",
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2a12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2a26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "131.0",
+      "units": "mm[Hg]",
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2a3a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "84.0",
+      "units": "/min",
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2a44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "15.0",
+      "units": "/min",
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2a58-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fee2b9bf-b790-4958-8b81-953686337fe0",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1976-01-04",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2a6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "126.1",
+      "units": "cm",
+      "date": "1977-01-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2a80-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2a94-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "24.0",
+      "units": "kg",
+      "date": "1977-01-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2a9e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "15.1",
+      "units": "kg/m2",
+      "date": "1977-01-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2ab2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "39.3",
+      "units": "%",
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2ac6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2ada-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "106.0",
+      "units": "mm[Hg]",
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2aee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "71.0",
+      "units": "/min",
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2b02-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "12.0",
+      "units": "/min",
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2b0c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a9ccbfdf-f476-445d-ae59-ba12c2b86a74",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1977-01-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2b20-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "132.5",
+      "units": "cm",
+      "date": "1978-01-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2b34-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2b48-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "26.1",
+      "units": "kg",
+      "date": "1978-01-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2b5c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "14.9",
+      "units": "kg/m2",
+      "date": "1978-01-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2b70-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "26.9",
+      "units": "%",
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2b84-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "77.0",
+      "units": "mm[Hg]",
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2b8e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "132.0",
+      "units": "mm[Hg]",
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2ba2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "65.0",
+      "units": "/min",
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2bb6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "14.0",
+      "units": "/min",
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2bca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "952e8f3b-de9a-4985-afe7-8fb7b71dffb3",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1978-01-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2bde-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "139.0",
+      "units": "cm",
+      "date": "1979-01-21",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2bf2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2bfc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "29.8",
+      "units": "kg",
+      "date": "1979-01-21",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2c10-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "15.4",
+      "units": "kg/m2",
+      "date": "1979-01-21",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2c2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "32.7",
+      "units": "%",
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2c42-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2c4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "134.0",
+      "units": "mm[Hg]",
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2c60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "88.0",
+      "units": "/min",
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2c74-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2c7e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "245adde8-13e2-4f09-907a-d410351e3ca4",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1979-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2c92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "144.4",
+      "units": "cm",
+      "date": "1980-01-27",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2ca6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2cc4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "32.7",
+      "units": "kg",
+      "date": "1980-01-27",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2cd8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "15.7",
+      "units": "kg/m2",
+      "date": "1980-01-27",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2cec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "29.2",
+      "units": "%",
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2d00-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "85.0",
+      "units": "mm[Hg]",
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2d0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "129.0",
+      "units": "mm[Hg]",
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2d1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "85.0",
+      "units": "/min",
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2d32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2d3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5fee5598-44a9-4b90-b2e5-e52c89aed778",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1980-01-27",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2d50-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "149.7",
+      "units": "cm",
+      "date": "1981-02-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2d64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2d6e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "37.7",
+      "units": "kg",
+      "date": "1981-02-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2d82-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "16.8",
+      "units": "kg/m2",
+      "date": "1981-02-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2d96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "42.9",
+      "units": "%",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2daa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "72.0",
+      "units": "mm[Hg]",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2dbe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "116.0",
+      "units": "mm[Hg]",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2dc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "75.0",
+      "units": "/min",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2ddc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "15.0",
+      "units": "/min",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2daa2de6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "9.2",
+      "units": "10*3/uL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2daa2dfa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "3.9",
+      "units": "10*6/uL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2daa2e18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "14.7",
+      "units": "g/dL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2daa2e22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "48.3",
+      "units": "%",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2daa2e36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "80.7",
+      "units": "fL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2daa2e4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "27.8",
+      "units": "pg",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2daa2e5e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "35.4",
+      "units": "g/dL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2daa2e72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "39.3",
+      "units": "fL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2daa2e86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "223.0",
+      "units": "10*3/uL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2daa2e9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "474.4",
+      "units": "fL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2daa2eae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "10.4",
+      "units": "fL",
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2ec2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bb18aa6d-ec85-4e20-933b-f5188df1f3c7",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1981-02-01",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2ed6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "155.7",
+      "units": "cm",
+      "date": "1982-02-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2eea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2ef4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "44.0",
+      "units": "kg",
+      "date": "1982-02-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2f08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "18.2",
+      "units": "kg/m2",
+      "date": "1982-02-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2f1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "55.8",
+      "units": "%",
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2f30-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "85.0",
+      "units": "mm[Hg]",
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2f44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "115.0",
+      "units": "mm[Hg]",
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa2f4e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "66.0",
+      "units": "/min",
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa2f62-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "12.0",
+      "units": "/min",
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa2f6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0c71932f-618f-4cbf-a512-e4ea905deeba",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1982-02-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa2f8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "163.1",
+      "units": "cm",
+      "date": "1983-02-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa2f9e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa2fb2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "51.6",
+      "units": "kg",
+      "date": "1983-02-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa2fbc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "19.4",
+      "units": "kg/m2",
+      "date": "1983-02-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa2fd0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "63.6",
+      "units": "%",
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa2fe4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "72.0",
+      "units": "mm[Hg]",
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa2ff8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "118.0",
+      "units": "mm[Hg]",
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa300c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "76.0",
+      "units": "/min",
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa3016-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa302a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3ee2a722-7f94-4669-b01f-e0f53c72dd4d",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1983-02-13",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa303e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "171.4",
+      "units": "cm",
+      "date": "1984-02-19",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa3048-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa305c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "62.2",
+      "units": "kg",
+      "date": "1984-02-19",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa3070-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "21.2",
+      "units": "kg/m2",
+      "date": "1984-02-19",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa3084-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "74.1",
+      "units": "%",
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa3098-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "85.0",
+      "units": "mm[Hg]",
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa30a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "130.0",
+      "units": "mm[Hg]",
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa30c0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "98.0",
+      "units": "/min",
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa30ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "12.0",
+      "units": "/min",
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa30e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbf851cd-6a57-4b08-bb54-2434d7bd7b13",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1984-02-19",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2daa30f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "176.9",
+      "units": "cm",
+      "date": "1985-02-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2daa3106-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2daa311a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "65.1",
+      "units": "kg",
+      "date": "1985-02-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2daa312e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "20.8",
+      "units": "kg/m2",
+      "date": "1985-02-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2daa3142-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "62.0",
+      "units": "%",
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2daa314c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2daa3160-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "121.0",
+      "units": "mm[Hg]",
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2daa3174-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "82.0",
+      "units": "/min",
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2daa317e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2daa3192-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b0458549-cdfc-43f9-8da2-9029f7013cd3",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "1985-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Cause of Death [US Standard Certificate of Death]",
+      "id": "obs_2daa31a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "37c67d77-56c1-4a79-acc5-08e836f685c6",
+      "value": "Sudden Cardiac Death",
+      "units": NaN,
+      "date": "1985-06-23",
+      "category": "other"
+    }
+  ]
+}

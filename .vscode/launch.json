@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Generate Data",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/generate_data/generate_data.py",
+            "console": "integratedTerminal",
+            "python": "${workspaceFolder}/ehr-proc-venv/bin/python",
+            "args": ["--data_directory_path", "sample_data", "--patient_json_path", "patients_debug", "--document_json_path", "docs_debug", "--mapping_json_path", "mappings_debug"
+            ],
+        "cwd": "${workspaceFolder}"
+        }
+    ]
+}

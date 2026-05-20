@@ -1,0 +1,4333 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_04a849f4-1aaf-4112-a62f-d44df4325773",
+    "firstName": "Ver\u00f3nica383",
+    "lastName": "Almanza534",
+    "dob": "1997-07-18",
+    "gender": "F",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [
+    {
+      "id": "care_6ed5641c-f10d-4f53-bdb9-fe88c3f99cce",
+      "startDate": "2011-01-07",
+      "endDate": "2011-01-14",
+      "encounter": "e1f73b85-9055-4a8d-b061-4bd6473e4a07",
+      "description": "Respiratory therapy",
+      "reasonDescription": "Acute bronchitis (disorder)"
+    },
+    {
+      "id": "care_c7e3a39c-697b-49b7-8be5-15c948c00b2b",
+      "startDate": "2011-04-06",
+      "endDate": "2011-06-05",
+      "encounter": "9d9a2004-f0ce-4438-a2fd-28e3ee020b4d",
+      "description": "Head injury rehabilitation",
+      "reasonDescription": "Concussion with no loss of consciousness"
+    },
+    {
+      "id": "care_e030fcb0-9b8c-46a0-9235-5a0a069810df",
+      "startDate": "2015-03-16",
+      "endDate": "2015-05-15",
+      "encounter": "dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "description": "Fracture care",
+      "reasonDescription": "Fracture subluxation of wrist"
+    },
+    {
+      "id": "care_c9964909-87db-471e-aa5c-3d977b9aa818",
+      "startDate": "2015-09-11",
+      "endDate": NaN,
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "description": "Lifestyle education regarding hypertension",
+      "reasonDescription": "Hypertension"
+    },
+    {
+      "id": "care_a0faf479-8e06-4170-8b2b-9ccc305a1822",
+      "startDate": "2018-06-08",
+      "endDate": "2019-01-18",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "description": "Routine antenatal care",
+      "reasonDescription": "Normal pregnancy"
+    },
+    {
+      "id": "care_fdc64d99-fac3-45a0-8ec7-dbb1c1a326e1",
+      "startDate": "2019-04-24",
+      "endDate": "2019-05-08",
+      "encounter": "fd599040-d14f-4668-8b3e-88af5ecda134",
+      "description": "Wound care",
+      "reasonDescription": "Facial laceration"
+    },
+    {
+      "id": "care_f2eb5326-e708-4dfb-97ba-f30e85c82b6f",
+      "startDate": "2019-06-21",
+      "endDate": "2020-01-17",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "description": "Routine antenatal care",
+      "reasonDescription": "Normal pregnancy"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_83815124-8faa-4bbc-9cbb-a16393353662",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2010-08-13",
+      "endDate": "2010-08-13",
+      "startTime": "20:13:17",
+      "endTime": "20:43:17"
+    },
+    {
+      "id": "enc_372479c3-dae3-4a37-96f1-7c81babb7ccc",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2010-08-18",
+      "endDate": "2010-08-18",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_e1f73b85-9055-4a8d-b061-4bd6473e4a07",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "2011-01-07",
+      "endDate": "2011-01-07",
+      "startTime": "20:13:17",
+      "endTime": "20:39:17"
+    },
+    {
+      "id": "enc_0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2011-01-14",
+      "endDate": "2011-01-14",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_9d9a2004-f0ce-4438-a2fd-28e3ee020b4d",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2011-04-06",
+      "endDate": "2011-04-06",
+      "startTime": "20:13:17",
+      "endTime": "21:13:17"
+    },
+    {
+      "id": "enc_b8913453-f882-4d8e-a835-4e2a3c9cd4e4",
+      "type": "ambulatory",
+      "description": "Encounter for 'check-up'",
+      "reason": "Concussion with no loss of consciousness",
+      "startDate": "2011-06-05",
+      "endDate": "2011-06-05",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2011-08-19",
+      "endDate": "2011-08-19",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_c0ce4322-995d-48b9-9513-4f41cb725b70",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2011-10-20",
+      "endDate": "2011-10-21",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_c3503275-7758-421a-b058-afb1fe74506c",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2012-04-06",
+      "endDate": "2012-04-07",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_3abdb303-31aa-4049-b0d7-1de435d3cb83",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2012-05-20",
+      "endDate": "2012-05-21",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_29ae378e-12c6-44cc-be1f-499934719f8f",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2012-07-09",
+      "endDate": "2012-07-09",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_189e92f4-563d-4c5e-b818-db80d5a2b20f",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2012-07-26",
+      "endDate": "2012-07-27",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2012-08-24",
+      "endDate": "2012-08-24",
+      "startTime": "20:13:17",
+      "endTime": "20:43:17"
+    },
+    {
+      "id": "enc_902a6896-9554-4eb6-abfa-07628d33a9bd",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2012-10-20",
+      "endDate": "2012-10-21",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_b371a8ff-9a84-4c8e-9274-674278c9d900",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2012-12-10",
+      "endDate": "2012-12-11",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_b6600272-8a3a-4f34-8159-85e9ab413145",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2013-03-29",
+      "endDate": "2013-03-30",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_cd66807e-a4c9-42a9-859e-02449fd41108",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2013-08-15",
+      "endDate": "2013-08-16",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2013-08-30",
+      "endDate": "2013-08-30",
+      "startTime": "20:13:17",
+      "endTime": "20:43:17"
+    },
+    {
+      "id": "enc_6de18333-9d75-40c4-bbb5-fe3cc80b039a",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2013-10-26",
+      "endDate": "2013-10-27",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_6a2c536d-7670-49c7-b811-6574ab2a1e7f",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2013-12-02",
+      "endDate": "2013-12-03",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_1802436b-6d81-4af3-ba58-890178e7a6c6",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2014-03-23",
+      "endDate": "2014-03-24",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_e63abda2-7973-4091-8e07-5cb883161823",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2014-06-10",
+      "endDate": "2014-06-11",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_9f2ebc41-7574-46f6-9187-10071bc99676",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2014-09-05",
+      "endDate": "2014-09-05",
+      "startTime": "20:13:17",
+      "endTime": "20:43:17"
+    },
+    {
+      "id": "enc_dbcc735e-9165-4e05-b78c-8c72550d18fc",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2014-10-13",
+      "endDate": "2014-10-14",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_c89693ed-3013-4bdf-a9a0-2e8ccc42ec4a",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2015-01-21",
+      "endDate": "2015-01-22",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_c077394f-e454-405f-95d6-0c4cfe8b41ee",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2015-03-20",
+      "endDate": "2015-03-21",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2015-03-16",
+      "endDate": "2015-03-16",
+      "startTime": "20:13:17",
+      "endTime": "22:08:17"
+    },
+    {
+      "id": "enc_a7866755-c131-4693-abcf-7fb375b50230",
+      "type": "ambulatory",
+      "description": "Encounter for 'check-up'",
+      "reason": "Fracture subluxation of wrist",
+      "startDate": "2015-05-15",
+      "endDate": "2015-05-15",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_d89d1e87-2981-415f-a324-491ab4388c9d",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2015-06-24",
+      "endDate": "2015-06-24",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_6d04adc5-cf0e-4fbd-8153-13d296ce1804",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2015-07-30",
+      "endDate": "2015-07-31",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2015-09-11",
+      "endDate": "2015-09-11",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_61d383f9-09e3-4b75-922f-563f758a965f",
+      "type": "ambulatory",
+      "description": "Hypertension follow-up encounter",
+      "reason": NaN,
+      "startDate": "2015-10-11",
+      "endDate": "2015-10-11",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_d5a263a0-c325-4186-94f3-4d6c8c530162",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2015-10-26",
+      "endDate": "2015-10-27",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_ba8b057c-09df-4bfa-a324-a58daf967c3b",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2016-02-12",
+      "endDate": "2016-02-13",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_2bd74de3-32ba-49d6-9f7b-987a8a90da42",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2016-07-09",
+      "endDate": "2016-07-10",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2016-09-16",
+      "endDate": "2016-09-16",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_72a37de4-65d8-452b-9f3a-c4c71f2b11f6",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2016-10-05",
+      "endDate": "2016-10-06",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_c154fc80-de65-42da-8311-b79e9f1db56b",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2016-11-11",
+      "endDate": "2016-11-12",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_c9b79c2c-9ba5-4839-90a6-fc0e66bfcc8b",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2017-04-13",
+      "endDate": "2017-04-14",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_24525a25-58f0-42ab-9b45-ef99c7257228",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2017-07-01",
+      "endDate": "2017-07-02",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_6b24d43e-bbe7-495b-835f-53a12765f63f",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2017-08-14",
+      "endDate": "2017-08-15",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2017-09-22",
+      "endDate": "2017-09-22",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_a0799f3b-c57d-41fa-87a2-361dbb0d9034",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2017-10-27",
+      "endDate": "2017-10-28",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_9dd90d6b-62f0-4134-a107-2c311274af9b",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2018-01-16",
+      "endDate": "2018-01-17",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_46fad99b-88b4-4d4c-85f2-ef443da7d415",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-02-16",
+      "endDate": "2018-02-16",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_463e0a64-4de5-49c9-9b29-e4f0679dd72b",
+      "type": "ambulatory",
+      "description": "Patient-initiated encounter",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-02-23",
+      "endDate": "2018-02-23",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_d12b09d9-130c-40d6-ab1f-dd403da8196e",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-03-02",
+      "endDate": "2018-03-02",
+      "startTime": "20:13:17",
+      "endTime": "21:13:17"
+    },
+    {
+      "id": "enc_1833b72c-ff11-4557-b255-5aafd1f09353",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2018-03-23",
+      "endDate": "2018-03-23",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2018-03-23",
+      "endDate": "2018-03-23",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_a673c236-f813-413a-8a03-35ab000738e9",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-06-08",
+      "endDate": "2018-06-09",
+      "startTime": "20:13:17",
+      "endTime": "01:28:17"
+    },
+    {
+      "id": "enc_15e9c9e3-1b6c-496a-b03c-a94d164767e7",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2018-06-27",
+      "endDate": "2018-06-28",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_c21d1c9e-1123-4b7d-ab02-b744f5176966",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-07-06",
+      "endDate": "2018-07-06",
+      "startTime": "20:13:17",
+      "endTime": "21:13:17"
+    },
+    {
+      "id": "enc_a6b4ffe4-ee34-438d-85e1-df976934bb1a",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-08-03",
+      "endDate": "2018-08-03",
+      "startTime": "20:13:17",
+      "endTime": "21:28:17"
+    },
+    {
+      "id": "enc_6c9259de-0ebf-4dac-b1d4-7ec8d0671fed",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Impacted molars",
+      "startDate": "2018-08-10",
+      "endDate": "2018-08-11",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_19d420dd-8a35-4cc1-8732-f80a30539fb5",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-08-31",
+      "endDate": "2018-08-31",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_d3c1d239-c36a-43c9-8e4c-70d72d014e44",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2018-09-28",
+      "endDate": "2018-09-28",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-09-28",
+      "endDate": "2018-09-28",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_076cd60a-0b83-4e23-80be-37a8e8d1319e",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-10-26",
+      "endDate": "2018-10-26",
+      "startTime": "20:13:17",
+      "endTime": "21:43:17"
+    },
+    {
+      "id": "enc_a1e75c72-eaec-41cc-aa30-7f97cd479143",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic intractable migraine without aura",
+      "startDate": "2018-11-04",
+      "endDate": "2018-11-05",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_6f499ea5-821f-4d4e-af88-baec97e91e55",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-11-23",
+      "endDate": "2018-11-23",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_cdf57f0e-dac6-4d46-b97c-e341ea83f55b",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2018-12-21",
+      "endDate": "2018-12-21",
+      "startTime": "20:13:17",
+      "endTime": "21:13:17"
+    },
+    {
+      "id": "enc_1145c123-4b03-4457-84b3-7b35146cdad3",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-01-04",
+      "endDate": "2019-01-04",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_ef21706c-53e3-450c-bed9-655fee4a7a07",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-01-11",
+      "endDate": "2019-01-11",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_fb70fe4d-cc4a-4309-a44a-3f75ea3db3d7",
+      "type": "emergency",
+      "description": "Obstetric emergency hospital admission",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-01-18",
+      "endDate": "2019-01-18",
+      "startTime": "20:13:17",
+      "endTime": "21:43:17"
+    },
+    {
+      "id": "enc_0232dd25-7a23-456d-94c6-9dc4cc26a0cd",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2019-01-24",
+      "endDate": "2019-01-25",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_b00cb964-b193-47cf-9155-40bfc4fc8f73",
+      "type": "ambulatory",
+      "description": "Postnatal visit",
+      "reason": NaN,
+      "startDate": "2019-03-01",
+      "endDate": "2019-03-01",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_fd599040-d14f-4668-8b3e-88af5ecda134",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2019-04-24",
+      "endDate": "2019-04-24",
+      "startTime": "20:13:17",
+      "endTime": "21:50:17"
+    },
+    {
+      "id": "enc_99bf5528-f956-4f94-89e8-7298906cd76b",
+      "type": "urgentcare",
+      "description": "Urgent care clinic (procedure)",
+      "reason": NaN,
+      "startDate": "2019-06-07",
+      "endDate": "2019-06-07",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_50fa7538-51d3-460c-afcf-7bf0dc8b6bfc",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2019-06-07",
+      "endDate": "2019-06-07",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2019-06-14",
+      "endDate": "2019-06-14",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    },
+    {
+      "id": "enc_15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-06-21",
+      "endDate": "2019-06-22",
+      "startTime": "20:13:17",
+      "endTime": "01:28:17"
+    },
+    {
+      "id": "enc_fe7bba91-5286-44f3-a1c5-2b68277755f2",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-07-19",
+      "endDate": "2019-07-19",
+      "startTime": "20:13:17",
+      "endTime": "21:13:17"
+    },
+    {
+      "id": "enc_cd75456d-6e49-44c7-8c88-d9263d57fea9",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-08-16",
+      "endDate": "2019-08-16",
+      "startTime": "20:13:17",
+      "endTime": "21:28:17"
+    },
+    {
+      "id": "enc_c4fe23a5-597d-4453-8cc3-3399b4e93173",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-09-13",
+      "endDate": "2019-09-13",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_194257bd-c5f9-445c-ab85-649750d2077d",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2019-10-04",
+      "endDate": "2019-10-04",
+      "startTime": "20:13:17",
+      "endTime": "20:43:17"
+    },
+    {
+      "id": "enc_cbd65479-0890-4a2c-bceb-f456a5af170f",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-10-11",
+      "endDate": "2019-10-11",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_2c150206-760f-4f44-ab42-a9cb8aa8eddf",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-11-08",
+      "endDate": "2019-11-08",
+      "startTime": "20:13:17",
+      "endTime": "21:43:17"
+    },
+    {
+      "id": "enc_8c3fd9b1-7a9d-4695-aa11-67256635e890",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2019-12-06",
+      "endDate": "2019-12-06",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_33c69906-fb22-457d-a147-c236c032bdd2",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2020-01-03",
+      "endDate": "2020-01-03",
+      "startTime": "20:13:17",
+      "endTime": "21:13:17"
+    },
+    {
+      "id": "enc_8d5259d2-46ac-4e16-8407-cab80a3e92b0",
+      "type": "emergency",
+      "description": "Obstetric emergency hospital admission",
+      "reason": "Normal pregnancy",
+      "startDate": "2020-01-17",
+      "endDate": "2020-01-17",
+      "startTime": "20:13:17",
+      "endTime": "21:43:17"
+    },
+    {
+      "id": "enc_d7f24a37-e081-4f96-9d2c-6211c1c8b747",
+      "type": "inpatient",
+      "description": "Drug rehabilitation and detoxification",
+      "reason": NaN,
+      "startDate": "2020-01-23",
+      "endDate": "2020-01-24",
+      "startTime": "20:13:17",
+      "endTime": "20:13:17"
+    },
+    {
+      "id": "enc_2d95aee3-93d2-40cb-8a57-a9cba22e1a51",
+      "type": "ambulatory",
+      "description": "Postnatal visit",
+      "reason": NaN,
+      "startDate": "2020-02-28",
+      "endDate": "2020-02-28",
+      "startTime": "20:13:17",
+      "endTime": "20:58:17"
+    },
+    {
+      "id": "enc_c7ed099d-4be8-4b4c-8991-5a2249ae8e89",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2020-02-24",
+      "endDate": "2020-02-24",
+      "startTime": "20:13:17",
+      "endTime": "20:28:17"
+    }
+  ],
+  "imaging_studies": [
+    {
+      "id": "img_7680aa38-576e-4992-be3b-108e9cf4ff88",
+      "date": "2015-03-16",
+      "encounter": "dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "bodysite": "Wrist",
+      "modality": "Digital Radiography"
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_2cfe1678-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "372479c3-dae3-4a37-96f1-7c81babb7ccc",
+      "startDate": "2010-08-18",
+      "endDate": "2010-08-25"
+    },
+    {
+      "condition": "Acute bronchitis (disorder)",
+      "id": "cond_2cfe17a4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e1f73b85-9055-4a8d-b061-4bd6473e4a07",
+      "startDate": "2011-01-07",
+      "endDate": "2011-01-14"
+    },
+    {
+      "condition": "Concussion with no loss of consciousness",
+      "id": "cond_2cfe18d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9d9a2004-f0ce-4438-a2fd-28e3ee020b4d",
+      "startDate": "2011-04-06",
+      "endDate": "2011-06-05"
+    },
+    {
+      "condition": "Chronic intractable migraine without aura",
+      "id": "cond_2cfe19e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c0ce4322-995d-48b9-9513-4f41cb725b70",
+      "startDate": "2011-10-20",
+      "endDate": null
+    },
+    {
+      "condition": "Impacted molars",
+      "id": "cond_2cfe1b1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c3503275-7758-421a-b058-afb1fe74506c",
+      "startDate": "2012-04-06",
+      "endDate": null
+    },
+    {
+      "condition": "Chronic pain",
+      "id": "cond_2cfe1c40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3abdb303-31aa-4049-b0d7-1de435d3cb83",
+      "startDate": "2012-05-20",
+      "endDate": null
+    },
+    {
+      "condition": "Fracture subluxation of wrist",
+      "id": "cond_2cfe1e8e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "startDate": "2015-03-16",
+      "endDate": "2015-05-15"
+    },
+    {
+      "condition": "Hypertension",
+      "id": "cond_2cfe1fc4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "startDate": "2015-09-11",
+      "endDate": null
+    },
+    {
+      "condition": "Normal pregnancy",
+      "id": "cond_2cfe20e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "46fad99b-88b4-4d4c-85f2-ef443da7d415",
+      "startDate": "2018-02-16",
+      "endDate": "2018-03-02"
+    },
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_2cfe23d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "startDate": "2018-03-23",
+      "endDate": "2018-04-06"
+    },
+    {
+      "condition": "Normal pregnancy",
+      "id": "cond_2cfe24f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "startDate": "2018-06-08",
+      "endDate": "2019-01-18"
+    },
+    {
+      "condition": "Facial laceration",
+      "id": "cond_2cfe262c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd599040-d14f-4668-8b3e-88af5ecda134",
+      "startDate": "2019-04-24",
+      "endDate": "2019-05-08"
+    },
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_2cfe2744-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "50fa7538-51d3-460c-afcf-7bf0dc8b6bfc",
+      "startDate": "2019-06-07",
+      "endDate": "2019-06-28"
+    },
+    {
+      "condition": "Normal pregnancy",
+      "id": "cond_2cfe287a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "startDate": "2019-06-21",
+      "endDate": "2020-01-17"
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1482dc-5305-11f1-a6a5-00155d35d14f",
+      "date": "2010-08-13",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662"
+    },
+    {
+      "name": "HPV  quadrivalent",
+      "id": "immu_2d1482f0-5305-11f1-a6a5-00155d35d14f",
+      "date": "2010-08-13",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1482fa-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-08-19",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d14830e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2012-08-24",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d148318-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-08-30",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c"
+    },
+    {
+      "name": "meningococcal MCV4P",
+      "id": "immu_2d14832c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-08-30",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d148368-5305-11f1-a6a5-00155d35d14f",
+      "date": "2014-09-05",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d14837c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-09-11",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d148386-5305-11f1-a6a5-00155d35d14f",
+      "date": "2016-09-16",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d14839a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-09-22",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d1483a4-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-09-22",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1484f8-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-03-23",
+      "encounter": "1833b72c-ff11-4557-b255-5aafd1f09353"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d14852a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-03-23",
+      "encounter": "1833b72c-ff11-4557-b255-5aafd1f09353"
+    },
+    {
+      "name": "Td (adult) preservative free",
+      "id": "immu_2d14858e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-09-28",
+      "encounter": "d3c1d239-c36a-43c9-8e4c-70d72d014e44"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d1485a2-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-09-28",
+      "encounter": "d3c1d239-c36a-43c9-8e4c-70d72d014e44"
+    },
+    {
+      "name": "meningococcal MCV4P",
+      "id": "immu_2d1485ac-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-09-28",
+      "encounter": "d3c1d239-c36a-43c9-8e4c-70d72d014e44"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1485c0-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-06-07",
+      "encounter": "99bf5528-f956-4f94-89e8-7298906cd76b"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d284ac4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e1f73b85-9055-4a8d-b061-4bd6473e4a07",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "2011-01-07",
+      "endDate": "2011-01-14"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284ae2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c0ce4322-995d-48b9-9513-4f41cb725b70",
+      "reason": NaN,
+      "startDate": "2011-10-20",
+      "endDate": "2011-12-08"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284af6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c3503275-7758-421a-b058-afb1fe74506c",
+      "reason": NaN,
+      "startDate": "2012-04-06",
+      "endDate": "2012-04-20"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284b0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3abdb303-31aa-4049-b0d7-1de435d3cb83",
+      "reason": NaN,
+      "startDate": "2012-05-20",
+      "endDate": "2012-05-27"
+    },
+    {
+      "description": "Seasonique 91 Day Pack",
+      "id": "med_2d284b1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "29ae378e-12c6-44cc-be1f-499934719f8f",
+      "reason": NaN,
+      "startDate": "2012-07-09",
+      "endDate": "2013-07-04"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284b32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "189e92f4-563d-4c5e-b818-db80d5a2b20f",
+      "reason": NaN,
+      "startDate": "2012-07-26",
+      "endDate": "2012-09-20"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284b46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "902a6896-9554-4eb6-abfa-07628d33a9bd",
+      "reason": NaN,
+      "startDate": "2012-10-20",
+      "endDate": "2012-11-10"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284b50-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b371a8ff-9a84-4c8e-9274-674278c9d900",
+      "reason": NaN,
+      "startDate": "2012-12-10",
+      "endDate": "2013-01-28"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284b64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b6600272-8a3a-4f34-8159-85e9ab413145",
+      "reason": NaN,
+      "startDate": "2013-03-29",
+      "endDate": "2013-05-03"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284b8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd66807e-a4c9-42a9-859e-02449fd41108",
+      "reason": NaN,
+      "startDate": "2013-08-15",
+      "endDate": "2013-09-26"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284ba0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6de18333-9d75-40c4-bbb5-fe3cc80b039a",
+      "reason": NaN,
+      "startDate": "2013-10-26",
+      "endDate": "2013-11-02"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284bb4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6a2c536d-7670-49c7-b811-6574ab2a1e7f",
+      "reason": NaN,
+      "startDate": "2013-12-02",
+      "endDate": "2013-12-23"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284bc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1802436b-6d81-4af3-ba58-890178e7a6c6",
+      "reason": NaN,
+      "startDate": "2014-03-23",
+      "endDate": "2014-05-11"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284bdc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e63abda2-7973-4091-8e07-5cb883161823",
+      "reason": NaN,
+      "startDate": "2014-06-10",
+      "endDate": "2014-07-15"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284be6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dbcc735e-9165-4e05-b78c-8c72550d18fc",
+      "reason": NaN,
+      "startDate": "2014-10-13",
+      "endDate": "2014-12-22"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284bfa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89693ed-3013-4bdf-a9a0-2e8ccc42ec4a",
+      "reason": NaN,
+      "startDate": "2015-01-21",
+      "endDate": "2015-02-18"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284c0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c077394f-e454-405f-95d6-0c4cfe8b41ee",
+      "reason": NaN,
+      "startDate": "2015-03-20",
+      "endDate": "2015-05-01"
+    },
+    {
+      "description": "Ibuprofen 200 MG Oral Tablet",
+      "id": "med_2d284c22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "reason": NaN,
+      "startDate": "2015-03-16",
+      "endDate": "2015-05-15"
+    },
+    {
+      "description": "Yaz 28 Day Pack",
+      "id": "med_2d284c36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d89d1e87-2981-415f-a324-491ab4388c9d",
+      "reason": NaN,
+      "startDate": "2015-06-24",
+      "endDate": "2016-06-18"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284c54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6d04adc5-cf0e-4fbd-8153-13d296ce1804",
+      "reason": NaN,
+      "startDate": "2015-07-30",
+      "endDate": "2015-08-27"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284c68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "reason": "Hypertension",
+      "startDate": "2015-09-11",
+      "endDate": "2016-09-16"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284c7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d5a263a0-c325-4186-94f3-4d6c8c530162",
+      "reason": NaN,
+      "startDate": "2015-10-26",
+      "endDate": "2015-12-14"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284c86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba8b057c-09df-4bfa-a324-a58daf967c3b",
+      "reason": NaN,
+      "startDate": "2016-02-12",
+      "endDate": "2016-03-11"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284c9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2bd74de3-32ba-49d6-9f7b-987a8a90da42",
+      "reason": NaN,
+      "startDate": "2016-07-09",
+      "endDate": "2016-08-06"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284cae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "reason": "Hypertension",
+      "startDate": "2016-09-16",
+      "endDate": "2017-09-22"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284cc2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "72a37de4-65d8-452b-9f3a-c4c71f2b11f6",
+      "reason": NaN,
+      "startDate": "2016-10-05",
+      "endDate": "2016-10-12"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284cd6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c154fc80-de65-42da-8311-b79e9f1db56b",
+      "reason": NaN,
+      "startDate": "2016-11-11",
+      "endDate": "2016-12-16"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284cea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c9b79c2c-9ba5-4839-90a6-fc0e66bfcc8b",
+      "reason": NaN,
+      "startDate": "2017-04-13",
+      "endDate": "2017-06-01"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284cfe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "24525a25-58f0-42ab-9b45-ef99c7257228",
+      "reason": NaN,
+      "startDate": "2017-07-01",
+      "endDate": "2017-07-15"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284d12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6b24d43e-bbe7-495b-835f-53a12765f63f",
+      "reason": NaN,
+      "startDate": "2017-08-14",
+      "endDate": "2017-08-28"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284d26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "reason": "Hypertension",
+      "startDate": "2017-09-22",
+      "endDate": "2018-03-23"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284d3a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a0799f3b-c57d-41fa-87a2-361dbb0d9034",
+      "reason": NaN,
+      "startDate": "2017-10-27",
+      "endDate": "2017-11-17"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284d4e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9dd90d6b-62f0-4134-a107-2c311274af9b",
+      "reason": NaN,
+      "startDate": "2018-01-16",
+      "endDate": "2018-02-27"
+    },
+    {
+      "description": "Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",
+      "id": "med_2d284d80-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2018-03-23",
+      "endDate": "2018-04-06"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284d94-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "reason": "Hypertension",
+      "startDate": "2018-03-23",
+      "endDate": "2018-09-28"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284da8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15e9c9e3-1b6c-496a-b03c-a94d164767e7",
+      "reason": NaN,
+      "startDate": "2018-06-27",
+      "endDate": "2018-07-11"
+    },
+    {
+      "description": "Acetaminophen 300 MG / HYDROcodone Bitartrate 5 MG Oral Tablet",
+      "id": "med_2d284dbc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6c9259de-0ebf-4dac-b1d4-7ec8d0671fed",
+      "reason": NaN,
+      "startDate": "2018-08-10",
+      "endDate": "2018-10-05"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284dd0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "reason": "Hypertension",
+      "startDate": "2018-09-28",
+      "endDate": "2019-06-14"
+    },
+    {
+      "description": "Acetaminophen 325 MG / Oxycodone Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d284de4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a1e75c72-eaec-41cc-aa30-7f97cd479143",
+      "reason": NaN,
+      "startDate": "2018-11-04",
+      "endDate": "2018-11-25"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d284df8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0232dd25-7a23-456d-94c6-9dc4cc26a0cd",
+      "reason": NaN,
+      "startDate": "2019-01-24",
+      "endDate": "2019-02-14"
+    },
+    {
+      "description": "Ibuprofen 200 MG Oral Tablet",
+      "id": "med_2d284e0c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd599040-d14f-4668-8b3e-88af5ecda134",
+      "reason": NaN,
+      "startDate": "2019-04-24",
+      "endDate": "2019-05-08"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284e20-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "reason": "Hypertension",
+      "startDate": "2019-06-14",
+      "endDate": "2019-10-04"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d284e34-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "reason": "Hypertension",
+      "startDate": "2019-10-04",
+      "endDate": null
+    },
+    {
+      "description": "Errin 28 Day Pack",
+      "id": "med_2d284e48-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c7ed099d-4be8-4b4c-8991-5a2249ae8e89",
+      "reason": NaN,
+      "startDate": "2020-02-24",
+      "endDate": null
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3d3e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "reason": NaN,
+      "date": "2010-08-13",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Measurement of respiratory function (procedure)",
+      "id": "proc_2d3e3d52-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e1f73b85-9055-4a8d-b061-4bd6473e4a07",
+      "reason": "Acute bronchitis (disorder)",
+      "date": "2011-01-07",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e3d5c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c3503275-7758-421a-b058-afb1fe74506c",
+      "reason": NaN,
+      "date": "2012-04-06",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3d70-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "reason": NaN,
+      "date": "2012-08-24",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e3d7a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b371a8ff-9a84-4c8e-9274-674278c9d900",
+      "reason": NaN,
+      "date": "2012-12-10",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3d8e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "reason": NaN,
+      "date": "2013-08-30",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e3da2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1802436b-6d81-4af3-ba58-890178e7a6c6",
+      "reason": NaN,
+      "date": "2014-03-23",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e3dde-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e63abda2-7973-4091-8e07-5cb883161823",
+      "reason": NaN,
+      "date": "2014-06-10",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3de8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "reason": NaN,
+      "date": "2014-09-05",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "X-ray or wrist",
+      "id": "proc_2d3e3dfc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "reason": NaN,
+      "date": "2015-03-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Bone immobilization",
+      "id": "proc_2d3e3e10-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dabe8612-4724-40bb-b904-cac5b8c8f7b9",
+      "reason": "Fracture subluxation of wrist",
+      "date": "2015-03-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e3e1a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c154fc80-de65-42da-8311-b79e9f1db56b",
+      "reason": NaN,
+      "date": "2016-11-11",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Standard pregnancy test",
+      "id": "proc_2d3e3e38-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "46fad99b-88b4-4d4c-85f2-ef443da7d415",
+      "reason": "Normal pregnancy",
+      "date": "2018-02-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Ultrasound scan for fetal viability",
+      "id": "proc_2d3e3e42-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "46fad99b-88b4-4d4c-85f2-ef443da7d415",
+      "reason": "Normal pregnancy",
+      "date": "2018-02-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Counseling for termination of pregnancy",
+      "id": "proc_2d3e3e56-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "463e0a64-4de5-49c9-9b29-e4f0679dd72b",
+      "reason": "Normal pregnancy",
+      "date": "2018-02-23",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Induced termination of pregnancy",
+      "id": "proc_2d3e3e60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "463e0a64-4de5-49c9-9b29-e4f0679dd72b",
+      "reason": "Normal pregnancy",
+      "date": "2018-02-23",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Pregnancy termination care",
+      "id": "proc_2d3e3e74-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d12b09d9-130c-40d6-ab1f-dd403da8196e",
+      "reason": "Normal pregnancy",
+      "date": "2018-03-02",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Physical exam following abortion",
+      "id": "proc_2d3e3e7e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d12b09d9-130c-40d6-ab1f-dd403da8196e",
+      "reason": "Normal pregnancy",
+      "date": "2018-03-02",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Depression screening",
+      "id": "proc_2d3e3e92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d12b09d9-130c-40d6-ab1f-dd403da8196e",
+      "reason": "Normal pregnancy",
+      "date": "2018-03-02",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3ec4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "reason": NaN,
+      "date": "2018-03-23",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Standard pregnancy test",
+      "id": "proc_2d3e3ece-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Ultrasound scan for fetal viability",
+      "id": "proc_2d3e3ee2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e3ef6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e3f0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Blood typing  RH typing",
+      "id": "proc_2d3e3f14-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hemoglobin / Hematocrit / Platelet count",
+      "id": "proc_2d3e3f28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hepatitis B Surface Antigen Measurement",
+      "id": "proc_2d3e3f32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Human immunodeficiency virus antigen test",
+      "id": "proc_2d3e3f46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Chlamydia antigen test",
+      "id": "proc_2d3e3f5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Gonorrhea infection test",
+      "id": "proc_2d3e3f64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Syphilis infection test",
+      "id": "proc_2d3e3f78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine culture",
+      "id": "proc_2d3e3f8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Cytopathology procedure  preparation of smear  genital source",
+      "id": "proc_2d3e3fa0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine screening test for diabetes",
+      "id": "proc_2d3e3faa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hepatitis C antibody test",
+      "id": "proc_2d3e4018-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Rubella screening",
+      "id": "proc_2d3e4068-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Measurement of Varicella-zoster virus antibody",
+      "id": "proc_2d3e4086-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Skin test for tuberculosis",
+      "id": "proc_2d3e409a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine protein test",
+      "id": "proc_2d3e40a4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Physical examination of mother",
+      "id": "proc_2d3e40b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a673c236-f813-413a-8a03-35ab000738e9",
+      "reason": "Normal pregnancy",
+      "date": "2018-06-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e40cc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15e9c9e3-1b6c-496a-b03c-a94d164767e7",
+      "reason": NaN,
+      "date": "2018-06-27",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e40d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c21d1c9e-1123-4b7d-ab02-b744f5176966",
+      "reason": "Normal pregnancy",
+      "date": "2018-07-06",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e4108-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c21d1c9e-1123-4b7d-ab02-b744f5176966",
+      "reason": "Normal pregnancy",
+      "date": "2018-07-06",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Screening for chromosomal aneuploidy in prenatal amniotic fluid",
+      "id": "proc_2d3e411c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c21d1c9e-1123-4b7d-ab02-b744f5176966",
+      "reason": "Normal pregnancy",
+      "date": "2018-07-06",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Fetal anatomy study",
+      "id": "proc_2d3e413a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a6b4ffe4-ee34-438d-85e1-df976934bb1a",
+      "reason": "Normal pregnancy",
+      "date": "2018-08-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Alpha-fetoprotein test",
+      "id": "proc_2d3e414e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a6b4ffe4-ee34-438d-85e1-df976934bb1a",
+      "reason": "Normal pregnancy",
+      "date": "2018-08-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4162-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a6b4ffe4-ee34-438d-85e1-df976934bb1a",
+      "reason": "Normal pregnancy",
+      "date": "2018-08-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e416c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a6b4ffe4-ee34-438d-85e1-df976934bb1a",
+      "reason": "Normal pregnancy",
+      "date": "2018-08-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Extraction of wisdom tooth",
+      "id": "proc_2d3e4180-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6c9259de-0ebf-4dac-b1d4-7ec8d0671fed",
+      "reason": NaN,
+      "date": "2018-08-10",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4194-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "19d420dd-8a35-4cc1-8732-f80a30539fb5",
+      "reason": "Normal pregnancy",
+      "date": "2018-08-31",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e419e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "19d420dd-8a35-4cc1-8732-f80a30539fb5",
+      "reason": "Normal pregnancy",
+      "date": "2018-08-31",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e41b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "reason": "Normal pregnancy",
+      "date": "2018-09-28",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e41bc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "reason": "Normal pregnancy",
+      "date": "2018-09-28",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e41da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "reason": NaN,
+      "date": "2018-09-28",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hemoglobin / Hematocrit / Platelet count",
+      "id": "proc_2d3e41e4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "076cd60a-0b83-4e23-80be-37a8e8d1319e",
+      "reason": "Normal pregnancy",
+      "date": "2018-10-26",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Vaccination for diphtheria  pertussis  and tetanus",
+      "id": "proc_2d3e41f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "076cd60a-0b83-4e23-80be-37a8e8d1319e",
+      "reason": "Normal pregnancy",
+      "date": "2018-10-26",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine screening for glucose",
+      "id": "proc_2d3e4202-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "076cd60a-0b83-4e23-80be-37a8e8d1319e",
+      "reason": "Normal pregnancy",
+      "date": "2018-10-26",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4216-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "076cd60a-0b83-4e23-80be-37a8e8d1319e",
+      "reason": "Normal pregnancy",
+      "date": "2018-10-26",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e422a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "076cd60a-0b83-4e23-80be-37a8e8d1319e",
+      "reason": "Normal pregnancy",
+      "date": "2018-10-26",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4234-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6f499ea5-821f-4d4e-af88-baec97e91e55",
+      "reason": "Normal pregnancy",
+      "date": "2018-11-23",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e4248-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6f499ea5-821f-4d4e-af88-baec97e91e55",
+      "reason": "Normal pregnancy",
+      "date": "2018-11-23",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Streptococcus pneumoniae group B antigen test",
+      "id": "proc_2d3e425c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cdf57f0e-dac6-4d46-b97c-e341ea83f55b",
+      "reason": "Normal pregnancy",
+      "date": "2018-12-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4270-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cdf57f0e-dac6-4d46-b97c-e341ea83f55b",
+      "reason": "Normal pregnancy",
+      "date": "2018-12-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e427a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cdf57f0e-dac6-4d46-b97c-e341ea83f55b",
+      "reason": "Normal pregnancy",
+      "date": "2018-12-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e428e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1145c123-4b03-4457-84b3-7b35146cdad3",
+      "reason": "Normal pregnancy",
+      "date": "2019-01-04",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e42a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1145c123-4b03-4457-84b3-7b35146cdad3",
+      "reason": "Normal pregnancy",
+      "date": "2019-01-04",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e42ac-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef21706c-53e3-450c-bed9-655fee4a7a07",
+      "reason": "Normal pregnancy",
+      "date": "2019-01-11",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e42c0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef21706c-53e3-450c-bed9-655fee4a7a07",
+      "reason": "Normal pregnancy",
+      "date": "2019-01-11",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Epidural anesthesia",
+      "id": "proc_2d3e42d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fb70fe4d-cc4a-4309-a44a-3f75ea3db3d7",
+      "reason": "Normal pregnancy",
+      "date": "2019-01-18",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Childbirth",
+      "id": "proc_2d3e42de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fb70fe4d-cc4a-4309-a44a-3f75ea3db3d7",
+      "reason": "Normal pregnancy",
+      "date": "2019-01-18",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Physical examination following birth",
+      "id": "proc_2d3e42f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b00cb964-b193-47cf-9155-40bfc4fc8f73",
+      "reason": NaN,
+      "date": "2019-03-01",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Depression screening",
+      "id": "proc_2d3e4306-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b00cb964-b193-47cf-9155-40bfc4fc8f73",
+      "reason": NaN,
+      "date": "2019-03-01",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Suture open wound",
+      "id": "proc_2d3e4310-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd599040-d14f-4668-8b3e-88af5ecda134",
+      "reason": "Facial laceration",
+      "date": "2019-04-24",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Injection of tetanus antitoxin",
+      "id": "proc_2d3e4324-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd599040-d14f-4668-8b3e-88af5ecda134",
+      "reason": "Facial laceration",
+      "date": "2019-04-24",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e4338-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "reason": NaN,
+      "date": "2019-06-14",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Standard pregnancy test",
+      "id": "proc_2d3e434c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Ultrasound scan for fetal viability",
+      "id": "proc_2d3e4356-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e436a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e437e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Blood typing  RH typing",
+      "id": "proc_2d3e4392-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hemoglobin / Hematocrit / Platelet count",
+      "id": "proc_2d3e439c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hepatitis B Surface Antigen Measurement",
+      "id": "proc_2d3e43b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Human immunodeficiency virus antigen test",
+      "id": "proc_2d3e43c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Chlamydia antigen test",
+      "id": "proc_2d3e43d8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Gonorrhea infection test",
+      "id": "proc_2d3e43e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Syphilis infection test",
+      "id": "proc_2d3e43f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine culture",
+      "id": "proc_2d3e4400-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Cytopathology procedure  preparation of smear  genital source",
+      "id": "proc_2d3e441e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine screening test for diabetes",
+      "id": "proc_2d3e4428-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hepatitis C antibody test",
+      "id": "proc_2d3e443c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Rubella screening",
+      "id": "proc_2d3e4446-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Measurement of Varicella-zoster virus antibody",
+      "id": "proc_2d3e445a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Skin test for tuberculosis",
+      "id": "proc_2d3e4464-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine protein test",
+      "id": "proc_2d3e4478-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Physical examination of mother",
+      "id": "proc_2d3e448c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15ef2e9e-fc61-415b-b4a3-1452201eb1ab",
+      "reason": "Normal pregnancy",
+      "date": "2019-06-21",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e44a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fe7bba91-5286-44f3-a1c5-2b68277755f2",
+      "reason": "Normal pregnancy",
+      "date": "2019-07-19",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e44b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fe7bba91-5286-44f3-a1c5-2b68277755f2",
+      "reason": "Normal pregnancy",
+      "date": "2019-07-19",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Screening for chromosomal aneuploidy in prenatal amniotic fluid",
+      "id": "proc_2d3e44be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fe7bba91-5286-44f3-a1c5-2b68277755f2",
+      "reason": "Normal pregnancy",
+      "date": "2019-07-19",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Fetal anatomy study",
+      "id": "proc_2d3e44d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd75456d-6e49-44c7-8c88-d9263d57fea9",
+      "reason": "Normal pregnancy",
+      "date": "2019-08-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Alpha-fetoprotein test",
+      "id": "proc_2d3e44dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd75456d-6e49-44c7-8c88-d9263d57fea9",
+      "reason": "Normal pregnancy",
+      "date": "2019-08-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e44fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd75456d-6e49-44c7-8c88-d9263d57fea9",
+      "reason": "Normal pregnancy",
+      "date": "2019-08-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e4504-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd75456d-6e49-44c7-8c88-d9263d57fea9",
+      "reason": "Normal pregnancy",
+      "date": "2019-08-16",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4518-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c4fe23a5-597d-4453-8cc3-3399b4e93173",
+      "reason": "Normal pregnancy",
+      "date": "2019-09-13",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e4522-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c4fe23a5-597d-4453-8cc3-3399b4e93173",
+      "reason": "Normal pregnancy",
+      "date": "2019-09-13",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e4536-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "reason": NaN,
+      "date": "2019-10-04",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e454a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cbd65479-0890-4a2c-bceb-f456a5af170f",
+      "reason": "Normal pregnancy",
+      "date": "2019-10-11",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e4554-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cbd65479-0890-4a2c-bceb-f456a5af170f",
+      "reason": "Normal pregnancy",
+      "date": "2019-10-11",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Hemoglobin / Hematocrit / Platelet count",
+      "id": "proc_2d3e4568-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2c150206-760f-4f44-ab42-a9cb8aa8eddf",
+      "reason": "Normal pregnancy",
+      "date": "2019-11-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Vaccination for diphtheria  pertussis  and tetanus",
+      "id": "proc_2d3e4572-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2c150206-760f-4f44-ab42-a9cb8aa8eddf",
+      "reason": "Normal pregnancy",
+      "date": "2019-11-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Urine screening for glucose",
+      "id": "proc_2d3e4586-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2c150206-760f-4f44-ab42-a9cb8aa8eddf",
+      "reason": "Normal pregnancy",
+      "date": "2019-11-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e4590-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2c150206-760f-4f44-ab42-a9cb8aa8eddf",
+      "reason": "Normal pregnancy",
+      "date": "2019-11-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e45a4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2c150206-760f-4f44-ab42-a9cb8aa8eddf",
+      "reason": "Normal pregnancy",
+      "date": "2019-11-08",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e45b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8c3fd9b1-7a9d-4695-aa11-67256635e890",
+      "reason": "Normal pregnancy",
+      "date": "2019-12-06",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e45c2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8c3fd9b1-7a9d-4695-aa11-67256635e890",
+      "reason": "Normal pregnancy",
+      "date": "2019-12-06",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Streptococcus pneumoniae group B antigen test",
+      "id": "proc_2d3e45d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "33c69906-fb22-457d-a147-c236c032bdd2",
+      "reason": "Normal pregnancy",
+      "date": "2020-01-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3e45e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "33c69906-fb22-457d-a147-c236c032bdd2",
+      "reason": "Normal pregnancy",
+      "date": "2020-01-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3e45fe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "33c69906-fb22-457d-a147-c236c032bdd2",
+      "reason": "Normal pregnancy",
+      "date": "2020-01-03",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Episiotomy",
+      "id": "proc_2d3e4608-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8d5259d2-46ac-4e16-8407-cab80a3e92b0",
+      "reason": "Normal pregnancy",
+      "date": "2020-01-17",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Childbirth",
+      "id": "proc_2d3e461c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8d5259d2-46ac-4e16-8407-cab80a3e92b0",
+      "reason": "Normal pregnancy",
+      "date": "2020-01-17",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Physical examination following birth",
+      "id": "proc_2d3e4626-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2d95aee3-93d2-40cb-8a57-a9cba22e1a51",
+      "reason": NaN,
+      "date": "2020-02-28",
+      "time": "20:13:17Z"
+    },
+    {
+      "description": "Depression screening",
+      "id": "proc_2d3e4644-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2d95aee3-93d2-40cb-8a57-a9cba22e1a51",
+      "reason": NaN,
+      "date": "2020-02-28",
+      "time": "20:13:17Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dd3c6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "148.4",
+      "units": "cm",
+      "date": "2010-08-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd3ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dd3f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "49.4",
+      "units": "kg",
+      "date": "2010-08-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dd40c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "22.4",
+      "units": "kg/m2",
+      "date": "2010-08-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dd420-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "84.3",
+      "units": "%",
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dd43e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dd45c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "130.0",
+      "units": "mm[Hg]",
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8dd470-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "67.0",
+      "units": "/min",
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8dd484-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8dd48e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "83815124-8faa-4bbc-9cbb-a16393353662",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2010-08-13",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dd4a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "150.3",
+      "units": "cm",
+      "date": "2011-01-14",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd4b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dd4ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "51.7",
+      "units": "kg",
+      "date": "2011-01-14",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dd4de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "22.9",
+      "units": "kg/m2",
+      "date": "2011-01-14",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dd4f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "84.9",
+      "units": "%",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dd4fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dd510-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "121.0",
+      "units": "mm[Hg]",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8dd524-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "95.0",
+      "units": "/min",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8dd52e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8dd542-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e4f08e8-0d04-4805-8fdf-3177a112de7b",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2011-01-14",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dd556-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "152.2",
+      "units": "cm",
+      "date": "2011-08-19",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd56a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dd57e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "57.2",
+      "units": "kg",
+      "date": "2011-08-19",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dd592-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "24.7",
+      "units": "kg/m2",
+      "date": "2011-08-19",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dd5a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "89.7",
+      "units": "%",
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dd5ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "77.0",
+      "units": "mm[Hg]",
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dd5ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "122.0",
+      "units": "mm[Hg]",
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8dd5e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "88.0",
+      "units": "/min",
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8dd5ec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8dd600-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "7ff37068-f3c1-4d72-996e-72133612cdd2",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2011-08-19",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd614-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c0ce4322-995d-48b9-9513-4f41cb725b70",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2011-10-20",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd61e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c3503275-7758-421a-b058-afb1fe74506c",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2012-04-06",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd632-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3abdb303-31aa-4049-b0d7-1de435d3cb83",
+      "value": "8.0",
+      "units": "{score}",
+      "date": "2012-05-20",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd646-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "189e92f4-563d-4c5e-b818-db80d5a2b20f",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2012-07-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dd65a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "153.7",
+      "units": "cm",
+      "date": "2012-08-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd66e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dd682-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "64.3",
+      "units": "kg",
+      "date": "2012-08-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dd68c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "27.2",
+      "units": "kg/m2",
+      "date": "2012-08-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dd6a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "93.6",
+      "units": "%",
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dd6b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dd6c8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "130.0",
+      "units": "mm[Hg]",
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8dd6dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "62.0",
+      "units": "/min",
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8dd6e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8dd6fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9680554d-aa4c-4e3f-bbd7-5a360a428e51",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2012-08-24",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd70e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "902a6896-9554-4eb6-abfa-07628d33a9bd",
+      "value": "8.0",
+      "units": "{score}",
+      "date": "2012-10-20",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd722-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b371a8ff-9a84-4c8e-9274-674278c9d900",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2012-12-10",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd736-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b6600272-8a3a-4f34-8159-85e9ab413145",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2013-03-29",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd740-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd66807e-a4c9-42a9-859e-02449fd41108",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2013-08-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dd754-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "154.3",
+      "units": "cm",
+      "date": "2013-08-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd768-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dd772-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "59.0",
+      "units": "kg",
+      "date": "2013-08-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dd786-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "24.8",
+      "units": "kg/m2",
+      "date": "2013-08-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dd79a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "85.3",
+      "units": "%",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dd7b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dd7c2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "126.0",
+      "units": "mm[Hg]",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8dd7d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "63.0",
+      "units": "/min",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8dd7ea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "12.0",
+      "units": "/min",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8dd7f4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "10.1",
+      "units": "10*3/uL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8dd808-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "4.2",
+      "units": "10*6/uL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d8dd81c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "14.8",
+      "units": "g/dL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d8dd826-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "46.3",
+      "units": "%",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d8dd83a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "87.6",
+      "units": "fL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d8dd84e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "29.7",
+      "units": "pg",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d8dd858-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "33.3",
+      "units": "g/dL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d8dd876-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "41.2",
+      "units": "fL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d8dd88a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "270.5",
+      "units": "10*3/uL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8dd894-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "300.6",
+      "units": "fL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8dd8a8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "11.4",
+      "units": "fL",
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8dd8bc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "add0cb6f-de11-4646-903f-d8a58968ed9c",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2013-08-30",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd8c6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6de18333-9d75-40c4-bbb5-fe3cc80b039a",
+      "value": "9.0",
+      "units": "{score}",
+      "date": "2013-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd8da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6a2c536d-7670-49c7-b811-6574ab2a1e7f",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2013-12-02",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd8ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1802436b-6d81-4af3-ba58-890178e7a6c6",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2014-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddcae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e63abda2-7973-4091-8e07-5cb883161823",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2014-06-10",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ddccc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "154.6",
+      "units": "cm",
+      "date": "2014-09-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddcd6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ddcea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "61.1",
+      "units": "kg",
+      "date": "2014-09-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8ddcfe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "25.6",
+      "units": "kg/m2",
+      "date": "2014-09-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8ddd12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "86.2",
+      "units": "%",
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ddd26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "79.0",
+      "units": "mm[Hg]",
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ddd3a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "122.0",
+      "units": "mm[Hg]",
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ddd44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "85.0",
+      "units": "/min",
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ddd58-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ddd6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9f2ebc41-7574-46f6-9187-10071bc99676",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2014-09-05",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddd76-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dbcc735e-9165-4e05-b78c-8c72550d18fc",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2014-10-13",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddd8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89693ed-3013-4bdf-a9a0-2e8ccc42ec4a",
+      "value": "8.0",
+      "units": "{score}",
+      "date": "2015-01-21",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddd9e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c077394f-e454-405f-95d6-0c4cfe8b41ee",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2015-03-20",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddda8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6d04adc5-cf0e-4fbd-8153-13d296ce1804",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2015-07-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dddc6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "154.8",
+      "units": "cm",
+      "date": "2015-09-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddde4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dddee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "61.5",
+      "units": "kg",
+      "date": "2015-09-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dde02-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "25.7",
+      "units": "kg/m2",
+      "date": "2015-09-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dde16-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "84.8",
+      "units": "%",
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dde2a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "104.0",
+      "units": "mm[Hg]",
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dde3e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "192.0",
+      "units": "mm[Hg]",
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8dde52-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "78.0",
+      "units": "/min",
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8dde66-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8dde70-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb4cbb6d-f33d-40f0-9c71-e8ac9eb09f4c",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2015-09-11",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8dde84-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "61d383f9-09e3-4b75-922f-563f758a965f",
+      "value": "85.0",
+      "units": "mm[Hg]",
+      "date": "2015-10-11",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8dde98-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "61d383f9-09e3-4b75-922f-563f758a965f",
+      "value": "124.0",
+      "units": "mm[Hg]",
+      "date": "2015-10-11",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddea2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d5a263a0-c325-4186-94f3-4d6c8c530162",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2015-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddeb6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ba8b057c-09df-4bfa-a324-a58daf967c3b",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2016-02-12",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddec0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2bd74de3-32ba-49d6-9f7b-987a8a90da42",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2016-07-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dded4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "155.0",
+      "units": "cm",
+      "date": "2016-09-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddee8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ddef2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "58.2",
+      "units": "kg",
+      "date": "2016-09-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8ddf06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "24.3",
+      "units": "kg/m2",
+      "date": "2016-09-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8ddf1a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "75.4",
+      "units": "%",
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ddf2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ddf38-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "118.0",
+      "units": "mm[Hg]",
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ddf4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "60.0",
+      "units": "/min",
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ddf60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ddf6a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d4d78eb2-43fd-476e-98a6-43a1645894bb",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2016-09-16",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddf88-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "72a37de4-65d8-452b-9f3a-c4c71f2b11f6",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2016-10-05",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddf9c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c154fc80-de65-42da-8311-b79e9f1db56b",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2016-11-11",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddfa6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c9b79c2c-9ba5-4839-90a6-fc0e66bfcc8b",
+      "value": "9.0",
+      "units": "{score}",
+      "date": "2017-04-13",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddfba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "24525a25-58f0-42ab-9b45-ef99c7257228",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2017-07-01",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddfce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6b24d43e-bbe7-495b-835f-53a12765f63f",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2017-08-14",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ddfd8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "155.0",
+      "units": "cm",
+      "date": "2017-09-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de000-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2017-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de014-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "59.3",
+      "units": "kg",
+      "date": "2017-09-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de01e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "24.7",
+      "units": "kg/m2",
+      "date": "2017-09-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de032-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "2017-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de046-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "107.0",
+      "units": "mm[Hg]",
+      "date": "2017-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de050-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "64.0",
+      "units": "/min",
+      "date": "2017-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de064-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2017-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de06e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "44a502ec-0a4a-4c7f-9d48-3d10894f774c",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2017-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de082-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a0799f3b-c57d-41fa-87a2-361dbb0d9034",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2017-10-27",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de096-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "9dd90d6b-62f0-4134-a107-2c311274af9b",
+      "value": "8.0",
+      "units": "{score}",
+      "date": "2018-01-16",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8de0a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "155.0",
+      "units": "cm",
+      "date": "2018-03-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de0b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2018-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de0c8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "59.3",
+      "units": "kg",
+      "date": "2018-03-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de0e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "24.7",
+      "units": "kg/m2",
+      "date": "2018-03-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de0fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "2018-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de10e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "2018-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de122-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "85.0",
+      "units": "/min",
+      "date": "2018-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de12c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2018-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de154-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "43033ade-cf95-4c60-9114-e3bb663ea9fe",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-03-23",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de3a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "15e9c9e3-1b6c-496a-b03c-a94d164767e7",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2018-06-27",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de6a4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6c9259de-0ebf-4dac-b1d4-7ec8d0671fed",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2018-08-10",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8de6d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "155.0",
+      "units": "cm",
+      "date": "2018-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de6f4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de708-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "60.7",
+      "units": "kg",
+      "date": "2018-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de712-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "25.3",
+      "units": "kg/m2",
+      "date": "2018-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de726-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de73a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "136.0",
+      "units": "mm[Hg]",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de74e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "67.0",
+      "units": "/min",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de758-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8de76c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "4.3",
+      "units": "10*3/uL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8de780-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "4.1",
+      "units": "10*6/uL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d8de794-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "15.2",
+      "units": "g/dL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d8de7a8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "35.4",
+      "units": "%",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d8de7c6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "94.2",
+      "units": "fL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d8de7da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "29.5",
+      "units": "pg",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d8de7ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "34.5",
+      "units": "g/dL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d8de7f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "41.1",
+      "units": "fL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d8de816-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "318.9",
+      "units": "10*3/uL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8de82a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "467.2",
+      "units": "fL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8de83e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "11.7",
+      "units": "fL",
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de852-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c89de07d-8f6d-4deb-afbd-4f475b47e1ad",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de866-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a1e75c72-eaec-41cc-aa30-7f97cd479143",
+      "value": "5.0",
+      "units": "{score}",
+      "date": "2018-11-04",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de870-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0232dd25-7a23-456d-94c6-9dc4cc26a0cd",
+      "value": "7.0",
+      "units": "{score}",
+      "date": "2019-01-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8de884-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "155.0",
+      "units": "cm",
+      "date": "2019-06-14",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de898-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2019-06-14",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de8ac-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "60.7",
+      "units": "kg",
+      "date": "2019-06-14",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de8b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "25.3",
+      "units": "kg/m2",
+      "date": "2019-06-14",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de8ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2019-06-14",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de8de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "135.0",
+      "units": "mm[Hg]",
+      "date": "2019-06-14",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de8f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "72.0",
+      "units": "/min",
+      "date": "2019-06-14",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de8fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2019-06-14",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de910-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "a5335f3d-01af-4556-801c-95d3e5318f7e",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-06-14",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8de924-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "155.0",
+      "units": "cm",
+      "date": "2019-10-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de938-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2019-10-04",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de94c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "61.8",
+      "units": "kg",
+      "date": "2019-10-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de960-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "25.7",
+      "units": "kg/m2",
+      "date": "2019-10-04",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de974-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "2019-10-04",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de97e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "2019-10-04",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de992-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "100.0",
+      "units": "/min",
+      "date": "2019-10-04",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de9a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2019-10-04",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de9b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "194257bd-c5f9-445c-ab85-649750d2077d",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-10-04",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de9c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d7f24a37-e081-4f96-9d2c-6211c1c8b747",
+      "value": "6.0",
+      "units": "{score}",
+      "date": "2020-01-23",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de9ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "12.0",
+      "units": "a",
+      "date": "2010-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de9e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "13.0",
+      "units": "a",
+      "date": "2011-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de9f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "14.0",
+      "units": "a",
+      "date": "2012-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "14.5",
+      "units": "a",
+      "date": "2013-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea14-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "15.1",
+      "units": "a",
+      "date": "2014-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "15.6",
+      "units": "a",
+      "date": "2015-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "16.1",
+      "units": "a",
+      "date": "2016-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea50-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "16.6",
+      "units": "a",
+      "date": "2017-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "17.2",
+      "units": "a",
+      "date": "2018-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8dea78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "17.7",
+      "units": "a",
+      "date": "2019-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8dea8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2010-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8dea96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2011-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deaaa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2012-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deabe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "a",
+      "date": "2013-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deac8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.9",
+      "units": "a",
+      "date": "2014-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deadc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.4",
+      "units": "a",
+      "date": "2015-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deae6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.9",
+      "units": "a",
+      "date": "2016-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deafa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.4",
+      "units": "a",
+      "date": "2017-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deb0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.8",
+      "units": "a",
+      "date": "2018-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8deb2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "3.3",
+      "units": "a",
+      "date": "2019-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deb40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2010-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deb4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2011-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deb5e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2012-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deb72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.6",
+      "units": "{score}",
+      "date": "2013-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deb7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "{score}",
+      "date": "2014-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deb90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "{score}",
+      "date": "2015-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8deba4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "{score}",
+      "date": "2016-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8dec62-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "{score}",
+      "date": "2017-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8dec8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "{score}",
+      "date": "2018-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8decbc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.5",
+      "units": "{score}",
+      "date": "2019-07-18",
+      "category": "other"
+    }
+  ]
+}

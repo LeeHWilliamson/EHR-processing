@@ -1,0 +1,3486 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_1030d86d-86f5-4195-962a-48895ca085ab",
+    "firstName": "Orval846",
+    "lastName": "Parisian75",
+    "dob": "1990-07-18",
+    "gender": "M",
+    "entities": []
+  },
+  "allergies": [
+    {
+      "id": "all_2ccec814-5305-11f1-a6a5-00155d35d14f",
+      "start": "1990-09-06",
+      "stop": NaN,
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "description": "Allergy to bee venom"
+    },
+    {
+      "id": "all_2ccec81e-5305-11f1-a6a5-00155d35d14f",
+      "start": "1990-09-06",
+      "stop": NaN,
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "description": "Allergy to mould"
+    },
+    {
+      "id": "all_2ccec832-5305-11f1-a6a5-00155d35d14f",
+      "start": "1990-09-06",
+      "stop": NaN,
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "description": "House dust mite allergy"
+    },
+    {
+      "id": "all_2ccec83c-5305-11f1-a6a5-00155d35d14f",
+      "start": "1990-09-06",
+      "stop": NaN,
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "description": "Dander (animal) allergy"
+    }
+  ],
+  "careplans": [
+    {
+      "id": "care_69bd3100-ac35-46db-909d-4b8342b19208",
+      "startDate": "1990-09-06",
+      "endDate": NaN,
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "description": "Self-care interventions (procedure)",
+      "reasonDescription": NaN
+    },
+    {
+      "id": "care_506f3c27-715b-468a-97da-05483dbe19dc",
+      "startDate": "1994-07-24",
+      "endDate": NaN,
+      "encounter": "5f5d7d06-3e33-471b-b737-b3a25242451f",
+      "description": "Asthma self management",
+      "reasonDescription": "Childhood asthma"
+    },
+    {
+      "id": "care_1929bbee-20b6-4f4c-8633-dcaf7440d7d6",
+      "startDate": "2008-09-10",
+      "endDate": NaN,
+      "encounter": "39dd5f17-5595-4d8f-950e-f3754171c64e",
+      "description": "Lifestyle education regarding hypertension",
+      "reasonDescription": "Hypertension"
+    },
+    {
+      "id": "care_8d99f54f-752f-4761-9973-a20a69c7a588",
+      "startDate": "2012-09-04",
+      "endDate": "2012-09-18",
+      "encounter": "54702187-1713-4a52-950e-a71c7ab41e17",
+      "description": "Burn care",
+      "reasonDescription": "Second degree burn"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_019be3d9-186c-4870-8815-c8cba8be683e",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": NaN,
+      "startDate": "1990-09-06",
+      "endDate": "1990-09-06",
+      "startTime": "16:46:23",
+      "endTime": "17:31:23"
+    },
+    {
+      "id": "enc_5f5d7d06-3e33-471b-b737-b3a25242451f",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Childhood asthma",
+      "startDate": "1994-07-24",
+      "endDate": "1994-07-24",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_f8188f3b-d37b-4a4f-9726-4ffaa360fb72",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "1995-01-04",
+      "endDate": "1995-01-04",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_11d28c74-4d40-4fa7-9b33-0cc25bfabcd8",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1995-06-28",
+      "endDate": "1995-06-28",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_e6bf1072-86b7-45bd-b781-5fb2eeb7a239",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Perennial allergic rhinitis with seasonal variation",
+      "startDate": "1995-07-24",
+      "endDate": "1995-08-07",
+      "startTime": "16:46:23",
+      "endTime": "16:46:23"
+    },
+    {
+      "id": "enc_5f395cde-121b-4063-8dfa-20efdd028a4e",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1996-07-03",
+      "endDate": "1996-07-03",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_713cc6cb-98c2-4c5a-bc70-802567652259",
+      "type": "ambulatory",
+      "description": "Asthma follow-up",
+      "reason": "Childhood asthma",
+      "startDate": "1997-07-09",
+      "endDate": "1997-07-09",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_096b0805-5914-46d0-9001-1d6a8b2f0e07",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "1997-10-15",
+      "endDate": "1997-10-15",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_6e730f95-556a-4b6d-9151-1cf411de296a",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "1998-07-15",
+      "endDate": "1998-07-15",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_8907bab1-b546-48cd-9262-3b9db2416d78",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "1998-07-29",
+      "endDate": "1998-07-29",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_bacd802c-6a6e-4ce9-9eb7-d835c7809ede",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "1998-08-05",
+      "endDate": "1998-08-05",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_dba771e9-d301-4599-b922-bf6936d1c468",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "1999-07-21",
+      "endDate": "1999-07-21",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_737dd66a-38af-4e51-8903-6a8a535a5d5b",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2000-07-26",
+      "endDate": "2000-07-26",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_17bed9bc-258e-4b1b-aba3-c8af076a0f49",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2001-08-01",
+      "endDate": "2001-08-01",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_61eb0718-469e-46dd-9edd-eb30b94f6fe6",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2002-08-07",
+      "endDate": "2002-08-07",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_b6e08734-a883-4378-ab9a-8e115e8bf86f",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2003-08-13",
+      "endDate": "2003-08-13",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_5c072d4f-07e9-4875-a170-999df0ee22c2",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2003-08-13",
+      "endDate": "2003-08-13",
+      "startTime": "16:46:23",
+      "endTime": "17:59:23"
+    },
+    {
+      "id": "enc_0dc52f34-b5e1-473f-a385-edb298c1280e",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2004-05-12",
+      "endDate": "2004-05-12",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_3544b79c-b509-48f4-b276-cfac5f5540dc",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2004-05-12",
+      "endDate": "2004-05-12",
+      "startTime": "16:46:23",
+      "endTime": "17:56:23"
+    },
+    {
+      "id": "enc_61e96b09-4fc5-4e1f-a6a8-eb3d05da7436",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2004-08-18",
+      "endDate": "2004-08-18",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_fb9d0ce9-65b3-4022-84c3-eff0c832f400",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2005-08-24",
+      "endDate": "2005-08-24",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_cd2bf294-7df7-4747-b003-74a3596dfc46",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2006-08-30",
+      "endDate": "2006-08-30",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_b638ebbb-4288-404d-8e18-f99d4e13f08f",
+      "type": "ambulatory",
+      "description": "Outpatient procedure",
+      "reason": NaN,
+      "startDate": "2006-08-30",
+      "endDate": "2006-08-30",
+      "startTime": "16:46:23",
+      "endTime": "17:18:23"
+    },
+    {
+      "id": "enc_ca9f92ad-b0a5-4314-9b06-2f83efe661ea",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2006-10-04",
+      "endDate": "2006-10-04",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_52a06c7f-ab05-40b2-aaf1-3e10877f186c",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2007-09-05",
+      "endDate": "2007-09-05",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_39dd5f17-5595-4d8f-950e-f3754171c64e",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2008-09-10",
+      "endDate": "2008-09-10",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_696766dc-f57b-4ac2-aebc-26dd41888d5e",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2009-09-16",
+      "endDate": "2009-09-16",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2010-09-22",
+      "endDate": "2010-09-22",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2011-09-28",
+      "endDate": "2011-09-28",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_54702187-1713-4a52-950e-a71c7ab41e17",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2012-09-04",
+      "endDate": "2012-09-04",
+      "startTime": "16:46:23",
+      "endTime": "17:46:23"
+    },
+    {
+      "id": "enc_2f587fdd-a24e-4cd1-b7b8-4f156333100e",
+      "type": "ambulatory",
+      "description": "Asthma follow-up",
+      "reason": "Asthma",
+      "startDate": "2012-09-11",
+      "endDate": "2012-09-11",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_5a7b1887-2fa1-4406-adc6-a417ea210eb5",
+      "type": "ambulatory",
+      "description": "Encounter for 'check-up'",
+      "reason": "Second degree burn",
+      "startDate": "2012-09-18",
+      "endDate": "2012-09-18",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2012-10-03",
+      "endDate": "2012-10-03",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2013-10-09",
+      "endDate": "2013-10-09",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_6a737ea0-26ac-4536-9fb6-600bb3f4b09c",
+      "type": "ambulatory",
+      "description": "Asthma follow-up",
+      "reason": "Asthma",
+      "startDate": "2014-09-01",
+      "endDate": "2014-09-01",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_cd5fff91-a34a-40ca-98be-6736794bb3f7",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2014-09-24",
+      "endDate": "2014-09-24",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2014-09-22",
+      "endDate": "2014-09-22",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2014-10-15",
+      "endDate": "2014-10-15",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2015-10-21",
+      "endDate": "2015-10-21",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_6438f8d3-161b-45d2-acc6-b41f2ee79994",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2016-09-07",
+      "endDate": "2016-09-07",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_07b674c1-2b4d-4b6f-a030-27f974573640",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "2016-09-04",
+      "endDate": "2016-09-04",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2016-10-26",
+      "endDate": "2016-10-26",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_0d2ba7b6-7db1-4e75-aff2-fe90262e4cd8",
+      "type": "ambulatory",
+      "description": "Asthma follow-up",
+      "reason": "Asthma",
+      "startDate": "2017-02-17",
+      "endDate": "2017-02-17",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_94ee9719-7aad-4530-91af-066094535862",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2017-11-01",
+      "endDate": "2017-11-01",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_37ee7690-a7cf-4d13-9534-9e5afa1b8a6c",
+      "type": "outpatient",
+      "description": "Encounter for check up (procedure)",
+      "reason": NaN,
+      "startDate": "2018-05-30",
+      "endDate": "2018-05-30",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Sinusitis (disorder)",
+      "startDate": "2018-05-26",
+      "endDate": "2018-05-26",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_862c6133-84b0-4cac-9ad1-104f8442bdfb",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Sinusitis (disorder)",
+      "startDate": "2018-09-01",
+      "endDate": "2018-09-01",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_0c8abecb-7f28-40b0-a2e4-de66095e2a88",
+      "type": "urgentcare",
+      "description": "Urgent care clinic (procedure)",
+      "reason": NaN,
+      "startDate": "2018-09-12",
+      "endDate": "2018-09-12",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_56ef5e4a-06e7-40d9-a302-c24e8dd9b2e6",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Sinusitis (disorder)",
+      "startDate": "2018-09-22",
+      "endDate": "2018-09-22",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_1eb3f84c-9d64-4f0e-8987-1e2d29c2b6fa",
+      "type": "urgentcare",
+      "description": "Urgent care clinic (procedure)",
+      "reason": NaN,
+      "startDate": "2018-10-03",
+      "endDate": "2018-10-03",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2018-11-07",
+      "endDate": "2018-11-07",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "type": "ambulatory",
+      "description": "Domiciliary or rest home patient evaluation and management",
+      "reason": NaN,
+      "startDate": "2019-08-10",
+      "endDate": "2019-08-10",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "type": "ambulatory",
+      "description": "Domiciliary or rest home patient evaluation and management",
+      "reason": NaN,
+      "startDate": "2019-09-09",
+      "endDate": "2019-09-09",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_3a22f20e-4a21-427e-a9e5-463777dac955",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2019-11-13",
+      "endDate": "2019-11-13",
+      "startTime": "16:46:23",
+      "endTime": "17:01:23"
+    },
+    {
+      "id": "enc_4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "type": "ambulatory",
+      "description": "Domiciliary or rest home patient evaluation and management",
+      "reason": NaN,
+      "startDate": "2019-11-08",
+      "endDate": "2019-11-08",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "type": "ambulatory",
+      "description": "Domiciliary or rest home patient evaluation and management",
+      "reason": NaN,
+      "startDate": "2020-02-06",
+      "endDate": "2020-02-06",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    },
+    {
+      "id": "enc_0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "type": "ambulatory",
+      "description": "Domiciliary or rest home patient evaluation and management",
+      "reason": NaN,
+      "startDate": "2020-03-07",
+      "endDate": "2020-03-07",
+      "startTime": "16:46:23",
+      "endTime": "17:16:23"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Perennial allergic rhinitis with seasonal variation",
+      "id": "cond_2d0b6fa8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e6bf1072-86b7-45bd-b781-5fb2eeb7a239",
+      "startDate": "1995-07-24",
+      "endDate": null
+    },
+    {
+      "condition": "Hypertension",
+      "id": "cond_2d0b6fd0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39dd5f17-5595-4d8f-950e-f3754171c64e",
+      "startDate": "2008-09-10",
+      "endDate": null
+    },
+    {
+      "condition": "Second degree burn",
+      "id": "cond_2d0b6fee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54702187-1713-4a52-950e-a71c7ab41e17",
+      "startDate": "2012-09-04",
+      "endDate": "2012-09-18"
+    },
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_2d0b700c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "startDate": "2014-09-22",
+      "endDate": "2014-10-06"
+    },
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_2d0b70f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "startDate": "2016-09-04",
+      "endDate": "2016-09-25"
+    },
+    {
+      "condition": "Sinusitis (disorder)",
+      "id": "cond_2d0b7228-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "startDate": "2018-05-26",
+      "endDate": "2018-10-06"
+    },
+    {
+      "condition": "Chronic sinusitis (disorder)",
+      "id": "cond_2d0b7368-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "862c6133-84b0-4cac-9ad1-104f8442bdfb",
+      "startDate": "2018-09-01",
+      "endDate": null
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163e06-5305-11f1-a6a5-00155d35d14f",
+      "date": "2010-09-22",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d163e1a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2010-09-22",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163e24-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-09-28",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447"
+    },
+    {
+      "name": "Td (adult) preservative free",
+      "id": "immu_2d163e38-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-09-28",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d163e42-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-09-28",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447"
+    },
+    {
+      "name": "meningococcal MCV4P",
+      "id": "immu_2d163e56-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-09-28",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163e60-5305-11f1-a6a5-00155d35d14f",
+      "date": "2012-10-03",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d163e74-5305-11f1-a6a5-00155d35d14f",
+      "date": "2012-10-03",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163e7e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2013-10-09",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163e92-5305-11f1-a6a5-00155d35d14f",
+      "date": "2014-09-24",
+      "encounter": "cd5fff91-a34a-40ca-98be-6736794bb3f7"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163ea6-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-10-21",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163eb0-5305-11f1-a6a5-00155d35d14f",
+      "date": "2016-09-07",
+      "encounter": "6438f8d3-161b-45d2-acc6-b41f2ee79994"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163ec4-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-11-01",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163ece-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-05-30",
+      "encounter": "37ee7690-a7cf-4d13-9534-9e5afa1b8a6c"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d163ee2-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-11-13",
+      "encounter": "3a22f20e-4a21-427e-a9e5-463777dac955"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Terfenadine 60 MG Oral Tablet",
+      "id": "med_2d31b53c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "reason": NaN,
+      "startDate": "1990-09-06",
+      "endDate": null
+    },
+    {
+      "description": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+      "id": "med_2d31b550-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "019be3d9-186c-4870-8815-c8cba8be683e",
+      "reason": NaN,
+      "startDate": "1990-09-06",
+      "endDate": null
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b578-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5f5d7d06-3e33-471b-b737-b3a25242451f",
+      "reason": "Childhood asthma",
+      "startDate": "1994-07-24",
+      "endDate": "1995-01-04"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b58c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5f5d7d06-3e33-471b-b737-b3a25242451f",
+      "reason": "Childhood asthma",
+      "startDate": "1994-07-24",
+      "endDate": "1995-01-04"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b5a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f8188f3b-d37b-4a4f-9726-4ffaa360fb72",
+      "reason": "Childhood asthma",
+      "startDate": "1995-01-04",
+      "endDate": "1995-06-28"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b5b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f8188f3b-d37b-4a4f-9726-4ffaa360fb72",
+      "reason": "Childhood asthma",
+      "startDate": "1995-01-04",
+      "endDate": "1995-06-28"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b5c8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "11d28c74-4d40-4fa7-9b33-0cc25bfabcd8",
+      "reason": "Childhood asthma",
+      "startDate": "1995-06-28",
+      "endDate": "1996-07-03"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b5e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "11d28c74-4d40-4fa7-9b33-0cc25bfabcd8",
+      "reason": "Childhood asthma",
+      "startDate": "1995-06-28",
+      "endDate": "1996-07-03"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b5fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5f395cde-121b-4063-8dfa-20efdd028a4e",
+      "reason": "Childhood asthma",
+      "startDate": "1996-07-03",
+      "endDate": "1997-07-09"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b60e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5f395cde-121b-4063-8dfa-20efdd028a4e",
+      "reason": "Childhood asthma",
+      "startDate": "1996-07-03",
+      "endDate": "1997-07-09"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b622-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "713cc6cb-98c2-4c5a-bc70-802567652259",
+      "reason": "Childhood asthma",
+      "startDate": "1997-07-09",
+      "endDate": "1997-10-15"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b636-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "713cc6cb-98c2-4c5a-bc70-802567652259",
+      "reason": "Childhood asthma",
+      "startDate": "1997-07-09",
+      "endDate": "1997-10-15"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b64a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "096b0805-5914-46d0-9001-1d6a8b2f0e07",
+      "reason": "Childhood asthma",
+      "startDate": "1997-10-15",
+      "endDate": "1998-07-15"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b65e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "096b0805-5914-46d0-9001-1d6a8b2f0e07",
+      "reason": "Childhood asthma",
+      "startDate": "1997-10-15",
+      "endDate": "1998-07-15"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b672-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6e730f95-556a-4b6d-9151-1cf411de296a",
+      "reason": "Childhood asthma",
+      "startDate": "1998-07-15",
+      "endDate": "1998-07-29"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b686-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6e730f95-556a-4b6d-9151-1cf411de296a",
+      "reason": "Childhood asthma",
+      "startDate": "1998-07-15",
+      "endDate": "1998-07-29"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b69a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8907bab1-b546-48cd-9262-3b9db2416d78",
+      "reason": "Childhood asthma",
+      "startDate": "1998-07-29",
+      "endDate": "1998-08-05"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b6ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8907bab1-b546-48cd-9262-3b9db2416d78",
+      "reason": "Childhood asthma",
+      "startDate": "1998-07-29",
+      "endDate": "1998-08-05"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b6cc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bacd802c-6a6e-4ce9-9eb7-d835c7809ede",
+      "reason": "Childhood asthma",
+      "startDate": "1998-08-05",
+      "endDate": "1999-07-21"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b6e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bacd802c-6a6e-4ce9-9eb7-d835c7809ede",
+      "reason": "Childhood asthma",
+      "startDate": "1998-08-05",
+      "endDate": "1999-07-21"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b6f4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dba771e9-d301-4599-b922-bf6936d1c468",
+      "reason": "Childhood asthma",
+      "startDate": "1999-07-21",
+      "endDate": "2000-07-26"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b708-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dba771e9-d301-4599-b922-bf6936d1c468",
+      "reason": "Childhood asthma",
+      "startDate": "1999-07-21",
+      "endDate": "2000-07-26"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b71c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "737dd66a-38af-4e51-8903-6a8a535a5d5b",
+      "reason": "Childhood asthma",
+      "startDate": "2000-07-26",
+      "endDate": "2001-08-01"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b87a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "737dd66a-38af-4e51-8903-6a8a535a5d5b",
+      "reason": "Childhood asthma",
+      "startDate": "2000-07-26",
+      "endDate": "2001-08-01"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b8b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "17bed9bc-258e-4b1b-aba3-c8af076a0f49",
+      "reason": "Childhood asthma",
+      "startDate": "2001-08-01",
+      "endDate": "2002-08-07"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b8ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "17bed9bc-258e-4b1b-aba3-c8af076a0f49",
+      "reason": "Childhood asthma",
+      "startDate": "2001-08-01",
+      "endDate": "2002-08-07"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b8e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "61eb0718-469e-46dd-9edd-eb30b94f6fe6",
+      "reason": "Childhood asthma",
+      "startDate": "2002-08-07",
+      "endDate": "2003-08-13"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b910-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "61eb0718-469e-46dd-9edd-eb30b94f6fe6",
+      "reason": "Childhood asthma",
+      "startDate": "2002-08-07",
+      "endDate": "2003-08-13"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b924-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b6e08734-a883-4378-ab9a-8e115e8bf86f",
+      "reason": "Childhood asthma",
+      "startDate": "2003-08-13",
+      "endDate": "2003-08-13"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b938-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b6e08734-a883-4378-ab9a-8e115e8bf86f",
+      "reason": "Childhood asthma",
+      "startDate": "2003-08-13",
+      "endDate": "2003-08-13"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b94c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5c072d4f-07e9-4875-a170-999df0ee22c2",
+      "reason": "Childhood asthma",
+      "startDate": "2003-08-13",
+      "endDate": "2004-05-12"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b960-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5c072d4f-07e9-4875-a170-999df0ee22c2",
+      "reason": "Childhood asthma",
+      "startDate": "2003-08-13",
+      "endDate": "2004-05-12"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b974-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0dc52f34-b5e1-473f-a385-edb298c1280e",
+      "reason": "Childhood asthma",
+      "startDate": "2004-05-12",
+      "endDate": "2004-05-12"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b988-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0dc52f34-b5e1-473f-a385-edb298c1280e",
+      "reason": "Childhood asthma",
+      "startDate": "2004-05-12",
+      "endDate": "2004-05-12"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b9a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3544b79c-b509-48f4-b276-cfac5f5540dc",
+      "reason": "Childhood asthma",
+      "startDate": "2004-05-12",
+      "endDate": "2004-08-18"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b9b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3544b79c-b509-48f4-b276-cfac5f5540dc",
+      "reason": "Childhood asthma",
+      "startDate": "2004-05-12",
+      "endDate": "2004-08-18"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b9ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "61e96b09-4fc5-4e1f-a6a8-eb3d05da7436",
+      "reason": "Childhood asthma",
+      "startDate": "2004-08-18",
+      "endDate": "2005-08-24"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b9e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "61e96b09-4fc5-4e1f-a6a8-eb3d05da7436",
+      "reason": "Childhood asthma",
+      "startDate": "2004-08-18",
+      "endDate": "2005-08-24"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31b9f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fb9d0ce9-65b3-4022-84c3-eff0c832f400",
+      "reason": "Childhood asthma",
+      "startDate": "2005-08-24",
+      "endDate": "2006-08-30"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fb9d0ce9-65b3-4022-84c3-eff0c832f400",
+      "reason": "Childhood asthma",
+      "startDate": "2005-08-24",
+      "endDate": "2006-08-30"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd2bf294-7df7-4747-b003-74a3596dfc46",
+      "reason": "Childhood asthma",
+      "startDate": "2006-08-30",
+      "endDate": "2006-08-30"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "cd2bf294-7df7-4747-b003-74a3596dfc46",
+      "reason": "Childhood asthma",
+      "startDate": "2006-08-30",
+      "endDate": "2006-08-30"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b638ebbb-4288-404d-8e18-f99d4e13f08f",
+      "reason": "Childhood asthma",
+      "startDate": "2006-08-30",
+      "endDate": "2006-10-04"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b638ebbb-4288-404d-8e18-f99d4e13f08f",
+      "reason": "Childhood asthma",
+      "startDate": "2006-08-30",
+      "endDate": "2006-10-04"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca9f92ad-b0a5-4314-9b06-2f83efe661ea",
+      "reason": "Childhood asthma",
+      "startDate": "2006-10-04",
+      "endDate": "2007-09-05"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31ba8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca9f92ad-b0a5-4314-9b06-2f83efe661ea",
+      "reason": "Childhood asthma",
+      "startDate": "2006-10-04",
+      "endDate": "2007-09-05"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31baaa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "52a06c7f-ab05-40b2-aaf1-3e10877f186c",
+      "reason": "Childhood asthma",
+      "startDate": "2007-09-05",
+      "endDate": "2008-09-10"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31babe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "52a06c7f-ab05-40b2-aaf1-3e10877f186c",
+      "reason": "Childhood asthma",
+      "startDate": "2007-09-05",
+      "endDate": "2008-09-10"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bad2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39dd5f17-5595-4d8f-950e-f3754171c64e",
+      "reason": "Childhood asthma",
+      "startDate": "2008-09-10",
+      "endDate": "2009-09-16"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bae6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39dd5f17-5595-4d8f-950e-f3754171c64e",
+      "reason": "Childhood asthma",
+      "startDate": "2008-09-10",
+      "endDate": "2009-09-16"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bafa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39dd5f17-5595-4d8f-950e-f3754171c64e",
+      "reason": "Hypertension",
+      "startDate": "2008-09-10",
+      "endDate": "2009-09-16"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bb0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "696766dc-f57b-4ac2-aebc-26dd41888d5e",
+      "reason": "Hypertension",
+      "startDate": "2009-09-16",
+      "endDate": "2010-09-22"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bb2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "696766dc-f57b-4ac2-aebc-26dd41888d5e",
+      "reason": "Childhood asthma",
+      "startDate": "2009-09-16",
+      "endDate": "2010-09-22"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bb40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "696766dc-f57b-4ac2-aebc-26dd41888d5e",
+      "reason": "Childhood asthma",
+      "startDate": "2009-09-16",
+      "endDate": "2010-09-22"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bb54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "reason": "Hypertension",
+      "startDate": "2010-09-22",
+      "endDate": "2011-09-28"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bb68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "reason": "Childhood asthma",
+      "startDate": "2010-09-22",
+      "endDate": "2011-09-28"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bb7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "reason": "Childhood asthma",
+      "startDate": "2010-09-22",
+      "endDate": "2011-09-28"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bb90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "reason": "Hypertension",
+      "startDate": "2011-09-28",
+      "endDate": "2012-10-03"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bba4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "reason": "Childhood asthma",
+      "startDate": "2011-09-28",
+      "endDate": "2012-10-03"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bbb8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "reason": "Childhood asthma",
+      "startDate": "2011-09-28",
+      "endDate": "2012-10-03"
+    },
+    {
+      "description": "Cefuroxime 250 MG Oral Tablet",
+      "id": "med_2d31bbcc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54702187-1713-4a52-950e-a71c7ab41e17",
+      "reason": NaN,
+      "startDate": "2012-09-04",
+      "endDate": "2012-09-18"
+    },
+    {
+      "description": "Acetaminophen 325 MG / oxyCODONE Hydrochloride 5 MG Oral Tablet",
+      "id": "med_2d31bbe0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54702187-1713-4a52-950e-a71c7ab41e17",
+      "reason": NaN,
+      "startDate": "2012-09-04",
+      "endDate": "2012-09-28"
+    },
+    {
+      "description": "Ibuprofen 200 MG Oral Tablet",
+      "id": "med_2d31bbf4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "54702187-1713-4a52-950e-a71c7ab41e17",
+      "reason": NaN,
+      "startDate": "2012-09-04",
+      "endDate": "2012-09-18"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bc08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "reason": "Hypertension",
+      "startDate": "2012-10-03",
+      "endDate": "2013-10-09"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bc1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "reason": "Childhood asthma",
+      "startDate": "2012-10-03",
+      "endDate": "2013-10-09"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bc44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "reason": "Childhood asthma",
+      "startDate": "2012-10-03",
+      "endDate": "2013-10-09"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bc6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "reason": "Hypertension",
+      "startDate": "2013-10-09",
+      "endDate": "2014-09-24"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bc80-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "reason": "Childhood asthma",
+      "startDate": "2013-10-09",
+      "endDate": "2014-09-24"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bc94-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "reason": "Childhood asthma",
+      "startDate": "2013-10-09",
+      "endDate": "2014-09-24"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bca8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "reason": "Hypertension",
+      "startDate": "2014-09-24",
+      "endDate": "2014-10-15"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bcbc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "reason": "Childhood asthma",
+      "startDate": "2014-09-24",
+      "endDate": "2014-10-15"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bcd0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "reason": "Childhood asthma",
+      "startDate": "2014-09-24",
+      "endDate": "2014-10-15"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bce4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "reason": "Hypertension",
+      "startDate": "2014-10-15",
+      "endDate": "2015-10-21"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bcf8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "reason": "Childhood asthma",
+      "startDate": "2014-10-15",
+      "endDate": "2015-10-21"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bd0c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "reason": "Childhood asthma",
+      "startDate": "2014-10-15",
+      "endDate": "2015-10-21"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bd20-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "reason": "Hypertension",
+      "startDate": "2015-10-21",
+      "endDate": "2016-09-07"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bd34-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "reason": "Childhood asthma",
+      "startDate": "2015-10-21",
+      "endDate": "2016-09-07"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bd48-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "reason": "Childhood asthma",
+      "startDate": "2015-10-21",
+      "endDate": "2016-09-07"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bd5c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "reason": "Hypertension",
+      "startDate": "2016-09-07",
+      "endDate": "2016-10-26"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bd70-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "reason": "Childhood asthma",
+      "startDate": "2016-09-07",
+      "endDate": "2016-10-26"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bd84-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "reason": "Childhood asthma",
+      "startDate": "2016-09-07",
+      "endDate": "2016-10-26"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bd98-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "reason": "Hypertension",
+      "startDate": "2016-10-26",
+      "endDate": "2017-11-01"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bdac-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "reason": "Childhood asthma",
+      "startDate": "2016-10-26",
+      "endDate": "2017-11-01"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bdc0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "reason": "Childhood asthma",
+      "startDate": "2016-10-26",
+      "endDate": "2017-11-01"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bdd4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "reason": "Hypertension",
+      "startDate": "2017-11-01",
+      "endDate": "2018-05-30"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bde8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "reason": "Childhood asthma",
+      "startDate": "2017-11-01",
+      "endDate": "2018-05-30"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31be06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "reason": "Childhood asthma",
+      "startDate": "2017-11-01",
+      "endDate": "2018-05-30"
+    },
+    {
+      "description": "Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet",
+      "id": "med_2d31be24-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "reason": "Sinusitis (disorder)",
+      "startDate": "2018-05-26",
+      "endDate": "2018-10-06"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31be38-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "reason": "Hypertension",
+      "startDate": "2018-05-30",
+      "endDate": "2018-11-07"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31be4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "reason": "Childhood asthma",
+      "startDate": "2018-05-30",
+      "endDate": "2018-11-07"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31be60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "reason": "Childhood asthma",
+      "startDate": "2018-05-30",
+      "endDate": "2018-11-07"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31be74-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "reason": "Hypertension",
+      "startDate": "2018-11-07",
+      "endDate": "2019-11-13"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31be88-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "reason": "Childhood asthma",
+      "startDate": "2018-11-07",
+      "endDate": "2019-11-13"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31be9c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "reason": "Childhood asthma",
+      "startDate": "2018-11-07",
+      "endDate": "2019-11-13"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31beb0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3a22f20e-4a21-427e-a9e5-463777dac955",
+      "reason": "Hypertension",
+      "startDate": "2019-11-13",
+      "endDate": "2019-11-13"
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bece-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3a22f20e-4a21-427e-a9e5-463777dac955",
+      "reason": "Childhood asthma",
+      "startDate": "2019-11-13",
+      "endDate": "2019-11-13"
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bee2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "3a22f20e-4a21-427e-a9e5-463777dac955",
+      "reason": "Childhood asthma",
+      "startDate": "2019-11-13",
+      "endDate": "2019-11-13"
+    },
+    {
+      "description": "Hydrochlorothiazide 25 MG Oral Tablet",
+      "id": "med_2d31bf00-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "reason": "Hypertension",
+      "startDate": "2019-11-13",
+      "endDate": null
+    },
+    {
+      "description": "120 ACTUAT Fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bf14-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "reason": "Childhood asthma",
+      "startDate": "2019-11-13",
+      "endDate": null
+    },
+    {
+      "description": "NDA020503 200 ACTUAT Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+      "id": "med_2d31bf28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "reason": "Childhood asthma",
+      "startDate": "2019-11-13",
+      "endDate": null
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430df0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "reason": NaN,
+      "date": "2010-09-22",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430e04-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "reason": NaN,
+      "date": "2011-09-28",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430e18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "reason": NaN,
+      "date": "2012-10-03",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430e22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "reason": NaN,
+      "date": "2015-10-21",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430e36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "reason": NaN,
+      "date": "2016-09-07",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430e40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "reason": NaN,
+      "date": "2018-05-30",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Information gathering (procedure)",
+      "id": "proc_2d430e54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "reason": NaN,
+      "date": "2019-08-10",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Information gathering (procedure)",
+      "id": "proc_2d430e68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "reason": NaN,
+      "date": "2019-09-09",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Information gathering (procedure)",
+      "id": "proc_2d430e72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "reason": NaN,
+      "date": "2019-11-08",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d430e86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "reason": NaN,
+      "date": "2019-11-13",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Information gathering (procedure)",
+      "id": "proc_2d430e90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "reason": NaN,
+      "date": "2020-02-06",
+      "time": "16:46:23Z"
+    },
+    {
+      "description": "Information gathering (procedure)",
+      "id": "proc_2d430ea4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "reason": NaN,
+      "date": "2020-03-07",
+      "time": "16:46:23Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2db5ec94-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2010-09-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5eca8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2010-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5ecbc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "93.0",
+      "units": "kg",
+      "date": "2010-09-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5ecd0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "25.4",
+      "units": "kg/m2",
+      "date": "2010-09-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5ece4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "84.0",
+      "units": "mm[Hg]",
+      "date": "2010-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5ee2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "114.0",
+      "units": "mm[Hg]",
+      "date": "2010-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5ee60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "78.0",
+      "units": "/min",
+      "date": "2010-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5ee9c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2010-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5eeb0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c2ccff0e-8ed7-4fae-a44f-def7e0a8d541",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2010-09-22",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5eec4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2011-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5eee2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5eef6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "94.2",
+      "units": "kg",
+      "date": "2011-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5ef0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "25.7",
+      "units": "kg/m2",
+      "date": "2011-09-28",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5ef1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5ef28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "109.0",
+      "units": "mm[Hg]",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5ef3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "80.0",
+      "units": "/min",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5ef50-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2db5ef5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "4.3",
+      "units": "10*3/uL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2db5ef6e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "4.9",
+      "units": "10*6/uL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2db5ef82-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "14.5",
+      "units": "g/dL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2db5ef96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "40.2",
+      "units": "%",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2db5efa0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "86.7",
+      "units": "fL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2db5efb4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "30.5",
+      "units": "pg",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2db5efc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "35.2",
+      "units": "g/dL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2db5efd2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "43.6",
+      "units": "fL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2db5efe6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "231.1",
+      "units": "10*3/uL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2db5effa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "274.4",
+      "units": "fL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2db5f00e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "9.5",
+      "units": "fL",
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f022-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b34b2b2d-9d8b-45d2-bc45-3fd6053a9447",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2011-09-28",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f036-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2012-10-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f040-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2012-10-03",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f054-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "95.5",
+      "units": "kg",
+      "date": "2012-10-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f068-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "26.1",
+      "units": "kg/m2",
+      "date": "2012-10-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f07c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "84.0",
+      "units": "mm[Hg]",
+      "date": "2012-10-03",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f086-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "117.0",
+      "units": "mm[Hg]",
+      "date": "2012-10-03",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f09a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "77.0",
+      "units": "/min",
+      "date": "2012-10-03",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f0ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2012-10-03",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f0c2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c02f305c-4dd1-4649-a898-7dbe4c6fa24f",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2012-10-03",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f0d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2013-10-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f0ea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2013-10-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f0f4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "97.0",
+      "units": "kg",
+      "date": "2013-10-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f108-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "26.5",
+      "units": "kg/m2",
+      "date": "2013-10-09",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f11c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "78.0",
+      "units": "mm[Hg]",
+      "date": "2013-10-09",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f130-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "133.0",
+      "units": "mm[Hg]",
+      "date": "2013-10-09",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f13a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "82.0",
+      "units": "/min",
+      "date": "2013-10-09",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f14e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2013-10-09",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f162-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5ba51479-0ac1-4960-9a41-f5eaf6aea1a8",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2013-10-09",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f176-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2014-09-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f18a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2014-09-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f194-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "98.0",
+      "units": "kg",
+      "date": "2014-09-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f1a8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "26.8",
+      "units": "kg/m2",
+      "date": "2014-09-24",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f1bc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "84.0",
+      "units": "mm[Hg]",
+      "date": "2014-09-24",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f1d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "107.0",
+      "units": "mm[Hg]",
+      "date": "2014-09-24",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f1e4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "63.0",
+      "units": "/min",
+      "date": "2014-09-24",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f1f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "12.0",
+      "units": "/min",
+      "date": "2014-09-24",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f202-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d680cfcc-79ce-4d19-aa6a-ddc065266fb1",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2014-09-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f216-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2014-10-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f22a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2014-10-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f234-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "98.0",
+      "units": "kg",
+      "date": "2014-10-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f248-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "26.8",
+      "units": "kg/m2",
+      "date": "2014-10-15",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f25c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "2014-10-15",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f266-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "112.0",
+      "units": "mm[Hg]",
+      "date": "2014-10-15",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f27a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "90.0",
+      "units": "/min",
+      "date": "2014-10-15",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f28e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "12.0",
+      "units": "/min",
+      "date": "2014-10-15",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f298-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ce532b18-4c3b-4c2e-a1c8-541df2420b95",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2014-10-15",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f2b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2015-10-21",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f2ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2015-10-21",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f2de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "99.3",
+      "units": "kg",
+      "date": "2015-10-21",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f2fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "27.1",
+      "units": "kg/m2",
+      "date": "2015-10-21",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f310-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "76.0",
+      "units": "mm[Hg]",
+      "date": "2015-10-21",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f31a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "117.0",
+      "units": "mm[Hg]",
+      "date": "2015-10-21",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f32e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "67.0",
+      "units": "/min",
+      "date": "2015-10-21",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f342-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "12.0",
+      "units": "/min",
+      "date": "2015-10-21",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f34c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "fd1eb9d2-9145-4c88-a188-788d7c5a8d01",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2015-10-21",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f360-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2016-09-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f36a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2016-09-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f37e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "100.6",
+      "units": "kg",
+      "date": "2016-09-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f392-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "27.5",
+      "units": "kg/m2",
+      "date": "2016-09-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f3a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "2016-09-07",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f3b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "129.0",
+      "units": "mm[Hg]",
+      "date": "2016-09-07",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f3c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "86.0",
+      "units": "/min",
+      "date": "2016-09-07",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f3d8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2016-09-07",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f3e2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "07b674c1-2b4d-4b6f-a030-27f974573640",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2016-09-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f3f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2016-10-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f40a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f41e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "100.6",
+      "units": "kg",
+      "date": "2016-10-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f432-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "27.5",
+      "units": "kg/m2",
+      "date": "2016-10-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f446-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "76.0",
+      "units": "mm[Hg]",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f450-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "125.0",
+      "units": "mm[Hg]",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f464-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "92.0",
+      "units": "/min",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f478-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2db5f482-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "9.4",
+      "units": "10*3/uL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2db5f496-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "5.1",
+      "units": "10*6/uL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2db5f4aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "16.4",
+      "units": "g/dL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2db5f4be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "42.2",
+      "units": "%",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2db5f4d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "92.5",
+      "units": "fL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2db5f4dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "32.6",
+      "units": "pg",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2db5f4f0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "34.4",
+      "units": "g/dL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2db5f504-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "40.8",
+      "units": "fL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2db5f50e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "371.5",
+      "units": "10*3/uL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2db5f52c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "205.3",
+      "units": "fL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2db5f536-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "11.9",
+      "units": "fL",
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f54a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f06e02a3-27a6-4fa6-b03c-b2b5450d43ae",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2016-10-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f55e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2017-11-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f572-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2017-11-01",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f586-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "101.9",
+      "units": "kg",
+      "date": "2017-11-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f59a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "27.8",
+      "units": "kg/m2",
+      "date": "2017-11-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f5ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2017-11-01",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f5b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "103.0",
+      "units": "mm[Hg]",
+      "date": "2017-11-01",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f5cc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "80.0",
+      "units": "/min",
+      "date": "2017-11-01",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f5e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2017-11-01",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f5ea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "94ee9719-7aad-4530-91af-066094535862",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2017-11-01",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f5fe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2018-05-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f612-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2018-05-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f61c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "101.9",
+      "units": "kg",
+      "date": "2018-05-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f630-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "27.8",
+      "units": "kg/m2",
+      "date": "2018-05-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f644-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "2018-05-30",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f64e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "2018-05-30",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f662-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "89.0",
+      "units": "/min",
+      "date": "2018-05-30",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f66c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2018-05-30",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f680-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "28b43127-b3ad-4a6a-b0cc-530d319e9fd9",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-05-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f694-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2018-11-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f69e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2018-11-07",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5f6b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "103.2",
+      "units": "kg",
+      "date": "2018-11-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5f6d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "28.2",
+      "units": "kg/m2",
+      "date": "2018-11-07",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5f6da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "86.0",
+      "units": "mm[Hg]",
+      "date": "2018-11-07",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5f6ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "131.0",
+      "units": "mm[Hg]",
+      "date": "2018-11-07",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5f702-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "95.0",
+      "units": "/min",
+      "date": "2018-11-07",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5f70c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2018-11-07",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5f720-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8783dd85-28c6-47ba-a0cd-fff9585c94a8",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-11-07",
+      "category": "other"
+    },
+    {
+      "description": "Sexual orientation",
+      "id": "obs_2db5f72a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "value": "heterosexual",
+      "units": "{nominal}",
+      "date": "2019-08-10",
+      "category": "other"
+    },
+    {
+      "description": "HIV status",
+      "id": "obs_2db5f73e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "value": "not HIV positive",
+      "units": "{nominal}",
+      "date": "2019-08-10",
+      "category": "other"
+    },
+    {
+      "description": "Abuse Status [OMAHA]",
+      "id": "obs_2db5f752-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "value": "No signs/symptoms",
+      "units": "{nominal}",
+      "date": "2019-08-10",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_2db5f766-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "value": "Patient is homeless",
+      "units": "{nominal}",
+      "date": "2019-08-10",
+      "category": "other"
+    },
+    {
+      "description": "Are you covered by health insurance or some other kind of health care plan [PhenX]",
+      "id": "obs_2db5f77a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "value": "No",
+      "units": "{nominal}",
+      "date": "2019-08-10",
+      "category": "other"
+    },
+    {
+      "description": "History of Hospitalizations+Outpatient visits",
+      "id": "obs_2db5f78e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1025c4a6-0b29-429c-a56e-c65de239fdf7",
+      "value": "5.0",
+      "units": "{count}",
+      "date": "2019-08-10",
+      "category": "other"
+    },
+    {
+      "description": "Sexual orientation",
+      "id": "obs_2db5f7a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "value": "heterosexual",
+      "units": "{nominal}",
+      "date": "2019-09-09",
+      "category": "other"
+    },
+    {
+      "description": "HIV status",
+      "id": "obs_2db5f7b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "value": "not HIV positive",
+      "units": "{nominal}",
+      "date": "2019-09-09",
+      "category": "other"
+    },
+    {
+      "description": "Abuse Status [OMAHA]",
+      "id": "obs_2db5f7c0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "value": "No signs/symptoms",
+      "units": "{nominal}",
+      "date": "2019-09-09",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_2db5f7d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "value": "Patient is homeless",
+      "units": "{nominal}",
+      "date": "2019-09-09",
+      "category": "other"
+    },
+    {
+      "description": "Are you covered by health insurance or some other kind of health care plan [PhenX]",
+      "id": "obs_2db5f7e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "value": "No",
+      "units": "{nominal}",
+      "date": "2019-09-09",
+      "category": "other"
+    },
+    {
+      "description": "History of Hospitalizations+Outpatient visits",
+      "id": "obs_2db5f7f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ac28d0fe-a95a-42e9-a0bf-febf412485e6",
+      "value": "9.5",
+      "units": "{count}",
+      "date": "2019-09-09",
+      "category": "other"
+    },
+    {
+      "description": "Sexual orientation",
+      "id": "obs_2db5f806-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "heterosexual",
+      "units": "{nominal}",
+      "date": "2019-11-08",
+      "category": "other"
+    },
+    {
+      "description": "HIV status",
+      "id": "obs_2db5f810-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "not HIV positive",
+      "units": "{nominal}",
+      "date": "2019-11-08",
+      "category": "other"
+    },
+    {
+      "description": "Abuse Status [OMAHA]",
+      "id": "obs_2db5f93c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "Severe signs/symptoms",
+      "units": "{nominal}",
+      "date": "2019-11-08",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_2db5f98c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "Patient is homeless",
+      "units": "{nominal}",
+      "date": "2019-11-08",
+      "category": "other"
+    },
+    {
+      "description": "Are you covered by health insurance or some other kind of health care plan [PhenX]",
+      "id": "obs_2db5f9aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "Yes",
+      "units": "{nominal}",
+      "date": "2019-11-08",
+      "category": "other"
+    },
+    {
+      "description": "History of Hospitalizations+Outpatient visits",
+      "id": "obs_2db5f9be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "4.2",
+      "units": "{count}",
+      "date": "2019-11-08",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2db5f9d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "191.4",
+      "units": "cm",
+      "date": "2019-11-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2db5f9f0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2019-11-13",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2db5fa04-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "104.7",
+      "units": "kg",
+      "date": "2019-11-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2db5fa18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "28.6",
+      "units": "kg/m2",
+      "date": "2019-11-13",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2db5fa2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2019-11-13",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2db5fa36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "102.0",
+      "units": "mm[Hg]",
+      "date": "2019-11-13",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2db5fa4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "94.0",
+      "units": "/min",
+      "date": "2019-11-13",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2db5fa54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2019-11-13",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2db5fa68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4a04ca55-0650-4e5c-a05b-bb5599891c52",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-11-13",
+      "category": "other"
+    },
+    {
+      "description": "Sexual orientation",
+      "id": "obs_2db5fa7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "value": "heterosexual",
+      "units": "{nominal}",
+      "date": "2020-02-06",
+      "category": "other"
+    },
+    {
+      "description": "HIV status",
+      "id": "obs_2db5fa86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "value": "not HIV positive",
+      "units": "{nominal}",
+      "date": "2020-02-06",
+      "category": "other"
+    },
+    {
+      "description": "Abuse Status [OMAHA]",
+      "id": "obs_2db5fa9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "value": "Severe signs/symptoms",
+      "units": "{nominal}",
+      "date": "2020-02-06",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_2db5faae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "value": "Patient is homeless",
+      "units": "{nominal}",
+      "date": "2020-02-06",
+      "category": "other"
+    },
+    {
+      "description": "Are you covered by health insurance or some other kind of health care plan [PhenX]",
+      "id": "obs_2db5fab8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "value": "No",
+      "units": "{nominal}",
+      "date": "2020-02-06",
+      "category": "other"
+    },
+    {
+      "description": "History of Hospitalizations+Outpatient visits",
+      "id": "obs_2db5facc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "509334e7-9f5f-4c82-96e2-e0ba0bea202b",
+      "value": "5.5",
+      "units": "{count}",
+      "date": "2020-02-06",
+      "category": "other"
+    },
+    {
+      "description": "Sexual orientation",
+      "id": "obs_2db5faf4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "value": "heterosexual",
+      "units": "{nominal}",
+      "date": "2020-03-07",
+      "category": "other"
+    },
+    {
+      "description": "HIV status",
+      "id": "obs_2db5fb08-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "value": "not HIV positive",
+      "units": "{nominal}",
+      "date": "2020-03-07",
+      "category": "other"
+    },
+    {
+      "description": "Abuse Status [OMAHA]",
+      "id": "obs_2db5fb1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "value": "No signs/symptoms",
+      "units": "{nominal}",
+      "date": "2020-03-07",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_2db5fb26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "value": "Patient is homeless",
+      "units": "{nominal}",
+      "date": "2020-03-07",
+      "category": "other"
+    },
+    {
+      "description": "Are you covered by health insurance or some other kind of health care plan [PhenX]",
+      "id": "obs_2db5fb3a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "value": "Yes",
+      "units": "{nominal}",
+      "date": "2020-03-07",
+      "category": "other"
+    },
+    {
+      "description": "History of Hospitalizations+Outpatient visits",
+      "id": "obs_2db5fb4e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0adf3df0-028f-43ec-a0d1-c29545c3c240",
+      "value": "6.6",
+      "units": "{count}",
+      "date": "2020-03-07",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fb58-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "18.2",
+      "units": "a",
+      "date": "2010-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fb6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "19.2",
+      "units": "a",
+      "date": "2011-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fb80-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "20.2",
+      "units": "a",
+      "date": "2012-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fb8a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "21.2",
+      "units": "a",
+      "date": "2013-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fb9e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "22.2",
+      "units": "a",
+      "date": "2014-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fbb2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "23.2",
+      "units": "a",
+      "date": "2015-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fbbc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "24.2",
+      "units": "a",
+      "date": "2016-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fbd0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "25.2",
+      "units": "a",
+      "date": "2017-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fbe4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "26.2",
+      "units": "a",
+      "date": "2018-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2db5fbee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "27.2",
+      "units": "a",
+      "date": "2019-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fc0c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2010-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fc98-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2011-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fce8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2012-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2013-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd38-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2014-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2015-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2016-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd6a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2017-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd7e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2018-07-18",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2db5fd88-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "a",
+      "date": "2019-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fd9c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2010-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fdb0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2011-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fdba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2012-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fdce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2013-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fdd8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2014-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fdec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2015-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fe00-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2016-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fe14-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2017-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fe28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2018-07-18",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2db5fe32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-07-18",
+      "category": "other"
+    }
+  ]
+}

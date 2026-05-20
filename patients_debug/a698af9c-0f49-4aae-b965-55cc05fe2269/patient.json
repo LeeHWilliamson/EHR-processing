@@ -1,0 +1,1128 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_a698af9c-0f49-4aae-b965-55cc05fe2269",
+    "firstName": "Yuk263",
+    "lastName": "Kuhlman484",
+    "dob": "2018-12-21",
+    "gender": "F",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2018-12-22",
+      "endDate": "2018-12-22",
+      "startTime": "04:47:13",
+      "endTime": "05:17:13"
+    },
+    {
+      "id": "enc_54642bf7-de6a-4f1e-ace0-b9c6a42fddd1",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2019-01-26",
+      "endDate": "2019-01-26",
+      "startTime": "04:47:13",
+      "endTime": "05:02:13"
+    },
+    {
+      "id": "enc_e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "type": "outpatient",
+      "description": "Encounter for symptom",
+      "reason": "Otitis media",
+      "startDate": "2019-01-21",
+      "endDate": "2019-01-21",
+      "startTime": "04:47:13",
+      "endTime": "05:02:13"
+    },
+    {
+      "id": "enc_d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2019-03-30",
+      "endDate": "2019-03-30",
+      "startTime": "04:47:13",
+      "endTime": "05:17:13"
+    },
+    {
+      "id": "enc_ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2019-06-01",
+      "endDate": "2019-06-01",
+      "startTime": "04:47:13",
+      "endTime": "05:02:13"
+    },
+    {
+      "id": "enc_1236dacd-83e7-4e37-acae-2289d23e7682",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Streptococcal sore throat (disorder)",
+      "startDate": "2019-07-24",
+      "endDate": "2019-07-24",
+      "startTime": "04:47:13",
+      "endTime": "05:02:13"
+    },
+    {
+      "id": "enc_233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2019-08-31",
+      "endDate": "2019-08-31",
+      "startTime": "04:47:13",
+      "endTime": "05:17:13"
+    },
+    {
+      "id": "enc_39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2019-11-30",
+      "endDate": "2019-11-30",
+      "startTime": "04:47:13",
+      "endTime": "05:17:13"
+    },
+    {
+      "id": "enc_18a70ce5-e679-4c0d-8260-add650720a16",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2020-02-29",
+      "endDate": "2020-02-29",
+      "startTime": "04:47:13",
+      "endTime": "05:17:13"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Otitis media",
+      "id": "cond_2d0d33ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "startDate": "2019-01-20",
+      "endDate": "2019-03-30"
+    },
+    {
+      "condition": "Streptococcal sore throat (disorder)",
+      "id": "cond_2d0d34dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1236dacd-83e7-4e37-acae-2289d23e7682",
+      "startDate": "2019-07-24",
+      "endDate": "2019-08-06"
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Hep B  adolescent or pediatric",
+      "id": "immu_2d167c68-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-12-22",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6"
+    },
+    {
+      "name": "Hep B  adolescent or pediatric",
+      "id": "immu_2d167c7c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-01-26",
+      "encounter": "54642bf7-de6a-4f1e-ace0-b9c6a42fddd1"
+    },
+    {
+      "name": "Hib (PRP-OMP)",
+      "id": "immu_2d167c90-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-30",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d"
+    },
+    {
+      "name": "rotavirus  monovalent",
+      "id": "immu_2d167c9a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-30",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d"
+    },
+    {
+      "name": "IPV",
+      "id": "immu_2d167cb8-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-30",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d"
+    },
+    {
+      "name": "DTaP",
+      "id": "immu_2d167ccc-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-30",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d"
+    },
+    {
+      "name": "Pneumococcal conjugate PCV 13",
+      "id": "immu_2d167cd6-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-30",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d"
+    },
+    {
+      "name": "Hib (PRP-OMP)",
+      "id": "immu_2d167cea-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-06-01",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2"
+    },
+    {
+      "name": "rotavirus  monovalent",
+      "id": "immu_2d167cf4-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-06-01",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2"
+    },
+    {
+      "name": "IPV",
+      "id": "immu_2d167d08-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-06-01",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2"
+    },
+    {
+      "name": "DTaP",
+      "id": "immu_2d167d1c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-06-01",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2"
+    },
+    {
+      "name": "Pneumococcal conjugate PCV 13",
+      "id": "immu_2d167d26-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-06-01",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2"
+    },
+    {
+      "name": "IPV",
+      "id": "immu_2d167d3a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-08-31",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d167d44-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-08-31",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de"
+    },
+    {
+      "name": "DTaP",
+      "id": "immu_2d167d4e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-08-31",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de"
+    },
+    {
+      "name": "Pneumococcal conjugate PCV 13",
+      "id": "immu_2d167d62-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-08-31",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de"
+    },
+    {
+      "name": "Hep B  adolescent or pediatric",
+      "id": "immu_2d167d6c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-08-31",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de"
+    },
+    {
+      "name": "Hib (PRP-OMP)",
+      "id": "immu_2d167d80-5305-11f1-a6a5-00155d35d14f",
+      "date": "2020-02-29",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16"
+    },
+    {
+      "name": "varicella",
+      "id": "immu_2d167d94-5305-11f1-a6a5-00155d35d14f",
+      "date": "2020-02-29",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16"
+    },
+    {
+      "name": "MMR",
+      "id": "immu_2d167d9e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2020-02-29",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16"
+    },
+    {
+      "name": "Pneumococcal conjugate PCV 13",
+      "id": "immu_2d167da8-5305-11f1-a6a5-00155d35d14f",
+      "date": "2020-02-29",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16"
+    },
+    {
+      "name": "Hep A  ped/adol  2 dose",
+      "id": "immu_2d167dbc-5305-11f1-a6a5-00155d35d14f",
+      "date": "2020-02-29",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Amoxicillin 250 MG Oral Capsule",
+      "id": "med_2d329b32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "reason": NaN,
+      "startDate": "2019-01-21",
+      "endDate": "2019-02-04"
+    },
+    {
+      "description": "Ibuprofen 100 MG Oral Tablet",
+      "id": "med_2d329b50-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "reason": NaN,
+      "startDate": "2019-01-21",
+      "endDate": "2019-02-04"
+    },
+    {
+      "description": "Penicillin V Potassium 250 MG Oral Tablet",
+      "id": "med_2d329b64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1236dacd-83e7-4e37-acae-2289d23e7682",
+      "reason": "Streptococcal sore throat (disorder)",
+      "startDate": "2019-07-24",
+      "endDate": "2019-08-06"
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d438f64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "reason": NaN,
+      "date": "2018-12-22",
+      "time": "04:47:13Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d438f78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "reason": NaN,
+      "date": "2019-01-26",
+      "time": "04:47:13Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d438f8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "reason": NaN,
+      "date": "2019-03-30",
+      "time": "04:47:13Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d438f96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "reason": NaN,
+      "date": "2019-08-31",
+      "time": "04:47:13Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d438faa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "reason": NaN,
+      "date": "2019-11-30",
+      "time": "04:47:13Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d438fbe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "reason": NaN,
+      "date": "2020-02-29",
+      "time": "04:47:13Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb7510-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "46.6",
+      "units": "cm",
+      "date": "2018-12-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb761e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb7682-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "3.1",
+      "units": "kg",
+      "date": "2018-12-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb76aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "78.5",
+      "units": "%",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb76d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "31.3",
+      "units": "cm",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb76e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "82.0",
+      "units": "mm[Hg]",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb76fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "128.0",
+      "units": "mm[Hg]",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7704-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "69.0",
+      "units": "/min",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb7718-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2dbb772c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "8.6",
+      "units": "10*3/uL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2dbb7740-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "5.5",
+      "units": "10*6/uL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2dbb774a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "13.2",
+      "units": "g/dL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2dbb775e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "39.2",
+      "units": "%",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2dbb7772-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "90.1",
+      "units": "fL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2dbb777c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "32.0",
+      "units": "pg",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2dbb7790-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "35.4",
+      "units": "g/dL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2dbb77a4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "44.4",
+      "units": "fL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2dbb77ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "413.9",
+      "units": "10*3/uL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2dbb77c2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "220.7",
+      "units": "fL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2dbb77d6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "9.9",
+      "units": "fL",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb77e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ca8dd3d5-e687-4d79-8c2a-82563f7357c6",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb77f4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "50.0",
+      "units": "cm",
+      "date": "2019-01-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb7808-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb781c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "3.7",
+      "units": "kg",
+      "date": "2019-01-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb7830-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "71.7",
+      "units": "%",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb7844-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "35.0",
+      "units": "cm",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb7858-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "87.0",
+      "units": "mm[Hg]",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb7862-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "106.0",
+      "units": "mm[Hg]",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7876-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "86.0",
+      "units": "/min",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb788a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb789e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e5b2a7d2-26e0-408a-993a-4ac2c9a230f1",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-01-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb78a8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "54.8",
+      "units": "cm",
+      "date": "2019-03-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb78bc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb78d0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "4.9",
+      "units": "kg",
+      "date": "2019-03-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb78e4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "67.7",
+      "units": "%",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb78ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "37.6",
+      "units": "cm",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb7902-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb790c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "137.0",
+      "units": "mm[Hg]",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7920-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "64.0",
+      "units": "/min",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb7934-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb793e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d317bcf4-7a9c-4c1d-a366-349fc7db206d",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-03-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb7952-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "58.4",
+      "units": "cm",
+      "date": "2019-06-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb7966-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb797a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "5.9",
+      "units": "kg",
+      "date": "2019-06-01",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb79ac-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "80.0",
+      "units": "%",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb7a60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "39.3",
+      "units": "cm",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb7a92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "73.0",
+      "units": "mm[Hg]",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb7ab0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "106.0",
+      "units": "mm[Hg]",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7ac4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "87.0",
+      "units": "/min",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb7ace-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb7ae2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab33a88d-fb08-4bea-8a33-a5df0e2c18c2",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-06-01",
+      "category": "other"
+    },
+    {
+      "description": "Body temperature",
+      "id": "obs_2dbb7af6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1236dacd-83e7-4e37-acae-2289d23e7682",
+      "value": "38.9",
+      "units": "Cel",
+      "date": "2019-07-24",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb7b0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "62.7",
+      "units": "cm",
+      "date": "2019-08-31",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb7b28-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb7b3c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "7.1",
+      "units": "kg",
+      "date": "2019-08-31",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb7b46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "73.2",
+      "units": "%",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb7b5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "40.9",
+      "units": "cm",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb7b6e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "75.0",
+      "units": "mm[Hg]",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb7b78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "113.0",
+      "units": "mm[Hg]",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7b8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "79.0",
+      "units": "/min",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb7ba0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "12.0",
+      "units": "/min",
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb7bc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "233f6f2e-7cd8-4f1b-a79e-77714da416de",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-08-31",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb7bdc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "66.3",
+      "units": "cm",
+      "date": "2019-11-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb7bfa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb7c0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "8.1",
+      "units": "kg",
+      "date": "2019-11-30",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb7c22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "81.6",
+      "units": "%",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb7c36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "42.0",
+      "units": "cm",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb7c40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb7c54-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "112.0",
+      "units": "mm[Hg]",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7c68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "95.0",
+      "units": "/min",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb7c72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb7c86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "39bd87ca-21c0-4101-9fab-4e2a5f364ef0",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-11-30",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2dbb7c9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "69.5",
+      "units": "cm",
+      "date": "2020-02-29",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2dbb7cae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2dbb7cb8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "8.9",
+      "units": "kg",
+      "date": "2020-02-29",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Weight-for-length Per age and sex",
+      "id": "obs_2dbb7ccc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "73.8",
+      "units": "%",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Head Occipital-frontal circumference",
+      "id": "obs_2dbb7ce0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "42.8",
+      "units": "cm",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2dbb7cf4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "78.0",
+      "units": "mm[Hg]",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2dbb7cfe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "116.0",
+      "units": "mm[Hg]",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2dbb7d12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "70.0",
+      "units": "/min",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2dbb7d26-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2dbb7d30-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "18a70ce5-e679-4c0d-8260-add650720a16",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2020-02-29",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2dbb7d44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2dbb7d58-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2019-12-22",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2dbb7d6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2dbb7d80-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a",
+      "date": "2019-12-22",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2dbb7d94-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2018-12-22",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2dbb7da8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-12-22",
+      "category": "other"
+    }
+  ]
+}

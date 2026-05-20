@@ -1,14 +1,12 @@
 from reportlab.pdfgen import canvas
 import json
 
-
-
 '''
 we pass document
 we write to text file
 '''
-def write_obs_table_pdf(document, patient):
-    dest_filepath = f"documents/{document["doc_id"]}/test_obs_render.pdf"
+def write_obs_table_pdf(document, patient, render_path):
+    dest_filepath = f"{render_path}/{document["doc_id"]}/test_obs_render.pdf"
     c= canvas.Canvas(dest_filepath, pagesize=(595.27, 841.89))
     xCoord = 50
     yCoord = 780
@@ -22,7 +20,7 @@ def write_obs_table_pdf(document, patient):
                             for field in obs_dict:
                                 if field in entity_dict["fields"]:
                                     # file.write(f"{field} {obs_dict[field]}\n")
-                                    toWrite = field + " " + obs_dict[field]
+                                    toWrite = str(field) + " " + str(obs_dict[field])
                                     print(toWrite)
                                     c.drawString(xCoord+20, yCoord, toWrite)
                                     yCoord -= 16
@@ -36,12 +34,12 @@ def write_obs_table_pdf(document, patient):
     c.save()
     return dest_filepath
 
-with open("documents/doc_2a568192-03e6-4521-a092-f38b911358ba/document.json") as file:
-    debug_doc = json.load(file)
-debug_patient_id = debug_doc["patient_id"].split('_')[1]
-with open(f"patients/{debug_patient_id}/patient.json") as file:
-    debug_patient = json.load(file)
-pdf_filepath = write_obs_table_pdf(debug_doc, debug_patient)
+# with open("documents/doc_2a568192-03e6-4521-a092-f38b911358ba/document.json") as file:
+#     debug_doc = json.load(file)
+# debug_patient_id = debug_doc["patient_id"].split('_')[1]
+# with open(f"patients/{debug_patient_id}/patient.json") as file:
+#     debug_patient = json.load(file)
+# pdf_filepath = write_obs_table_pdf(debug_doc, debug_patient)
 
 # c = canvas.Canvas("bork.pdf", pagesize=(595.27, 841.89)) #A4 pagesize
 

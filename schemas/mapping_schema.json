@@ -3,7 +3,7 @@
 
   "patient_id": "string",
 
-  "document_id": "string",
+  "doc_id": "string",
   "doc_category": "string",
   "template_id": "string",
 
@@ -19,6 +19,17 @@
       "realized_ids": ["string", "..."]
     }
   },
+
+  "field_expectations": {
+  "<entity_type>": {
+    "<entity_id>": {
+      "expected_fields": ["string", "..."],
+      "realized_fields": ["string", "..."],
+      "omitted_fields": ["string", "..."],
+      "omission_mode": "string"
+    }
+  }
+},
 
   "generation_outcome": {
     "status": "success | partial | failed",

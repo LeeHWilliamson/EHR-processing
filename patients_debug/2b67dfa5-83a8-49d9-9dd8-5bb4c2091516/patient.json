@@ -1,0 +1,1018 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_2b67dfa5-83a8-49d9-9dd8-5bb4c2091516",
+    "firstName": "Kasey569",
+    "lastName": "Herman763",
+    "dob": "1993-05-17",
+    "gender": "M",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [
+    {
+      "id": "care_491b5ebc-9298-420a-8205-a3b0f3a9e91a",
+      "startDate": "2000-05-15",
+      "endDate": "2011-05-23",
+      "encounter": "1ea6c39d-9273-405d-9a0c-7db6ee4c493d",
+      "description": "Overactivity/inattention behavior management",
+      "reasonDescription": "Child attention deficit disorder"
+    },
+    {
+      "id": "care_dbb48855-19ba-4d10-a21f-b641bdc901d2",
+      "startDate": "2015-03-07",
+      "endDate": "2015-03-21",
+      "encounter": "eb876750-c9f3-4440-9041-ac54411db3cb",
+      "description": "Wound care",
+      "reasonDescription": "Laceration of thigh"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_1ea6c39d-9273-405d-9a0c-7db6ee4c493d",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": "Child attention deficit disorder",
+      "startDate": "2000-05-15",
+      "endDate": "2000-05-15",
+      "startTime": "08:47:00",
+      "endTime": "09:02:00"
+    },
+    {
+      "id": "enc_ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "type": "wellness",
+      "description": "Well child visit (procedure)",
+      "reason": NaN,
+      "startDate": "2010-07-05",
+      "endDate": "2010-07-05",
+      "startTime": "08:47:00",
+      "endTime": "09:02:00"
+    },
+    {
+      "id": "enc_e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2011-07-11",
+      "endDate": "2011-07-11",
+      "startTime": "08:47:00",
+      "endTime": "09:17:00"
+    },
+    {
+      "id": "enc_d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2012-07-16",
+      "endDate": "2012-07-16",
+      "startTime": "08:47:00",
+      "endTime": "09:17:00"
+    },
+    {
+      "id": "enc_eb876750-c9f3-4440-9041-ac54411db3cb",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2015-03-07",
+      "endDate": "2015-03-07",
+      "startTime": "08:47:00",
+      "endTime": "10:19:00"
+    },
+    {
+      "id": "enc_db230f23-4e07-4066-80c3-3906792ac46a",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2015-07-20",
+      "endDate": "2015-07-20",
+      "startTime": "08:47:00",
+      "endTime": "09:02:00"
+    },
+    {
+      "id": "enc_275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2018-07-23",
+      "endDate": "2018-07-23",
+      "startTime": "08:47:00",
+      "endTime": "09:02:00"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Child attention deficit disorder",
+      "id": "cond_2cfe1d6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1ea6c39d-9273-405d-9a0c-7db6ee4c493d",
+      "startDate": "2000-05-15",
+      "endDate": "2011-05-23"
+    },
+    {
+      "condition": "Laceration of thigh",
+      "id": "cond_2cfe223a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb876750-c9f3-4440-9041-ac54411db3cb",
+      "startDate": "2015-03-07",
+      "endDate": "2015-03-21"
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d148336-5305-11f1-a6a5-00155d35d14f",
+      "date": "2010-07-05",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d14834a-5305-11f1-a6a5-00155d35d14f",
+      "date": "2011-07-11",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d14835e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2012-07-16",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d14853e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-07-20",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a"
+    },
+    {
+      "name": "Td (adult) preservative free",
+      "id": "immu_2d148552-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-07-20",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a"
+    },
+    {
+      "name": "Hep B  adult",
+      "id": "immu_2d14855c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-07-20",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a"
+    },
+    {
+      "name": "meningococcal MCV4P",
+      "id": "immu_2d148570-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-07-20",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d148584-5305-11f1-a6a5-00155d35d14f",
+      "date": "2018-07-23",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d284d62-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb876750-c9f3-4440-9041-ac54411db3cb",
+      "reason": NaN,
+      "startDate": "2015-03-07",
+      "endDate": "2015-03-21"
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3db6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "reason": NaN,
+      "date": "2011-07-11",
+      "time": "08:47:00Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3e3dca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "reason": NaN,
+      "date": "2012-07-16",
+      "time": "08:47:00Z"
+    },
+    {
+      "description": "Suture open wound",
+      "id": "proc_2d3e3ea6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb876750-c9f3-4440-9041-ac54411db3cb",
+      "reason": "Laceration of thigh",
+      "date": "2015-03-07",
+      "time": "08:47:00Z"
+    },
+    {
+      "description": "Injection of tetanus antitoxin",
+      "id": "proc_2d3e3eb0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb876750-c9f3-4440-9041-ac54411db3cb",
+      "reason": "Laceration of thigh",
+      "date": "2015-03-07",
+      "time": "08:47:00Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2d8dd8f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "171.8",
+      "units": "cm",
+      "date": "2010-07-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8dd90c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8dd920-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "61.1",
+      "units": "kg",
+      "date": "2010-07-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8dda2e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "20.7",
+      "units": "kg/m2",
+      "date": "2010-07-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8dda9c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "41.4",
+      "units": "%",
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ddac4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ddad8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "115.0",
+      "units": "mm[Hg]",
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ddaec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "98.0",
+      "units": "/min",
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ddb00-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ddb0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ab5fcb1c-f777-4bff-88ef-ec865a1f7d30",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2010-07-05",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ddb1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "172.7",
+      "units": "cm",
+      "date": "2011-07-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddb32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ddb5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "67.2",
+      "units": "kg",
+      "date": "2011-07-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8ddb78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "22.5",
+      "units": "kg/m2",
+      "date": "2011-07-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8ddb8c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "57.7",
+      "units": "%",
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ddbaa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ddbbe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ddbc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "93.0",
+      "units": "/min",
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ddbdc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ddbf0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e7b4b6fd-88f2-4f62-8cff-a40091bd0539",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2011-07-11",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8ddc04-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "173.1",
+      "units": "cm",
+      "date": "2012-07-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8ddc18-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8ddc22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "63.3",
+      "units": "kg",
+      "date": "2012-07-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8ddc36-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "21.1",
+      "units": "kg/m2",
+      "date": "2012-07-16",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "id": "obs_2d8ddc4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "30.2",
+      "units": "%",
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8ddc5e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "77.0",
+      "units": "mm[Hg]",
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8ddc68-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "111.0",
+      "units": "mm[Hg]",
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8ddc7c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "86.0",
+      "units": "/min",
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8ddc90-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8ddc9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "d05e83e7-58b2-40d3-bc27-c9a8edf9b5f6",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2012-07-16",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8de140-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "173.3",
+      "units": "cm",
+      "date": "2015-07-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de168-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de172-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "68.3",
+      "units": "kg",
+      "date": "2015-07-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de186-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "22.8",
+      "units": "kg/m2",
+      "date": "2015-07-20",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de19a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "76.0",
+      "units": "mm[Hg]",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de1ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "116.0",
+      "units": "mm[Hg]",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de1b8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "65.0",
+      "units": "/min",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de1cc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "16.0",
+      "units": "/min",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8de1e0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "6.6",
+      "units": "10*3/uL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d8de1ea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "4.4",
+      "units": "10*6/uL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d8de1fe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "15.4",
+      "units": "g/dL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d8de212-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "35.7",
+      "units": "%",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d8de21c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "93.5",
+      "units": "fL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d8de23a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "29.4",
+      "units": "pg",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d8de24e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "34.2",
+      "units": "g/dL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d8de262-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "42.7",
+      "units": "fL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d8de276-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "203.3",
+      "units": "10*3/uL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8de280-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "256.1",
+      "units": "fL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d8de294-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "9.5",
+      "units": "fL",
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de2a8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "db230f23-4e07-4066-80c3-3906792ac46a",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2015-07-20",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d8de2b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "173.3",
+      "units": "cm",
+      "date": "2018-07-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d8de2c6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d8de2da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "72.7",
+      "units": "kg",
+      "date": "2018-07-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d8de2ee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "24.2",
+      "units": "kg/m2",
+      "date": "2018-07-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d8de2f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d8de30c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "132.0",
+      "units": "mm[Hg]",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d8de320-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "61.0",
+      "units": "/min",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d8de32a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d8de33e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "275c9ab1-5c04-455c-9f31-1928f3fba494",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2018-07-23",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de352-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "15.6",
+      "units": "a",
+      "date": "2010-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de35c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "16.6",
+      "units": "a",
+      "date": "2011-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de370-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "17.6",
+      "units": "a",
+      "date": "2012-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de384-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "18.6",
+      "units": "a",
+      "date": "2013-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de38e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "19.6",
+      "units": "a",
+      "date": "2014-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de3b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "20.6",
+      "units": "a",
+      "date": "2015-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de3d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "21.6",
+      "units": "a",
+      "date": "2016-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de3de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "22.6",
+      "units": "a",
+      "date": "2017-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de3f2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "23.6",
+      "units": "a",
+      "date": "2018-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d8de406-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "24.6",
+      "units": "a",
+      "date": "2019-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de410-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2010-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de424-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2011-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de42e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2012-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de442-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2013-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de456-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2014-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de46a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2015-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de47e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2016-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de488-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2017-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de49c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2018-05-17",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d8de4b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.4",
+      "units": "a",
+      "date": "2019-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de4ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2010-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de4ce-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2011-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de4d8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2012-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de5fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2013-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de654-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2014-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de668-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2015-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de67c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2016-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de690-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2017-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de6ae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2018-05-17",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d8de6c2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-05-17",
+      "category": "other"
+    }
+  ]
+}

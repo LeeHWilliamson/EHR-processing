@@ -1,0 +1,2031 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_f7d7b580-e670-4921-bc67-550ec468d506",
+    "firstName": "Micki733",
+    "lastName": "Witting912",
+    "dob": "1975-02-16",
+    "gender": "F",
+    "entities": []
+  },
+  "allergies": [
+    {
+      "id": "all_2cceade8-5305-11f1-a6a5-00155d35d14f",
+      "start": "1975-12-23",
+      "stop": NaN,
+      "encounter": "0e201aa3-271d-4fa0-b6db-d73aa17f776d",
+      "description": "Shellfish allergy"
+    }
+  ],
+  "careplans": [
+    {
+      "id": "care_5f7eb79d-f62a-4d00-ad60-558491b8ae9a",
+      "startDate": "1975-12-13",
+      "endDate": NaN,
+      "encounter": "70998a60-1574-40b6-aaa8-c917fe8b78c7",
+      "description": "Self-care interventions (procedure)",
+      "reasonDescription": NaN
+    },
+    {
+      "id": "care_117d75e8-8b59-4a96-b616-dd0d95ccec2e",
+      "startDate": "1997-04-20",
+      "endDate": NaN,
+      "encounter": "88c8a68f-4835-4a87-869e-30baaf98101c",
+      "description": "Diabetes self management plan",
+      "reasonDescription": "Prediabetes"
+    },
+    {
+      "id": "care_2dde5503-d24d-487e-8d65-0d6f800ece6f",
+      "startDate": "2009-12-27",
+      "endDate": "2010-08-01",
+      "encounter": "678c67a0-8426-414d-87db-8440280f66e1",
+      "description": "Routine antenatal care",
+      "reasonDescription": "Normal pregnancy"
+    },
+    {
+      "id": "care_b4cdf496-bb5d-4a13-862d-c346cbb91fc1",
+      "startDate": "2012-08-10",
+      "endDate": "2012-08-24",
+      "encounter": "bbbcf47a-7a34-4f0b-ad82-f2e23d44ae95",
+      "description": "Physical therapy procedure",
+      "reasonDescription": "Sprain of ankle"
+    },
+    {
+      "id": "care_3db44934-0a54-4562-8610-d43cc0e60340",
+      "startDate": "2016-12-01",
+      "endDate": "2017-03-01",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "description": "Fracture care",
+      "reasonDescription": "Fracture of ankle"
+    }
+  ],
+  "devices": [],
+  "encounters": [
+    {
+      "id": "enc_70998a60-1574-40b6-aaa8-c917fe8b78c7",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": NaN,
+      "startDate": "1975-12-13",
+      "endDate": "1975-12-13",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_0e201aa3-271d-4fa0-b6db-d73aa17f776d",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": NaN,
+      "startDate": "1975-12-23",
+      "endDate": "1975-12-23",
+      "startTime": "22:40:32",
+      "endTime": "23:22:32"
+    },
+    {
+      "id": "enc_88c8a68f-4835-4a87-869e-30baaf98101c",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1997-04-20",
+      "endDate": "1997-04-20",
+      "startTime": "22:40:32",
+      "endTime": "23:10:32"
+    },
+    {
+      "id": "enc_c329b35d-2aee-4ce4-9fb6-02eb6a4f0c40",
+      "type": "ambulatory",
+      "description": "Encounter for problem",
+      "reason": "Anemia (disorder)",
+      "startDate": "1997-04-20",
+      "endDate": "1997-04-21",
+      "startTime": "22:40:32",
+      "endTime": "00:03:32"
+    },
+    {
+      "id": "enc_467182db-bf20-4434-9c89-7a68c9e05013",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2005-12-04",
+      "endDate": "2005-12-04",
+      "startTime": "22:40:32",
+      "endTime": "23:25:32"
+    },
+    {
+      "id": "enc_678c67a0-8426-414d-87db-8440280f66e1",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2009-12-27",
+      "endDate": "2009-12-28",
+      "startTime": "22:40:32",
+      "endTime": "03:55:32"
+    },
+    {
+      "id": "enc_c66e5d09-dba3-48ae-a533-4ced31984771",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2010-05-16",
+      "endDate": "2010-05-17",
+      "startTime": "22:40:32",
+      "endTime": "00:10:32"
+    },
+    {
+      "id": "enc_1d789f7f-05d1-474d-920b-ca765af55783",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2010-06-13",
+      "endDate": "2010-06-13",
+      "startTime": "22:40:32",
+      "endTime": "23:25:32"
+    },
+    {
+      "id": "enc_df276fe9-b807-49eb-a0d2-aa352209e482",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2010-07-11",
+      "endDate": "2010-07-11",
+      "startTime": "22:40:32",
+      "endTime": "23:40:32"
+    },
+    {
+      "id": "enc_66f405c8-c7ec-4bfe-b7d9-e2730b184953",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2010-07-25",
+      "endDate": "2010-07-25",
+      "startTime": "22:40:32",
+      "endTime": "23:25:32"
+    },
+    {
+      "id": "enc_dd0f7350-1b3c-4018-ac68-5000fe15fc5b",
+      "type": "emergency",
+      "description": "Obstetric emergency hospital admission",
+      "reason": "Normal pregnancy",
+      "startDate": "2010-08-01",
+      "endDate": "2010-08-02",
+      "startTime": "22:40:32",
+      "endTime": "00:10:32"
+    },
+    {
+      "id": "enc_46f266a1-bc3e-44b6-b2db-97e254b1db30",
+      "type": "ambulatory",
+      "description": "Postnatal visit",
+      "reason": NaN,
+      "startDate": "2010-09-12",
+      "endDate": "2010-09-12",
+      "startTime": "22:40:32",
+      "endTime": "23:25:32"
+    },
+    {
+      "id": "enc_2a77cbd9-b1fb-4c45-8afd-1351fbcea705",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2010-09-22",
+      "endDate": "2010-09-22",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_7243f893-be3d-43f8-ba00-8f43404a7910",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2011-09-17",
+      "endDate": "2011-09-17",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_637698cb-c529-46b9-8214-716fb31e0205",
+      "type": "outpatient",
+      "description": "Patient encounter procedure",
+      "reason": NaN,
+      "startDate": "2011-09-19",
+      "endDate": "2011-09-19",
+      "startTime": "22:40:32",
+      "endTime": "23:38:32"
+    },
+    {
+      "id": "enc_f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2012-05-06",
+      "endDate": "2012-05-06",
+      "startTime": "22:40:32",
+      "endTime": "23:10:32"
+    },
+    {
+      "id": "enc_bbbcf47a-7a34-4f0b-ad82-f2e23d44ae95",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2012-08-10",
+      "endDate": "2012-08-10",
+      "startTime": "22:40:32",
+      "endTime": "23:40:32"
+    },
+    {
+      "id": "enc_b1bbbe25-1616-495b-9c8a-529b34ebf5c7",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2012-09-19",
+      "endDate": "2012-09-19",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_6cd1a269-55d6-4ba4-bd42-49ff86108035",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2013-09-14",
+      "endDate": "2013-09-14",
+      "startTime": "22:40:32",
+      "endTime": "23:06:32"
+    },
+    {
+      "id": "enc_838150c5-d8cf-4242-a8fe-e987dbd8fcca",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2014-09-09",
+      "endDate": "2014-09-09",
+      "startTime": "22:40:32",
+      "endTime": "23:09:32"
+    },
+    {
+      "id": "enc_ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2015-02-22",
+      "endDate": "2015-02-22",
+      "startTime": "22:40:32",
+      "endTime": "23:10:32"
+    },
+    {
+      "id": "enc_f1062c34-871d-40c2-815c-6f42781160a1",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2015-09-04",
+      "endDate": "2015-09-04",
+      "startTime": "22:40:32",
+      "endTime": "23:07:32"
+    },
+    {
+      "id": "enc_24a8c6af-cb0d-4223-8f52-bccc2d14098b",
+      "type": "outpatient",
+      "description": "Patient encounter procedure",
+      "reason": NaN,
+      "startDate": "2016-06-19",
+      "endDate": "2016-06-19",
+      "startTime": "22:40:32",
+      "endTime": "23:42:32"
+    },
+    {
+      "id": "enc_4ef49825-e2d1-4872-8006-c5e6b1783bd2",
+      "type": "ambulatory",
+      "description": "Prenatal initial visit",
+      "reason": "Normal pregnancy",
+      "startDate": "2016-08-14",
+      "endDate": "2016-08-14",
+      "startTime": "22:40:32",
+      "endTime": "23:25:32"
+    },
+    {
+      "id": "enc_e0e1018f-02bb-4bd4-b5a0-53e8459ef5ea",
+      "type": "ambulatory",
+      "description": "Prenatal visit",
+      "reason": "Fetus with unknown complication",
+      "startDate": "2016-08-21",
+      "endDate": "2016-08-21",
+      "startTime": "22:40:32",
+      "endTime": "23:25:32"
+    },
+    {
+      "id": "enc_5d952f85-359b-442e-a9f3-6666095c2274",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2016-08-29",
+      "endDate": "2016-08-29",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_0a393182-5136-401b-b677-b16b0ede4c00",
+      "type": "ambulatory",
+      "description": "Encounter for symptom",
+      "reason": "Acute viral pharyngitis (disorder)",
+      "startDate": "2016-11-08",
+      "endDate": "2016-11-08",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "type": "emergency",
+      "description": "Emergency room admission (procedure)",
+      "reason": NaN,
+      "startDate": "2016-12-01",
+      "endDate": "2016-12-02",
+      "startTime": "22:40:32",
+      "endTime": "00:52:32"
+    },
+    {
+      "id": "enc_e95af538-4d97-4e56-87ec-9ef671101ef6",
+      "type": "inpatient",
+      "description": "Encounter Inpatient",
+      "reason": "Chronic pain",
+      "startDate": "2017-02-03",
+      "endDate": "2017-02-04",
+      "startTime": "22:40:32",
+      "endTime": "22:40:32"
+    },
+    {
+      "id": "enc_704964df-b336-48e7-8ca6-607ff310d8f7",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2017-02-26",
+      "endDate": "2017-02-26",
+      "startTime": "22:40:32",
+      "endTime": "23:10:32"
+    },
+    {
+      "id": "enc_c2a32ce8-30b9-490c-b2d8-81c568e2b2b9",
+      "type": "ambulatory",
+      "description": "Encounter for 'check-up'",
+      "reason": "Fracture of ankle",
+      "startDate": "2017-03-01",
+      "endDate": "2017-03-01",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_8bc56b5d-274c-4778-aaf2-0006e7edbdef",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2017-08-24",
+      "endDate": "2017-08-24",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_c8873c67-7e55-471a-ae40-a8775d393121",
+      "type": "outpatient",
+      "description": "Consultation for treatment",
+      "reason": NaN,
+      "startDate": "2018-08-19",
+      "endDate": "2018-08-19",
+      "startTime": "22:40:32",
+      "endTime": "22:55:32"
+    },
+    {
+      "id": "enc_ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "2019-03-03",
+      "endDate": "2019-03-03",
+      "startTime": "22:40:32",
+      "endTime": "23:10:32"
+    }
+  ],
+  "imaging_studies": [
+    {
+      "id": "img_5ce0531b-e7e7-4438-a625-edbc86eb6692",
+      "date": "2016-12-01",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "bodysite": "Ankle",
+      "modality": "Digital Radiography"
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "Prediabetes",
+      "id": "cond_2cf40980-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "88c8a68f-4835-4a87-869e-30baaf98101c",
+      "startDate": "1997-04-20",
+      "endDate": null
+    },
+    {
+      "condition": "Anemia (disorder)",
+      "id": "cond_2cf40b4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "88c8a68f-4835-4a87-869e-30baaf98101c",
+      "startDate": "1997-04-20",
+      "endDate": null
+    },
+    {
+      "condition": "Miscarriage in first trimester",
+      "id": "cond_2cf40c82-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "467182db-bf20-4434-9c89-7a68c9e05013",
+      "startDate": "2005-12-04",
+      "endDate": null
+    },
+    {
+      "condition": "Normal pregnancy",
+      "id": "cond_2cf40e44-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "678c67a0-8426-414d-87db-8440280f66e1",
+      "startDate": "2009-12-27",
+      "endDate": "2010-08-01"
+    },
+    {
+      "condition": "Sprain of ankle",
+      "id": "cond_2cf40fa2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbbcf47a-7a34-4f0b-ad82-f2e23d44ae95",
+      "startDate": "2012-08-10",
+      "endDate": "2012-08-24"
+    },
+    {
+      "condition": "Normal pregnancy",
+      "id": "cond_2cf4115a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4ef49825-e2d1-4872-8006-c5e6b1783bd2",
+      "startDate": "2016-08-14",
+      "endDate": "2016-08-21"
+    },
+    {
+      "condition": "Fetus with unknown complication",
+      "id": "cond_2cf41290-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4ef49825-e2d1-4872-8006-c5e6b1783bd2",
+      "startDate": "2016-08-14",
+      "endDate": "2016-08-21"
+    },
+    {
+      "condition": "Acute viral pharyngitis (disorder)",
+      "id": "cond_2cf413b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0a393182-5136-401b-b677-b16b0ede4c00",
+      "startDate": "2016-11-08",
+      "endDate": "2016-11-16"
+    },
+    {
+      "condition": "Fracture of ankle",
+      "id": "cond_2cf41574-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "startDate": "2016-12-01",
+      "endDate": "2017-03-01"
+    },
+    {
+      "condition": "Chronic pain",
+      "id": "cond_2cf416b4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e95af538-4d97-4e56-87ec-9ef671101ef6",
+      "startDate": "2017-02-03",
+      "endDate": null
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1329d2-5305-11f1-a6a5-00155d35d14f",
+      "date": "2012-05-06",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d1329e6-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-02-22",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a"
+    },
+    {
+      "name": "Hep A  adult",
+      "id": "immu_2d132a04-5305-11f1-a6a5-00155d35d14f",
+      "date": "2015-02-22",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d132a0e-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-02-26",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7"
+    },
+    {
+      "name": "Td (adult) preservative free",
+      "id": "immu_2d132a22-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-02-26",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7"
+    },
+    {
+      "name": "Hep A  adult",
+      "id": "immu_2d132a2c-5305-11f1-a6a5-00155d35d14f",
+      "date": "2017-02-26",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7"
+    },
+    {
+      "name": "Influenza  seasonal  injectable  preservative free",
+      "id": "immu_2d132a40-5305-11f1-a6a5-00155d35d14f",
+      "date": "2019-03-03",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2"
+    }
+  ],
+  "medications": [
+    {
+      "description": "Chlorpheniramine Maleate 2 MG/ML Oral Solution",
+      "id": "med_2d2448b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0e201aa3-271d-4fa0-b6db-d73aa17f776d",
+      "reason": NaN,
+      "startDate": "1975-12-23",
+      "endDate": null
+    },
+    {
+      "description": "Vitamin B 12 5 MG/ML Injectable Solution",
+      "id": "med_2d2448d4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c329b35d-2aee-4ce4-9fb6-02eb6a4f0c40",
+      "reason": NaN,
+      "startDate": "1997-04-20",
+      "endDate": null
+    },
+    {
+      "description": "Camila 28 Day Pack",
+      "id": "med_2d2448e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "2a77cbd9-b1fb-4c45-8afd-1351fbcea705",
+      "reason": NaN,
+      "startDate": "2010-09-22",
+      "endDate": "2011-09-17"
+    },
+    {
+      "description": "Ibuprofen 200 MG Oral Tablet",
+      "id": "med_2d2448fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "bbbcf47a-7a34-4f0b-ad82-f2e23d44ae95",
+      "reason": NaN,
+      "startDate": "2012-08-10",
+      "endDate": "2012-08-24"
+    },
+    {
+      "description": "Trinessa 28 Day Pack",
+      "id": "med_2d244910-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "b1bbbe25-1616-495b-9c8a-529b34ebf5c7",
+      "reason": NaN,
+      "startDate": "2012-09-19",
+      "endDate": "2013-09-14"
+    },
+    {
+      "description": "1 ML medroxyprogesterone acetate 150 MG/ML Injection",
+      "id": "med_2d244924-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6cd1a269-55d6-4ba4-bd42-49ff86108035",
+      "reason": NaN,
+      "startDate": "2013-09-14",
+      "endDate": "2014-09-09"
+    },
+    {
+      "description": "1 ML medroxyPROGESTERone acetate 150 MG/ML Injection",
+      "id": "med_2d244938-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "838150c5-d8cf-4242-a8fe-e987dbd8fcca",
+      "reason": NaN,
+      "startDate": "2014-09-09",
+      "endDate": "2015-09-04"
+    },
+    {
+      "description": "1 ML medroxyprogesterone acetate 150 MG/ML Injection",
+      "id": "med_2d244942-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f1062c34-871d-40c2-815c-6f42781160a1",
+      "reason": NaN,
+      "startDate": "2015-09-04",
+      "endDate": "2016-06-19"
+    },
+    {
+      "description": "Yaz 28 Day Pack",
+      "id": "med_2d244956-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "5d952f85-359b-442e-a9f3-6666095c2274",
+      "reason": NaN,
+      "startDate": "2016-08-29",
+      "endDate": "2017-08-24"
+    },
+    {
+      "description": "Meperidine Hydrochloride 50 MG Oral Tablet",
+      "id": "med_2d244974-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "reason": NaN,
+      "startDate": "2016-12-01",
+      "endDate": "2017-01-13"
+    },
+    {
+      "description": "Acetaminophen 325 MG Oral Tablet",
+      "id": "med_2d244992-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "reason": NaN,
+      "startDate": "2016-12-01",
+      "endDate": "2017-03-01"
+    },
+    {
+      "description": "Abuse-Deterrent 12 HR Oxycodone Hydrochloride 15 MG Extended Release Oral Tablet",
+      "id": "med_2d2449a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e95af538-4d97-4e56-87ec-9ef671101ef6",
+      "reason": NaN,
+      "startDate": "2017-02-03",
+      "endDate": "2017-02-24"
+    },
+    {
+      "description": "NuvaRing 0.12/0.015 MG per 24HR 21 Day Vaginal Ring",
+      "id": "med_2d2449ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "8bc56b5d-274c-4778-aaf2-0006e7edbdef",
+      "reason": NaN,
+      "startDate": "2017-08-24",
+      "endDate": "2018-08-19"
+    },
+    {
+      "description": "Levora 0.15/30 28 Day Pack",
+      "id": "med_2d2449c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c8873c67-7e55-471a-ae40-a8775d393121",
+      "reason": NaN,
+      "startDate": "2018-08-19",
+      "endDate": "2019-08-14"
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Hemoglobin / Hematocrit / Platelet count",
+      "id": "proc_2d3b9124-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c66e5d09-dba3-48ae-a533-4ced31984771",
+      "reason": "Normal pregnancy",
+      "date": "2010-05-16",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Vaccination for diphtheria  pertussis  and tetanus",
+      "id": "proc_2d3b912e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c66e5d09-dba3-48ae-a533-4ced31984771",
+      "reason": "Normal pregnancy",
+      "date": "2010-05-16",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Urine screening for glucose",
+      "id": "proc_2d3b9142-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c66e5d09-dba3-48ae-a533-4ced31984771",
+      "reason": "Normal pregnancy",
+      "date": "2010-05-16",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3b9156-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c66e5d09-dba3-48ae-a533-4ced31984771",
+      "reason": "Normal pregnancy",
+      "date": "2010-05-16",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3b9160-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "c66e5d09-dba3-48ae-a533-4ced31984771",
+      "reason": "Normal pregnancy",
+      "date": "2010-05-16",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3b9174-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1d789f7f-05d1-474d-920b-ca765af55783",
+      "reason": "Normal pregnancy",
+      "date": "2010-06-13",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3b9188-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "1d789f7f-05d1-474d-920b-ca765af55783",
+      "reason": "Normal pregnancy",
+      "date": "2010-06-13",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Streptococcus pneumoniae group B antigen test",
+      "id": "proc_2d3b919c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "df276fe9-b807-49eb-a0d2-aa352209e482",
+      "reason": "Normal pregnancy",
+      "date": "2010-07-11",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3b91a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "df276fe9-b807-49eb-a0d2-aa352209e482",
+      "reason": "Normal pregnancy",
+      "date": "2010-07-11",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3b91ba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "df276fe9-b807-49eb-a0d2-aa352209e482",
+      "reason": "Normal pregnancy",
+      "date": "2010-07-11",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Evaluation of uterine fundal height",
+      "id": "proc_2d3b91c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "66f405c8-c7ec-4bfe-b7d9-e2730b184953",
+      "reason": "Normal pregnancy",
+      "date": "2010-07-25",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Auscultation of the fetal heart",
+      "id": "proc_2d3b91d8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "66f405c8-c7ec-4bfe-b7d9-e2730b184953",
+      "reason": "Normal pregnancy",
+      "date": "2010-07-25",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Episiotomy",
+      "id": "proc_2d3b91ec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dd0f7350-1b3c-4018-ac68-5000fe15fc5b",
+      "reason": "Normal pregnancy",
+      "date": "2010-08-01",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Childbirth",
+      "id": "proc_2d3b91f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "dd0f7350-1b3c-4018-ac68-5000fe15fc5b",
+      "reason": "Normal pregnancy",
+      "date": "2010-08-01",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Physical examination following birth",
+      "id": "proc_2d3b920a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "46f266a1-bc3e-44b6-b2db-97e254b1db30",
+      "reason": NaN,
+      "date": "2010-09-12",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Depression screening",
+      "id": "proc_2d3b9214-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "46f266a1-bc3e-44b6-b2db-97e254b1db30",
+      "reason": NaN,
+      "date": "2010-09-12",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Insertion of intrauterine contraceptive device",
+      "id": "proc_2d3b9228-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "637698cb-c529-46b9-8214-716fb31e0205",
+      "reason": NaN,
+      "date": "2011-09-19",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3b9232-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "reason": NaN,
+      "date": "2012-05-06",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Intramuscular injection",
+      "id": "proc_2d3b9246-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "6cd1a269-55d6-4ba4-bd42-49ff86108035",
+      "reason": NaN,
+      "date": "2013-09-14",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Intramuscular injection",
+      "id": "proc_2d3b925a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "838150c5-d8cf-4242-a8fe-e987dbd8fcca",
+      "reason": NaN,
+      "date": "2014-09-09",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3b9264-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "reason": NaN,
+      "date": "2015-02-22",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Intramuscular injection",
+      "id": "proc_2d3b9278-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f1062c34-871d-40c2-815c-6f42781160a1",
+      "reason": NaN,
+      "date": "2015-09-04",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Removal of intrauterine device",
+      "id": "proc_2d3b928c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "24a8c6af-cb0d-4223-8f52-bccc2d14098b",
+      "reason": NaN,
+      "date": "2016-06-19",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Standard pregnancy test",
+      "id": "proc_2d3b92a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4ef49825-e2d1-4872-8006-c5e6b1783bd2",
+      "reason": "Normal pregnancy",
+      "date": "2016-08-14",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Ultrasound scan for fetal viability",
+      "id": "proc_2d3b92aa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "4ef49825-e2d1-4872-8006-c5e6b1783bd2",
+      "reason": "Normal pregnancy",
+      "date": "2016-08-14",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Physical examination",
+      "id": "proc_2d3b92be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e0e1018f-02bb-4bd4-b5a0-53e8459ef5ea",
+      "reason": "Normal pregnancy",
+      "date": "2016-08-21",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Depression screening",
+      "id": "proc_2d3b92d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e0e1018f-02bb-4bd4-b5a0-53e8459ef5ea",
+      "reason": "Normal pregnancy",
+      "date": "2016-08-21",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Ankle X-ray",
+      "id": "proc_2d3b92e6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "reason": NaN,
+      "date": "2016-12-01",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Bone immobilization",
+      "id": "proc_2d3b92f0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "eb5bc867-9079-40ec-ab5f-2fe13802dc8c",
+      "reason": "Fracture of ankle",
+      "date": "2016-12-01",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3b9304-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "reason": NaN,
+      "date": "2017-02-26",
+      "time": "22:40:32Z"
+    },
+    {
+      "description": "Medication Reconciliation (procedure)",
+      "id": "proc_2d3b930e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "reason": NaN,
+      "date": "2019-03-03",
+      "time": "22:40:32Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_2d719512-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "161.0",
+      "units": "cm",
+      "date": "2012-05-06",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d719530-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d71953a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "72.7",
+      "units": "kg",
+      "date": "2012-05-06",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d71954e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "28.0",
+      "units": "kg/m2",
+      "date": "2012-05-06",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d719562-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "74.0",
+      "units": "mm[Hg]",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d719576-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "115.0",
+      "units": "mm[Hg]",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d719580-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "74.0",
+      "units": "/min",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d719594-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "14.0",
+      "units": "/min",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Glucose",
+      "id": "obs_2d7195a8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "88.1",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Urea Nitrogen",
+      "id": "obs_2d7195b2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "15.2",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Creatinine",
+      "id": "obs_2d7195c6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "1.4",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Calcium",
+      "id": "obs_2d7195da-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "8.8",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Sodium",
+      "id": "obs_2d7195e4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "138.6",
+      "units": "mmol/L",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Potassium",
+      "id": "obs_2d7195f8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "4.6",
+      "units": "mmol/L",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Chloride",
+      "id": "obs_2d71960c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "107.2",
+      "units": "mmol/L",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Carbon Dioxide",
+      "id": "obs_2d719616-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "20.3",
+      "units": "mmol/L",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Total Cholesterol",
+      "id": "obs_2d71962a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "173.5",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Triglycerides",
+      "id": "obs_2d71963e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "117.4",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Low Density Lipoprotein Cholesterol",
+      "id": "obs_2d719652-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "75.4",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "High Density Lipoprotein Cholesterol",
+      "id": "obs_2d71965c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "74.6",
+      "units": "mg/dL",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d71967a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "id": "obs_2d71968e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "f3ce534a-f8cf-45f7-ac7b-6bf3eec27347",
+      "value": "6.1",
+      "units": "%",
+      "date": "2012-05-06",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d7196a2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "161.0",
+      "units": "cm",
+      "date": "2015-02-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7196b6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d7196ca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "78.0",
+      "units": "kg",
+      "date": "2015-02-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d7196de-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "30.1",
+      "units": "kg/m2",
+      "date": "2015-02-22",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d7196e8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "76.0",
+      "units": "mm[Hg]",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d7196fc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "131.0",
+      "units": "mm[Hg]",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d719710-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "74.0",
+      "units": "/min",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d71971a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Glucose",
+      "id": "obs_2d71972e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "73.9",
+      "units": "mg/dL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Urea Nitrogen",
+      "id": "obs_2d719742-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "15.4",
+      "units": "mg/dL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Creatinine",
+      "id": "obs_2d71974c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "0.9",
+      "units": "mg/dL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Calcium",
+      "id": "obs_2d719760-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "8.9",
+      "units": "mg/dL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Sodium",
+      "id": "obs_2d71976a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "140.7",
+      "units": "mmol/L",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Potassium",
+      "id": "obs_2d71977e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "4.4",
+      "units": "mmol/L",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Chloride",
+      "id": "obs_2d719792-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "101.8",
+      "units": "mmol/L",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Carbon Dioxide",
+      "id": "obs_2d7197a6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "20.8",
+      "units": "mmol/L",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d7197b0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "7.5",
+      "units": "10*3/uL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_2d7197c4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "4.9",
+      "units": "10*6/uL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_2d7197d8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "12.4",
+      "units": "g/dL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_2d7197ec-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "38.4",
+      "units": "%",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic volume] by Automated count",
+      "id": "obs_2d7197f6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "82.3",
+      "units": "fL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_2d71980a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "32.6",
+      "units": "pg",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Mass/volume] by Automated count",
+      "id": "obs_2d71981e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "33.1",
+      "units": "g/dL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "id": "obs_2d719828-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "39.3",
+      "units": "fL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_2d71983c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "340.1",
+      "units": "10*3/uL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d719850-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "187.2",
+      "units": "fL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "id": "obs_2d71985a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "12.1",
+      "units": "fL",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d71986e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "id": "obs_2d719878-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ef76d66a-e049-4c09-abd4-77aa0b8fe20a",
+      "value": "6.1",
+      "units": "%",
+      "date": "2015-02-22",
+      "category": "other"
+    },
+    {
+      "description": "Body temperature",
+      "id": "obs_2d71988c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "0a393182-5136-401b-b677-b16b0ede4c00",
+      "value": "37.4",
+      "units": "Cel",
+      "date": "2016-11-08",
+      "category": "other"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7198a0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "e95af538-4d97-4e56-87ec-9ef671101ef6",
+      "value": "8.0",
+      "units": "{score}",
+      "date": "2017-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d7198be-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "161.0",
+      "units": "cm",
+      "date": "2017-02-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d7198d2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d7198dc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "73.0",
+      "units": "kg",
+      "date": "2017-02-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d7198fa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "28.2",
+      "units": "kg/m2",
+      "date": "2017-02-26",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d71990e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "83.0",
+      "units": "mm[Hg]",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d719918-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "126.0",
+      "units": "mm[Hg]",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d71992c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "95.0",
+      "units": "/min",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d719940-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "15.0",
+      "units": "/min",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Glucose",
+      "id": "obs_2d71994a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "79.4",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Urea Nitrogen",
+      "id": "obs_2d71995e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "11.2",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Creatinine",
+      "id": "obs_2d719a6c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "0.8",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Calcium",
+      "id": "obs_2d719ad0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "8.8",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Sodium",
+      "id": "obs_2d719aee-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "139.2",
+      "units": "mmol/L",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Potassium",
+      "id": "obs_2d719b02-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "4.8",
+      "units": "mmol/L",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Chloride",
+      "id": "obs_2d719b16-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "108.9",
+      "units": "mmol/L",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Carbon Dioxide",
+      "id": "obs_2d719b20-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "20.3",
+      "units": "mmol/L",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Total Cholesterol",
+      "id": "obs_2d719b34-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "198.7",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Triglycerides",
+      "id": "obs_2d719b48-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "138.9",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Low Density Lipoprotein Cholesterol",
+      "id": "obs_2d719b52-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "99.8",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "High Density Lipoprotein Cholesterol",
+      "id": "obs_2d719b66-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "71.1",
+      "units": "mg/dL",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d719b7a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "id": "obs_2d719b84-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "704964df-b336-48e7-8ca6-607ff310d8f7",
+      "value": "6.0",
+      "units": "%",
+      "date": "2017-02-26",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_2d719b98-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "161.0",
+      "units": "cm",
+      "date": "2019-03-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_2d719bca-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_2d719bde-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "76.3",
+      "units": "kg",
+      "date": "2019-03-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body Mass Index",
+      "id": "obs_2d719bf2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "29.5",
+      "units": "kg/m2",
+      "date": "2019-03-03",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_2d719c06-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "76.0",
+      "units": "mm[Hg]",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_2d719c1a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "123.0",
+      "units": "mm[Hg]",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_2d719c24-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "87.0",
+      "units": "/min",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_2d719c38-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "13.0",
+      "units": "/min",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Glucose",
+      "id": "obs_2d719c4c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "81.8",
+      "units": "mg/dL",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Urea Nitrogen",
+      "id": "obs_2d719c60-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "7.9",
+      "units": "mg/dL",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Creatinine",
+      "id": "obs_2d719c74-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "0.9",
+      "units": "mg/dL",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Calcium",
+      "id": "obs_2d719c88-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "9.6",
+      "units": "mg/dL",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Sodium",
+      "id": "obs_2d719c92-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "141.2",
+      "units": "mmol/L",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Potassium",
+      "id": "obs_2d719ca6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "3.9",
+      "units": "mmol/L",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Chloride",
+      "id": "obs_2d719cba-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "107.4",
+      "units": "mmol/L",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Carbon Dioxide",
+      "id": "obs_2d719cc4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "25.9",
+      "units": "mmol/L",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status NHIS",
+      "id": "obs_2d719cd8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "Never smoker",
+      "units": NaN,
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "id": "obs_2d719ce2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": "ffb23083-c70b-4dd2-a485-59588a0f20c2",
+      "value": "6.2",
+      "units": "%",
+      "date": "2019-03-03",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719cf6-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "32.9",
+      "units": "a",
+      "date": "2010-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d0a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "33.8",
+      "units": "a",
+      "date": "2011-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d1e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "34.6",
+      "units": "a",
+      "date": "2012-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d32-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "35.4",
+      "units": "a",
+      "date": "2013-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d46-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "36.3",
+      "units": "a",
+      "date": "2014-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d5a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "37.1",
+      "units": "a",
+      "date": "2015-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d64-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "38.0",
+      "units": "a",
+      "date": "2016-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d78-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "38.8",
+      "units": "a",
+      "date": "2017-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d82-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "39.5",
+      "units": "a",
+      "date": "2018-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719d96-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "40.4",
+      "units": "a",
+      "date": "2019-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QALY",
+      "id": "obs_2d719daa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "41.2",
+      "units": "a",
+      "date": "2020-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719db4-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.1",
+      "units": "a",
+      "date": "2010-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719dc8-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.2",
+      "units": "a",
+      "date": "2011-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719ddc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.4",
+      "units": "a",
+      "date": "2012-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719df0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.6",
+      "units": "a",
+      "date": "2013-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719dfa-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.7",
+      "units": "a",
+      "date": "2014-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719e0e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "1.9",
+      "units": "a",
+      "date": "2015-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719e22-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.0",
+      "units": "a",
+      "date": "2016-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719e2c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.2",
+      "units": "a",
+      "date": "2017-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719e40-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.5",
+      "units": "a",
+      "date": "2018-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719e4a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.6",
+      "units": "a",
+      "date": "2019-02-16",
+      "category": "other"
+    },
+    {
+      "description": "DALY",
+      "id": "obs_2d719e5e-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "2.8",
+      "units": "a",
+      "date": "2020-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719e72-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2010-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719e86-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2011-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719e9a-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2012-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719eae-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2013-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719ec2-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2014-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719ecc-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2015-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719ee0-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.9",
+      "units": "{score}",
+      "date": "2016-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719eea-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.9",
+      "units": "{score}",
+      "date": "2017-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719efe-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.7",
+      "units": "{score}",
+      "date": "2018-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719f12-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2019-02-16",
+      "category": "other"
+    },
+    {
+      "description": "QOLS",
+      "id": "obs_2d719f1c-5305-11f1-a6a5-00155d35d14f",
+      "encounter": NaN,
+      "value": "0.8",
+      "units": "{score}",
+      "date": "2020-02-16",
+      "category": "other"
+    }
+  ]
+}
