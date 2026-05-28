@@ -1,0 +1,4 @@
+from reconstruct_via_metadata import patient_reconstructor_metadata
+
+reconstructor = patient_reconstructor_metadata("docs_debug")
+reconstructor.reconstruct_all()
