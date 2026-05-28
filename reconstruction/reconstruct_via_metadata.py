@@ -1,6 +1,7 @@
 '''
 This script will reconstruct patient JSONs via document metadata 
 input: path to document directory output output: a patient JSON for each patient mentioned across the docs within the directory
+In future refactors, preload all docs, mappings, patients, and try to use lookup tables instead of deep for loop traversal
 '''
 from pathlib import Path
 import json
