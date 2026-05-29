@@ -1,0 +1,675 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_10339b10-3cd1-4ac3-ac13-ec26728cb592",
+    "firstName": "string",
+    "lastName": "string",
+    "dob": "YYYY-MM-DD",
+    "gender": "string",
+    "entities": []
+  },
+  "allergies": [],
+  "careplans": [],
+  "devices": [],
+  "encounters": [],
+  "imaging_studies": [],
+  "conditions": [],
+  "immunizations": [],
+  "medications": [],
+  "procedures": [],
+  "observations": [
+    {
+      "id": "obs_1417756a-5acf-11f1-ad28-00155d199340",
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_141775ce-5acf-11f1-ad28-00155d199340",
+      "description": "Diastolic Blood Pressure",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "79.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_141775ec-5acf-11f1-ad28-00155d199340",
+      "description": "Systolic Blood Pressure",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "123.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_1417761e-5acf-11f1-ad28-00155d199340",
+      "description": "Heart rate",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "89.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_14177664-5acf-11f1-ad28-00155d199340",
+      "description": "Respiratory rate",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "14.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_14177696-5acf-11f1-ad28-00155d199340",
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "4.1",
+      "units": "10*3/uL"
+    },
+    {
+      "id": "obs_141776d2-5acf-11f1-ad28-00155d199340",
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "5.4",
+      "units": "10*6/uL"
+    },
+    {
+      "id": "obs_14177704-5acf-11f1-ad28-00155d199340",
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "17.1",
+      "units": "g/dL"
+    },
+    {
+      "id": "obs_1417772c-5acf-11f1-ad28-00155d199340",
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "37.7",
+      "units": "%"
+    },
+    {
+      "id": "obs_14177768-5acf-11f1-ad28-00155d199340",
+      "description": "MCV [Entitic volume] by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "86.0",
+      "units": "fL"
+    },
+    {
+      "id": "obs_1417779a-5acf-11f1-ad28-00155d199340",
+      "description": "MCH [Entitic mass] by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "27.9",
+      "units": "pg"
+    },
+    {
+      "id": "obs_141777c2-5acf-11f1-ad28-00155d199340",
+      "description": "MCHC [Mass/volume] by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "34.0",
+      "units": "g/dL"
+    },
+    {
+      "id": "obs_141777f4-5acf-11f1-ad28-00155d199340",
+      "description": "Erythrocyte distribution width [Entitic volume] by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "45.4",
+      "units": "fL"
+    },
+    {
+      "id": "obs_14177826-5acf-11f1-ad28-00155d199340",
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "262.7",
+      "units": "10*3/uL"
+    },
+    {
+      "id": "obs_1417784e-5acf-11f1-ad28-00155d199340",
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "417.2",
+      "units": "fL"
+    },
+    {
+      "id": "obs_14177880-5acf-11f1-ad28-00155d199340",
+      "description": "Platelet mean volume [Entitic volume] in Blood by Automated count",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "9.4",
+      "units": "fL"
+    },
+    {
+      "id": "obs_141778a8-5acf-11f1-ad28-00155d199340",
+      "description": "Tobacco smoking status NHIS",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "Never smoker",
+      "units": NaN
+    },
+    {
+      "id": "obs_14178636-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "19.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_141788a2-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_14178992-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_14178690-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "22.0"
+    },
+    {
+      "id": "obs_14178924-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0"
+    },
+    {
+      "id": "obs_141789c4-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0"
+    },
+    {
+      "id": "obs_141772fe-5acf-11f1-ad28-00155d199340",
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "1.0"
+    },
+    {
+      "id": "obs_14177362-5acf-11f1-ad28-00155d199340",
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "68.1"
+    },
+    {
+      "id": "obs_1417738a-5acf-11f1-ad28-00155d199340",
+      "description": "Diastolic Blood Pressure",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "84.0"
+    },
+    {
+      "id": "obs_141773b2-5acf-11f1-ad28-00155d199340",
+      "description": "Systolic Blood Pressure",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "121.0"
+    },
+    {
+      "id": "obs_141773d0-5acf-11f1-ad28-00155d199340",
+      "description": "Heart rate",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "98.0"
+    },
+    {
+      "id": "obs_141773ee-5acf-11f1-ad28-00155d199340",
+      "description": "Respiratory rate",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "13.0"
+    },
+    {
+      "id": "obs_14177402-5acf-11f1-ad28-00155d199340",
+      "description": "Tobacco smoking status NHIS",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "Never smoker"
+    },
+    {
+      "id": "obs_1417841a-5acf-11f1-ad28-00155d199340",
+      "description": "Body Height",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "165.7",
+      "units": "cm"
+    },
+    {
+      "id": "obs_14178460-5acf-11f1-ad28-00155d199340",
+      "description": "Body Weight",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "76.4",
+      "units": "kg"
+    },
+    {
+      "id": "obs_14178488-5acf-11f1-ad28-00155d199340",
+      "description": "Body Mass Index",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "27.8",
+      "units": "kg/m2"
+    },
+    {
+      "id": "obs_14176cbe-5acf-11f1-ad28-00155d199340",
+      "description": "Body Height",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "165.5"
+    },
+    {
+      "id": "obs_14176d04-5acf-11f1-ad28-00155d199340",
+      "description": "Body Weight",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "66.1"
+    },
+    {
+      "id": "obs_14176d22-5acf-11f1-ad28-00155d199340",
+      "description": "Body Mass Index",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "24.1"
+    },
+    {
+      "id": "obs_14177f10-5acf-11f1-ad28-00155d199340",
+      "description": "Body Height",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "165.7"
+    },
+    {
+      "id": "obs_14177f6a-5acf-11f1-ad28-00155d199340",
+      "description": "Body Weight",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "74.4"
+    },
+    {
+      "id": "obs_14178064-5acf-11f1-ad28-00155d199340",
+      "description": "Body Mass Index",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "27.1"
+    },
+    {
+      "id": "obs_14178712-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "26.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_14178960-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_14178a32-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_141785f0-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "17.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_1417876c-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_14178974-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_141772e0-5acf-11f1-ad28-00155d199340",
+      "description": "Body Height",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "165.5"
+    },
+    {
+      "id": "obs_1417731c-5acf-11f1-ad28-00155d199340",
+      "description": "Body Weight",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "66.1"
+    },
+    {
+      "id": "obs_14177344-5acf-11f1-ad28-00155d199340",
+      "description": "Body Mass Index",
+      "encounter": "470ccc46-0d6b-4a60-9f52-f3adaa7ac08f",
+      "value": "24.1"
+    },
+    {
+      "id": "obs_1417860e-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "18.0"
+    },
+    {
+      "id": "obs_14178776-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0"
+    },
+    {
+      "id": "obs_1417897e-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0"
+    },
+    {
+      "id": "obs_14176cdc-5acf-11f1-ad28-00155d199340",
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_14176d4a-5acf-11f1-ad28-00155d199340",
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "68.1",
+      "units": "%"
+    },
+    {
+      "id": "obs_14176f48-5acf-11f1-ad28-00155d199340",
+      "description": "Diastolic Blood Pressure",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "85.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_14176f52-5acf-11f1-ad28-00155d199340",
+      "description": "Systolic Blood Pressure",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "118.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_14176f66-5acf-11f1-ad28-00155d199340",
+      "description": "Heart rate",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "79.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_14176f7a-5acf-11f1-ad28-00155d199340",
+      "description": "Respiratory rate",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "15.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_14176f84-5acf-11f1-ad28-00155d199340",
+      "description": "Tobacco smoking status NHIS",
+      "encounter": "c6d1442e-5c85-4a29-b80d-e2ae982cd8da",
+      "value": "Never smoker",
+      "units": NaN
+    },
+    {
+      "id": "obs_14176354-5acf-11f1-ad28-00155d199340",
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_14176390-5acf-11f1-ad28-00155d199340",
+      "description": "Body mass index (BMI) [Percentile] Per age and gender",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "71.3",
+      "units": "%"
+    },
+    {
+      "id": "obs_141763a4-5acf-11f1-ad28-00155d199340",
+      "description": "Diastolic Blood Pressure",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "70.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_141763d6-5acf-11f1-ad28-00155d199340",
+      "description": "Systolic Blood Pressure",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "121.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_141763ea-5acf-11f1-ad28-00155d199340",
+      "description": "Heart rate",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "70.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_141763fe-5acf-11f1-ad28-00155d199340",
+      "description": "Respiratory rate",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "15.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_14176408-5acf-11f1-ad28-00155d199340",
+      "description": "Tobacco smoking status NHIS",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "Never smoker",
+      "units": NaN
+    },
+    {
+      "id": "obs_141786ea-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "25.0"
+    },
+    {
+      "id": "obs_1417894c-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0"
+    },
+    {
+      "id": "obs_14178a14-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0"
+    },
+    {
+      "id": "obs_141786cc-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "24.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_14178942-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_141789e2-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_141786ae-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "23.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_1417892e-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_141789ce-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_14177420-5acf-11f1-ad28-00155d199340",
+      "description": "Body Height",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "165.7",
+      "units": "cm"
+    },
+    {
+      "id": "obs_14177588-5acf-11f1-ad28-00155d199340",
+      "description": "Body Weight",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "69.7",
+      "units": "kg"
+    },
+    {
+      "id": "obs_1417759c-5acf-11f1-ad28-00155d199340",
+      "description": "Body Mass Index",
+      "encounter": "23106584-f522-4dcf-ad01-b215160cd5b2",
+      "value": "25.4",
+      "units": "kg/m2"
+    },
+    {
+      "id": "obs_14178438-5acf-11f1-ad28-00155d199340",
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "4.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_141784a6-5acf-11f1-ad28-00155d199340",
+      "description": "Diastolic Blood Pressure",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "83.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_141784c4-5acf-11f1-ad28-00155d199340",
+      "description": "Systolic Blood Pressure",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "106.0",
+      "units": "mm[Hg]"
+    },
+    {
+      "id": "obs_141784d8-5acf-11f1-ad28-00155d199340",
+      "description": "Heart rate",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "64.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_141784f6-5acf-11f1-ad28-00155d199340",
+      "description": "Respiratory rate",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "16.0",
+      "units": "/min"
+    },
+    {
+      "id": "obs_1417850a-5acf-11f1-ad28-00155d199340",
+      "description": "Tobacco smoking status NHIS",
+      "encounter": "35ad487a-3e5b-44ad-9e04-6b628bdac9bb",
+      "value": "Never smoker",
+      "units": NaN
+    },
+    {
+      "id": "obs_14176340-5acf-11f1-ad28-00155d199340",
+      "description": "Body Height",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "165.0"
+    },
+    {
+      "id": "obs_14176368-5acf-11f1-ad28-00155d199340",
+      "description": "Body Weight",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "64.7"
+    },
+    {
+      "id": "obs_1417637c-5acf-11f1-ad28-00155d199340",
+      "description": "Body Mass Index",
+      "encounter": "dae2b7cb-1316-4b78-954f-fa610a6c6d0e",
+      "value": "23.8"
+    },
+    {
+      "id": "obs_14178672-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "21.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_14178910-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_141789b0-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    },
+    {
+      "id": "obs_14177f38-5acf-11f1-ad28-00155d199340",
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "1.0"
+    },
+    {
+      "id": "obs_141780aa-5acf-11f1-ad28-00155d199340",
+      "description": "Diastolic Blood Pressure",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "77.0"
+    },
+    {
+      "id": "obs_141780d2-5acf-11f1-ad28-00155d199340",
+      "description": "Systolic Blood Pressure",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "109.0"
+    },
+    {
+      "id": "obs_141780f0-5acf-11f1-ad28-00155d199340",
+      "description": "Heart rate",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "70.0"
+    },
+    {
+      "id": "obs_14178136-5acf-11f1-ad28-00155d199340",
+      "description": "Respiratory rate",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "14.0"
+    },
+    {
+      "id": "obs_1417814a-5acf-11f1-ad28-00155d199340",
+      "description": "Tobacco smoking status NHIS",
+      "encounter": "99953577-4f3c-4098-bd0c-d59a7ba1edb3",
+      "value": "Never smoker"
+    },
+    {
+      "id": "obs_14178654-5acf-11f1-ad28-00155d199340",
+      "description": "QALY",
+      "encounter": NaN,
+      "value": "20.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_141788fc-5acf-11f1-ad28-00155d199340",
+      "description": "DALY",
+      "encounter": NaN,
+      "value": "0.0",
+      "units": "a"
+    },
+    {
+      "id": "obs_1417899c-5acf-11f1-ad28-00155d199340",
+      "description": "QOLS",
+      "encounter": NaN,
+      "value": "1.0",
+      "units": "{score}"
+    }
+  ]
+}

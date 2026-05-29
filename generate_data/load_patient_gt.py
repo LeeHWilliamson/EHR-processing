@@ -194,5 +194,5 @@ def run_end_to_end(input_directory="sample_data", output_directory="patients"):
         os.makedirs(f"{output_directory}/{key}", exist_ok=True)
         with open(f"{output_directory}/{key}/patient.json", 'w') as file:
             json.dump(value, file, indent=2)
-    patient_paths.append(f"{output_directory}/{key}/patient.json")
+        patient_paths.append(f"{output_directory}/{key}/patient.json")
     return patient_paths

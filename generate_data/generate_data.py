@@ -20,5 +20,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     patient_paths = run_end_to_end("sample_data", args.patient_json_path) #create patient JSONs
+    counter = 0
     for patient in patient_paths:
-        generate_observation_table(patient, args.document_json_path, args.mapping_json_path, args.document_json_path)
+        if counter < 10:
+            generate_observation_table(patient, args.document_json_path, args.mapping_json_path, args.document_json_path)
+            counter +=1
