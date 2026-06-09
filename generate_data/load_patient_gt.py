@@ -11,17 +11,17 @@ import csv
 #we will use some constant paths for our schemas and datafiles for now, we import all clinical data
 patient_template = 'schemas/patient_template.json'
 patients_output_path = 'sample_data/patients.json'
-patients_csv = 'sample_data/patients.csv'
-allergies_csv = 'sample_data/allergies.csv'
-conditions_csv = 'sample_data/conditions.csv'
-encounters_csv = 'sample_data/encounters.csv'
-immunizations_csv = 'sample_data/immunizations.csv'
-medications_csv = 'sample_data/medications.csv'
-procedures_csv = 'sample_data/procedures.csv'
-observations_csv = "sample_data/observations.csv"
-careplans_csv = "sample_data/careplans.csv"
-devices_csv = "sample_data/devices.csv"
-imaging_studies_csv = "sample_data/imaging_studies.csv"
+# patients_csv = 'sample_data/patients.csv'
+# allergies_csv = 'sample_data/allergies.csv'
+# conditions_csv = 'sample_data/conditions.csv'
+# encounters_csv = 'sample_data/encounters.csv'
+# immunizations_csv = 'sample_data/immunizations.csv'
+# medications_csv = 'sample_data/medications.csv'
+# procedures_csv = 'sample_data/procedures.csv'
+# observations_csv = "sample_data/observations.csv"
+# careplans_csv = "sample_data/careplans.csv"
+# devices_csv = "sample_data/devices.csv"
+# imaging_studies_csv = "sample_data/imaging_studies.csv"
 
 
 '''
@@ -59,6 +59,7 @@ def load_patients(data_directory):
     for row in patients_df.itertuples(index=True):
         with open(patient_template) as file:
             patients[row.Id] = json.load(file)
+        print(row.Id)
     print(len(patients))
 
     # load patient info, each patient will only have 1 entry in patients table, so we simply load each row as an individual record
@@ -70,9 +71,21 @@ def load_patients(data_directory):
         patients[row.Id]["patient"]["gender"] = row.GENDER
     # for record in records(dataframe=patients_df):
     #     patient_record = {key: value for key, value in record.items() if pandas.notna(value)}
+    print(patients)
     return patients
 
-def load_fields(patients_no_fields):
+def load_fields(input_directory, patients_no_fields):
+    patients_csv = f'{input_directory}/patients.csv'
+    allergies_csv = f'{input_directory}/allergies.csv'
+    conditions_csv = f'{input_directory}/conditions.csv'
+    encounters_csv = f'{input_directory}/encounters.csv'
+    immunizations_csv = f'{input_directory}/immunizations.csv'
+    medications_csv = f'{input_directory}/medications.csv'
+    procedures_csv = f'{input_directory}/procedures.csv'
+    observations_csv = f'{input_directory}/observations.csv'
+    careplans_csv = f'{input_directory}/careplans.csv'
+    devices_csv = f'{input_directory}/devices.csv'
+    imaging_studies_csv = f'{input_directory}/imaging_studies.csv'
     #trackers for incrementing instance ids
     med_count = 1
     proc_count = 1
@@ -82,11 +95,12 @@ def load_fields(patients_no_fields):
     #load allergies
     patients = patients_no_fields.copy()
 
-    allergies_df = pandas.read_csv(allergies_csv)
-    for row in allergies_df.itertuples(index=True):
-        allergyID = f"all_{uuid.uuid1()}"
-        # patients[row.PATIENT]["patient"]["entities"].append(allergyID)
-        patients[row.PATIENT]["allergies"].append({"id": allergyID, "start": row.START, "stop" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION})
+    if os.path.exists(allergies_csv) and os.path.isfile(allergies_csv):
+        allergies_df = pandas.read_csv(allergies_csv)
+        for row in allergies_df.itertuples(index=True):
+            allergyID = f"all_{uuid.uuid1()}"
+            # patients[row.PATIENT]["patient"]["entities"].append(allergyID)
+            patients[row.PATIENT]["allergies"].append({"id": allergyID, "start": row.START, "stop" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION})
 
     #load careplans
     careplans_df = pandas.read_csv(careplans_csv)
@@ -114,13 +128,14 @@ def load_fields(patients_no_fields):
         patients[row.PATIENT]["encounters"].append({"id" : encountersID, "type" : row.ENCOUNTERCLASS, "description" : row.DESCRIPTION, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0], "startTime" : startTime, "endTime" : endTime})
 
     #load imaging studies
-    imaging_studies_df = pandas.read_csv(imaging_studies_csv)
+    if os.path.exists(imaging_studies_csv) and os.path.isfile(imaging_studies_csv):
+        imaging_studies_df = pandas.read_csv(imaging_studies_csv)
 
-    for row in imaging_studies_df.itertuples(index=True):
-        dateTime = row.DATE.split("T")
-        imagingID = "img_" + row.Id
-        # patients[row.PATIENT]["patient"]["entities"].append(imagingID)
-        patients[row.PATIENT]["imaging_studies"].append({"id" : imagingID, "date" : dateTime[0], "encounter" : row.ENCOUNTER, "bodysite" : row.BODYSITE_DESCRIPTION, "modality" : row.MODALITY_DESCRIPTION})
+        for row in imaging_studies_df.itertuples(index=True):
+            dateTime = row.DATE.split("T")
+            imagingID = "img_" + row.Id
+            # patients[row.PATIENT]["patient"]["entities"].append(imagingID)
+            patients[row.PATIENT]["imaging_studies"].append({"id" : imagingID, "date" : dateTime[0], "encounter" : row.ENCOUNTER, "bodysite" : row.BODYSITE_DESCRIPTION, "modality" : row.MODALITY_DESCRIPTION})
 
     #load conditions
     conditions_df = pandas.read_csv(conditions_csv)
@@ -164,7 +179,10 @@ def load_fields(patients_no_fields):
     #load procedures
     procedures_df = pandas.read_csv(procedures_csv)
     for row in procedures_df.itertuples(index=True):
-        dateTime = row.DATE.split('T')
+        # if row.DATE:
+        #     dateTime = row.DATE.split('T')
+        # else:
+        dateTime = row.STOP.split('T')
         proceduresID = f"proc_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(proceduresID)
         patients[row.PATIENT]["procedures"].append({"description" : row.DESCRIPTION, "id" : proceduresID, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "date" : dateTime[0], "time" : dateTime[1]})
@@ -187,7 +205,7 @@ def load_fields(patients_no_fields):
 
 def run_end_to_end(input_directory="sample_data", output_directory="patients"):
     patients_no_fields = load_patients(input_directory)
-    patients = load_fields(patients_no_fields)
+    patients = load_fields(input_directory, patients_no_fields)
     patient_paths = []
     for key, value in patients.items():
         # os.mkdir(f"patients/{key}")
@@ -196,3 +214,7 @@ def run_end_to_end(input_directory="sample_data", output_directory="patients"):
             json.dump(value, file, indent=2)
         patient_paths.append(f"{output_directory}/{key}/patient.json")
     return patient_paths
+
+if __name__ == "__main__":
+
+    run_end_to_end(input_directory="synthea/output/csv", output_directory="synthea/output/json")
