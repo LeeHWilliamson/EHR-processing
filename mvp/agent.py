@@ -14,6 +14,8 @@ import api_client
 import json
 from openai import OpenAI
 import os
+import copy
+from datetime import datetime, timezone
 from dotenv import load_dotenv #lets use utilize a .env file for dependency injection (in this case, our OpenAI API key)
 
 load_dotenv()
@@ -22,7 +24,23 @@ client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
 
+def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot"):
+    AGENT_REPORT_SCHEMA = {
+        "task": task,
+        "agent": agent,
+        "datetime": datetime.now(timezone.utc).isoformat(),
+        "accuracy": 0.0,
+        "tools_used": set(),
+        "api_calls_made": 0,
+        "total_tokens_used": 0,
+        "total_rows_retrieved": 0
+    }
 
+    analytics_report = copy.deepcopy(AGENT_REPORT_SCHEMA)
+    return analytics_report
+
+def collect_agent_analytics(response):
+    pass
 
 '''
 ~~~~~~TOOLS~~~~~~~~~~~
@@ -87,8 +105,7 @@ def run_agent(input_items, previous_response_id=None):
         previous_response_id=previous_response_id,
     )
 
-
-if __name__ == "__main__":
+def run_workflow(patient_id : str):
     initial_messages = [
         {
             "role": "system",
@@ -101,10 +118,12 @@ if __name__ == "__main__":
             "role": "user",
             "content": (
                 "List the names of all medications that "
-                "pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60 is currently taking."
+                f"{patient_id} is currently taking."
             )
         }
     ]
+
+    analytics = initialize_agent_report(task = "list_current_meds", agent = "agent_brobot")
 
     response = run_agent(initial_messages)
 
@@ -112,6 +131,7 @@ if __name__ == "__main__":
         file.write(response.model_dump_json(indent=2))
 
         while True:
+            analytics["total_tokens_used"] += response.usage.total_tokens
             tool_outputs = []
 
             for item in response.output:
@@ -124,6 +144,10 @@ if __name__ == "__main__":
 
                     result = TOOL_MAP[tool_name](**arguments)
 
+                    analytics["tools_used"].add(tool_name)
+                    analytics["api_calls_made"] += 1
+                    analytics["total_rows_retrieved"] += len(result)
+
                     tool_outputs.append({
                         "type": "function_call_output",
                         "call_id": item.call_id,
@@ -135,6 +159,7 @@ if __name__ == "__main__":
 
             file.write("\n\n~~~~~TOOL OUTPUTS~~~~~\n")
             file.write(json.dumps(tool_outputs, indent=2))
+            
 
             response = run_agent(
                 input_items=tool_outputs,
@@ -146,9 +171,14 @@ if __name__ == "__main__":
 
         print("Final response:")
         print(response.output_text)
+        print(analytics)
 
         file.write("\n\n~~~~~FINAL RESULT~~~~~\n")
         file.write(response.output_text)
-            
+
+        return analytics, response.output_text
+
+if __name__ == "__main__":
+    analytics_dict, response_text = run_workflow(patient_id="pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60")
 
     
