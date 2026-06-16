@@ -10,7 +10,7 @@ This script will
 
 Our task for the agent will be to return all medications that a patient is currently taking in structured JSON format
 '''
-import api_client
+from . import api_client
 import json
 from openai import OpenAI
 import os
@@ -33,7 +33,9 @@ def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot"):
         "tools_used": set(),
         "api_calls_made": 0,
         "total_tokens_used": 0,
-        "total_rows_retrieved": 0
+        "total_rows_retrieved": 0,
+        "missed_meds": [],
+        "hallucinated_meds": []
     }
 
     analytics_report = copy.deepcopy(AGENT_REPORT_SCHEMA)
