@@ -39,13 +39,14 @@ def insert_patient(conn, patient: dict):
     cursor.execute(
         """
         INSERT INTO patients
-        VALUES (?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?)
         """,
         (
             patient["patient"]["id"],
             patient["patient"]["firstName"],
             patient["patient"]["lastName"],
-            patient["patient"]["dob"],
+            patient["patient"]["birthdate"],
+            patient["patient"]["deathdate"],
             patient["patient"]["gender"]
         )
     )

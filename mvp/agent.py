@@ -157,6 +157,8 @@ def run_workflow(patient_id : str):
                     })
 
             if not tool_outputs:
+                #convert set to list so it can be converted to json
+                analytics["tools_used"] = list(analytics["tools_used"])
                 break
 
             file.write("\n\n~~~~~TOOL OUTPUTS~~~~~\n")

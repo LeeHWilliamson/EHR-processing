@@ -11,7 +11,11 @@ def parse_agent_output(agent_output = None):
         if character == "-":
             continue
         temp_str = temp_str + character
-    parsed_output = temp_str.split("/n").strip() 
+    #the agent_output is given as a single string
+    #each entry is followed by a newline characters, so we can use that to separate them into a list of strings
+    parsed_output = temp_str.split("\n")
+    for index in range(len(parsed_output)):
+        parsed_output[index] = parsed_output[index].strip()
     return parsed_output
 
 def calc_accuracy(med_gt_list = None, agent_output = None):
@@ -29,7 +33,7 @@ def calc_accuracy(med_gt_list = None, agent_output = None):
     correct_meds = 0
     for medication in parsed_output_set:
         if medication in med_gt_set:
-            currect_meds += 1
+            correct_meds += 1
         else:
             hallucinated_meds.append(medication)
     for medication in med_gt_set:

@@ -11,13 +11,16 @@ import subprocess
 from pathlib import Path
 import time
 import requests
+from datetime import datetime, timezone
 
 SYNTHEA_DIR = Path("/home/leeha/Projects/EHR-processing/synthea")
 def generate_patients():
     cmd = [
-        "run_synthea",
+        "java",
+        "-jar",
+        "synthea-with-dependencies.jar",
         "-c",
-        "settings.properties",
+        "/home/leeha/Projects/EHR-processing/synthea/settings.properties",
         "Texas",
         "Houston"
     ]
@@ -28,7 +31,7 @@ def generate_patients():
     )
 def launch_api():
     api_process = subprocess.Popen(
-        ["uvicorn", "api_endpoints:app", "--reload"],
+        ["uvicorn", "mvp.api_endpoints:app", "--reload"],
     )
     time.sleep(5)
     requests.get("http://127.0.0.1:8000/docs")
@@ -37,26 +40,39 @@ def launch_api():
 if __name__ == '__main__': 
     print("starting")
     #generate patients
+    print("calling synthea")
     generate_patients()
     #assemble patient ground truth
+    print("creating patient JSONs")
     patient_paths = run_end_to_end(input_directory=r'synthea/output/csv', output_directory=r'synthea/output/json')
     #launch app
+    print("launching DB")
     api_process = launch_api()
-    #populate SQLite DB
-    load_patients.main()
-    all_analytics = {}
-    #For each patient...
-    for patient_folder in Path('synthea/output/json').iterdir():
-        patient = json.load(patient_folder/"patient.json")
-        #run agent, return analytics_dict and response_text
-        analytics_dict, response_text = run_workflow("pat_" + patient["patient"]["id"])
-        #get patient GT
-        current_meds_gt = get_meds(patient)
-        #compare GT to response_text to calc accuracy and get list of mistakes, update analytics_dict
-        accuracy, hallucinated_meds, missed_meds = calc_accuracy(current_meds_gt, response_text)
-        analytics_dict["accuracy"] = accuracy
-        analytics_dict["missed_meds"] = missed_meds
-        analytics_dict["hallucinated_meds"] = hallucinated_meds
-        all_analytics.add(analytics_dict)
-    #output analytics as json
-    json.dump(all_analytics, "agent_reports", indent=2)
+    try:
+        #populate SQLite DB
+        print("populating DB")
+        load_patients.main()
+        # all_analytics = {}
+        #For each patient...
+        for patient_folder in Path('synthea/output/json').iterdir():
+            patient_folder_str = str(patient_folder)
+            with open(f"{patient_folder_str}/patient.json", "r") as file:
+                patient = json.load(file)
+            #run agent, return analytics_dict and response_text
+            analytics_dict, response_text = run_workflow(patient["patient"]["id"])
+            #get patient GT
+            current_meds_gt = get_meds(patient)
+            #compare GT to response_text to calc accuracy and get list of mistakes, update analytics_dict
+            accuracy, hallucinated_meds, missed_meds = calc_accuracy(current_meds_gt, response_text)
+            analytics_dict["accuracy"] = accuracy
+            analytics_dict["missed_meds"] = missed_meds
+            analytics_dict["hallucinated_meds"] = hallucinated_meds
+            # all_analytics[patient["patient"]["id"]] = analytics_dict
+            #output analytics as json
+            curr_datetime = str(datetime.now(timezone.utc).isoformat())
+            curr_date = curr_datetime[:10]
+            with open(fr"mvp/agent_reports/{curr_date}.json", "w") as file:
+                json.dump(analytics_dict, file, indent=2)
+    finally:
+        api_process.terminate()
+        api_process.wait()
