@@ -1,0 +1,31 @@
+{   "HELP": {
+    "prompt": "LIST: structured messages for the AI agent, each message is a dict with keys 'role' and 'content'",
+    "ground_truth_source": "STR: the function whose results will be compared to AI agent's for performance evaluation",
+    "allowed_endpoints": "LIST: api endpoints that are accessible to the agent",
+    "ideal_workflow": "LIST: ordered sequence of API calls that correctly accomplishes the tast, any deviations will reduce performance score",
+    "workflow_evaluation": "STR: the method for assessing whether the ideal workflow was followed",
+    "results_evalutation": "STR: the method for assessing results accuracy"
+},
+    "medication_retrieval_v1": {
+    "prompt": [
+        {
+            "role": "system",
+            "content": "You are an AI assistant with access to a synthetic Electronic Health Record API. Use the provided functions whenever you need patient information." 
+        },
+        {
+            "role": "user",
+            "content": "List the codes of all medications that the patient with the following ID is currently taking, separate each code with a newline character: "
+        }
+    ],
+    "ground_truth_source": "get_patient_meds(patient_id)",
+    "allowed_endpoints": [
+      "get_patient",
+      "get_medications"
+    ],
+    "ideal_workflow": [
+        "get_patient", "get_medications"
+    ],
+    "workflow_evaluation": "sequence_match",
+    "results_evaluation": "set_match"
+  }
+}

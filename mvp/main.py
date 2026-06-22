@@ -4,7 +4,7 @@ from pathlib import Path
 from generate_data.load_patient_gt import run_end_to_end
 from .agent import run_workflow
 from .get_patient_meds import get_meds
-from .calculate_accuracy import calc_accuracy
+from .calculate_accuracy import calc_metrics
 from . import load_patients_sqlite3 as load_patients
 import json
 import subprocess
@@ -40,8 +40,8 @@ def launch_api():
 if __name__ == '__main__': 
     print("starting")
     #generate patients
-    print("calling synthea")
-    generate_patients()
+    # print("calling synthea")
+    # generate_patients()
     #assemble patient ground truth
     print("creating patient JSONs")
     patient_paths = run_end_to_end(input_directory=r'synthea/output/csv', output_directory=r'synthea/output/json')
@@ -59,20 +59,25 @@ if __name__ == '__main__':
             with open(f"{patient_folder_str}/patient.json", "r") as file:
                 patient = json.load(file)
             #run agent, return analytics_dict and response_text
-            analytics_dict, response_text = run_workflow(patient["patient"]["id"])
+            analytics_dict = run_workflow(patient["patient"]["id"], task = "medication_retrieval_v1")
             #get patient GT
             current_meds_gt = get_meds(patient)
+            analytics_dict["patient_gt"] = current_meds_gt
             #compare GT to response_text to calc accuracy and get list of mistakes, update analytics_dict
-            accuracy, hallucinated_meds, missed_meds = calc_accuracy(current_meds_gt, response_text)
-            analytics_dict["accuracy"] = accuracy
+            metrics, hallucinated_meds, missed_meds = calc_metrics(current_meds_gt, analytics_dict["raw_response"])
+            analytics_dict["output_metrics"] = metrics
             analytics_dict["missed_meds"] = missed_meds
             analytics_dict["hallucinated_meds"] = hallucinated_meds
             # all_analytics[patient["patient"]["id"]] = analytics_dict
             #output analytics as json
             curr_datetime = str(datetime.now(timezone.utc).isoformat())
             curr_date = curr_datetime[:10]
-            with open(fr"mvp/agent_reports/{curr_date}.json", "w") as file:
-                json.dump(analytics_dict, file, indent=2)
+            #append results to agent file
+            report_dir = Path(f"mvp/agent_reports/{analytics_dict["task"]}")
+            report_dir.mkdir(parents=True, exist_ok=True)
+            report_path = report_dir / f"{analytics_dict["agent"]}.jsonl"
+            with report_path.open("a", encoding="utf-8") as file:
+                file.write(json.dumps(analytics_dict, indent=2) + "\n")
     finally:
         api_process.terminate()
         api_process.wait()

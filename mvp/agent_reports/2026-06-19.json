@@ -11,4 +11,91 @@
   "total_rows_retrieved": 40,
   "missed_meds": [],
   "hallucinated_meds": []
+}{
+  "task": "list_current_meds",
+  "agent": "agent_brobot",
+  "patient_id": "pat_d72b4eb3-7bf1-4c4a-ad8a-d66d6666ff58",
+  "datetime": "2026-06-19T15:59:43.627067+00:00",
+  "tools_used": [
+    "get_medications"
+  ],
+  "api_calls_made": 1,
+  "total_tokens_used": 4831,
+  "total_rows_retrieved": 21,
+  "raw_report": "- Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+  "patient_gt": [
+    "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]"
+  ],
+  "accuracy": 1.0,
+  "missed_meds": [],
+  "hallucinated_meds": []
+}{
+  "task": "list_current_meds",
+  "agent": "agent_brobot",
+  "patient_id": "pat_507609fb-d34e-83cc-3741-093052618bc3",
+  "datetime": "2026-06-19T16:54:51.698536+00:00",
+  "tools_used": [
+    "get_medications"
+  ],
+  "api_calls_made": 1,
+  "total_tokens_used": 5437,
+  "total_rows_retrieved": 27,
+  "raw_report": "- fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\n- albuterol 0.83 MG/ML Inhalation Solution",
+  "patient_gt": [
+    "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+    "albuterol 0.83 MG/ML Inhalation Solution"
+  ],
+  "accuracy": 0.5,
+  "missed_meds": [
+    "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]"
+  ],
+  "hallucinated_meds": [
+    "fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]"
+  ]
+}{
+  "task": "list_current_meds",
+  "agent": "agent_brobot",
+  "patient_id": "pat_5aad4274-7308-d846-c0a8-55b7f696467d",
+  "datetime": "2026-06-19T16:58:05.098167+00:00",
+  "tools_used": [
+    "get_medications"
+  ],
+  "api_calls_made": 1,
+  "total_tokens_used": 3512,
+  "total_rows_retrieved": 13,
+  "raw_report": "- Naproxen sodium 220 mg oral tablet\n- Simvastatin 10 mg oral tablet\n- Levora 0.15/30 (ethinyl estradiol/levonorgestrel) 28-day pack",
+  "patient_gt": [
+    "Naproxen sodium 220 MG Oral Tablet",
+    "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]",
+    "Simvastatin 10 MG Oral Tablet"
+  ],
+  "accuracy": 0.0,
+  "missed_meds": [
+    "Simvastatin 10 MG Oral Tablet",
+    "Naproxen sodium 220 MG Oral Tablet",
+    "{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]"
+  ],
+  "hallucinated_meds": [
+    "Naproxen sodium 220 mg oral tablet",
+    "Simvastatin 10 mg oral tablet",
+    "Levora 0.15/30 (ethinyl estradiol/levonorgestrel) 28day pack"
+  ]
+}{
+  "task": "list_current_meds",
+  "agent": "agent_brobot",
+  "patient_id": "pat_1632b8f2-0d66-15ae-fda0-73c5d9abe831",
+  "datetime": "2026-06-19T16:58:48.834752+00:00",
+  "tools_used": [
+    "get_medications"
+  ],
+  "api_calls_made": 1,
+  "total_tokens_used": 1147,
+  "total_rows_retrieved": 1,
+  "raw_report": "None \u2014 there are no current medications on record for this patient.",
+  "patient_gt": [],
+  "accuracy": 0.0,
+  "missed_meds": [],
+  "hallucinated_meds": [
+    "None \u2014 there are no current medications on record for this patient."
+  ]
 }

@@ -175,7 +175,7 @@ def load_fields(input_directory, patients_no_fields):
             endDateTime = [None]
         medicationsID = f"med_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(medicationsID)
-        patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "id" : medicationsID, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+        patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "code" : row.CODE, "id" : medicationsID, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
         med_count += 1
     #load procedures
     procedures_df = pandas.read_csv(procedures_csv)

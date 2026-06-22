@@ -1,6 +1,6 @@
 {
-  "id": "resp_0f5193d82f74c550006a34896c78d88194adf4c218c31eb5c1",
-  "created_at": 1781827948.0,
+  "id": "resp_030a95e666350675006a396ae602688194866ebbbf4ef255a9",
+  "created_at": 1782147814.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -9,7 +9,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_0f5193d82f74c550006a34896cfe208194a9a55fee9f639127",
+      "id": "rs_030a95e666350675006a396ae69da48194928ea269dc0d9957",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -17,11 +17,11 @@
       "status": null
     },
     {
-      "arguments": "{\"patient_id\":\"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\"}",
-      "call_id": "call_bl8MzoB1XYgqMHG21wPmVLoc",
+      "arguments": "{\"patient_id\":\"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\"}",
+      "call_id": "call_8EKMvXn19GWBK3vDhlc4uwXJ",
       "name": "get_medications",
       "type": "function_call",
-      "id": "fc_0f5193d82f74c550006a34896e50c08194babb9a06c30a4b47",
+      "id": "fc_030a95e666350675006a396ae973508194aea753bcb91d5854",
       "namespace": null,
       "status": "completed"
     }
@@ -73,7 +73,7 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1781827950.0,
+  "completed_at": 1782147818.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
@@ -100,15 +100,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 147,
+    "input_tokens": 162,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 154,
+    "output_tokens": 149,
     "output_tokens_details": {
       "reasoning_tokens": 64
     },
-    "total_tokens": 301
+    "total_tokens": 311
   },
   "user": null,
   "billing": {
@@ -123,15 +123,15 @@
 [
   {
     "type": "function_call_output",
-    "call_id": "call_bl8MzoB1XYgqMHG21wPmVLoc",
-    "output": "[{\"id\": \"med_477ebcce-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-4a27-f3b5c75c3056\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2016-01-05\", \"endDate\": \"2017-01-10\"}, {\"id\": \"med_477ebce2-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-4a27-f3b5c75c3056\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2016-01-05\", \"endDate\": \"2017-01-10\"}, {\"id\": \"med_477ebcf6-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-d0a1-a44f9c4913db\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2017-01-10\", \"endDate\": \"2018-01-16\"}, {\"id\": \"med_477ebd14-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-d0a1-a44f9c4913db\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2017-01-10\", \"endDate\": \"2018-01-16\"}, {\"id\": \"med_477ebd28-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-9c3a-16c7174a585b\", \"description\": \"Naproxen sodium 220 MG Oral Tablet\", \"reason\": \"Osteoarthritis of hip (disorder)\", \"startDate\": \"2017-03-30\", \"endDate\": null}, {\"id\": \"med_477ebd3c-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-87bf-39eb11f94482\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2018-01-16\", \"endDate\": \"2018-12-18\"}, {\"id\": \"med_477ebd50-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-87bf-39eb11f94482\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2018-01-16\", \"endDate\": \"2018-12-18\"}, {\"id\": \"med_477ebd64-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-5bbf-4e64587640be\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2018-12-18\", \"endDate\": \"2018-12-25\"}, {\"id\": \"med_477ebd78-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-5bbf-4e64587640be\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2018-12-18\", \"endDate\": \"2018-12-25\"}, {\"id\": \"med_477ebd8c-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-9e06-7b3f1943e2f0\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2018-12-25\", \"endDate\": \"2019-01-01\"}, {\"id\": \"med_477ebda0-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-9e06-7b3f1943e2f0\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2018-12-25\", \"endDate\": \"2019-01-01\"}, {\"id\": \"med_477ebdb4-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-e4e1-2dc1a5080a7b\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2019-01-01\", \"endDate\": \"2019-01-22\"}, {\"id\": \"med_477ebdbe-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-e4e1-2dc1a5080a7b\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2019-01-01\", \"endDate\": \"2019-01-22\"}, {\"id\": \"med_477ebdd2-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-1e04-323e996d3b10\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2019-01-08\", \"endDate\": \"2019-01-15\"}, {\"id\": \"med_477ebde6-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-d76e-efe6750ebc5d\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2019-01-22\", \"endDate\": \"2020-01-28\"}, {\"id\": \"med_477ebdfa-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-d76e-efe6750ebc5d\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2019-01-22\", \"endDate\": \"2020-01-28\"}, {\"id\": \"med_477ebe0e-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-d5da-88b91226b2a9\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2019-06-14\", \"endDate\": \"2019-07-02\"}, {\"id\": \"med_477ebe22-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-1474-abf14afdebdd\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2020-01-28\", \"endDate\": \"2020-09-22\"}, {\"id\": \"med_477ebe36-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-1474-abf14afdebdd\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2020-01-28\", \"endDate\": \"2020-09-22\"}, {\"id\": \"med_477ebe4a-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-7de6-381d8a940411\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2020-02-12\", \"endDate\": \"2020-02-12\"}, {\"id\": \"med_477ebe68-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-f3fc-a5901fc2f837\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2020-09-22\", \"endDate\": \"2021-02-02\"}, {\"id\": \"med_477ebe7c-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-f3fc-a5901fc2f837\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2020-09-22\", \"endDate\": \"2021-02-02\"}, {\"id\": \"med_477ebe90-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-bf0c-7983b41dd4fa\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2021-02-02\", \"endDate\": \"2022-02-08\"}, {\"id\": \"med_477ebea4-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-bf0c-7983b41dd4fa\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2021-02-02\", \"endDate\": \"2022-02-08\"}, {\"id\": \"med_477ebeb8-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-a475-122e0519d5ae\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2022-02-08\", \"endDate\": \"2023-02-14\"}, {\"id\": \"med_477ebecc-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-a475-122e0519d5ae\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2022-02-08\", \"endDate\": \"2023-02-14\"}, {\"id\": \"med_477ebee0-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-c045-38e396333f66\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2023-02-14\", \"endDate\": \"2024-02-20\"}, {\"id\": \"med_477ebef4-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-c045-38e396333f66\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2023-02-14\", \"endDate\": \"2024-02-20\"}, {\"id\": \"med_477ebf08-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-ed74-8e9fd6ca4e06\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2024-02-20\", \"endDate\": \"2025-02-25\"}, {\"id\": \"med_477ebf1c-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-ed74-8e9fd6ca4e06\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2024-02-20\", \"endDate\": \"2025-02-25\"}, {\"id\": \"med_477ebf30-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-3212-d9df515bbfbf\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2024-03-06\", \"endDate\": \"2024-03-06\"}, {\"id\": \"med_477ebf44-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-cc2d-dd2ee4875fbf\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2025-02-25\", \"endDate\": \"2025-09-27\"}, {\"id\": \"med_477ebf4e-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-cc2d-dd2ee4875fbf\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2025-02-25\", \"endDate\": \"2025-09-27\"}, {\"id\": \"med_477ebf62-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-0993-6534dfaef329\", \"description\": \"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2025-09-19\", \"endDate\": \"2025-09-27\"}, {\"id\": \"med_477ebf76-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-0993-6534dfaef329\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2025-09-27\", \"endDate\": \"2025-09-30\"}, {\"id\": \"med_477ebf8a-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-0993-6534dfaef329\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2025-09-27\", \"endDate\": \"2025-09-30\"}, {\"id\": \"med_477ebf9e-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-e0ab-c8542accbe34\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2025-09-30\", \"endDate\": \"2026-03-03\"}, {\"id\": \"med_477ebfb2-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-e0ab-c8542accbe34\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2025-09-30\", \"endDate\": \"2026-03-03\"}, {\"id\": \"med_477ebfd0-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-203d-f10be72f0989\", \"description\": \"72 HR Fentanyl 0.025 MG/HR Transdermal System\", \"reason\": null, \"startDate\": \"2026-03-03\", \"endDate\": null}, {\"id\": \"med_477ebfe4-6b73-11f1-9e14-00155d09b6b5\", \"patient_id\": \"pat_2117d24b-faf0-4912-64cf-7e7c1829edbf\", \"encounter\": \"enc_2117d24b-faf0-4912-203d-f10be72f0989\", \"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"reason\": null, \"startDate\": \"2026-03-03\", \"endDate\": null}]"
+    "call_id": "call_8EKMvXn19GWBK3vDhlc4uwXJ",
+    "output": "[{\"id\": \"med_2850b758-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-c5a9-d12b903b0e46\", \"description\": \"{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]\", \"code\": \"748879\", \"reason\": null, \"startDate\": \"2016-02-20\", \"endDate\": \"2017-02-14\"}, {\"id\": \"med_2850b7bc-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-d1cc-e14270f3f81d\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2017-04-05\", \"endDate\": \"2017-04-05\"}, {\"id\": \"med_2850b7ee-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"Clopidogrel 75 MG Oral Tablet\", \"code\": \"309362\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b802-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"Simvastatin 20 MG Oral Tablet\", \"code\": \"312961\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b820-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"24 HR metoprolol succinate 100 MG Extended Release Oral Tablet\", \"code\": \"866412\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b834-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray\", \"code\": \"705129\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b848-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-37ac-cb7c5ba92652\", \"description\": \"Ibuprofen 200 MG Oral Tablet\", \"code\": \"310965\", \"reason\": null, \"startDate\": \"2020-04-15\", \"endDate\": \"2020-05-28\"}, {\"id\": \"med_2850b9a6-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-ad61-1acda0624547\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Traumatic dislocation of temporomandibular joint (disorder)\", \"startDate\": \"2020-04-29\", \"endDate\": \"2020-04-29\"}, {\"id\": \"med_2850b9f6-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-894a-0d0467cc2ecb\", \"description\": \"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution\", \"code\": \"1043400\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2020-10-06\", \"endDate\": \"2020-10-25\"}, {\"id\": \"med_2850ba1e-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-7cdd-eca5c4070972\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2021-04-28\", \"endDate\": \"2021-04-28\"}, {\"id\": \"med_2850ba32-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-3f1d-816322e4a833\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2024-03-31\", \"endDate\": \"2024-04-10\"}, {\"id\": \"med_2850ba46-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-1646-fa788fa29d67\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2025-05-21\", \"endDate\": \"2025-05-21\"}]"
   }
 ]
 
 ~~~~~NEXT RESPONSE~~~~~
 {
-  "id": "resp_0f5193d82f74c550006a34896f45108194939a0c4c84fff320",
-  "created_at": 1781827951.0,
+  "id": "resp_030a95e666350675006a396aeac7e48194b4a27b53628c6aa5",
+  "created_at": 1782147818.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -140,7 +140,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_0f5193d82f74c550006a34896fddc081949161849e16c8c3a9",
+      "id": "rs_030a95e666350675006a396aec0a6c81948148f95f6e5a8c7b",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -148,11 +148,11 @@
       "status": null
     },
     {
-      "id": "msg_0f5193d82f74c550006a3489947d548194a2b7011d97b93f7e",
+      "id": "msg_030a95e666350675006a396af4db0c819494fb79b9b9544dec",
       "content": [
         {
           "annotations": [],
-          "text": "- Naproxen sodium 220 MG Oral Tablet\n- 72 HR Fentanyl 0.025 MG/HR Transdermal System\n- Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+          "text": "309362\n312961\n866412\n705129",
           "type": "output_text",
           "logprobs": []
         }
@@ -210,12 +210,12 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1781827990.0,
+  "completed_at": 1782147829.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
   "moderation": null,
-  "previous_response_id": "resp_0f5193d82f74c550006a34896c78d88194adf4c218c31eb5c1",
+  "previous_response_id": "resp_030a95e666350675006a396ae602688194866ebbbf4ef255a9",
   "prompt": null,
   "prompt_cache_key": null,
   "prompt_cache_retention": "in_memory",
@@ -237,15 +237,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 6122,
+    "input_tokens": 2221,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 877,
+    "output_tokens": 369,
     "output_tokens_details": {
-      "reasoning_tokens": 768
+      "reasoning_tokens": 320
     },
-    "total_tokens": 6999
+    "total_tokens": 2590
   },
   "user": null,
   "billing": {
@@ -257,6 +257,7 @@
 }
 
 ~~~~~FINAL RESULT~~~~~
-- Naproxen sodium 220 MG Oral Tablet
-- 72 HR Fentanyl 0.025 MG/HR Transdermal System
-- Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet
+309362
+312961
+866412
+705129

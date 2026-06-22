@@ -1,7 +1,7 @@
 '''
 This script will get the GT for a patient for the medication task
 input: a patient path
-output: a list of strs corresponding to descriptions of patient's current meds
+output: a list of strs corresponding to code ids of patient's current meds
 '''
 import json
 from pathlib import Path
@@ -16,5 +16,5 @@ def get_meds(patient_json = None):
     for medication in patient_json["medications"]:
         #if we don't have an endDate, we consider this a current medication
         if type(medication["endDate"]) != str:
-            current_med_decsriptions.append(medication["description"])
+            current_med_decsriptions.append(medication["code"])
     return current_med_decsriptions

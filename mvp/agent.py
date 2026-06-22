@@ -16,6 +16,7 @@ from openai import OpenAI
 import os
 import copy
 from datetime import datetime, timezone
+from uuid import uuid4
 from dotenv import load_dotenv #lets use utilize a .env file for dependency injection (in this case, our OpenAI API key)
 
 load_dotenv()
@@ -24,16 +25,27 @@ client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
 
-def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot"):
+def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot", patient_id = None):
+    now = datetime.now(timezone.utc)
     AGENT_REPORT_SCHEMA = {
+        "run_id": (
+            f"{task}-" 
+            f"{now:%Y%m%dT%H%M%S.%fZ}-" 
+            f"{uuid4().hex[:4]}"
+            ),
         "task": task,
         "agent": agent,
-        "datetime": datetime.now(timezone.utc).isoformat(),
-        "accuracy": 0.0,
-        "tools_used": set(),
+        "provider" : "OpenAI",
+        "model": "gpt-5",
+        "patient_id": patient_id,
+        "datetime": now.isoformat(),
+        "tools_workflow": [],
         "api_calls_made": 0,
         "total_tokens_used": 0,
         "total_rows_retrieved": 0,
+        "raw_response": None,
+        "patient_gt": None, 
+        "output_metrics": None,
         "missed_meds": [],
         "hallucinated_meds": []
     }
@@ -99,7 +111,10 @@ TOOL_MAP = {
     "get_medications": api_client.get_medications,
 }
 
-def run_agent(input_items, previous_response_id=None):
+def run_agent(input_items, patient = None, previous_response_id=None):
+    #we assemble the full user-side prompt by simply appending the relevant patient ID
+    if "content" in input_items[-1]:
+        input_items[-1]["content"] = input_items[-1]["content"] + patient
     return client.responses.create(
         model="gpt-5",
         input=input_items,
@@ -107,7 +122,7 @@ def run_agent(input_items, previous_response_id=None):
         previous_response_id=previous_response_id,
     )
 
-def run_workflow(patient_id : str):
+def run_workflow(patient_id : str, task : str):
     initial_messages = [
         {
             "role": "system",
@@ -124,10 +139,15 @@ def run_workflow(patient_id : str):
             )
         }
     ]
+    try:
+        with open("mvp/tasks.json", "r") as file:
+            tasks = json.load(file)
+            current_task = tasks[task].copy()
+    except:
+        return RuntimeError
+    analytics = initialize_agent_report(task = task, agent = "agent_brobot", patient_id = patient_id)
 
-    analytics = initialize_agent_report(task = "list_current_meds", agent = "agent_brobot")
-
-    response = run_agent(initial_messages)
+    response = run_agent(current_task["prompt"], patient = patient_id)
 
     with open("agent_output.txt", "w") as file:
         file.write(response.model_dump_json(indent=2))
@@ -146,7 +166,7 @@ def run_workflow(patient_id : str):
 
                     result = TOOL_MAP[tool_name](**arguments)
 
-                    analytics["tools_used"].add(tool_name)
+                    analytics["tools_workflow"].append(tool_name)
                     analytics["api_calls_made"] += 1
                     analytics["total_rows_retrieved"] += len(result)
 
@@ -157,8 +177,6 @@ def run_workflow(patient_id : str):
                     })
 
             if not tool_outputs:
-                #convert set to list so it can be converted to json
-                analytics["tools_used"] = list(analytics["tools_used"])
                 break
 
             file.write("\n\n~~~~~TOOL OUTPUTS~~~~~\n")
@@ -172,6 +190,7 @@ def run_workflow(patient_id : str):
 
             file.write("\n\n~~~~~NEXT RESPONSE~~~~~\n")
             file.write(response.model_dump_json(indent=2))
+            # analytics["raw_response"] = response.output_text
 
         print("Final response:")
         print(response.output_text)
@@ -179,8 +198,8 @@ def run_workflow(patient_id : str):
 
         file.write("\n\n~~~~~FINAL RESULT~~~~~\n")
         file.write(response.output_text)
-
-        return analytics, response.output_text
+        analytics["raw_response"] = response.output_text
+        return analytics
 
 if __name__ == "__main__":
     analytics_dict, response_text = run_workflow(patient_id="pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60")
