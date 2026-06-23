@@ -52,3 +52,72 @@
   "missed_meds": {},
   "hallucinated_meds": {}
 }
+{
+  "run_id": "medication_retrieval_v1-20260623T155200.776092Z-68a9",
+  "task": "medication_retrieval_v1",
+  "agent": "agent_brobot",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_74d84556-dc6d-1f74-92be-89bac2e4949f",
+  "datetime": "2026-06-23T15:52:00.776092+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 1438,
+  "total_rows_retrieved": 4,
+  "raw_response": "1049630\n1870230",
+  "patient_gt": [
+    1049630,
+    1870230
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260623T155209.110469Z-1798",
+  "task": "medication_retrieval_v1",
+  "agent": "agent_brobot",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_7dc51008-ee8b-fac7-c354-6789d5150a19",
+  "datetime": "2026-06-23T15:52:09.110469+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3365,
+  "total_rows_retrieved": 7,
+  "raw_response": "",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}

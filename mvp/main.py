@@ -4,7 +4,8 @@ from pathlib import Path
 from generate_data.load_patient_gt import run_end_to_end
 from .agent import run_workflow
 from .get_patient_meds import get_meds
-from .calculate_accuracy import calc_metrics
+from .calc_output_metrics import calc_metrics
+from .calc_workflow_metrics import analyze_workflow
 from . import load_patients_sqlite3 as load_patients
 import json
 import subprocess
@@ -39,10 +40,10 @@ def launch_api():
 
 if __name__ == '__main__': 
     print("starting")
-    #generate patients
-    # print("calling synthea")
-    # generate_patients()
-    #assemble patient ground truth
+    # generate patients
+    print("calling synthea")
+    generate_patients()
+    # assemble patient ground truth
     print("creating patient JSONs")
     patient_paths = run_end_to_end(input_directory=r'synthea/output/csv', output_directory=r'synthea/output/json')
     #launch app
@@ -60,14 +61,15 @@ if __name__ == '__main__':
                 patient = json.load(file)
             #run agent, return analytics_dict and response_text
             analytics_dict = run_workflow(patient["patient"]["id"], task = "medication_retrieval_v1")
+            #analyze workflow compared to ideal workflow
+            workflow_metrics = analyze_workflow(analytics_dict)
+            analytics_dict["workflow_metrics"] = workflow_metrics
             #get patient GT
             current_meds_gt = get_meds(patient)
             analytics_dict["patient_gt"] = current_meds_gt
-            #compare GT to response_text to calc accuracy and get list of mistakes, update analytics_dict
-            metrics, hallucinated_meds, missed_meds = calc_metrics(current_meds_gt, analytics_dict["raw_response"])
-            analytics_dict["output_metrics"] = metrics
-            analytics_dict["missed_meds"] = missed_meds
-            analytics_dict["hallucinated_meds"] = hallucinated_meds
+            #compare GT to response_text to calc output accuracy and get list of mistakes, update analytics_dict
+            output_metrics = calc_metrics(current_meds_gt, analytics_dict["raw_response"])
+            analytics_dict["output_metrics"] = output_metrics
             # all_analytics[patient["patient"]["id"]] = analytics_dict
             #output analytics as json
             curr_datetime = str(datetime.now(timezone.utc).isoformat())

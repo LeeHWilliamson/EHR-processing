@@ -40,14 +40,13 @@ def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot", 
         "patient_id": patient_id,
         "datetime": now.isoformat(),
         "tools_workflow": [],
+        "workflow_metrics": {},
         "api_calls_made": 0,
         "total_tokens_used": 0,
         "total_rows_retrieved": 0,
         "raw_response": None,
         "patient_gt": None, 
-        "output_metrics": None,
-        "missed_meds": [],
-        "hallucinated_meds": []
+        "output_metrics": {}
     }
 
     analytics_report = copy.deepcopy(AGENT_REPORT_SCHEMA)

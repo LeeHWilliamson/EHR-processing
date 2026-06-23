@@ -1,6 +1,6 @@
 {
-  "id": "resp_030a95e666350675006a396ae602688194866ebbbf4ef255a9",
-  "created_at": 1782147814.0,
+  "id": "resp_0ebecfbaf4bc8799006a3aaba957548194968ed89f5a64909c",
+  "created_at": 1782229929.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -9,7 +9,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_030a95e666350675006a396ae69da48194928ea269dc0d9957",
+      "id": "rs_0ebecfbaf4bc8799006a3aaba9b2a881948635193553e811a8",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -17,11 +17,11 @@
       "status": null
     },
     {
-      "arguments": "{\"patient_id\":\"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\"}",
-      "call_id": "call_8EKMvXn19GWBK3vDhlc4uwXJ",
+      "arguments": "{\"patient_id\":\"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\"}",
+      "call_id": "call_j7Gx15vNoaNQUlBamH8UHrK0",
       "name": "get_medications",
       "type": "function_call",
-      "id": "fc_030a95e666350675006a396ae973508194aea753bcb91d5854",
+      "id": "fc_0ebecfbaf4bc8799006a3aabaa653c819487a20e27aede809f",
       "namespace": null,
       "status": "completed"
     }
@@ -73,7 +73,7 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1782147818.0,
+  "completed_at": 1782229930.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
@@ -100,15 +100,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 162,
+    "input_tokens": 158,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 149,
+    "output_tokens": 116,
     "output_tokens_details": {
       "reasoning_tokens": 64
     },
-    "total_tokens": 311
+    "total_tokens": 274
   },
   "user": null,
   "billing": {
@@ -123,15 +123,15 @@
 [
   {
     "type": "function_call_output",
-    "call_id": "call_8EKMvXn19GWBK3vDhlc4uwXJ",
-    "output": "[{\"id\": \"med_2850b758-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-c5a9-d12b903b0e46\", \"description\": \"{21 (ethinyl estradiol 0.03 MG / levonorgestrel 0.15 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Levora 0.15/30 28 Day]\", \"code\": \"748879\", \"reason\": null, \"startDate\": \"2016-02-20\", \"endDate\": \"2017-02-14\"}, {\"id\": \"med_2850b7bc-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-d1cc-e14270f3f81d\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2017-04-05\", \"endDate\": \"2017-04-05\"}, {\"id\": \"med_2850b7ee-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"Clopidogrel 75 MG Oral Tablet\", \"code\": \"309362\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b802-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"Simvastatin 20 MG Oral Tablet\", \"code\": \"312961\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b820-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"24 HR metoprolol succinate 100 MG Extended Release Oral Tablet\", \"code\": \"866412\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b834-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-bf80-67b1c9f53647\", \"description\": \"Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray\", \"code\": \"705129\", \"reason\": null, \"startDate\": \"2018-04-04\", \"endDate\": null}, {\"id\": \"med_2850b848-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-37ac-cb7c5ba92652\", \"description\": \"Ibuprofen 200 MG Oral Tablet\", \"code\": \"310965\", \"reason\": null, \"startDate\": \"2020-04-15\", \"endDate\": \"2020-05-28\"}, {\"id\": \"med_2850b9a6-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-ad61-1acda0624547\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Traumatic dislocation of temporomandibular joint (disorder)\", \"startDate\": \"2020-04-29\", \"endDate\": \"2020-04-29\"}, {\"id\": \"med_2850b9f6-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-894a-0d0467cc2ecb\", \"description\": \"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution\", \"code\": \"1043400\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2020-10-06\", \"endDate\": \"2020-10-25\"}, {\"id\": \"med_2850ba1e-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-7cdd-eca5c4070972\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2021-04-28\", \"endDate\": \"2021-04-28\"}, {\"id\": \"med_2850ba32-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-3f1d-816322e4a833\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2024-03-31\", \"endDate\": \"2024-04-10\"}, {\"id\": \"med_2850ba46-6e5c-11f1-b0b2-00155d49a459\", \"patient_id\": \"pat_0dd50f13-5a21-1f9c-a973-18ddf79db51b\", \"encounter\": \"enc_0dd50f13-5a21-1f9c-1646-fa788fa29d67\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2025-05-21\", \"endDate\": \"2025-05-21\"}]"
+    "call_id": "call_j7Gx15vNoaNQUlBamH8UHrK0",
+    "output": "[{\"id\": \"med_75b153bc-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-bcd7-856d0332f54d\", \"description\": \"Ibuprofen 100 MG Oral Tablet\", \"code\": \"198405\", \"reason\": null, \"startDate\": \"2016-07-05\", \"endDate\": \"2016-07-19\"}, {\"id\": \"med_75b15466-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-47a3-5277511a89d3\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2019-07-30\", \"endDate\": \"2019-08-06\"}, {\"id\": \"med_75b15484-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-3971-d13fcad16030\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2019-11-12\", \"endDate\": \"2019-11-12\"}, {\"id\": \"med_75b154ac-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-3cf5-84153b2b5cc2\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2024-07-14\", \"endDate\": \"2024-07-28\"}, {\"id\": \"med_75b154c0-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-37f2-32b1881eb9c0\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2024-08-06\", \"endDate\": \"2024-08-06\"}, {\"id\": \"med_75b154d4-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-1cb2-00cf08e013a8\", \"description\": \"levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]\", \"code\": \"1605257\", \"reason\": null, \"startDate\": \"2025-11-07\", \"endDate\": \"2025-11-07\"}, {\"id\": \"med_75b154fc-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-cb7c-6117affdf116\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2025-12-23\", \"endDate\": \"2025-12-23\"}]"
   }
 ]
 
 ~~~~~NEXT RESPONSE~~~~~
 {
-  "id": "resp_030a95e666350675006a396aeac7e48194b4a27b53628c6aa5",
-  "created_at": 1782147818.0,
+  "id": "resp_0ebecfbaf4bc8799006a3aabab1ec4819490be1ffc716dfdbc",
+  "created_at": 1782229931.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -140,7 +140,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_030a95e666350675006a396aec0a6c81948148f95f6e5a8c7b",
+      "id": "rs_0ebecfbaf4bc8799006a3aabab81f88194b3f3502c5dd0e810",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -148,11 +148,11 @@
       "status": null
     },
     {
-      "id": "msg_030a95e666350675006a396af4db0c819494fb79b9b9544dec",
+      "id": "msg_0ebecfbaf4bc8799006a3aabc236888194b9e6a19584b08d26",
       "content": [
         {
           "annotations": [],
-          "text": "309362\n312961\n866412\n705129",
+          "text": "",
           "type": "output_text",
           "logprobs": []
         }
@@ -210,12 +210,12 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1782147829.0,
+  "completed_at": 1782229954.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
   "moderation": null,
-  "previous_response_id": "resp_030a95e666350675006a396ae602688194866ebbbf4ef255a9",
+  "previous_response_id": "resp_0ebecfbaf4bc8799006a3aaba957548194968ed89f5a64909c",
   "prompt": null,
   "prompt_cache_key": null,
   "prompt_cache_retention": "in_memory",
@@ -237,15 +237,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 2221,
+    "input_tokens": 1318,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 369,
+    "output_tokens": 1773,
     "output_tokens_details": {
-      "reasoning_tokens": 320
+      "reasoning_tokens": 1728
     },
-    "total_tokens": 2590
+    "total_tokens": 3091
   },
   "user": null,
   "billing": {
@@ -257,7 +257,3 @@
 }
 
 ~~~~~FINAL RESULT~~~~~
-309362
-312961
-866412
-705129
