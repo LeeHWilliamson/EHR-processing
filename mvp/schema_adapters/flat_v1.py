@@ -37,3 +37,33 @@ def insert_patient(conn, patient: dict):
     )
 
     conn.commit()
+
+def get_patient(conn, patient_id : str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT id, firstName, lastName, birthdate, deathdate, gender FROM patients WHERE id = ?",
+        (patient_id,),
+    )
+    row = cursor.fetchone()
+    if row is None:
+        return None
+    
+    patient = dict(row)
+    return patient
+
+def get_medications(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT medications_blob FROM patients WHERE id = ?",
+        (patient_id,),
+    )
+
+    row = cursor.fetchone()
+
+    if row is None:
+        return []
+    
+    return json.loads(row["medications_blob"])

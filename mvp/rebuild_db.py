@@ -5,8 +5,8 @@ from pathlib import Path
 def rebuild_db(schema : str):
     DB_PATH_PREFIX = "/home/leeha/tools/sqlite/"
     SCHEMA_PATH_PREFIX = "mvp/schemas"
-    schema_path = Path(SCHEMA_PATH_PREFIX  / fr"{schema}.sql")
-    db_path = Path(DB_PATH_PREFIX / fr"{schema}.db")
+    schema_path = Path(fr"{SCHEMA_PATH_PREFIX}/{schema}.sql")
+    db_path = Path(fr"{DB_PATH_PREFIX}/{schema}.db")
     if os.path.exists(db_path):
         os.remove(db_path)
 

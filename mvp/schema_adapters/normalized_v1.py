@@ -58,8 +58,8 @@ def insert_patient(conn, patient: dict):
         insert_dict(cursor, "encounters", row)
 
     #DEBUG check that encounters were inserted
-    cursor.execute("SELECT COUNT(*) FROM encounters")
-    print("Encounter count:", cursor.fetchone()[0]) 
+    # cursor.execute("SELECT COUNT(*) FROM encounters")
+    # print("Encounter count:", cursor.fetchone()[0]) 
     
     #all other tables
 
@@ -93,3 +93,29 @@ def insert_patient(conn, patient: dict):
 
     conn.commit()
     # conn.close()
+
+def get_patient(conn, patient_id: str):
+    #specify the format that rows are returned in
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "SELECT * FROM patients WHERE id = ?",
+        (patient_id,),
+    )
+    #id is the primary key that corresponds to a specific patient, so row should only contain 1 record lol
+    row = cursor.fetchone()
+    if row is None:
+        return None
+    patient = dict(row)
+    return patient
+
+def get_medications(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM medications WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]

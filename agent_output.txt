@@ -1,6 +1,6 @@
 {
-  "id": "resp_0ebecfbaf4bc8799006a3aaba957548194968ed89f5a64909c",
-  "created_at": 1782229929.0,
+  "id": "resp_0de89b884b2491d3006a3eb2716214819093de9296adbfc6e6",
+  "created_at": 1782493809.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -9,7 +9,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_0ebecfbaf4bc8799006a3aaba9b2a881948635193553e811a8",
+      "id": "rs_0de89b884b2491d3006a3eb272305081908878ac028e453749",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -17,11 +17,11 @@
       "status": null
     },
     {
-      "arguments": "{\"patient_id\":\"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\"}",
-      "call_id": "call_j7Gx15vNoaNQUlBamH8UHrK0",
+      "arguments": "{\"patient_id\":\"pat_2f72b840-3c69-f42b-78a3-039283ff5384\"}",
+      "call_id": "call_78aFZh34ol69e6UaEdpE3rBx",
       "name": "get_medications",
       "type": "function_call",
-      "id": "fc_0ebecfbaf4bc8799006a3aabaa653c819487a20e27aede809f",
+      "id": "fc_0de89b884b2491d3006a3eb27394f4819085abb5909f377ed5",
       "namespace": null,
       "status": "completed"
     }
@@ -73,7 +73,7 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1782229930.0,
+  "completed_at": 1782493811.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
@@ -86,7 +86,8 @@
     "effort": "medium",
     "generate_summary": null,
     "summary": null,
-    "context": "current_turn"
+    "context": "current_turn",
+    "mode": "standard"
   },
   "safety_identifier": null,
   "service_tier": "default",
@@ -100,15 +101,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 158,
+    "input_tokens": 160,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 116,
+    "output_tokens": 141,
     "output_tokens_details": {
       "reasoning_tokens": 64
     },
-    "total_tokens": 274
+    "total_tokens": 301
   },
   "user": null,
   "billing": {
@@ -116,22 +117,40 @@
   },
   "frequency_penalty": 0.0,
   "presence_penalty": 0.0,
-  "store": true
+  "store": true,
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  }
 }
 
 ~~~~~TOOL OUTPUTS~~~~~
 [
   {
     "type": "function_call_output",
-    "call_id": "call_j7Gx15vNoaNQUlBamH8UHrK0",
-    "output": "[{\"id\": \"med_75b153bc-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-bcd7-856d0332f54d\", \"description\": \"Ibuprofen 100 MG Oral Tablet\", \"code\": \"198405\", \"reason\": null, \"startDate\": \"2016-07-05\", \"endDate\": \"2016-07-19\"}, {\"id\": \"med_75b15466-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-47a3-5277511a89d3\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2019-07-30\", \"endDate\": \"2019-08-06\"}, {\"id\": \"med_75b15484-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-3971-d13fcad16030\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2019-11-12\", \"endDate\": \"2019-11-12\"}, {\"id\": \"med_75b154ac-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-3cf5-84153b2b5cc2\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2024-07-14\", \"endDate\": \"2024-07-28\"}, {\"id\": \"med_75b154c0-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-37f2-32b1881eb9c0\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2024-08-06\", \"endDate\": \"2024-08-06\"}, {\"id\": \"med_75b154d4-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-1cb2-00cf08e013a8\", \"description\": \"levonorgestrel 0.000813 MG/HR Intrauterine System [Liletta]\", \"code\": \"1605257\", \"reason\": null, \"startDate\": \"2025-11-07\", \"endDate\": \"2025-11-07\"}, {\"id\": \"med_75b154fc-6f1b-11f1-bfc8-00155d4bfc58\", \"patient_id\": \"pat_7dc51008-ee8b-fac7-c354-6789d5150a19\", \"encounter\": \"enc_7dc51008-ee8b-fac7-cb7c-6117affdf116\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2025-12-23\", \"endDate\": \"2025-12-23\"}]"
+    "call_id": "call_78aFZh34ol69e6UaEdpE3rBx",
+    "output": "[{\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac59f8-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-5431-53bf16e84c41\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2015-07-26\", \"endDate\": \"2016-07-31\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5a66-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-5431-53bf16e84c41\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2015-07-26\", \"endDate\": \"2016-07-31\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5aac-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-5678-eca571f3157f\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2016-07-31\", \"endDate\": \"2017-08-06\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5aca-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-5678-eca571f3157f\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2016-07-31\", \"endDate\": \"2017-08-06\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": 1535362, \"id\": \"med_7aac5afc-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-0db5-c467024d4815\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2016-08-14\", \"endDate\": \"2016-08-14\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5b10-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-1b50-466f854aed5a\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2017-08-06\", \"endDate\": \"2018-08-12\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5b42-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-1b50-466f854aed5a\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2017-08-06\", \"endDate\": \"2018-08-12\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": 1535362, \"id\": \"med_7aac5b56-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-9806-8a727d99468a\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2017-08-20\", \"endDate\": \"2017-08-20\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5b92-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-7287-336e96a5118d\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2018-08-12\", \"endDate\": \"2019-08-18\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5ba6-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-7287-336e96a5118d\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2018-08-12\", \"endDate\": \"2019-08-18\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5be2-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-a92d-bf58276311e2\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2019-08-18\", \"endDate\": \"2020-08-23\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5bf6-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-a92d-bf58276311e2\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2019-08-18\", \"endDate\": \"2020-08-23\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5c0a-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-ab92-a457a38241cb\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2020-08-23\", \"endDate\": \"2021-08-29\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5c1e-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-ab92-a457a38241cb\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2020-08-23\", \"endDate\": \"2021-08-29\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5c50-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-77fa-7682c3db270f\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2021-08-29\", \"endDate\": \"2022-09-04\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5c64-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-77fa-7682c3db270f\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2021-08-29\", \"endDate\": \"2022-09-04\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5c78-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-3dc4-fe61e7fcd5e6\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2022-09-04\", \"endDate\": \"2023-09-10\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5c8c-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-3dc4-fe61e7fcd5e6\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2022-09-04\", \"endDate\": \"2023-09-10\"}, {\"description\": \"amLODIPine 2.5 MG Oral Tablet\", \"code\": 308136, \"id\": \"med_7aac5ca0-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-3dc4-fe61e7fcd5e6\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2022-09-04\", \"endDate\": \"2023-09-10\"}, {\"description\": \"Hydrochlorothiazide 25 MG Oral Tablet\", \"code\": 310798, \"id\": \"med_7aac5cb4-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-3dc4-fe61e7fcd5e6\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2022-09-04\", \"endDate\": \"2023-09-10\"}, {\"description\": \"lisinopril 10 MG Oral Tablet\", \"code\": 314076, \"id\": \"med_7aac5cd2-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-7e48-caf4635830b9\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2022-10-04\", \"endDate\": \"2023-09-10\"}, {\"description\": \"Hydrochlorothiazide 25 MG Oral Tablet\", \"code\": 310798, \"id\": \"med_7aac5d18-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-dfe1-c7319a198c9d\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2023-09-10\", \"endDate\": \"2024-09-15\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5d2c-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-dfe1-c7319a198c9d\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2023-09-10\", \"endDate\": \"2024-09-15\"}, {\"description\": \"lisinopril 10 MG Oral Tablet\", \"code\": 314076, \"id\": \"med_7aac5d40-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-dfe1-c7319a198c9d\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2023-09-10\", \"endDate\": \"2024-09-15\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5d54-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-dfe1-c7319a198c9d\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2023-09-10\", \"endDate\": \"2024-09-15\"}, {\"description\": \"amLODIPine 2.5 MG Oral Tablet\", \"code\": 308136, \"id\": \"med_7aac5d68-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-dfe1-c7319a198c9d\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2023-09-10\", \"endDate\": \"2024-09-15\"}, {\"description\": \"Hydrochlorothiazide 25 MG Oral Tablet\", \"code\": 310798, \"id\": \"med_7aac5d7c-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-15ab-314d6ad57bc7\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2024-09-15\", \"endDate\": \"2025-09-21\"}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5d90-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-15ab-314d6ad57bc7\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2024-09-15\", \"endDate\": \"2025-09-21\"}, {\"description\": \"lisinopril 10 MG Oral Tablet\", \"code\": 314076, \"id\": \"med_7aac5da4-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-15ab-314d6ad57bc7\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2024-09-15\", \"endDate\": \"2025-09-21\"}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5db8-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-15ab-314d6ad57bc7\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2024-09-15\", \"endDate\": \"2025-09-21\"}, {\"description\": \"amLODIPine 2.5 MG Oral Tablet\", \"code\": 308136, \"id\": \"med_7aac5dcc-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-15ab-314d6ad57bc7\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2024-09-15\", \"endDate\": \"2025-09-21\"}, {\"description\": \"Hydrochlorothiazide 25 MG Oral Tablet\", \"code\": 310798, \"id\": \"med_7aac5e12-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-2346-c03b2149c149\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2025-09-21\", \"endDate\": null}, {\"description\": \"120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]\", \"code\": 895996, \"id\": \"med_7aac5e26-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-2346-c03b2149c149\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2025-09-21\", \"endDate\": null}, {\"description\": \"lisinopril 10 MG Oral Tablet\", \"code\": 314076, \"id\": \"med_7aac5e44-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-2346-c03b2149c149\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2025-09-21\", \"endDate\": null}, {\"description\": \"NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]\", \"code\": 745752, \"id\": \"med_7aac5e58-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-2346-c03b2149c149\", \"reason\": \"Childhood asthma (disorder)\", \"startDate\": \"2025-09-21\", \"endDate\": null}, {\"description\": \"amLODIPine 2.5 MG Oral Tablet\", \"code\": 308136, \"id\": \"med_7aac5e6c-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-2346-c03b2149c149\", \"reason\": \"Essential hypertension (disorder)\", \"startDate\": \"2025-09-21\", \"endDate\": null}, {\"description\": \"Furosemide 40 MG Oral Tablet\", \"code\": 313988, \"id\": \"med_7aac5e80-717c-11f1-bdf0-00155d05cd99\", \"encounter\": \"enc_2f72b840-3c69-f42b-5417-34021d04be76\", \"reason\": \"Chronic congestive heart failure (disorder)\", \"startDate\": \"2026-01-16\", \"endDate\": null}]"
   }
 ]
 
 ~~~~~NEXT RESPONSE~~~~~
 {
-  "id": "resp_0ebecfbaf4bc8799006a3aabab1ec4819490be1ffc716dfdbc",
-  "created_at": 1782229931.0,
+  "id": "resp_0de89b884b2491d3006a3eb274279c8190ba0ba7470ebd2819",
+  "created_at": 1782493812.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -140,7 +159,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_0ebecfbaf4bc8799006a3aabab81f88194b3f3502c5dd0e810",
+      "id": "rs_0de89b884b2491d3006a3eb274d66481908dd673d31ef982cc",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -148,11 +167,11 @@
       "status": null
     },
     {
-      "id": "msg_0ebecfbaf4bc8799006a3aabc236888194b9e6a19584b08d26",
+      "id": "msg_0de89b884b2491d3006a3eb28784a881909c00304109f3986b",
       "content": [
         {
           "annotations": [],
-          "text": "",
+          "text": "310798\n895996\n314076\n745752\n308136\n313988",
           "type": "output_text",
           "logprobs": []
         }
@@ -210,12 +229,12 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1782229954.0,
+  "completed_at": 1782493832.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
   "moderation": null,
-  "previous_response_id": "resp_0ebecfbaf4bc8799006a3aaba957548194968ed89f5a64909c",
+  "previous_response_id": "resp_0de89b884b2491d3006a3eb2716214819093de9296adbfc6e6",
   "prompt": null,
   "prompt_cache_key": null,
   "prompt_cache_retention": "in_memory",
@@ -223,7 +242,8 @@
     "effort": "medium",
     "generate_summary": null,
     "summary": null,
-    "context": "current_turn"
+    "context": "current_turn",
+    "mode": "standard"
   },
   "safety_identifier": null,
   "service_tier": "default",
@@ -237,15 +257,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 1318,
+    "input_tokens": 5022,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 1773,
+    "output_tokens": 1085,
     "output_tokens_details": {
-      "reasoning_tokens": 1728
+      "reasoning_tokens": 1024
     },
-    "total_tokens": 3091
+    "total_tokens": 6107
   },
   "user": null,
   "billing": {
@@ -253,7 +273,31 @@
   },
   "frequency_penalty": 0.0,
   "presence_penalty": 0.0,
-  "store": true
+  "store": true,
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  }
 }
 
 ~~~~~FINAL RESULT~~~~~
+310798
+895996
+314076
+745752
+308136
+313988

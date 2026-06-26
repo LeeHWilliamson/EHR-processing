@@ -4,11 +4,17 @@ They typically rely on decorator functions like
 
 '''
 from fastapi import FastAPI, HTTPException, Request
+from mvp.schema_adapters import flat_v1, normalized_v1
 import sqlite3
 from datetime import datetime, timezone
 import json
 
-DB_PATH = "/home/leeha/tools/sqlite/synth_ehr.db"
+DB_DIR = "/home/leeha/tools/sqlite"
+#schema adapter filenames
+ADAPTERS = {
+    "flat_v1": flat_v1,
+    "normalized_v1": normalized_v1,
+}
 '''
 #we are using FastAPI decorators
 #app object will have decorator functions, decorator functions are nested argument functions with an outer function like 'get', 
@@ -18,13 +24,15 @@ DB_PATH = "/home/leeha/tools/sqlite/synth_ehr.db"
 app = FastAPI()
 
 #server side helper function, not an api endpoint but will be called at API endpoints
-def get_connection():
-    conn = sqlite3.connect(DB_PATH)
+def get_connection(schema: str):
+    db_path = f"{DB_DIR}/{schema}.db"
+    conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn
 
 #server side helper function for updating log table
 def log_api_call(
+        schema,
         request: Request,
         endpoint: str,
         method: str,
@@ -36,7 +44,7 @@ def log_api_call(
     agent_id = request.headers.get("X-Agent-ID")
     task_id = request.headers.get("X-Task-ID")
 
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     cursor.execute(
@@ -64,7 +72,11 @@ def log_api_call(
     conn.commit()
     conn.close()
 
-
+def get_adapter(schema: str):
+    try: 
+        return ADAPTERS[schema]
+    except KeyError:
+        raise HTTPException(status_code=400, detail=f"Unknown schema: {schema}")
 '''
 Now we get to the actual API endpoints
 Here, the @ denotes a decorator as we described earlier. .get is the outer function that takes a predefined path as an argument. .get also
@@ -77,20 +89,26 @@ with the url route "/patients/{patient_id}". If someone accesses that URL, pleas
 '''
 #retrieve patients by id
 @app.get("/patients/{patient_id}")
-def get_patient(patient_id: str, request: Request):
-    conn = get_connection()
-    cursor = conn.cursor()
+def get_patient(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
+    conn = get_connection(schema)
+    try:
+        patient = adapter.get_patient(conn, patient_id)
+    finally:
+        conn.close()
+    # cursor = conn.cursor()
 
-    cursor.execute(
-        "SELECT * FROM patients WHERE id = ?",
-        (patient_id,),
-    )
-    #id is the primary key that corresponds to a specific patient, so row should only contain 1 record lol
-    row = cursor.fetchone()
-    conn.close()
+    # cursor.execute(
+    #     "SELECT * FROM patients WHERE id = ?",
+    #     (patient_id,),
+    # )
+    # #id is the primary key that corresponds to a specific patient, so row should only contain 1 record lol
+    # row = cursor.fetchone()
+    # conn.close()
 
-    if row is None:
+    if patient is None:
         log_api_call(
+            schema,
             request=request,
             endpoint=f"/patients/{patient_id}",
             method="GET",
@@ -99,9 +117,10 @@ def get_patient(patient_id: str, request: Request):
         )
         raise HTTPException(status_code=404, detail="Patient not found")
     
-    result = dict(row)
+    # result = dict(row)
 
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}",
         method="GET",
@@ -110,12 +129,13 @@ def get_patient(patient_id: str, request: Request):
         rows_returned=1,
     )
 
-    return result
+    return patient
 
 #get list of encounters associated with a patient
 @app.get('/patients/{patient_id}/encounters')
-def get_patient_encounters(patient_id: str, request: Request):
-    conn = get_connection()
+def get_patient_encounters(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     cursor.execute(
@@ -152,20 +172,27 @@ def get_patient_encounters(patient_id: str, request: Request):
 
 #Get list of medications associated with a patient
 @app.get("/patients/{patient_id}/medications")
-def get_patient_medications(patient_id: str, request: Request):
+def get_patient_medications(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to server
-    conn = get_connection()
-    #create cursor object (whatever that is)
-    cursor = conn.cursor()
-    #query db
-    cursor.execute("SELECT * FROM medications WHERE patient_id = ?", (patient_id,),)
-    #fetch all results
-    rows = cursor.fetchall()
-    #close connection
-    conn.close()
+    conn = get_connection(schema)
+    #utilize adapter for schema specific SQL
+    try:
+        medications = adapter.get_medications(conn, patient_id)
+    finally:
+        conn.close()
+    # #create cursor object (whatever that is)
+    # cursor = conn.cursor()
+    # #query db
+    # cursor.execute("SELECT * FROM medications WHERE patient_id = ?", (patient_id,),)
+    # #fetch all results
+    # rows = cursor.fetchall()
+    # #close connection
+    # conn.close()
     #log attempt and outcome
-    if rows is None:
+    if medications is None:
         log_api_call(
+            schema,
             request=request,
             endpoint=f"/patients/{patient_id}/medications",
             method="GET",
@@ -174,24 +201,26 @@ def get_patient_medications(patient_id: str, request: Request):
         )
         raise HTTPException(status_code=404, detail="No medications associated with that patient ID")
     #convert result to serializable format
-    results = [dict(row) for row in rows]
 
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/medications",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(medications),
     )
+    return medications
 
-    return results
+
 
 #get all observations associated with a patient
 @app.get("/patients/{patient_id}/observations")
-def get_patient_observations(patient_id: str, request: Request):
+def get_patient_observations(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to server
-    conn = get_connection()
+    conn = get_connection(schema)
     #create cursor
     cursor = conn.cursor()
     #query
@@ -226,9 +255,10 @@ def get_patient_observations(patient_id: str, request: Request):
 
 
 @app.get("/patients/{patient_id}/allergies")
-def get_patient_allergies(patient_id: str, request: Request):
+def get_patient_allergies(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to db
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     #query
@@ -257,9 +287,10 @@ def get_patient_allergies(patient_id: str, request: Request):
     return results
 #get patient conditions
 @app.get("/patients/{patient_id}/conditions")
-def get_patient_conditions(patient_id: str, request: Request):
+def get_patient_conditions(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to db
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     #query
@@ -288,9 +319,10 @@ def get_patient_conditions(patient_id: str, request: Request):
     return results
 #get patient immunizations
 @app.get("/patients/{patient_id}/immunizations")
-def get_patient_immunizations(patient_id: str, request: Request):
+def get_patient_immunizations(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to db
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     #query
@@ -319,9 +351,10 @@ def get_patient_immunizations(patient_id: str, request: Request):
     return results
 #get patient devices
 @app.get("/patients/{patient_id}/devices")
-def get_patient_devices(patient_id: str, request: Request):
+def get_patient_devices(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to db
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     #query
@@ -350,9 +383,10 @@ def get_patient_devices(patient_id: str, request: Request):
     return results
 #get patient procedures
 @app.get("/patients/{patient_id}/procedures")
-def get_patient_procedures(patient_id: str, request: Request):
+def get_patient_procedures(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to db
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     #query
@@ -381,9 +415,10 @@ def get_patient_procedures(patient_id: str, request: Request):
     return results
 #get patient careplans
 @app.get("/patients/{patient_id}/careplans")
-def get_patient_careplans(patient_id: str, request: Request):
+def get_patient_careplans(patient_id: str, schema: str, request: Request):
+    adapter = get_adapter(schema)
     #connect to db
-    conn = get_connection()
+    conn = get_connection(schema)
     cursor = conn.cursor()
 
     #query

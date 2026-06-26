@@ -121,3 +121,157 @@
     "missed_items": {}
   }
 }
+{
+  "run_id": "medication_retrieval_v1-20260626T170934.680574Z-3864",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "agent_brobot",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_cf25ae18-a01d-f1c0-1f5d-52a5f3efbf1c",
+  "datetime": "2026-06-26T17:09:34.680574+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3802,
+  "total_rows_retrieved": 17,
+  "raw_response": "308136",
+  "patient_gt": [
+    308136
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260626T170950.426444Z-aeb3",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "agent_brobot",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_2f72b840-3c69-f42b-78a3-039283ff5384",
+  "datetime": "2026-06-26T17:09:50.426444+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 6971,
+  "total_rows_retrieved": 37,
+  "raw_response": "310798\n895996\n314076\n745752\n308136\n313988",
+  "patient_gt": [
+    310798,
+    895996,
+    314076,
+    745752,
+    308136,
+    313988
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260626T171000.698262Z-e38d",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "agent_brobot",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_cf25ae18-a01d-f1c0-1f5d-52a5f3efbf1c",
+  "datetime": "2026-06-26T17:10:00.698262+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3179,
+  "total_rows_retrieved": 17,
+  "raw_response": "308136",
+  "patient_gt": [
+    308136
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260626T171009.946223Z-5818",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "agent_brobot",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_2f72b840-3c69-f42b-78a3-039283ff5384",
+  "datetime": "2026-06-26T17:10:09.946223+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 6408,
+  "total_rows_retrieved": 37,
+  "raw_response": "310798\n895996\n314076\n745752\n308136\n313988",
+  "patient_gt": [
+    310798,
+    895996,
+    314076,
+    745752,
+    308136,
+    313988
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
