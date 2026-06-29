@@ -10,9 +10,9 @@ This script will
 
 Our task for the agent will be to return all medications that a patient is currently taking in structured JSON format
 '''
-from . import api_client
+# import api_client
 import json
-from openai import OpenAI
+from anthropic import Anthropic
 import os
 import copy
 from datetime import datetime, timezone
@@ -21,9 +21,22 @@ from dotenv import load_dotenv #lets use utilize a .env file for dependency inje
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
+client = Anthropic(
+    api_key=os.getenv("ANTHROPIC_KEY")
 )
+
+'''
+EXAMPLE MESSAGE
+'''
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Hello, world"}],
+)
+print(message.content)
+
+with open("claude_output.txt", "w") as file:
+        file.write(message.model_dump_json(indent=2))
 
 def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot", patient_id = None, schema: str = None):
     now = datetime.now(timezone.utc)
@@ -58,8 +71,7 @@ def collect_agent_analytics(response):
 
 '''
 ~~~~~~TOOLS~~~~~~~~~~~
-Now we construct a list of tools for those wrappers we just wrote. These tools are simply descriptions of the functions in our program that the 
-agent is allowed to use, formatted as JSON. Think of it as a guide we give our agent for navigating our database
+Currently OpenAI format, look up required format for claude
 '''
 TOOLS = [
     {
@@ -93,53 +105,49 @@ TOOLS = [
             "required": ["patient_id"]
         }
     }
-    # {
-    #     "type": "function",
-    #     "function": {
-    #         "name": "get_immunizations",
-    #     }
-    # }
 ]
 
 '''
-Ok, so we've written the functions our agent is allowed to use, and we've written out the instructions for our agent on how to use those tools.
-Our agent uses a tool by calling TOOL_MAP["name_of_tool_we_gave_it"]. Here, we write a little dictionary so our script knows which functions
-to call when our agent does that :)
+TOOL MAP
+Currently OpenAI format, adapt for claude
 '''
 TOOL_MAP = {
     "get_patient": api_client.get_patient,
     "get_medications": api_client.get_medications,
 }
 
+'''
+RUNNING THE AGENT
+Currently just copy-paste from openAI script
+
+Input args will likely be exactly the same (this function will likely end up getting move to agent_common), but will need to be preprocessed
+into acceptable format
+
+we will use client.messages.create() for Anthropic, model and tools parameter will likely be the same. input + previous_response_id will be encompassed
+in the messages field, which we will need to manage to contain the entire conversation history for the current session.
+
+Will likely need to add input to .system field as we cannot send system instructions via input
+'''
 def run_agent(input_items, patient = None, previous_response_id=None):
     #we assemble the full user-side prompt by simply appending the relevant patient ID
     if "content" in input_items[-1]:
         input_items[-1]["content"] = input_items[-1]["content"] + patient
+    #we pass name of model we want, a ResponseInputParam, a list of function definitions, and a str
+    #the ResponseInputParam is structured as a list of dicts, see tasks.json prompts for examples
+    #the previous response id is so the agent can carry context forward
     return client.responses.create(
         model="gpt-5",
         input=input_items,
         tools=TOOLS,
         previous_response_id=previous_response_id,
     )
-
+'''
+Schema setting, task loading, report initialization will likely be moved to agent_common
+'''
 def run_workflow(patient_id : str, task : str, schema: str):
     api_client.set_schema(schema)
-    # initial_messages = [
-    #     {
-    #         "role": "system",
-    #         "content": (
-    #             "You are an AI assistant with access to a synthetic Electronic Health Record API. "
-    #             "Use the provided functions whenever you need patient information."
-    #         )
-    #     },
-    #     {
-    #         "role": "user",
-    #         "content": (
-    #             "List the names of all medications that "
-    #             f"{patient_id} is currently taking."
-    #         )
-    #     }
-    # ]
+    #primitive approach for loading info specific to current task
+    #all tasks are stored in a json, load the entire dict with key = current_task
     try:
         with open("mvp/tasks.json", "r") as file:
             tasks = json.load(file)
@@ -147,7 +155,14 @@ def run_workflow(patient_id : str, task : str, schema: str):
     except:
         return RuntimeError
     analytics = initialize_agent_report(task = task, agent = "agent_brobot", patient_id = patient_id, schema = schema)
+    '''
+    We will need to write a helper for parsing the task prompt into format expect by Anthropic
+    '''
+    # initial_prompt = parse_task(current_task["prompt"], agent)
 
+    '''
+    The input will no longer be a single prompt, it will be the entire conversation history that we build as we go
+    '''
     response = run_agent(current_task["prompt"], patient = patient_id)
 
     with open("agent_output.txt", "w") as file:
@@ -204,5 +219,3 @@ def run_workflow(patient_id : str, task : str, schema: str):
 
 if __name__ == "__main__":
     analytics_dict, response_text = run_workflow(patient_id="pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60")
-
-    
