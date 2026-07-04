@@ -1,0 +1,625 @@
+{
+  "run_id": "medication_retrieval_v1-20260703T230230.404035Z-224d",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_35045da5-4c6b-9fae-b7c9-7d4225b2f367",
+  "datetime": "2026-07-03T23:02:30.404035+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2959,
+  "total_rows_retrieved": 5,
+  "raw_response": "Based on the medication records for this patient, all listed medications have specific **end dates**, meaning none are currently active (an ongoing medication would typically show a null/empty end date). Here's a summary:\n\n| Medication | Code | Start Date | End Date |\n|---|---|---|---|\n| Cefuroxime 250 MG Oral Tablet | 309097 | 2019-09-30 | 2019-10-14 |\n| Acetaminophen 160 MG Chewable Tablet | 313820 | 2019-09-30 | 2019-10-14 |\n| Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet | 562251 | 2021-09-25 | 2021-10-17 |\n| Sodium fluoride 0.0272 MG/MG Oral Gel | 1535362 | 2023-07-13 | 2023-07-13 |\n| Acetaminophen 325 MG Oral Tablet | 313782 | 2025-10-29 | 2025-11-09 |\n\n**There are no medications currently being taken** \u2014 all five have completed end dates, with the most recent course (Acetaminophen 325 MG) ending 2025-11-09.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records for this patient, all listed medications have specific **end dates**, meaning none are currently active (an ongoing medication would typically show a null/empty end date). Here's a summary:": 1,
+      "| Medication | Code | Start Date | End Date |": 1,
+      "|---|---|---|---|": 1,
+      "| Cefuroxime 250 MG Oral Tablet | 309097 | 2019-09-30 | 2019-10-14 |": 1,
+      "| Acetaminophen 160 MG Chewable Tablet | 313820 | 2019-09-30 | 2019-10-14 |": 1,
+      "| Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet | 562251 | 2021-09-25 | 2021-10-17 |": 1,
+      "| Sodium fluoride 0.0272 MG/MG Oral Gel | 1535362 | 2023-07-13 | 2023-07-13 |": 1,
+      "| Acetaminophen 325 MG Oral Tablet | 313782 | 2025-10-29 | 2025-11-09 |": 1,
+      "**There are no medications currently being taken** \u2014 all five have completed end dates, with the most recent course (Acetaminophen 325 MG) ending 2025-11-09.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260703T230239.962616Z-367e",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_0b446341-8cd6-2563-f180-296169c0c0ad",
+  "datetime": "2026-07-03T23:02:39.962616+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 1988,
+  "total_rows_retrieved": 2,
+  "raw_response": "Based on the medication records for this patient, both medications have already ended:\n\n- **Acetaminophen 160 MG Chewable Tablet** (code: 313820) \u2014 ended 2019-07-26\n- **Ibuprofen 100 MG Oral Tablet** (code: 198405) \u2014 ended 2023-12-04\n\nThe patient is **not currently taking any medications**, as both have completed end dates with no active prescriptions on record.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records for this patient, both medications have already ended:": 1,
+      "- **Acetaminophen 160 MG Chewable Tablet** (code: 313820) \u2014 ended 2019-07-26": 1,
+      "- **Ibuprofen 100 MG Oral Tablet** (code: 198405) \u2014 ended 2023-12-04": 1,
+      "The patient is **not currently taking any medications**, as both have completed end dates with no active prescriptions on record.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260703T234637.910045Z-76ad",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_09ba2d7b-2162-bb74-2e35-042ff17ff53e",
+  "datetime": "2026-07-03T23:46:37.910045+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2082,
+  "total_rows_retrieved": 3,
+  "raw_response": "Based on the medication records, the patient is currently taking only one medication (no end date, meaning it's ongoing):\n\n197591",
+  "patient_gt": [
+    197591
+  ],
+  "output_metrics": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666,
+    "hallucinated_items": {
+      "Based on the medication records, the patient is currently taking only one medication (no end date, meaning it's ongoing):": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260703T234642.061634Z-f5c6",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_4795b73b-16e4-d98c-b60e-51cf603db895",
+  "datetime": "2026-07-03T23:46:42.061634+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2470,
+  "total_rows_retrieved": 5,
+  "raw_response": "2001499",
+  "patient_gt": [
+    2001499
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260703T235256.978897Z-e05a",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_d4ed8f5f-a1b9-34d0-d3de-40474da315e1",
+  "datetime": "2026-07-03T23:52:56.978897+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 121581,
+  "total_rows_retrieved": 577,
+  "raw_response": "308136",
+  "patient_gt": [
+    308136
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260703T235302.089102Z-e57c",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_845e449a-f465-f791-4a40-097e25511bdc",
+  "datetime": "2026-07-03T23:53:02.089102+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 1513,
+  "total_rows_retrieved": 0,
+  "raw_response": "It appears there are no medications on record for this patient. No medication codes to list.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "It appears there are no medications on record for this patient. No medication codes to list.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012037.377040Z-77f6",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_66b0f0a0-a98e-65e0-2307-32beeebb0d78",
+  "datetime": "2026-07-04T01:20:37.377040+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3558,
+  "total_rows_retrieved": 9,
+  "raw_response": "Based on the medication records, only one medication currently has an active status (its end date is in the future relative to the others, which have all already ended):\n\n748962",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, only one medication currently has an active status (its end date is in the future relative to the others, which have all already ended):": 1,
+      "748962": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012042.735437Z-fe80",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_16e281e2-9d45-e933-2d38-ab86ecacc64b",
+  "datetime": "2026-07-04T01:20:42.735437+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 12691,
+  "total_rows_retrieved": 58,
+  "raw_response": "856987\n1049625\n206905\n209387\n835603",
+  "patient_gt": [
+    856987,
+    1049625,
+    206905,
+    209387,
+    835603
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012355.094621Z-31a6",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_53b4d36b-aec7-55d3-8240-430936bf65da",
+  "datetime": "2026-07-04T01:23:55.094621+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 4230,
+  "total_rows_retrieved": 13,
+  "raw_response": "997488\n1870230\n895996\n745752",
+  "patient_gt": [
+    997488,
+    1870230,
+    895996,
+    745752
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012359.008977Z-74b6",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_bd8f91c2-aad2-5757-fa66-628498432e91",
+  "datetime": "2026-07-04T01:23:59.008977+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2521,
+  "total_rows_retrieved": 4,
+  "raw_response": "Based on the medication records for this patient, all listed medications have an `endDate` specified, meaning none are currently active \u2014 every medication course has already ended:\n\n- Acetaminophen 325 MG Oral Tablet (code 313782): ended 2016-12-10\n- Acetaminophen 325 MG Oral Tablet (code 313782): ended 2018-01-15\n- Acetaminophen 325 MG Oral Tablet (code 313782): ended 2020-04-13\n- sodium fluoride 0.0272 MG/MG Oral Gel (code 1535362): ended 2020-03-27\n\n**There are no medications the patient is currently taking.**",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records for this patient, all listed medications have an `endDate` specified, meaning none are currently active \u2014 every medication course has already ended:": 1,
+      "- Acetaminophen 325 MG Oral Tablet (code 313782): ended 2016-12-10": 1,
+      "- Acetaminophen 325 MG Oral Tablet (code 313782): ended 2018-01-15": 1,
+      "- Acetaminophen 325 MG Oral Tablet (code 313782): ended 2020-04-13": 1,
+      "- sodium fluoride 0.0272 MG/MG Oral Gel (code 1535362): ended 2020-03-27": 1,
+      "**There are no medications the patient is currently taking.**": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012404.850942Z-3b19",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_66b0f0a0-a98e-65e0-2307-32beeebb0d78",
+  "datetime": "2026-07-04T01:24:04.850942+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3799,
+  "total_rows_retrieved": 9,
+  "raw_response": "Based on the medication records, the patient currently has one active medication (with an end date in the future relative to the most recent records):\n\n748962\n\nThis corresponds to the **{28 (norethindrone 0.35 MG Oral Tablet)} Pack [Camila 28 Day]**, started 2025-05-29 with an end date of 2026-05-24.\n\nAll other medications in the record have end dates that have already passed and are not currently active.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, the patient currently has one active medication (with an end date in the future relative to the most recent records):": 1,
+      "748962": 1,
+      "This corresponds to the **{28 (norethindrone 0.35 MG Oral Tablet)} Pack [Camila 28 Day]**, started 2025-05-29 with an end date of 2026-05-24.": 1,
+      "All other medications in the record have end dates that have already passed and are not currently active.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012411.915408Z-ff1e",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_16e281e2-9d45-e933-2d38-ab86ecacc64b",
+  "datetime": "2026-07-04T01:24:11.915408+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 12548,
+  "total_rows_retrieved": 58,
+  "raw_response": "Based on the medication records, the medications currently being taken (endDate is None) are:\n\n1049625\n206905\n209387\n835603",
+  "patient_gt": [
+    856987,
+    1049625,
+    206905,
+    209387,
+    835603
+  ],
+  "output_metrics": {
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1": 0.8000000000000002,
+    "hallucinated_items": {
+      "Based on the medication records, the medications currently being taken (endDate is None) are:": 1
+    },
+    "missed_items": {
+      "856987": 1
+    }
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012457.819998Z-64c6",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_53b4d36b-aec7-55d3-8240-430936bf65da",
+  "datetime": "2026-07-04T01:24:57.819998+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3803,
+  "total_rows_retrieved": 13,
+  "raw_response": "Here are the codes of medications currently being taken (no end date):\n\n997488\n1870230\n895996\n745752",
+  "patient_gt": [
+    997488,
+    1870230,
+    895996,
+    745752
+  ],
+  "output_metrics": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.888888888888889,
+    "hallucinated_items": {
+      "Here are the codes of medications currently being taken (no end date):": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012504.412282Z-4c77",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_bd8f91c2-aad2-5757-fa66-628498432e91",
+  "datetime": "2026-07-04T01:25:04.412282+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2151,
+  "total_rows_retrieved": 4,
+  "raw_response": "Based on the medication records, none of the medications have an ongoing status (all have both a start date and an end date, indicating they have been completed/discontinued). The patient is not currently taking any medications.\n\nIf you'd like, I can list the codes for all historical medications instead:\n\n313782\n1535362",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, none of the medications have an ongoing status (all have both a start date and an end date, indicating they have been completed/discontinued). The patient is not currently taking any medications.": 1,
+      "If you'd like, I can list the codes for all historical medications instead:": 1,
+      "313782": 1,
+      "1535362": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012507.613523Z-bc10",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_66b0f0a0-a98e-65e0-2307-32beeebb0d78",
+  "datetime": "2026-07-04T01:25:07.613523+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3197,
+  "total_rows_retrieved": 9,
+  "raw_response": "748962",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "748962": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260704T012513.791330Z-970f",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_16e281e2-9d45-e933-2d38-ab86ecacc64b",
+  "datetime": "2026-07-04T01:25:13.791330+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 10516,
+  "total_rows_retrieved": 58,
+  "raw_response": "856987\n1049625\n206905\n209387\n835603",
+  "patient_gt": [
+    856987,
+    1049625,
+    206905,
+    209387,
+    835603
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}

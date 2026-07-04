@@ -25,36 +25,6 @@ client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY")
 )
 
-def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot", patient_id = None, schema: str = None):
-    now = datetime.now(timezone.utc)
-    AGENT_REPORT_SCHEMA = {
-        "run_id": (
-            f"{task}-" 
-            f"{now:%Y%m%dT%H%M%S.%fZ}-" 
-            f"{uuid4().hex[:4]}"
-            ),
-        "task": task,
-        "schema": schema,
-        "agent": agent,
-        "provider" : "OpenAI",
-        "model": "gpt-5",
-        "patient_id": patient_id,
-        "datetime": now.isoformat(),
-        "tools_workflow": [],
-        "workflow_metrics": {},
-        "api_calls_made": 0,
-        "total_tokens_used": 0,
-        "total_rows_retrieved": 0,
-        "raw_response": None,
-        "patient_gt": None, 
-        "output_metrics": {}
-    }
-
-    analytics_report = copy.deepcopy(AGENT_REPORT_SCHEMA)
-    return analytics_report
-
-def collect_agent_analytics(response):
-    pass
 
 '''
 ~~~~~~TOOLS~~~~~~~~~~~
@@ -125,33 +95,8 @@ def run_agent(input_items, patient = None, previous_response_id=None):
         previous_response_id=previous_response_id,
     )
 
-def run_workflow(patient_id : str, task : str, schema: str):
-    api_client.set_schema(schema)
-    # initial_messages = [
-    #     {
-    #         "role": "system",
-    #         "content": (
-    #             "You are an AI assistant with access to a synthetic Electronic Health Record API. "
-    #             "Use the provided functions whenever you need patient information."
-    #         )
-    #     },
-    #     {
-    #         "role": "user",
-    #         "content": (
-    #             "List the names of all medications that "
-    #             f"{patient_id} is currently taking."
-    #         )
-    #     }
-    # ]
-    #primitive approach for loading info specific to current task
-    #all tasks are stored in a json, load the entire dict with key = current_task
-    try:
-        with open("mvp/tasks.json", "r") as file:
-            tasks = json.load(file)
-            current_task = tasks[task].copy()
-    except:
-        return RuntimeError
-    analytics = initialize_agent_report(task = task, agent = "agent_brobot", patient_id = patient_id, schema = schema)
+def run_workflow(patient_id : str, current_task, analytics):
+    
 
     #"prompt" is a list of promp dicts {"role":sr, "content":str} formatted as expected by OpenAI agent
     response = run_agent(current_task["prompt"], patient = patient_id)
@@ -168,7 +113,7 @@ def run_workflow(patient_id : str, task : str, schema: str):
                     tool_name = item.name
                     arguments = json.loads(item.arguments)
 
-                    print(f"Calling tool: {tool_name} for schema: {schema}")
+                    print(f"Calling tool: {tool_name}")
                     print(arguments)
 
                     result = TOOL_MAP[tool_name](**arguments)

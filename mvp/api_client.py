@@ -18,6 +18,7 @@ ACTIVE_SCHEMA = "normalized_v1"
 def set_schema(schema: str):
     global ACTIVE_SCHEMA
     ACTIVE_SCHEMA = schema
+    print(f"SCHEMA HAS BEEN SET TO {schema}")
 
 
 '''
