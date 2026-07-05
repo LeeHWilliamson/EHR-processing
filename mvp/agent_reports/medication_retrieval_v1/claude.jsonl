@@ -623,3 +623,300 @@
     "missed_items": {}
   }
 }
+{
+  "run_id": "medication_retrieval_v1-20260705T193217.653163Z-c869",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_51c49ad0-369f-cead-400b-5eb2e3b98309",
+  "datetime": "2026-07-05T19:32:17.653163+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2281,
+  "total_rows_retrieved": 3,
+  "raw_response": "Based on the medication records, this patient has no medications currently active \u2014 all three listed medications have an `endDate` in the past:\n\n- Acetaminophen 325 MG Oral Tablet (313782): ended 2018-11-27\n- Sodium fluoride 0.0272 MG/MG Oral Gel (1535362): ended 2019-12-22\n- Ibuprofen 200 MG Oral Tablet (310965): ended 2024-10-12\n\nThere are no medications currently being taken by this patient.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, this patient has no medications currently active \u2014 all three listed medications have an `endDate` in the past:": 1,
+      "- Acetaminophen 325 MG Oral Tablet (313782): ended 2018-11-27": 1,
+      "- Sodium fluoride 0.0272 MG/MG Oral Gel (1535362): ended 2019-12-22": 1,
+      "- Ibuprofen 200 MG Oral Tablet (310965): ended 2024-10-12": 1,
+      "There are no medications currently being taken by this patient.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T193224.940297Z-c4bc",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_827729aa-115e-2df8-7c57-9adccfa8b11c",
+  "datetime": "2026-07-05T19:32:24.940297+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2387,
+  "total_rows_retrieved": 2,
+  "raw_response": "Based on the medication records, the patient has one medication that appears to be currently active (within an ongoing date range), while the other has already ended.\n\n**Currently taking:**\n198405\n\nNote: The other medication (sodium fluoride, code 1535362) had a start and end date both on 2024-12-23, indicating it was a single-day treatment and is no longer active.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, the patient has one medication that appears to be currently active (within an ongoing date range), while the other has already ended.": 1,
+      "**Currently taking:**": 1,
+      "198405": 1,
+      "Note: The other medication (sodium fluoride, code 1535362) had a start and end date both on 2024-12-23, indicating it was a single-day treatment and is no longer active.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T193320.479690Z-411e",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_51c49ad0-369f-cead-400b-5eb2e3b98309",
+  "datetime": "2026-07-05T19:33:20.479690+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2158,
+  "total_rows_retrieved": 3,
+  "raw_response": "Based on the medication records for this patient, none of the medications are currently being taken \u2014 all three have completed end dates:\n\n- **Acetaminophen 325 MG Oral Tablet** (code 313782): ended 2018-11-27\n- **Sodium fluoride 0.0272 MG/MG Oral Gel** (code 1535362): ended 2019-12-22\n- **Ibuprofen 200 MG Oral Tablet** (code 310965): ended 2024-10-12\n\nThere are no active/ongoing medications for this patient at this time.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records for this patient, none of the medications are currently being taken \u2014 all three have completed end dates:": 1,
+      "- **Acetaminophen 325 MG Oral Tablet** (code 313782): ended 2018-11-27": 1,
+      "- **Sodium fluoride 0.0272 MG/MG Oral Gel** (code 1535362): ended 2019-12-22": 1,
+      "- **Ibuprofen 200 MG Oral Tablet** (code 310965): ended 2024-10-12": 1,
+      "There are no active/ongoing medications for this patient at this time.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T193325.114330Z-c9b3",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "OpenAI",
+  "model": "gpt-5",
+  "patient_id": "pat_827729aa-115e-2df8-7c57-9adccfa8b11c",
+  "datetime": "2026-07-05T19:33:25.114330+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2189,
+  "total_rows_retrieved": 2,
+  "raw_response": "Based on the medication records, the sodium fluoride gel course ended on 2024\u201112\u201123, so it's no longer active. The Ibuprofen prescription (2025\u201112\u201122 to 2026\u201101\u201106) is the current medication.\n\n**Currently active medication code:**\n198405",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, the sodium fluoride gel course ended on 2024\u201112\u201123, so it's no longer active. The Ibuprofen prescription (2025\u201112\u201122 to 2026\u201101\u201106) is the current medication.": 1,
+      "**Currently active medication code:**": 1,
+      "198405": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T204126.946276Z-5c80",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_35ee5280-6997-e5a6-88eb-8ca173ecd7eb",
+  "datetime": "2026-07-05T20:41:26.946276+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3822,
+  "total_rows_retrieved": 12,
+  "raw_response": "206905",
+  "patient_gt": [
+    206905
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T204131.837430Z-e46d",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_3cd82c10-d3bc-2798-76f6-f1de120cb986",
+  "datetime": "2026-07-05T20:41:31.837430+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2123,
+  "total_rows_retrieved": 3,
+  "raw_response": "No current meds found.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T204159.315848Z-17bf",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_35ee5280-6997-e5a6-88eb-8ca173ecd7eb",
+  "datetime": "2026-07-05T20:41:59.315848+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3330,
+  "total_rows_retrieved": 12,
+  "raw_response": "206905",
+  "patient_gt": [
+    206905
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260705T204202.813371Z-e114",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_3cd82c10-d3bc-2798-76f6-f1de120cb986",
+  "datetime": "2026-07-05T20:42:02.813371+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 2111,
+  "total_rows_retrieved": 3,
+  "raw_response": "No current meds found.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}

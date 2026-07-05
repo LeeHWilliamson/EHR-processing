@@ -40,6 +40,17 @@ def process_lists(med_gt_list = None, agent_output = None):
 def calc_metrics(med_gt_list, agent_output):
     if med_gt_list is None or agent_output is None:
         return "please pass required arguments"
+    '''
+    If patient json contains no current meds, and agent returns no current meds, return early
+    '''
+    if len(med_gt_list) == 0 and agent_output == "No current meds found.":
+        return {
+            "precision": 1,
+            "recall": 1,
+            "f1": 1,
+            "hallucinated_items" : {},
+            "missed_items" : {}
+        }
     #cast gt items to str, remove whitespaces and \n
     expected = [str(item).strip() for item in med_gt_list]
     #if line.strip() will result in a Truthy str, then output it
@@ -52,6 +63,8 @@ def calc_metrics(med_gt_list, agent_output):
 
     gt_counts = {}
     actual_counts = {}
+
+    
 
     #get frequencies of all items in gt and response
     for item in expected:

@@ -15,6 +15,14 @@
         {
             "role": "user",
             "content": "List the codes of all medications that the patient with the following ID is currently taking, separate each code with a newline character: "
+        },
+        {
+            "role": "user",
+            "content": "Use the available patient and medication information to determine whether a medication should be considered current."
+        },
+        {
+            "role": "user",
+            "content": "Do not return any text besides the list of codes. If a patient has no current meds, return 'No current meds found.'"
         }
     ],
     "ground_truth_source": "get_patient_meds(patient_id)",

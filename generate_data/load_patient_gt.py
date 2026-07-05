@@ -69,6 +69,9 @@ def load_patients(data_directory):
         patients[row.Id]["patient"]["lastName"] = row.LAST
         patients[row.Id]["patient"]["birthdate"] = row.BIRTHDATE
         patients[row.Id]["patient"]["deathdate"] = row.DEATHDATE
+        #if patient is not deceased (has no deathdate), record their deathdate as None
+        if type(patients[row.Id]["patient"]["deathdate"]) == float:
+            patients[row.Id]["patient"]["deathdate"] = None
         patients[row.Id]["patient"]["gender"] = row.GENDER
     # for record in records(dataframe=patients_df):
     #     patient_record = {key: value for key, value in record.items() if pandas.notna(value)}

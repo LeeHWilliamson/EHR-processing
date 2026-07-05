@@ -16,6 +16,12 @@ AGENTS = {
 }
 
 def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot", patient_id = None, schema: str = None):
+    if agent == "open_ai":
+        provider = "Open AI"
+        model = "gpt-5"
+    elif agent == "claude":
+        provider = "Anthropic"
+        model = "Claude Sonnet-5"
     now = datetime.now(timezone.utc)
     AGENT_REPORT_SCHEMA = {
         "run_id": (
@@ -26,8 +32,8 @@ def initialize_agent_report(task = "list_current_meds", agent = "agent_brobot", 
         "task": task,
         "schema": schema,
         "agent": agent,
-        "provider" : "OpenAI",
-        "model": "gpt-5",
+        "provider" : provider,
+        "model": model,
         "patient_id": patient_id,
         "datetime": now.isoformat(),
         "tools_workflow": [],

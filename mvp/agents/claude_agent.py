@@ -101,8 +101,8 @@ Will likely need to add input to .system field as we cannot send system instruct
 def run_agent(system_instructions, input_messsages, patient = None):
     #we assemble the full user-side prompt by simply appending the relevant patient ID
     #anthropic message format will be list of all comms so far, so FIRST item is our task
-    if "content" in input_messsages[0]:
-        input_messsages[-1]["content"] = input_messsages[-1]["content"] + patient
+    # if "content" in input_messsages[0]:
+    #     input_messsages[-1]["content"] = input_messsages[-1]["content"] + patient
     return client.messages.create(
         model="claude-sonnet-5",
         max_tokens=1024,
@@ -123,6 +123,8 @@ def run_workflow(patient_id : str, task, analytics):
     print(type(task))
     print(task)
     system_instructions, initial_prompt = parse_task(task["prompt"])
+    #for the initial prompt, we must append the patient ID
+    initial_prompt[0]["content"] = initial_prompt[0]["content"] + patient_id
     messages = initial_prompt
     '''
     The input will no longer be a single prompt, it will be the entire conversation history that we build as we go

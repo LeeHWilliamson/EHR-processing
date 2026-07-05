@@ -1,6 +1,6 @@
 {
-  "id": "resp_0eacbd76a5712460006a48612bfe6c8193ab062ce2a9d2aa1f",
-  "created_at": 1783128364.0,
+  "id": "resp_0402d2ff2e2f512f006a4ac1ad6d848190849cf0d9a29825ef",
+  "created_at": 1783284141.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -9,7 +9,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_0eacbd76a5712460006a48612c4850819395ee10cdf4103446",
+      "id": "rs_0402d2ff2e2f512f006a4ac1adbc448190a6f41a3631889b2e",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -17,11 +17,11 @@
       "status": null
     },
     {
-      "arguments": "{\"patient_id\":\"pat_16e281e2-9d45-e933-2d38-ab86ecacc64b\"}",
-      "call_id": "call_8hFEL7covNcpPwg3ksNhQBDs",
+      "arguments": "{\"patient_id\":\"pat_3cd82c10-d3bc-2798-76f6-f1de120cb986\"}",
+      "call_id": "call_YVbiy7qt1mGp8nKrUCIAZa6R",
       "name": "get_medications",
       "type": "function_call",
-      "id": "fc_0eacbd76a5712460006a48612d35dc8193aea0648bbbdcb732",
+      "id": "fc_0402d2ff2e2f512f006a4ac1b190e881909806e4da15169025",
       "namespace": null,
       "status": "completed"
     }
@@ -73,7 +73,7 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1783128365.0,
+  "completed_at": 1783284145.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
@@ -101,15 +101,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 159,
+    "input_tokens": 190,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 162,
+    "output_tokens": 415,
     "output_tokens_details": {
-      "reasoning_tokens": 64
+      "reasoning_tokens": 320
     },
-    "total_tokens": 321
+    "total_tokens": 605
   },
   "user": null,
   "billing": {
@@ -142,15 +142,15 @@
 [
   {
     "type": "function_call_output",
-    "call_id": "call_8hFEL7covNcpPwg3ksNhQBDs",
-    "output": "[{\"description\": \"Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet\", \"code\": 856987, \"id\": \"med_8d031d06-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-027a-cb971dfcb0ad\", \"reason\": null, \"startDate\": \"2014-03-28\", \"endDate\": null}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031d24-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-5bdb-c0a984e0673d\", \"reason\": null, \"startDate\": \"2016-04-28\", \"endDate\": \"2017-05-04\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031d38-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-5bdb-c0a984e0673d\", \"reason\": null, \"startDate\": \"2016-04-28\", \"endDate\": \"2017-05-04\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031d4c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-5bdb-c0a984e0673d\", \"reason\": null, \"startDate\": \"2016-04-28\", \"endDate\": \"2017-05-04\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031d6a-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-5bdb-c0a984e0673d\", \"reason\": null, \"startDate\": \"2016-04-28\", \"endDate\": \"2017-05-04\"}, {\"description\": \"Naproxen sodium 220 MG Oral Tablet\", \"code\": 849574, \"id\": \"med_8d031d7e-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e7a5-f16b7d9355f4\", \"reason\": null, \"startDate\": \"2016-09-23\", \"endDate\": \"2016-10-30\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031d9c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-f1f1-129aef64376c\", \"reason\": null, \"startDate\": \"2017-05-04\", \"endDate\": \"2018-05-10\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031db0-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-f1f1-129aef64376c\", \"reason\": null, \"startDate\": \"2017-05-04\", \"endDate\": \"2018-05-10\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031dce-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-f1f1-129aef64376c\", \"reason\": null, \"startDate\": \"2017-05-04\", \"endDate\": \"2018-05-10\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031de2-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-f1f1-129aef64376c\", \"reason\": null, \"startDate\": \"2017-05-04\", \"endDate\": \"2018-05-10\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": 1535362, \"id\": \"med_8d031df6-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-dcf7-3ce8ec8acd59\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2017-05-19\", \"endDate\": \"2017-05-19\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031e00-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-29cd-7c61116a8657\", \"reason\": null, \"startDate\": \"2018-05-10\", \"endDate\": \"2019-05-16\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031e1e-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-29cd-7c61116a8657\", \"reason\": null, \"startDate\": \"2018-05-10\", \"endDate\": \"2019-05-16\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031e32-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-29cd-7c61116a8657\", \"reason\": null, \"startDate\": \"2018-05-10\", \"endDate\": \"2019-05-16\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031e3c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-29cd-7c61116a8657\", \"reason\": null, \"startDate\": \"2018-05-10\", \"endDate\": \"2019-05-16\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031e50-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-bc76-897f97f17e4e\", \"reason\": null, \"startDate\": \"2019-05-16\", \"endDate\": \"2020-05-21\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031e64-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-bc76-897f97f17e4e\", \"reason\": null, \"startDate\": \"2019-05-16\", \"endDate\": \"2020-05-21\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031e78-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-bc76-897f97f17e4e\", \"reason\": null, \"startDate\": \"2019-05-16\", \"endDate\": \"2020-05-21\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031e8c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-bc76-897f97f17e4e\", \"reason\": null, \"startDate\": \"2019-05-16\", \"endDate\": \"2020-05-21\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031ea0-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-76a0-b43d02afae4b\", \"reason\": null, \"startDate\": \"2020-05-21\", \"endDate\": \"2021-05-27\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031eb4-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-76a0-b43d02afae4b\", \"reason\": null, \"startDate\": \"2020-05-21\", \"endDate\": \"2021-05-27\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031ec8-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-76a0-b43d02afae4b\", \"reason\": null, \"startDate\": \"2020-05-21\", \"endDate\": \"2021-05-27\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031edc-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-76a0-b43d02afae4b\", \"reason\": null, \"startDate\": \"2020-05-21\", \"endDate\": \"2021-05-27\"}, {\"description\": \"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet\", \"code\": 562251, \"id\": \"med_8d031ef0-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-b8fd-a6cd9a729d52\", \"reason\": \"Viral sinusitis (disorder)\", \"startDate\": \"2020-06-14\", \"endDate\": \"2020-07-10\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031f04-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-b424-2cabf105b663\", \"reason\": null, \"startDate\": \"2021-05-27\", \"endDate\": \"2022-06-02\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031f18-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-b424-2cabf105b663\", \"reason\": null, \"startDate\": \"2021-05-27\", \"endDate\": \"2022-06-02\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031f2c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-b424-2cabf105b663\", \"reason\": null, \"startDate\": \"2021-05-27\", \"endDate\": \"2022-06-02\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031f40-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-b424-2cabf105b663\", \"reason\": null, \"startDate\": \"2021-05-27\", \"endDate\": \"2022-06-02\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031f54-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e2cc-dec538d5152b\", \"reason\": null, \"startDate\": \"2022-06-02\", \"endDate\": \"2023-06-08\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031f68-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e2cc-dec538d5152b\", \"reason\": null, \"startDate\": \"2022-06-02\", \"endDate\": \"2023-06-08\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031f7c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e2cc-dec538d5152b\", \"reason\": null, \"startDate\": \"2022-06-02\", \"endDate\": \"2023-06-08\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031f90-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e2cc-dec538d5152b\", \"reason\": null, \"startDate\": \"2022-06-02\", \"endDate\": \"2023-06-08\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d031fa4-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-9468-15aaf53eaa2d\", \"reason\": null, \"startDate\": \"2023-06-08\", \"endDate\": \"2024-06-13\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d031fb8-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-9468-15aaf53eaa2d\", \"reason\": null, \"startDate\": \"2023-06-08\", \"endDate\": \"2024-06-13\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d031fe0-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-9468-15aaf53eaa2d\", \"reason\": null, \"startDate\": \"2023-06-08\", \"endDate\": \"2024-06-13\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d031ff4-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-9468-15aaf53eaa2d\", \"reason\": null, \"startDate\": \"2023-06-08\", \"endDate\": \"2024-06-13\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": 1535362, \"id\": \"med_8d032008-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-ad05-c35e44b26a6d\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2023-06-23\", \"endDate\": \"2023-06-23\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d03201c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-50c9-6b518fa19662\", \"reason\": null, \"startDate\": \"2024-06-13\", \"endDate\": \"2024-10-31\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d032030-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-50c9-6b518fa19662\", \"reason\": null, \"startDate\": \"2024-06-13\", \"endDate\": \"2024-10-31\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d032044-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-50c9-6b518fa19662\", \"reason\": null, \"startDate\": \"2024-06-13\", \"endDate\": \"2024-10-31\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d032058-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-50c9-6b518fa19662\", \"reason\": null, \"startDate\": \"2024-06-13\", \"endDate\": \"2024-10-31\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d032062-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e673-0d2c40d09397\", \"reason\": null, \"startDate\": \"2024-10-31\", \"endDate\": \"2024-11-07\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d032080-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e673-0d2c40d09397\", \"reason\": null, \"startDate\": \"2024-10-31\", \"endDate\": \"2024-11-07\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d032094-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e673-0d2c40d09397\", \"reason\": null, \"startDate\": \"2024-10-31\", \"endDate\": \"2024-11-07\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d0320a8-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-e673-0d2c40d09397\", \"reason\": null, \"startDate\": \"2024-10-31\", \"endDate\": \"2024-11-07\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d0320c6-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-d9a2-403b1fea6f20\", \"reason\": null, \"startDate\": \"2024-11-07\", \"endDate\": \"2025-06-19\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d0320da-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-d9a2-403b1fea6f20\", \"reason\": null, \"startDate\": \"2024-11-07\", \"endDate\": \"2025-06-19\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d0320ee-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-d9a2-403b1fea6f20\", \"reason\": null, \"startDate\": \"2024-11-07\", \"endDate\": \"2025-06-19\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d032102-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-d9a2-403b1fea6f20\", \"reason\": null, \"startDate\": \"2024-11-07\", \"endDate\": \"2025-06-19\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": 1535362, \"id\": \"med_8d032116-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-45ec-7f7716340920\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2024-11-15\", \"endDate\": \"2024-11-15\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d032120-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-2047-884988099256\", \"reason\": null, \"startDate\": \"2025-06-19\", \"endDate\": \"2026-06-25\"}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d032134-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-2047-884988099256\", \"reason\": null, \"startDate\": \"2025-06-19\", \"endDate\": \"2026-06-25\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d032148-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-2047-884988099256\", \"reason\": null, \"startDate\": \"2025-06-19\", \"endDate\": \"2026-06-25\"}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d03215c-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-2047-884988099256\", \"reason\": null, \"startDate\": \"2025-06-19\", \"endDate\": \"2026-06-25\"}, {\"description\": \"Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]\", \"code\": 1049625, \"id\": \"med_8d032170-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-45c6-14f167ea4bd8\", \"reason\": null, \"startDate\": \"2026-06-25\", \"endDate\": null}, {\"description\": \"Ibuprofen 400 MG Oral Tablet [Ibu]\", \"code\": 206905, \"id\": \"med_8d03218e-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-45c6-14f167ea4bd8\", \"reason\": null, \"startDate\": \"2026-06-25\", \"endDate\": null}, {\"description\": \"Acetaminophen 325 MG Oral Tablet [Tylenol]\", \"code\": 209387, \"id\": \"med_8d0321a2-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-45c6-14f167ea4bd8\", \"reason\": null, \"startDate\": \"2026-06-25\", \"endDate\": null}, {\"description\": \"tramadol hydrochloride 50 MG Oral Tablet\", \"code\": 835603, \"id\": \"med_8d0321b6-7746-11f1-a09f-00155df81d2e\", \"encounter\": \"enc_16e281e2-9d45-e933-45c6-14f167ea4bd8\", \"reason\": null, \"startDate\": \"2026-06-25\", \"endDate\": null}]"
+    "call_id": "call_YVbiy7qt1mGp8nKrUCIAZa6R",
+    "output": "[{\"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": 313782, \"id\": \"med_e1a35dbe-78b1-11f1-aee0-00155df818bc\", \"encounter\": \"enc_3cd82c10-d3bc-2798-1e24-740dcccd362d\", \"reason\": null, \"startDate\": \"2020-09-05\", \"endDate\": \"2020-10-02\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": 1535362, \"id\": \"med_e1a35e22-78b1-11f1-aee0-00155df818bc\", \"encounter\": \"enc_3cd82c10-d3bc-2798-ef6a-adc1925166b8\", \"reason\": \"Gingivitis (disorder)\", \"startDate\": \"2025-01-31\", \"endDate\": \"2025-01-31\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": 313782, \"id\": \"med_e1a35e4a-78b1-11f1-aee0-00155df818bc\", \"encounter\": \"enc_3cd82c10-d3bc-2798-2250-96dc3dcf9d42\", \"reason\": null, \"startDate\": \"2025-09-14\", \"endDate\": \"2025-09-30\"}]"
   }
 ]
 
 ~~~~~NEXT RESPONSE~~~~~
 {
-  "id": "resp_0eacbd76a5712460006a48612dbd808193ad1a030fd20cf3d7",
-  "created_at": 1783128365.0,
+  "id": "resp_0402d2ff2e2f512f006a4ac1b21ddc81909e86f49bdd7b3eda",
+  "created_at": 1783284146.0,
   "error": null,
   "incomplete_details": null,
   "instructions": null,
@@ -159,7 +159,7 @@
   "object": "response",
   "output": [
     {
-      "id": "rs_0eacbd76a5712460006a48612e439c819384d103b3ec9ba2ff",
+      "id": "rs_0402d2ff2e2f512f006a4ac1b2804c8190a50b1f2960dfd424",
       "summary": [],
       "type": "reasoning",
       "content": [],
@@ -167,11 +167,11 @@
       "status": null
     },
     {
-      "id": "msg_0eacbd76a5712460006a4861381b5c81939ca5a914571d8814",
+      "id": "msg_0402d2ff2e2f512f006a4ac1b88bc48190b341da9e757fffe8",
       "content": [
         {
           "annotations": [],
-          "text": "856987\n1049625\n206905\n209387\n835603",
+          "text": "No current meds found.",
           "type": "output_text",
           "logprobs": []
         }
@@ -229,12 +229,12 @@
   ],
   "top_p": 1.0,
   "background": false,
-  "completed_at": 1783128376.0,
+  "completed_at": 1783284152.0,
   "conversation": null,
   "max_output_tokens": null,
   "max_tool_calls": null,
   "moderation": null,
-  "previous_response_id": "resp_0eacbd76a5712460006a48612bfe6c8193ab062ce2a9d2aa1f",
+  "previous_response_id": "resp_0402d2ff2e2f512f006a4ac1ad6d848190849cf0d9a29825ef",
   "prompt": null,
   "prompt_cache_key": null,
   "prompt_cache_retention": "in_memory",
@@ -257,15 +257,15 @@
   "top_logprobs": 0,
   "truncation": "disabled",
   "usage": {
-    "input_tokens": 7027,
+    "input_tokens": 958,
     "input_tokens_details": {
       "cached_tokens": 0
     },
-    "output_tokens": 1126,
+    "output_tokens": 501,
     "output_tokens_details": {
-      "reasoning_tokens": 1088
+      "reasoning_tokens": 448
     },
-    "total_tokens": 8153
+    "total_tokens": 1459
   },
   "user": null,
   "billing": {
@@ -295,8 +295,4 @@
 }
 
 ~~~~~FINAL RESULT~~~~~
-856987
-1049625
-206905
-209387
-835603
+No current meds found.

@@ -13,6 +13,9 @@ def get_meds(patient_json = None):
     #     whole_patient = json.load(file)
     #extract current medications
     current_med_decsriptions = []
+    #if patient is deceased, they have no current meds
+    if patient_json["patient"]["deathdate"] is not None:
+        return []
     for medication in patient_json["medications"]:
         #if we don't have an endDate, we consider this a current medication
         if type(medication["endDate"]) != str:

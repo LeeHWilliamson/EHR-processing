@@ -67,7 +67,6 @@ if __name__ == '__main__':
                         patient = json.load(file)
                     #run agent, return analytics_dict and response_text
                     analytics_dict = run_agent(task = "medication_retrieval_v1", curr_agent = agent, patient_id = patient["patient"]["id"], schema = schema)
-                    print("here is the analytics dict: \n", analytics_dict)
                     #analyze workflow compared to ideal workflow
                     workflow_metrics = analyze_workflow(analytics_dict)
                     analytics_dict["workflow_metrics"] = workflow_metrics

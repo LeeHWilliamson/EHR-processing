@@ -81,6 +81,10 @@ TOOL_MAP = {
     "get_medications": api_client.get_medications,
 }
 
+def parse_task(prompt, patient_id):
+    prompt[1]["content"] = prompt[1]["content"] + patient_id
+    return prompt
+
 def run_agent(input_items, patient = None, previous_response_id=None):
     #we assemble the full user-side prompt by simply appending the relevant patient ID
     if "content" in input_items[-1]:
@@ -99,6 +103,7 @@ def run_workflow(patient_id : str, current_task, analytics):
     
 
     #"prompt" is a list of promp dicts {"role":sr, "content":str} formatted as expected by OpenAI agent
+    prompt = parse_task(current_task["prompt"], patient_id)
     response = run_agent(current_task["prompt"], patient = patient_id)
 
     with open("agent_output.txt", "w") as file:
