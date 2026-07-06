@@ -1,7 +1,20 @@
 # Synth-EHR
 
 ## Purpose
-Synth-EHR is a synthetic healthcare database platform for generating and hosting synthetic patient electronic health records and implementing and evaluating AI tools and workflows. Patient data is distributed across an electronic health record database backend. This synthetic data is intended to be deployed in medical contexts for the purpose of evaluating AI tools in a secure environment without providing AI with access to actual patient records. Patient records and documents are also stored as plain text ground truths to facilitate metric analysis of the efficacy of AI tools.
+Synth-EHR is an application for evaluating AI Agents in a clinical setting, assessing accuracy and performance of the agents as well as the degree to which an agent's workflow follows HIPPA compliance and in-house rules of individual healthcare providers. Assess AI agents on your system, at scale, without exposing protected information. 
+
+## Motivation
+Modern AI tools show great potential in their ability to carry out nuanced clinical tasks that involve processing large amounts of patient data from an Electronic Health Record and extracting relevant information. 
+
+## Core Features
+- Generating high-quality synthetic patients: By implementing the Synthea platform for creating patients, we utilize research-backed models of disease progressions. This means that generated patient populations accurately recreate real-world populations, and individual patient health histories mirror realistic disease progression. exposing intuitive tools for accessing this database
+- Customizable databases for hosting simulated data: This application supports custom database schema designs. The user decides what data will exist on what tables, what entities should be allowed to access these tables, and what data standards these database adheres to, whether it be FHIR, C-CDA, or something else.
+- Automatic generation of data querying tools based on user specifications: The user decides what tools exist for accessing patient data and what data those tools expose. Synth-EHR automatically generates the tools based on the database design set by the user.
+- Quantitative AI evaluation that is agnostic to database design and specific AI agent being used: this application includes end-to-end implementations for carrying out and evluating AI performance in routine clinical tasks such as patient medical history summaries, collection of relevant conditions, and health diagnoses. Users can create customized tasks for their simulated databases, or edit existing tasks, and the application will pass these workflows on the user's AI agent of choice.
+- Quantifying, performance, compliance, and resource usage at scale: Visualize performance of an AI agent across different tasks, compare workflows used by different AI models to evaluate compliance, quantify token usage for different agents across different tasks, and much more. 
+
+## Purpose
+Synth-EHR is a healthcare database platform for generating and hosting synthetic patient electronic health records and implementing and evaluating AI tools and workflows. Patient data is distributed across an electronic health record database backend. This synthetic data is intended to be deployed in medical contexts for the purpose of evaluating AI tools in a secure environment without providing AI with access to actual patient records. Patient records and documents are also stored as plain text ground truths to facilitate metric analysis of the efficacy of AI tools.
 
 ## Motivation
 Modern AI tools show great promise in enhancing medical workflow tasks such as assembling relevant medical histories, creating tailored treatment plans, and more. Deploying AI tools in a medical context, however, requires an exhaustive evaluation of the tool's performance as well as its risks of hallucination, privacy violation, and data leakage. Such an evaluation is uniquely challenging in the medical field. While true electronic health records contain patient data, they rarely do so in a way that trvializes AI output assessment.
@@ -62,77 +75,6 @@ These fields and entities are what get mapped to rendered documents.
 ]
 }
 ```
-### Document
-Each document receives patient entities and fields based on the type of document being rendered.
-```json
-{
-  "doc_id": "string",
-  "doc_category": "string",
-  "template_id": "string",
-  "patient_id": "string",
-  "date": "YYYY-MM-DD",
-
-  "entities_provided": {
-    "<entity_type>": [
-      {
-        "entity_id": "string",
-        "fields": ["string", "..."]
-      }
-    ]
-  }
-}
-```
-### Patient -> Documents Mappings
-Mappings track what entities and fields were received by documents (expected), what fields were actually rendered (realized), and what fields were omitted (to simulate mistakes in record keeping)
-```json
-{
-  "log_id": "log_4b59f091-595e-4bf6-a490-a37557c0ce90",
-  "patient_id": "pat_fc817953-cc8b-45db-9c85-7c0ced8fa90d",
-  "doc_id": "doc_fc156d69-d41f-4747-beea-0c7d9c6c8c82",
-  "doc_category": "obs_table",
-  "template_id": "obs_date_body_measurements_v1",
-  "expected_entities": [
-    "obs_2dc14d6e-5305-11f1-a6a5-00155d35d14f",
-    "obs_2dc14d96-5305-11f1-a6a5-00155d35d14f",
-    "obs_2dc14da0-5305-11f1-a6a5-00155d35d14f"
-  ],
-  "realized_entities": [
-    "obs_2dc14d6e-5305-11f1-a6a5-00155d35d14f",
-    "obs_2dc14d96-5305-11f1-a6a5-00155d35d14f",
-    "obs_2dc14da0-5305-11f1-a6a5-00155d35d14f"
-  ],
-  "omitted_entities": "none",
-  "field_expectations": {
-    "observations": {
-      "obs_2dc14d6e-5305-11f1-a6a5-00155d35d14f": {
-        "expected_fields": [
-          "description",
-          "encounter",
-          "value",
-          "units"
-        ],
-        "realized_fields": [
-          "description",
-          "encounter",
-          "value"
-        ],
-        "omitted_fields": ["units"],
-        "omission_mode": "FORGOT_UNITS"
-      }
-    }
-  },
-  "omitting_mode": "FORGOT_UNITS",
-  "degredations": ["blur"]
-}
-```
-
-<!-- ### Example degraded documents
-The following image pair shows an observations document with and without degradations. In this case, the degradation is the ommission of units for each measurement
-![Full Document](assets/no_ommission_doc.png)
-![Without Units](assets/forgot_units_doc.png) -->
-
-### Current status
-Developed pipeline that creates patient JSONs, creates documents that contain body measurement information, reads these documents to text via OCR, and measures OCR accuracy
 
 ### Future steps
 - Create GUI that allows users to easily set population parameters for generated patients
@@ -153,4 +95,3 @@ Developed pipeline that creates patient JSONs, creates documents that contain bo
 - evaluator compares AI JSON vs ground truth
 - Streamlit dashboard shows errors
 
-Stack
