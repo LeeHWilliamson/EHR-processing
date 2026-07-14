@@ -920,3 +920,357 @@
     "missed_items": {}
   }
 }
+{
+  "run_id": "medication_retrieval_v1-20260714T005933.626425Z-174c",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T00:59:33.626425+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3393,
+  "total_rows_retrieved": 9,
+  "raw_response": "No current meds found.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T010000.705576Z-4d0b",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:00:00.705576+00:00",
+  "tools_workflow": [
+    "get_medications",
+    "get_patient"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 2,
+  "total_tokens_used": 3479,
+  "total_rows_retrieved": 15,
+  "raw_response": "No current meds found.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T011528.026749Z-0b23",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:15:28.026749+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3399,
+  "total_rows_retrieved": 9,
+  "raw_response": "No current meds found.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T011549.067433Z-2613",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:15:49.067433+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3174,
+  "total_rows_retrieved": 9,
+  "raw_response": "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T012759.864149Z-67f1",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:27:59.864149+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3692,
+  "total_rows_retrieved": 9,
+  "raw_response": "Based on the medication records, the only medication without an end date (i.e., currently active) is:\n\n**didanosine 400 MG Delayed Release Oral Capsule** (started 1991-11-26, no end date)\n\nHowever, this record does not have a code value populated \u2014 the `code` field for this medication is `None`/null in the data. All other medications listed have specific `startDate` and `endDate` values indicating they have been completed and are not currently active.\n\nSo, there is no valid medication code to list for the patient's currently active medication, as the code field is empty for this record.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "Based on the medication records, the only medication without an end date (i.e., currently active) is:": 1,
+      "**didanosine 400 MG Delayed Release Oral Capsule** (started 1991-11-26, no end date)": 1,
+      "However, this record does not have a code value populated \u2014 the `code` field for this medication is `None`/null in the data. All other medications listed have specific `startDate` and `endDate` values indicating they have been completed and are not currently active.": 1,
+      "So, there is no valid medication code to list for the patient's currently active medication, as the code field is empty for this record.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T012836.741932Z-ca36",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:28:36.741932+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3146,
+  "total_rows_retrieved": 9,
+  "raw_response": "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T013435.434270Z-b857",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:34:35.434270+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3905,
+  "total_rows_retrieved": 9,
+  "raw_response": "None",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "None": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T013507.280319Z-b163",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T01:35:07.280319+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3351,
+  "total_rows_retrieved": 9,
+  "raw_response": "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T021044.686215Z-23cc",
+  "task": "medication_retrieval_v1",
+  "schema": "normalized_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T02:10:44.686215+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3609,
+  "total_rows_retrieved": 9,
+  "raw_response": "null",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "null": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "medication_retrieval_v1-20260714T021115.072175Z-2bd1",
+  "task": "medication_retrieval_v1",
+  "schema": "flat_v1",
+  "agent": "claude",
+  "provider": "Anthropic",
+  "model": "Claude Sonnet-5",
+  "patient_id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+  "datetime": "2026-07-14T02:11:15.072175+00:00",
+  "tools_workflow": [
+    "get_medications"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": false,
+    "workflow_precision": 1.0,
+    "workflow_recall": 0.5,
+    "added_steps": [],
+    "ommitted_steps": [
+      "get_patient"
+    ]
+  },
+  "api_calls_made": 1,
+  "total_tokens_used": 3292,
+  "total_rows_retrieved": 9,
+  "raw_response": "No current meds found.\n\nExplanation: All medications in this patient's record have either an endDate in the past matching the startDate (single-day treatments, e.g., dental fluoride gel applications) or an explicit endDate that falls before the present date (e.g., the zidovudine courses ending in 1991). The only medication without an endDate is didanosine (started 1991-11-26); however, examining the record as a whole, this entry appears to be the final documented medication in a decades-old history (last activity in 1991), with no subsequent encounters or renewals indicating ongoing treatment. Given the patient's overall record ends in the early 1990s and there is no evidence of continued dispensing, follow-up, or a current encounter supporting active use, none of the medications qualify as currently active.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}

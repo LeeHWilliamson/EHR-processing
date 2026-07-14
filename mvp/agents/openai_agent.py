@@ -87,8 +87,7 @@ def parse_task(prompt, patient_id):
 
 def run_agent(input_items, patient = None, previous_response_id=None):
     #we assemble the full user-side prompt by simply appending the relevant patient ID
-    if "content" in input_items[-1]:
-        input_items[-1]["content"] = input_items[-1]["content"] + patient
+    #the patient ID is added once by parse_task before the initial API call
     #we pass name of model we want, a ResponseInputParam, a list of function definitions, and a str
     #the ResponseInputParam is structured as a list of dicts, see tasks.json prompts for examples
     #the previous response id is so the agent can carry context forward
@@ -100,13 +99,11 @@ def run_agent(input_items, patient = None, previous_response_id=None):
     )
 
 def run_workflow(patient_id : str, current_task, analytics):
-    
-
     #"prompt" is a list of promp dicts {"role":sr, "content":str} formatted as expected by OpenAI agent
     prompt = parse_task(current_task["prompt"], patient_id)
-    response = run_agent(current_task["prompt"], patient = patient_id)
+    response = run_agent(prompt)
 
-    with open("agent_output.txt", "w") as file:
+    with open("agent_output.txt", "a") as file:
         file.write(response.model_dump_json(indent=2))
 
         while True:
@@ -160,5 +157,3 @@ def run_workflow(patient_id : str, current_task, analytics):
 
 if __name__ == "__main__":
     analytics_dict, response_text = run_workflow(patient_id="pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60")
-
-    

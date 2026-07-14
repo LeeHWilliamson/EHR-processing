@@ -132,12 +132,21 @@ def run_workflow(patient_id : str, task, analytics):
     '''
     response = run_agent(system_instructions, initial_prompt, patient = patient_id)
 
-    with open("claude_output.txt", "w") as file:
+    with open("claude_output.txt", "a") as file:
         file.write(response.model_dump_json(indent=2))
 
         while True:
-            messages.append( {"role" : "user", "content" : "the following messages are the results of all your tool calls thus far"})
             analytics["total_tokens_used"] += response.usage.input_tokens+ response.usage.output_tokens
+
+            #Anthropic tells us why generation stopped. A tool result should only be
+            #sent when the assistant actually stopped to request one.
+            if response.stop_reason != "tool_use":
+                break
+
+            #Keep Claude's complete assistant turn in the conversation. This preserves
+            #the tool_use block (and any thinking/signature blocks) that the following
+            #tool_result blocks refer to.
+            messages.append({"role" : "assistant", "content" : response.content})
             tool_outputs = []
 
             for item in response.content:
@@ -156,15 +165,17 @@ def run_workflow(patient_id : str, task, analytics):
                     analytics["total_rows_retrieved"] += len(result)
 
                     tool_outputs.append({
-                        "type": "function_call_output",
-                        "call_id": item.id,
-                        "output": json.dumps(result),
+                        "type": "tool_result",
+                        "tool_use_id": item.id,
+                        "content": json.dumps(result),
                     })
-                    result_str = str(result)
-                    messages.append({"role" : "user", "content" : f"tool called: {tool_name}, result: {result_str}"})
 
             if not tool_outputs:
-                break
+                raise RuntimeError("Claude stopped for tool use without returning a tool_use block")
+
+            #Anthropic expects every tool result together in the user message directly
+            #after the assistant message containing the matching tool_use blocks.
+            messages.append({"role" : "user", "content" : tool_outputs})
 
             file.write("\n\n~~~~~TOOL OUTPUTS~~~~~\n")
             file.write(json.dumps(tool_outputs, indent=2))
@@ -179,7 +190,13 @@ def run_workflow(patient_id : str, task, analytics):
             file.write(response.model_dump_json(indent=2))
             # analytics["raw_response"] = response.output_text
 
-        final_response_text = response.content[-1].text
+        #A response can contain non-text blocks, so assemble the final answer only
+        #from its text blocks instead of assuming the final block always has .text.
+        final_response_text = "\n".join(
+            item.text
+            for item in response.content
+            if item.type == "text"
+        )
         print("Final response:")
         print(final_response_text)
         print(analytics)

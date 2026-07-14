@@ -43,7 +43,7 @@ def calc_metrics(med_gt_list, agent_output):
     '''
     If patient json contains no current meds, and agent returns no current meds, return early
     '''
-    if len(med_gt_list) == 0 and agent_output == "No current meds found.":
+    if len(med_gt_list) == 0 and "No current meds found." in agent_output: #== "No current meds found.":
         return {
             "precision": 1,
             "recall": 1,
