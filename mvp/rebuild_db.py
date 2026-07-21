@@ -1,14 +1,17 @@
-import os
 import sqlite3
 from pathlib import Path
 
-def rebuild_db(schema : str):
-    DB_PATH_PREFIX = "/home/leeha/tools/sqlite/"
-    SCHEMA_PATH_PREFIX = "mvp/schemas"
-    schema_path = Path(fr"{SCHEMA_PATH_PREFIX}/{schema}.sql")
-    db_path = Path(fr"{DB_PATH_PREFIX}/{schema}.db")
-    if os.path.exists(db_path):
-        os.remove(db_path)
+MODULE_DIR = Path(__file__).resolve().parent
+SCHEMA_DIR = MODULE_DIR / "schemas"
+DB_DIR = Path("/home/leeha/tools/sqlite")
+
+
+def rebuild_db(schema: str):
+    # Resolve resources from this module, not from the caller's working directory.
+    schema_path = SCHEMA_DIR / f"{schema}.sql"
+    db_path = DB_DIR / f"{schema}.db"
+    if db_path.exists():
+        db_path.unlink()
 
     conn = sqlite3.connect(db_path)
 

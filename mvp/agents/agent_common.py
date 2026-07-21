@@ -9,6 +9,9 @@ import json
 from datetime import datetime, timezone
 from uuid import uuid4
 import copy
+from pathlib import Path
+
+MODULE_DIR = Path(__file__).resolve().parent.parent
 
 AGENTS = {
     "open_ai" : run_brobot_agent,
@@ -56,8 +59,9 @@ def run_agent(task, curr_agent, patient_id, schema):
     api_client.set_schema(schema)
     #primitive approach for loading info specific to current task
     #all tasks are stored in a json, load the entire dict with key = current_task
+    
     try:
-        with open("mvp/tasks.json", "r") as file:
+        with open(MODULE_DIR / "tasks.json", "r") as file:
             tasks = json.load(file)
             current_task = tasks[task].copy()
     except:
