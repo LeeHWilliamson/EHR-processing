@@ -98,31 +98,32 @@ in the messages field, which we will need to manage to contain the entire conver
 Will likely need to add input to .system field as we cannot send system instructions via input
 '''
 
-def run_agent(system_instructions, input_messsages, patient = None):
+def run_agent(system_instructions, task, input_messages, patient = None):
     #we assemble the full user-side prompt by simply appending the relevant patient ID
     #anthropic message format will be list of all comms so far, so FIRST item is our task
-    # if "content" in input_messsages[0]:
-    #     input_messsages[-1]["content"] = input_messsages[-1]["content"] + patient
+
+    available_tools = []
+    for tool in TOOLS:
+        if tool["name"] in task["allowed_endpoints"]:
+            available_tools.append(tool)
     return client.messages.create(
         model="claude-sonnet-5",
         max_tokens=1024,
-        tools=TOOLS,
+        tools=available_tools,
         tool_choice = {"type" : "auto"},
         system = system_instructions,
-        messages = input_messsages
+        messages = input_messages
     )
 '''
 Schema setting, task loading, report initialization will likely be moved to agent_common
 '''
-def run_workflow(patient_id : str, task, analytics):
-
-    
+def run_workflow(patient_id : str, current_task, analytics):
     '''
     We will need to write a helper for parsing the task prompt into format expect by Anthropic
     '''
-    print(type(task))
-    print(task)
-    system_instructions, initial_prompt = parse_task(task["prompt"])
+    print(type(current_task))
+    print(current_task)
+    system_instructions, initial_prompt = parse_task(current_task["prompt"])
     #for the initial prompt, we must append the patient ID
     initial_prompt[0]["content"] = initial_prompt[0]["content"] + patient_id
     messages = initial_prompt
@@ -130,7 +131,7 @@ def run_workflow(patient_id : str, task, analytics):
     The input will no longer be a single prompt, it will be the entire conversation history that we build as we go
     INITIAL RUN: above prompt
     '''
-    response = run_agent(system_instructions, initial_prompt, patient = patient_id)
+    response = run_agent(system_instructions, task=current_task, input_messages=initial_prompt, patient = patient_id)
 
     with open("claude_output.txt", "a") as file:
         file.write(response.model_dump_json(indent=2))
@@ -207,4 +208,28 @@ def run_workflow(patient_id : str, task, analytics):
         return analytics
 
 if __name__ == "__main__":
-    analytics_dict= run_workflow(patient_id="pat_2f72b840-3c69-f42b-78a3-039283ff5384", task = "medication_retrieval_v1")
+    with open("mvp/tasks.json", "r") as file:
+                    tasks = json.load(file)
+                    current_task = tasks["medication_retrieval_v1"].copy()
+    DEBUG_REPORT = {
+                "run_id": (
+                    f"{"medication_retrieval_v1"}-" 
+                    f"{uuid4().hex[:4]}"
+                    ),
+                "task": "medication_retrieval_v1",
+                "schema": "none",
+                "agent": "claude",
+                "provider" : "claude",
+                "model": "claude",
+                "patient_id": "pat_2f72b840-3c69-f42b-78a3-039283ff5384",
+                "tools_workflow": [],
+                "workflow_metrics": {},
+                "api_calls_made": 0,
+                "total_tokens_used": 0,
+                "total_rows_retrieved": 0,
+                "raw_response": None,
+                "patient_gt": None, 
+                "output_metrics": {}
+            }
+    
+    analytics_dict= run_workflow(patient_id="pat_2f72b840-3c69-f42b-78a3-039283ff5384", current_task=current_task, analytics=DEBUG_REPORT)

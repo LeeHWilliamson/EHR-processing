@@ -30,6 +30,26 @@
       "console": "integratedTerminal",
       "python": "${workspaceFolder}/ehr-proc-venv/bin/python",
       "justMyCode": true
+    },
+    {
+      "name": "Debug MVP openai_agent",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mvp.agents.openai_agent",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "python": "${workspaceFolder}/ehr-proc-venv/bin/python",
+      "justMyCode": true
+    },
+    {
+      "name": "Debug MVP claude_agent",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mvp.agents.claude_agent",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "python": "${workspaceFolder}/ehr-proc-venv/bin/python",
+      "justMyCode": true
     }
   ]
 }

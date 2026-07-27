@@ -4,8 +4,8 @@ firstName TEXT,
 lastName TEXT,
 birthdate TEXT,
 deathdate TEXT,
-gender TEXT
-, medications_blob TEXT);
+gender TEXT, 
+medications_blob TEXT);
 CREATE TABLE api_access_log (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 timestamp TEXT NOT NULL,

@@ -85,23 +85,29 @@ def parse_task(prompt, patient_id):
     prompt[1]["content"] = prompt[1]["content"] + patient_id
     return prompt
 
-def run_agent(input_items, patient = None, previous_response_id=None):
+def run_agent(input_items, task, patient = None, previous_response_id=None):
     #we assemble the full user-side prompt by simply appending the relevant patient ID
     #the patient ID is added once by parse_task before the initial API call
     #we pass name of model we want, a ResponseInputParam, a list of function definitions, and a str
     #the ResponseInputParam is structured as a list of dicts, see tasks.json prompts for examples
     #the previous response id is so the agent can carry context forward
+
+    #FIRST WE NEED TO LIMIT THE AVAILABLE TOOLS TO THOSE LISTED IN TASK DESCRIPTION
+    available_tools = []
+    for tool in TOOLS:
+        if tool["name"] in task["allowed_endpoints"]:
+            available_tools.append(tool)
     return client.responses.create(
         model="gpt-5",
         input=input_items,
-        tools=TOOLS,
+        tools=available_tools,
         previous_response_id=previous_response_id,
     )
 
 def run_workflow(patient_id : str, current_task, analytics):
     #"prompt" is a list of promp dicts {"role":sr, "content":str} formatted as expected by OpenAI agent
     prompt = parse_task(current_task["prompt"], patient_id)
-    response = run_agent(prompt)
+    response = run_agent(prompt, current_task)
 
     with open("agent_output.txt", "a") as file:
         file.write(response.model_dump_json(indent=2))
@@ -156,4 +162,27 @@ def run_workflow(patient_id : str, current_task, analytics):
         return analytics
 
 if __name__ == "__main__":
-    analytics_dict, response_text = run_workflow(patient_id="pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60")
+    with open("mvp/tasks.json", "r") as file:
+                tasks = json.load(file)
+                current_task = tasks["medication_retrieval_v1"].copy()
+    DEBUG_REPORT = {
+            "run_id": (
+                f"{"medication_retrieval_v1"}-" 
+                f"{uuid4().hex[:4]}"
+                ),
+            "task": "medication_retrieval_v1",
+            "schema": "none",
+            "agent": "openai",
+            "provider" : "openai",
+            "model": "openai",
+            "patient_id": "pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60",
+            "tools_workflow": [],
+            "workflow_metrics": {},
+            "api_calls_made": 0,
+            "total_tokens_used": 0,
+            "total_rows_retrieved": 0,
+            "raw_response": None,
+            "patient_gt": None, 
+            "output_metrics": {}
+        }
+    analytics_dict, response_text = run_workflow(patient_id="pat_4b66ed71-3922-62ba-b7fd-c2ca18c7cb60", current_task = current_task, analytics=DEBUG_REPORT )
