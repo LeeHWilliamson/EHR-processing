@@ -1,0 +1,4445 @@
+{
+  "_carePlans": "careplans are excluded because their information is largely redundant with medications + procedures",
+  "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+  "patient": {
+    "id": "pat_b7e15ab8-7633-df03-b152-d68acebedb56",
+    "firstName": "Carter549",
+    "lastName": "MacGyver246",
+    "dob": "YYYY-MM-DD",
+    "gender": "M",
+    "entities": [],
+    "birthdate": "1955-02-24",
+    "deathdate": "1992-06-19"
+  },
+  "allergies": [],
+  "careplans": [
+    {
+      "id": "care_b7e15ab8-7633-df03-d581-03630271c9d8",
+      "startDate": "1985-11-04",
+      "endDate": "1986-05-08",
+      "encounter": "b7e15ab8-7633-df03-6f4d-f3954fe0f524",
+      "description": "Respiratory therapy (procedure)",
+      "reasonDescription": NaN
+    },
+    {
+      "id": "care_b7e15ab8-7633-df03-308b-333d079d9b9f",
+      "startDate": "1990-02-03",
+      "endDate": NaN,
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "description": "Infectious disease care plan (record artifact)",
+      "reasonDescription": "Acquired immune deficiency syndrome (disorder)"
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev_477c79d2-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1983-05-19T19:02:55Z",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "description": "Dental x-ray system (physical object)"
+    },
+    {
+      "id": "dev_477c7a4a-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1983-05-19T19:50:30Z",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "description": "Operating room (environment)"
+    },
+    {
+      "id": "dev_477c7a68-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1986-05-22T18:45:32Z",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "description": "Dental x-ray system (physical object)"
+    },
+    {
+      "id": "dev_477c7a86-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1986-05-22T19:29:36Z",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "description": "Operating room (environment)"
+    },
+    {
+      "id": "dev_477c7a9a-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1991-06-13T19:00:36Z",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "description": "Operating room (environment)"
+    },
+    {
+      "id": "dev_477c7aa4-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1992-05-21T16:49:54Z",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "description": "Hospital bed  device (physical object)"
+    },
+    {
+      "id": "dev_477c7ab8-6b73-11f1-9e14-00155d09b6b5",
+      "startDate": "1992-05-21T16:49:54Z",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "description": "Patient lifting system (physical object)"
+    }
+  ],
+  "encounters": [
+    {
+      "id": "enc_b7e15ab8-7633-df03-cfac-b847b4f53cb4",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1973-04-19",
+      "endDate": "1973-04-19",
+      "startTime": "16:49:54",
+      "endTime": "17:49:49"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-61cb-21b9bef04f53",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1977-04-28",
+      "endDate": "1977-04-28",
+      "startTime": "16:49:54",
+      "endTime": "17:34:26"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-4d5d-8a066d70da30",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1980-05-01",
+      "endDate": "1980-05-01",
+      "startTime": "16:49:54",
+      "endTime": "17:48:42"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1983-05-05",
+      "endDate": "1983-05-05",
+      "startTime": "16:49:54",
+      "endTime": "17:42:03"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-ec52-eb736201c750",
+      "type": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)",
+      "startDate": "1983-05-19",
+      "endDate": "1983-05-19",
+      "startTime": "16:49:54",
+      "endTime": "23:29:06"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-6f4d-f3954fe0f524",
+      "type": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1985-11-04",
+      "endDate": "1985-11-04",
+      "startTime": "19:49:54",
+      "endTime": "20:08:04"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-01b9-047f383633fe",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1986-05-08",
+      "endDate": "1986-05-08",
+      "startTime": "16:49:54",
+      "endTime": "17:25:39"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-a82b-515d834a0147",
+      "type": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Patient referral for dental care (procedure)",
+      "startDate": "1986-05-22",
+      "endDate": "1986-05-22",
+      "startTime": "16:49:54",
+      "endTime": "23:20:37"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-eec9-0bdedb6cc01d",
+      "type": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "1987-09-07",
+      "endDate": "1987-09-07",
+      "startTime": "11:49:54",
+      "endTime": "12:04:54"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1989-05-11",
+      "endDate": "1989-05-11",
+      "startTime": "16:49:54",
+      "endTime": "17:39:54"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-bf81-f8dba4bec82a",
+      "type": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Viral sinusitis (disorder)",
+      "startDate": "1989-05-27",
+      "endDate": "1989-05-27",
+      "startTime": "03:49:54",
+      "endTime": "04:04:54"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-79e9-6e345f0cadf1",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-01-01",
+      "endDate": "1990-01-01",
+      "startTime": "16:49:54",
+      "endTime": "17:54:06"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-02-03",
+      "endDate": "1990-02-04",
+      "startTime": "16:49:54",
+      "endTime": "02:43:55"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-89d2-83283609dc7d",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-02-12",
+      "endDate": "1990-02-12",
+      "startTime": "02:43:55",
+      "endTime": "03:58:58"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-2058-9777a41287c2",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1990-05-17",
+      "endDate": "1990-05-17",
+      "startTime": "16:49:54",
+      "endTime": "17:33:03"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-63b9-1bc79f38d823",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-05-24",
+      "endDate": "1990-05-24",
+      "startTime": "16:49:54",
+      "endTime": "18:01:28"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "type": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)",
+      "startDate": "1990-06-07",
+      "endDate": "1990-06-07",
+      "startTime": "16:49:54",
+      "endTime": "20:20:28"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-e1fb-e64381232799",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-08-22",
+      "endDate": "1990-08-22",
+      "startTime": "18:01:28",
+      "endTime": "19:28:09"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-b4f8-e99bc0c3dc34",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-11-20",
+      "endDate": "1990-11-20",
+      "startTime": "19:28:09",
+      "endTime": "20:35:52"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-8404-39f6c344dfc2",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1991-02-18",
+      "endDate": "1991-02-18",
+      "startTime": "20:35:52",
+      "endTime": "21:38:27"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "type": "wellness",
+      "description": "General examination of patient (procedure)",
+      "reason": NaN,
+      "startDate": "1991-05-23",
+      "endDate": "1991-05-23",
+      "startTime": "16:49:54",
+      "endTime": "17:40:35"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-bf2e-266abc904028",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1991-05-30",
+      "endDate": "1991-05-30",
+      "startTime": "16:49:54",
+      "endTime": "18:02:03"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "type": "ambulatory",
+      "description": "Encounter for check up (procedure)",
+      "reason": "Gingivitis (disorder)",
+      "startDate": "1991-06-13",
+      "endDate": "1991-06-13",
+      "startTime": "16:49:54",
+      "endTime": "22:22:48"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-e887-7f31b9da7dd6",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1991-08-28",
+      "endDate": "1991-08-28",
+      "startTime": "18:02:03",
+      "endTime": "19:15:12"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-fc8e-e902122f9ae3",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1991-11-26",
+      "endDate": "1991-11-26",
+      "startTime": "19:15:12",
+      "endTime": "20:25:15"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-cb62-93061e22d6fd",
+      "type": "ambulatory",
+      "description": "Encounter for symptom (procedure)",
+      "reason": "Acute viral pharyngitis (disorder)",
+      "startDate": "1992-01-10",
+      "endDate": "1992-01-10",
+      "startTime": "18:49:54",
+      "endTime": "19:04:54"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-31f8-d4691133c70f",
+      "type": "ambulatory",
+      "description": "Encounter for problem (procedure)",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1992-02-24",
+      "endDate": "1992-02-24",
+      "startTime": "20:25:15",
+      "endTime": "21:26:58"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "type": "hospice",
+      "description": "Admission to hospice (procedure)",
+      "reason": NaN,
+      "startDate": "1992-05-21",
+      "endDate": "1992-06-19",
+      "startTime": "16:49:54",
+      "endTime": "17:54:06"
+    },
+    {
+      "id": "enc_b7e15ab8-7633-df03-95f8-2b24d3b7cbf3",
+      "type": "wellness",
+      "description": "Death Certification",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1992-06-25",
+      "endDate": "1992-06-25",
+      "startTime": "16:49:54",
+      "endTime": "17:04:54"
+    }
+  ],
+  "imaging_studies": [],
+  "conditions": [
+    {
+      "condition": "Educated to high school level (finding)",
+      "id": "cond_477d0aaa-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cfac-b847b4f53cb4",
+      "startDate": "1973-04-19",
+      "endDate": null
+    },
+    {
+      "condition": "Stress (finding)",
+      "id": "cond_477d0c26-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-61cb-21b9bef04f53",
+      "startDate": "1977-04-28",
+      "endDate": "1990-02-03"
+    },
+    {
+      "condition": "Medication review due (situation)",
+      "id": "cond_477d0d66-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-4d5d-8a066d70da30",
+      "startDate": "1980-05-01",
+      "endDate": "1983-05-05"
+    },
+    {
+      "condition": "Not in labor force (finding)",
+      "id": "cond_477d0ea6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-4d5d-8a066d70da30",
+      "startDate": "1980-05-01",
+      "endDate": "1983-05-05"
+    },
+    {
+      "condition": "Full-time employment (finding)",
+      "id": "cond_477d0fdc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "startDate": "1983-05-05",
+      "endDate": "1990-05-17"
+    },
+    {
+      "condition": "Gingivitis (disorder)",
+      "id": "cond_477d1112-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "startDate": "1983-05-05",
+      "endDate": "1983-05-19"
+    },
+    {
+      "condition": "Gingival disease (disorder)",
+      "id": "cond_477d1248-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "startDate": "1983-05-19",
+      "endDate": "1983-05-19"
+    },
+    {
+      "condition": "Acute bronchitis (disorder)",
+      "id": "cond_477d1374-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-6f4d-f3954fe0f524",
+      "startDate": "1985-11-04",
+      "endDate": "1985-11-24"
+    },
+    {
+      "condition": "Medication review due (situation)",
+      "id": "cond_477d14b4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "startDate": "1986-05-08",
+      "endDate": null
+    },
+    {
+      "condition": "Limited social contact (finding)",
+      "id": "cond_477d15ea-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "startDate": "1986-05-08",
+      "endDate": "1989-05-11"
+    },
+    {
+      "condition": "Gingival disease (disorder)",
+      "id": "cond_477d1720-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "startDate": "1986-05-22",
+      "endDate": "1986-05-22"
+    },
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_477d1856-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-eec9-0bdedb6cc01d",
+      "startDate": "1987-09-07",
+      "endDate": "1987-09-26"
+    },
+    {
+      "condition": "Viral sinusitis (disorder)",
+      "id": "cond_477d198c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-bf81-f8dba4bec82a",
+      "startDate": "1989-05-26",
+      "endDate": "1989-06-07"
+    },
+    {
+      "condition": "Acquired immune deficiency syndrome (disorder)",
+      "id": "cond_477d1ab8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-79e9-6e345f0cadf1",
+      "startDate": "1990-01-01",
+      "endDate": null
+    },
+    {
+      "condition": "Anemia (disorder)",
+      "id": "cond_477d1bf8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "startDate": "1990-02-03",
+      "endDate": null
+    },
+    {
+      "condition": "Not in labor force (finding)",
+      "id": "cond_477d1d24-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "startDate": "1990-05-17",
+      "endDate": "1991-05-23"
+    },
+    {
+      "condition": "Has a criminal record (finding)",
+      "id": "cond_477d1e5a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "startDate": "1990-05-17",
+      "endDate": null
+    },
+    {
+      "condition": "Gingivitis (disorder)",
+      "id": "cond_477d1f90-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "startDate": "1990-05-17",
+      "endDate": "1990-06-07"
+    },
+    {
+      "condition": "Primary dental caries (disorder)",
+      "id": "cond_477d20c6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "startDate": "1990-06-07",
+      "endDate": "1990-06-07"
+    },
+    {
+      "condition": "Full-time employment (finding)",
+      "id": "cond_477d21fc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "startDate": "1991-05-23",
+      "endDate": null
+    },
+    {
+      "condition": "Stress (finding)",
+      "id": "cond_477d2332-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "startDate": "1991-05-23",
+      "endDate": null
+    },
+    {
+      "condition": "Gingivitis (disorder)",
+      "id": "cond_477d2468-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "startDate": "1991-05-23",
+      "endDate": "1991-06-13"
+    },
+    {
+      "condition": "Gingival disease (disorder)",
+      "id": "cond_477d259e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "startDate": "1991-06-13",
+      "endDate": "1991-06-13"
+    },
+    {
+      "condition": "Acute viral pharyngitis (disorder)",
+      "id": "cond_477d26ca-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb62-93061e22d6fd",
+      "startDate": "1992-01-10",
+      "endDate": "1992-01-22"
+    }
+  ],
+  "immunizations": [
+    {
+      "name": "Influenza  split virus  trivalent  PF",
+      "id": "immu_477e6a30-6b73-11f1-9e14-00155d09b6b5",
+      "date": "1983-05-05",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca"
+    },
+    {
+      "name": "Influenza  split virus  trivalent  PF",
+      "id": "immu_477e6a94-6b73-11f1-9e14-00155d09b6b5",
+      "date": "1986-05-08",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe"
+    },
+    {
+      "name": "Influenza  split virus  trivalent  PF",
+      "id": "immu_477e6ab2-6b73-11f1-9e14-00155d09b6b5",
+      "date": "1989-05-11",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d"
+    },
+    {
+      "name": "Influenza  split virus  trivalent  PF",
+      "id": "immu_477e6ac6-6b73-11f1-9e14-00155d09b6b5",
+      "date": "1990-05-17",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2"
+    },
+    {
+      "name": "Influenza  split virus  trivalent  PF",
+      "id": "immu_477e6ada-6b73-11f1-9e14-00155d09b6b5",
+      "date": "1991-05-23",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276"
+    }
+  ],
+  "medications": [
+    {
+      "description": "sodium fluoride 0.0272 MG/MG Oral Gel",
+      "id": "med_477ebb8e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "startDate": "1983-05-19",
+      "endDate": "1983-05-19"
+    },
+    {
+      "description": "Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution",
+      "id": "med_477ebbfc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-6f4d-f3954fe0f524",
+      "reason": "Acute bronchitis (disorder)",
+      "startDate": "1985-11-04",
+      "endDate": "1985-11-24"
+    },
+    {
+      "description": "sodium fluoride 0.0272 MG/MG Oral Gel",
+      "id": "med_477ebc24-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "startDate": "1986-05-22",
+      "endDate": "1986-05-22"
+    },
+    {
+      "description": "zidovudine 300 MG Oral Tablet",
+      "id": "med_477ebc42-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-89d2-83283609dc7d",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-02-12",
+      "endDate": "1991-11-26"
+    },
+    {
+      "description": "zidovudine 300 MG Oral Tablet",
+      "id": "med_477ebc56-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1990-05-17",
+      "endDate": "1991-05-23"
+    },
+    {
+      "description": "sodium fluoride 0.0272 MG/MG Oral Gel",
+      "id": "med_477ebc6a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "startDate": "1990-06-07",
+      "endDate": "1990-06-07"
+    },
+    {
+      "description": "zidovudine 300 MG Oral Tablet",
+      "id": "med_477ebc88-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1991-05-23",
+      "endDate": "1991-11-26"
+    },
+    {
+      "description": "sodium fluoride 0.0272 MG/MG Oral Gel",
+      "id": "med_477ebc9c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "startDate": "1991-06-13",
+      "endDate": "1991-06-13"
+    },
+    {
+      "description": "didanosine 400 MG Delayed Release Oral Capsule",
+      "id": "med_477ebcb0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fc8e-e902122f9ae3",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "startDate": "1991-11-26",
+      "endDate": null
+    }
+  ],
+  "procedures": [
+    {
+      "description": "Medication reconciliation (procedure)",
+      "id": "proc_477f43a6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": NaN,
+      "date": "1983-05-05",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Assessment of health and social care needs (procedure)",
+      "id": "proc_477f4414-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": NaN,
+      "date": "1983-05-05",
+      "time": "17:42:03Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f4432-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": NaN,
+      "date": "1983-05-05",
+      "time": "17:54:25Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f4450-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": NaN,
+      "date": "1983-05-05",
+      "time": "18:21:18Z"
+    },
+    {
+      "description": "Assessment of substance use (procedure)",
+      "id": "proc_477f4464-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": NaN,
+      "date": "1983-05-05",
+      "time": "18:33:35Z"
+    },
+    {
+      "description": "Screening for drug abuse (procedure)",
+      "id": "proc_477f4478-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": NaN,
+      "date": "1983-05-05",
+      "time": "18:56:32Z"
+    },
+    {
+      "description": "Patient referral for dental care (procedure)",
+      "id": "proc_477f448c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-05",
+      "time": "19:14:42Z"
+    },
+    {
+      "description": "Dental consultation and report (procedure)",
+      "id": "proc_477f4496-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "17:24:01Z"
+    },
+    {
+      "description": "Dental care (regime/therapy)",
+      "id": "proc_477f44aa-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "18:10:45Z"
+    },
+    {
+      "description": "Removal of supragingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f44be-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "18:40:15Z"
+    },
+    {
+      "description": "Removal of subgingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f44c8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "19:02:55Z"
+    },
+    {
+      "description": "Dental plain X-ray bitewing (procedure)",
+      "id": "proc_477f44dc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": NaN,
+      "date": "1983-05-19",
+      "time": "19:32:55Z"
+    },
+    {
+      "description": "Examination of gingivae (procedure)",
+      "id": "proc_477f44f0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "19:50:30Z"
+    },
+    {
+      "description": "Dental surgical procedure (procedure)",
+      "id": "proc_477f4504-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingival disease (disorder)",
+      "date": "1983-05-19",
+      "time": "20:06:34Z"
+    },
+    {
+      "description": "Dental application of desensitizing medicament (procedure)",
+      "id": "proc_477f450e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingival disease (disorder)",
+      "date": "1983-05-19",
+      "time": "20:42:07Z"
+    },
+    {
+      "description": "Gingivectomy or gingivoplasty  per tooth (procedure)",
+      "id": "proc_477f4522-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingival disease (disorder)",
+      "date": "1983-05-19",
+      "time": "21:25:46Z"
+    },
+    {
+      "description": "Postoperative care for dental procedure (regime/therapy)",
+      "id": "proc_477f4536-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": NaN,
+      "date": "1983-05-19",
+      "time": "22:43:35Z"
+    },
+    {
+      "description": "Dental fluoride treatment (procedure)",
+      "id": "proc_477f454a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "23:12:06Z"
+    },
+    {
+      "description": "Oral health education (procedure)",
+      "id": "proc_477f455e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ec52-eb736201c750",
+      "reason": "Gingivitis (disorder)",
+      "date": "1983-05-19",
+      "time": "23:29:06Z"
+    },
+    {
+      "description": "Measurement of respiratory function (procedure)",
+      "id": "proc_477f4572-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-6f4d-f3954fe0f524",
+      "reason": "Acute bronchitis (disorder)",
+      "date": "1985-11-04",
+      "time": "20:08:04Z"
+    },
+    {
+      "description": "Assessment of health and social care needs (procedure)",
+      "id": "proc_477f457c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "17:25:39Z"
+    },
+    {
+      "description": "Assessment of anxiety (procedure)",
+      "id": "proc_477f4590-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "17:52:12Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f45a4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "18:03:20Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f45ae-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "18:29:23Z"
+    },
+    {
+      "description": "Assessment of substance use (procedure)",
+      "id": "proc_477f45c2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "18:43:46Z"
+    },
+    {
+      "description": "Screening for drug abuse (procedure)",
+      "id": "proc_477f45d6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "19:06:56Z"
+    },
+    {
+      "description": "Patient referral for dental care (procedure)",
+      "id": "proc_477f45e0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "reason": NaN,
+      "date": "1986-05-08",
+      "time": "19:17:11Z"
+    },
+    {
+      "description": "Dental consultation and report (procedure)",
+      "id": "proc_477f45f4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "17:28:46Z"
+    },
+    {
+      "description": "Dental care (regime/therapy)",
+      "id": "proc_477f4608-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "17:59:49Z"
+    },
+    {
+      "description": "Removal of supragingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f461c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "18:26:55Z"
+    },
+    {
+      "description": "Removal of subgingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f4626-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "18:45:32Z"
+    },
+    {
+      "description": "Dental plain X-ray bitewing (procedure)",
+      "id": "proc_477f463a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": NaN,
+      "date": "1986-05-22",
+      "time": "19:15:32Z"
+    },
+    {
+      "description": "Examination of gingivae (procedure)",
+      "id": "proc_477f464e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "19:29:36Z"
+    },
+    {
+      "description": "Dental surgical procedure (procedure)",
+      "id": "proc_477f4658-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Gingival disease (disorder)",
+      "date": "1986-05-22",
+      "time": "19:38:56Z"
+    },
+    {
+      "description": "Dental application of desensitizing medicament (procedure)",
+      "id": "proc_477f466c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Gingival disease (disorder)",
+      "date": "1986-05-22",
+      "time": "20:36:52Z"
+    },
+    {
+      "description": "Gingivectomy or gingivoplasty  per tooth (procedure)",
+      "id": "proc_477f4680-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Gingival disease (disorder)",
+      "date": "1986-05-22",
+      "time": "21:27:27Z"
+    },
+    {
+      "description": "Postoperative care for dental procedure (regime/therapy)",
+      "id": "proc_477f468a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": NaN,
+      "date": "1986-05-22",
+      "time": "22:27:43Z"
+    },
+    {
+      "description": "Dental fluoride treatment (procedure)",
+      "id": "proc_477f46a8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "23:03:42Z"
+    },
+    {
+      "description": "Oral health education (procedure)",
+      "id": "proc_477f46b2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-a82b-515d834a0147",
+      "reason": "Patient referral for dental care (procedure)",
+      "date": "1986-05-22",
+      "time": "23:20:37Z"
+    },
+    {
+      "description": "Assessment of health and social care needs (procedure)",
+      "id": "proc_477f46c6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "reason": NaN,
+      "date": "1989-05-11",
+      "time": "17:39:54Z"
+    },
+    {
+      "description": "Assessment of anxiety (procedure)",
+      "id": "proc_477f46da-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "reason": NaN,
+      "date": "1989-05-11",
+      "time": "17:56:31Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f46e4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "reason": NaN,
+      "date": "1989-05-11",
+      "time": "18:11:21Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f4702-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "reason": NaN,
+      "date": "1989-05-11",
+      "time": "18:33:49Z"
+    },
+    {
+      "description": "Human immunodeficiency virus screening (procedure)",
+      "id": "proc_477f470c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-79e9-6e345f0cadf1",
+      "reason": NaN,
+      "date": "1990-01-01",
+      "time": "16:57:35Z"
+    },
+    {
+      "description": "Human immunodeficiency virus counseling (procedure)",
+      "id": "proc_477f4720-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-79e9-6e345f0cadf1",
+      "reason": NaN,
+      "date": "1990-01-01",
+      "time": "17:46:36Z"
+    },
+    {
+      "description": "Patient referral (procedure)",
+      "id": "proc_477f4734-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-79e9-6e345f0cadf1",
+      "reason": NaN,
+      "date": "1990-01-01",
+      "time": "17:54:06Z"
+    },
+    {
+      "description": "History AND physical examination (procedure)",
+      "id": "proc_477f473e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "17:22:15Z"
+    },
+    {
+      "description": "Laboratory test (procedure)",
+      "id": "proc_477f4752-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "17:35:16Z"
+    },
+    {
+      "description": "Viral hepatitis screening test (procedure)",
+      "id": "proc_477f4770-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "18:02:33Z"
+    },
+    {
+      "description": "Hepatitis B screening (procedure)",
+      "id": "proc_477f477a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "18:25:50Z"
+    },
+    {
+      "description": "Hepatitis C screening (procedure)",
+      "id": "proc_477f478e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "18:44:28Z"
+    },
+    {
+      "description": "Hepatitis antibody test (procedure)",
+      "id": "proc_477f47a2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "19:08:46Z"
+    },
+    {
+      "description": "Tuberculosis screening (procedure)",
+      "id": "proc_477f47ac-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "19:36:42Z"
+    },
+    {
+      "description": "Venereal disease screening (procedure)",
+      "id": "proc_477f47c0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "20:06:00Z"
+    },
+    {
+      "description": "Serologic test for Toxoplasma gondii (procedure)",
+      "id": "proc_477f47d4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "20:23:36Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f47e8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "20:57:13Z"
+    },
+    {
+      "description": "Assessment of health and social care needs (procedure)",
+      "id": "proc_477f47fc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": NaN,
+      "date": "1990-02-03",
+      "time": "21:31:29Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f4810-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": NaN,
+      "date": "1990-02-03",
+      "time": "21:45:15Z"
+    },
+    {
+      "description": "Depression screening (procedure)",
+      "id": "proc_477f481a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": NaN,
+      "date": "1990-02-03",
+      "time": "22:05:49Z"
+    },
+    {
+      "description": "Assessment of anxiety (procedure)",
+      "id": "proc_477f482e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": NaN,
+      "date": "1990-02-03",
+      "time": "22:22:32Z"
+    },
+    {
+      "description": "Assessment of substance use (procedure)",
+      "id": "proc_477f4842-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": NaN,
+      "date": "1990-02-03",
+      "time": "22:33:00Z"
+    },
+    {
+      "description": "Screening for drug abuse (procedure)",
+      "id": "proc_477f4856-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": NaN,
+      "date": "1990-02-03",
+      "time": "23:01:48Z"
+    },
+    {
+      "description": "Assessment of social support (procedure)",
+      "id": "proc_477f4860-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "23:13:51Z"
+    },
+    {
+      "description": "Assessment of readiness for disclosure of health status (procedure)",
+      "id": "proc_477f4982-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-03",
+      "time": "23:41:52Z"
+    },
+    {
+      "description": "Assessment of readiness for self-management (procedure)",
+      "id": "proc_477f49e6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-04",
+      "time": "00:05:29Z"
+    },
+    {
+      "description": "Health promotion education  guidance  and counseling (procedure)",
+      "id": "proc_477f4a0e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-04",
+      "time": "01:01:56Z"
+    },
+    {
+      "description": "Care planning and problem solving actions (procedure)",
+      "id": "proc_477f4a22-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-04",
+      "time": "01:51:53Z"
+    },
+    {
+      "description": "Coordination of care plan (procedure)",
+      "id": "proc_477f4a36-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-04",
+      "time": "02:43:55Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4a40-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-89d2-83283609dc7d",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-12",
+      "time": "02:55:36Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4a72-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-89d2-83283609dc7d",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-12",
+      "time": "03:07:19Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4a86-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-89d2-83283609dc7d",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-02-12",
+      "time": "03:58:58Z"
+    },
+    {
+      "description": "Assessment of health and social care needs (procedure)",
+      "id": "proc_477f4a9a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "reason": NaN,
+      "date": "1990-05-17",
+      "time": "17:33:03Z"
+    },
+    {
+      "description": "Assessment of substance use (procedure)",
+      "id": "proc_477f4aa4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "reason": NaN,
+      "date": "1990-05-17",
+      "time": "17:47:56Z"
+    },
+    {
+      "description": "Screening for drug abuse (procedure)",
+      "id": "proc_477f4ab8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "reason": NaN,
+      "date": "1990-05-17",
+      "time": "18:10:46Z"
+    },
+    {
+      "description": "Patient referral for dental care (procedure)",
+      "id": "proc_477f4acc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-05-17",
+      "time": "18:15:46Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4ad6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-63b9-1bc79f38d823",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-05-24",
+      "time": "17:05:44Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4b26-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-63b9-1bc79f38d823",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-05-24",
+      "time": "17:25:11Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4b3a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-63b9-1bc79f38d823",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-05-24",
+      "time": "18:01:28Z"
+    },
+    {
+      "description": "Dental consultation and report (procedure)",
+      "id": "proc_477f4b4e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "17:29:57Z"
+    },
+    {
+      "description": "Dental care (regime/therapy)",
+      "id": "proc_477f4b58-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "17:59:01Z"
+    },
+    {
+      "description": "Removal of supragingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f4b6c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "18:32:33Z"
+    },
+    {
+      "description": "Removal of subgingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f4b80-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "18:47:08Z"
+    },
+    {
+      "description": "Examination of gingivae (procedure)",
+      "id": "proc_477f4b8a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "19:17:44Z"
+    },
+    {
+      "description": "Application of composite dental filling material to dentin of tooth following fracture of tooth (procedure)",
+      "id": "proc_477f4b9e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Primary dental caries (disorder)",
+      "date": "1990-06-07",
+      "time": "19:46:53Z"
+    },
+    {
+      "description": "Dental fluoride treatment (procedure)",
+      "id": "proc_477f4bbc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "20:12:23Z"
+    },
+    {
+      "description": "Oral health education (procedure)",
+      "id": "proc_477f4bc6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad57-7e63701abda1",
+      "reason": "Gingivitis (disorder)",
+      "date": "1990-06-07",
+      "time": "20:20:28Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4bda-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e1fb-e64381232799",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-08-22",
+      "time": "18:20:55Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4bee-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e1fb-e64381232799",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-08-22",
+      "time": "18:40:46Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4bf8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e1fb-e64381232799",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-08-22",
+      "time": "19:28:09Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4c0c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-b4f8-e99bc0c3dc34",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-11-20",
+      "time": "19:39:33Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4c20-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-b4f8-e99bc0c3dc34",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-11-20",
+      "time": "19:56:25Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4c34-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-b4f8-e99bc0c3dc34",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1990-11-20",
+      "time": "20:35:52Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4c48-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-8404-39f6c344dfc2",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-02-18",
+      "time": "20:52:47Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4c5c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-8404-39f6c344dfc2",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-02-18",
+      "time": "21:03:37Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4c66-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-8404-39f6c344dfc2",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-02-18",
+      "time": "21:38:27Z"
+    },
+    {
+      "description": "Assessment of health and social care needs (procedure)",
+      "id": "proc_477f4c84-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "reason": NaN,
+      "date": "1991-05-23",
+      "time": "17:40:35Z"
+    },
+    {
+      "description": "Assessment of substance use (procedure)",
+      "id": "proc_477f4c8e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "reason": NaN,
+      "date": "1991-05-23",
+      "time": "17:54:21Z"
+    },
+    {
+      "description": "Assessment using Alcohol Use Disorders Identification Test - Consumption (procedure)",
+      "id": "proc_477f4ca2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "reason": NaN,
+      "date": "1991-05-23",
+      "time": "18:15:14Z"
+    },
+    {
+      "description": "Patient referral for dental care (procedure)",
+      "id": "proc_477f4cb6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-05-23",
+      "time": "18:22:05Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4cc0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-bf2e-266abc904028",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-05-30",
+      "time": "17:01:49Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4cd4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-bf2e-266abc904028",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-05-30",
+      "time": "17:21:01Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4ce8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-bf2e-266abc904028",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-05-30",
+      "time": "18:02:03Z"
+    },
+    {
+      "description": "Dental consultation and report (procedure)",
+      "id": "proc_477f4cf2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "17:27:34Z"
+    },
+    {
+      "description": "Dental care (regime/therapy)",
+      "id": "proc_477f4d06-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "17:45:12Z"
+    },
+    {
+      "description": "Removal of supragingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f4d1a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "18:06:25Z"
+    },
+    {
+      "description": "Removal of subgingival plaque and calculus from all teeth using dental instrument (procedure)",
+      "id": "proc_477f4d24-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "18:11:25Z"
+    },
+    {
+      "description": "Examination of gingivae (procedure)",
+      "id": "proc_477f4d38-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "19:00:36Z"
+    },
+    {
+      "description": "Dental surgical procedure (procedure)",
+      "id": "proc_477f4d4c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingival disease (disorder)",
+      "date": "1991-06-13",
+      "time": "19:12:18Z"
+    },
+    {
+      "description": "Dental application of desensitizing medicament (procedure)",
+      "id": "proc_477f4d60-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingival disease (disorder)",
+      "date": "1991-06-13",
+      "time": "19:51:40Z"
+    },
+    {
+      "description": "Gingivectomy or gingivoplasty  per tooth (procedure)",
+      "id": "proc_477f4d6a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingival disease (disorder)",
+      "date": "1991-06-13",
+      "time": "20:12:31Z"
+    },
+    {
+      "description": "Postoperative care for dental procedure (regime/therapy)",
+      "id": "proc_477f4d7e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": NaN,
+      "date": "1991-06-13",
+      "time": "21:35:45Z"
+    },
+    {
+      "description": "Dental fluoride treatment (procedure)",
+      "id": "proc_477f4d92-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "22:00:17Z"
+    },
+    {
+      "description": "Oral health education (procedure)",
+      "id": "proc_477f4da6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-33fe-c56e4dfdf83b",
+      "reason": "Gingivitis (disorder)",
+      "date": "1991-06-13",
+      "time": "22:22:48Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4dba-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e887-7f31b9da7dd6",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-08-28",
+      "time": "18:15:18Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4dc4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e887-7f31b9da7dd6",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-08-28",
+      "time": "18:33:03Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4dec-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e887-7f31b9da7dd6",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-08-28",
+      "time": "19:15:12Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4e00-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fc8e-e902122f9ae3",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-11-26",
+      "time": "19:27:30Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4e0a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fc8e-e902122f9ae3",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-11-26",
+      "time": "19:41:29Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4e1e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fc8e-e902122f9ae3",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1991-11-26",
+      "time": "20:25:15Z"
+    },
+    {
+      "description": "Throat culture (procedure)",
+      "id": "proc_477f4e32-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb62-93061e22d6fd",
+      "reason": "Acute viral pharyngitis (disorder)",
+      "date": "1992-01-10",
+      "time": "19:04:54Z"
+    },
+    {
+      "description": "History and physical examination  limited (procedure)",
+      "id": "proc_477f4e3c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-31f8-d4691133c70f",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1992-02-24",
+      "time": "20:42:44Z"
+    },
+    {
+      "description": "Complete blood count with white cell differential  automated (procedure)",
+      "id": "proc_477f4e50-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-31f8-d4691133c70f",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1992-02-24",
+      "time": "20:52:50Z"
+    },
+    {
+      "description": "Absolute CD4 count procedure (procedure)",
+      "id": "proc_477f4e64-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-31f8-d4691133c70f",
+      "reason": "Acquired immune deficiency syndrome (disorder)",
+      "date": "1992-02-24",
+      "time": "21:26:58Z"
+    },
+    {
+      "description": "Certification procedure (procedure)",
+      "id": "proc_477f4e78-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-21",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Notifications (procedure)",
+      "id": "proc_477f4e82-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-21",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Initial patient assessment (procedure)",
+      "id": "proc_477f4e96-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-21",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Development of individualized plan of care (procedure)",
+      "id": "proc_477f4eaa-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-21",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4ebe-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-21",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4ed2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-22",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4edc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-23",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4ef0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-24",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f04-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-25",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f0e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-26",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f2c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-27",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f40-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-28",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f54-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-29",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f68-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-30",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f72-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-05-31",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f86-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-01",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4f9a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-02",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4fa4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-03",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4fb8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-04",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4fcc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-05",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4fd6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-06",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4fea-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-07",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f4ffe-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-08",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f5008-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-09",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f501c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-10",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f5030-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-11",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f503a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-12",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f504e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-13",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f5062-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-14",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f506c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-15",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f5080-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-16",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f509e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-17",
+      "time": "17:04:54Z"
+    },
+    {
+      "description": "Hospice care (regime/therapy)",
+      "id": "proc_477f50b2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-854a-ce1c0a7eb9e1",
+      "reason": NaN,
+      "date": "1992-06-18",
+      "time": "17:04:54Z"
+    }
+  ],
+  "observations": [
+    {
+      "description": "Body Height",
+      "id": "obs_47806b28-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "173.5",
+      "units": "cm",
+      "date": "1983-05-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_47806ba0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_47806bc8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "77.7",
+      "units": "kg",
+      "date": "1983-05-05",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Ratio]",
+      "id": "obs_47806be6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "25.8",
+      "units": "kg/m2",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_47806c04-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "80.0",
+      "units": "mm[Hg]",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_47806c18-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "116.0",
+      "units": "mm[Hg]",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_47806c2c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "89.0",
+      "units": "/min",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_47806c40-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "14.0",
+      "units": "/min",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_47806c54-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "8.0",
+      "units": "10*3/uL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_47806c68-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "4.1",
+      "units": "10*6/uL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_47806c7c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "15.2",
+      "units": "g/dL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_47806c86-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "39.0",
+      "units": "%",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+      "id": "obs_47806c9a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "88.1",
+      "units": "fL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_47806cae-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "32.8",
+      "units": "pg",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count",
+      "id": "obs_47806cc2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "34.6",
+      "units": "g/dL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte [DistWidth] in Blood by Automated count",
+      "id": "obs_47806cd6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "42.2",
+      "units": "fL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_47806ce0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "414.1",
+      "units": "10*3/uL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_47806cf4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "508.2",
+      "units": "fL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Platelet [Entitic mean volume] in Blood by Automated count",
+      "id": "obs_47806d08-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "11.1",
+      "units": "fL",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status",
+      "id": "obs_47806d1c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "Ex-smoker (finding)",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Within the last year  have you been afraid of your partner or ex-partner",
+      "id": "obs_47806d30-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+      "id": "obs_47806d44-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Are you a refugee",
+      "id": "obs_47806d58-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Have you spent more than 2 nights in a row in a jail  prison  detention center  or juvenile correctional facility in past 1 year [PRAPARE]",
+      "id": "obs_47806d6c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Stress level",
+      "id": "obs_47806d80-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "A little bit",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+      "id": "obs_47806d94-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "5 or more times a week",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Has lack of transportation kept you from medical appointments  meetings  work  or from getting things needed for daily living",
+      "id": "obs_47806da8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+      "id": "obs_47806db2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "Utilities",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "What was your best estimate of the total income of all family members from all sources  before taxes  in last year [PhenX]",
+      "id": "obs_47806dc6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "11730",
+      "units": "/a",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Primary insurance",
+      "id": "obs_47806de4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "Private insurance",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Employment status - current",
+      "id": "obs_47806dee-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "Full-time work",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Highest level of education",
+      "id": "obs_47806e02-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "High school diploma or GED",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Address",
+      "id": "obs_47806e16-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "1094 Ferry Center Apt 22",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Are you worried about losing your housing [PRAPARE]",
+      "id": "obs_47806e2a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_47806e3e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "I have housing",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "How many people are living or staying at this address [#]",
+      "id": "obs_47806e48-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "2.0",
+      "units": "{#}",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Preferred language",
+      "id": "obs_47806e5c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "English",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Discharged from the U.S. Armed Forces",
+      "id": "obs_47806e70-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+      "id": "obs_47806e84-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Race",
+      "id": "obs_47806e8e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "White",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Hispanic or Latino",
+      "id": "obs_47806eac-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "No",
+      "units": NaN,
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "id": "obs_47806eb6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Total score [DAST-10]",
+      "id": "obs_47806eca-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-9bac-54ef881351ca",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1983-05-05",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_47806ede-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "173.5",
+      "units": "cm",
+      "date": "1986-05-08",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_47806ef2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "3.0",
+      "units": "{score}",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_47806f06-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "82.4",
+      "units": "kg",
+      "date": "1986-05-08",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Ratio]",
+      "id": "obs_47806f1a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "27.4",
+      "units": "kg/m2",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_47806f2e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "81.0",
+      "units": "mm[Hg]",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_47806f42-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "131.0",
+      "units": "mm[Hg]",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_47806f56-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "77.0",
+      "units": "/min",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_47806f60-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol [Mass/volume] in Serum or Plasma",
+      "id": "obs_47806f74-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "272.7",
+      "units": "mg/dL",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Triglyceride [Mass/volume] in Serum or Plasma",
+      "id": "obs_47806f88-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "108.0",
+      "units": "mg/dL",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+      "id": "obs_47806f9c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "194.9",
+      "units": "mg/dL",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+      "id": "obs_47806fa6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "56.1",
+      "units": "mg/dL",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status",
+      "id": "obs_47806fba-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Ex-smoker (finding)",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Within the last year  have you been afraid of your partner or ex-partner",
+      "id": "obs_47806fce-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+      "id": "obs_47806fd8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Are you a refugee",
+      "id": "obs_47806fec-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Have you spent more than 2 nights in a row in a jail  prison  detention center  or juvenile correctional facility in past 1 year [PRAPARE]",
+      "id": "obs_47807000-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Stress level",
+      "id": "obs_47807014-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Quite a bit",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+      "id": "obs_47807028-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "1 or 2 times a week",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Has lack of transportation kept you from medical appointments  meetings  work  or from getting things needed for daily living",
+      "id": "obs_4780703c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+      "id": "obs_47807050-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Medicine or Any Health Care (Medical  Dental  Mental Health  Vision)",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "What was your best estimate of the total income of all family members from all sources  before taxes  in last year [PhenX]",
+      "id": "obs_4780705a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "11730",
+      "units": "/a",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Primary insurance",
+      "id": "obs_4780706e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Private insurance",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Employment status - current",
+      "id": "obs_47807082-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Full-time work",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Highest level of education",
+      "id": "obs_47807096-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "High school diploma or GED",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Address",
+      "id": "obs_478070a0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "1094 Ferry Center Apt 22",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Are you worried about losing your housing [PRAPARE]",
+      "id": "obs_478070b4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_478070c8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "I have housing",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "How many people are living or staying at this address [#]",
+      "id": "obs_478070e6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "2.0",
+      "units": "{#}",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Preferred language",
+      "id": "obs_478070f0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "English",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Discharged from the U.S. Armed Forces",
+      "id": "obs_47807104-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+      "id": "obs_47807118-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Race",
+      "id": "obs_47807122-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "White",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Hispanic or Latino",
+      "id": "obs_47807136-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "No",
+      "units": NaN,
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+      "id": "obs_4780714a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "id": "obs_47807154-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Total score [DAST-10]",
+      "id": "obs_47807172-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-01b9-047f383633fe",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1986-05-08",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_4780717c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "173.5",
+      "units": "cm",
+      "date": "1989-05-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_47807190-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_478071a4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "86.9",
+      "units": "kg",
+      "date": "1989-05-11",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Ratio]",
+      "id": "obs_478071b8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "28.9",
+      "units": "kg/m2",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_478071cc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "84.0",
+      "units": "mm[Hg]",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_478071e0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "123.0",
+      "units": "mm[Hg]",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_478071ea-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "81.0",
+      "units": "/min",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_478071fe-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "14.0",
+      "units": "/min",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807212-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "281.8",
+      "units": "mg/dL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Triglyceride [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807226-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "145.9",
+      "units": "mg/dL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+      "id": "obs_47807230-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "198.5",
+      "units": "mg/dL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807244-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "54.1",
+      "units": "mg/dL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_47807258-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "4.9",
+      "units": "10*3/uL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_4780726c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "5.4",
+      "units": "10*6/uL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_47807276-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "14.0",
+      "units": "g/dL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by Automated count",
+      "id": "obs_4780728a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "46.7",
+      "units": "%",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+      "id": "obs_4780729e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "93.9",
+      "units": "fL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_478072b2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "27.1",
+      "units": "pg",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count",
+      "id": "obs_478072bc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "35.5",
+      "units": "g/dL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte [DistWidth] in Blood by Automated count",
+      "id": "obs_478072da-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "43.0",
+      "units": "fL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_478072ee-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "390.3",
+      "units": "10*3/uL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_478072f8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "188.6",
+      "units": "fL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Platelet [Entitic mean volume] in Blood by Automated count",
+      "id": "obs_47807316-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "11.6",
+      "units": "fL",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status",
+      "id": "obs_4780732a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "Ex-smoker (finding)",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Within the last year  have you been afraid of your partner or ex-partner",
+      "id": "obs_47807334-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+      "id": "obs_47807348-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Are you a refugee",
+      "id": "obs_4780735c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Have you spent more than 2 nights in a row in a jail  prison  detention center  or juvenile correctional facility in past 1 year [PRAPARE]",
+      "id": "obs_47807370-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Stress level",
+      "id": "obs_4780737a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "A little bit",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+      "id": "obs_4780738e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "5 or more times a week",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Has lack of transportation kept you from medical appointments  meetings  work  or from getting things needed for daily living",
+      "id": "obs_478073a2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+      "id": "obs_478073ac-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "Utilities",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "What was your best estimate of the total income of all family members from all sources  before taxes  in last year [PhenX]",
+      "id": "obs_478073c0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "11730",
+      "units": "/a",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Primary insurance",
+      "id": "obs_478073d4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "Private insurance",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Employment status - current",
+      "id": "obs_478073e8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "Full-time work",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Highest level of education",
+      "id": "obs_478073fc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "High school diploma or GED",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Address",
+      "id": "obs_47807406-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "1094 Ferry Center Apt 22",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Are you worried about losing your housing [PRAPARE]",
+      "id": "obs_4780741a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_4780742e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "I have housing",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "How many people are living or staying at this address [#]",
+      "id": "obs_47807442-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "2.0",
+      "units": "{#}",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Preferred language",
+      "id": "obs_47807456-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "English",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Discharged from the U.S. Armed Forces",
+      "id": "obs_47807460-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+      "id": "obs_47807474-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Race",
+      "id": "obs_47807488-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "White",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Hispanic or Latino",
+      "id": "obs_47807492-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "No",
+      "units": NaN,
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+      "id": "obs_478074a6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "id": "obs_478074ba-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-ad1d-6bd98520c52d",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1989-05-11",
+      "category": "other"
+    },
+    {
+      "description": "HIV 1 Ab [Presence] in Serum",
+      "id": "obs_478074c4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-79e9-6e345f0cadf1",
+      "value": "Human immunodeficiency virus detected (finding)",
+      "units": "{nominal}",
+      "date": "1990-01-01",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Mass/volume] in Blood",
+      "id": "obs_478074d8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "9.9",
+      "units": "g/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Hematocrit [Volume Fraction] of Blood by calculation",
+      "id": "obs_478074ec-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "20.8",
+      "units": "%",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Leukocytes [#/volume] in Blood by Automated count",
+      "id": "obs_47807500-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "4.6",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocytes [#/volume] in Blood by Automated count",
+      "id": "obs_4780750a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "5.4",
+      "units": "10*6/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+      "id": "obs_4780751e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "89.8",
+      "units": "fL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "MCH [Entitic mass] by Automated count",
+      "id": "obs_47807532-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "32.9",
+      "units": "pg",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count",
+      "id": "obs_47807546-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "33.1",
+      "units": "g/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Erythrocyte [DistWidth] in Blood by Automated count",
+      "id": "obs_4780755a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "40.5",
+      "units": "fL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Platelets [#/volume] in Blood by Automated count",
+      "id": "obs_4780756e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "255.8",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+      "id": "obs_47807578-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "399.3",
+      "units": "fL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Platelet [Entitic mean volume] in Blood by Automated count",
+      "id": "obs_47807596-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "12.1",
+      "units": "fL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Neutrophils/Leukocytes in Blood by Automated count",
+      "id": "obs_478075aa-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "13.8",
+      "units": "%",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Lymphocytes/Leukocytes in Blood by Automated count",
+      "id": "obs_478075be-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "19.2",
+      "units": "%",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Monocytes/Leukocytes in Blood by Automated count",
+      "id": "obs_478075d2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "12.7",
+      "units": "%",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Eosinophils/Leukocytes in Blood by Automated count",
+      "id": "obs_478075dc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "4.8",
+      "units": "%",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Basophils/Leukocytes in Blood by Automated count",
+      "id": "obs_478075f0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "3.5",
+      "units": "%",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Neutrophils [#/volume] in Blood by Automated count",
+      "id": "obs_47807604-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "3.2",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Lymphocytes [#/volume] in Blood by Automated count",
+      "id": "obs_4780760e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "2.7",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Monocytes [#/volume] in Blood by Automated count",
+      "id": "obs_47807622-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "0.6",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Eosinophils [#/volume] in Blood by Automated count",
+      "id": "obs_47807636-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "0.3",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Basophils [#/volume] in Blood by Automated count",
+      "id": "obs_47807640-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "0.2",
+      "units": "10*3/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Glucose [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807654-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "78.2",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Urea nitrogen [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807668-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "15.3",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Creatinine [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807672-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "2.9",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Calcium [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807686-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "10.0",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Sodium [Moles/volume] in Serum or Plasma",
+      "id": "obs_4780769a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "141.1",
+      "units": "mmol/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Potassium [Moles/volume] in Serum or Plasma",
+      "id": "obs_478076ae-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "4.2",
+      "units": "mmol/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Chloride [Moles/volume] in Serum or Plasma",
+      "id": "obs_478076b8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "109.2",
+      "units": "mmol/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Carbon dioxide  total [Moles/volume] in Serum or Plasma",
+      "id": "obs_478076cc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "26.7",
+      "units": "mmol/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M",
+      "id": "obs_478076ea-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "10.7",
+      "units": "mL/min",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Protein [Mass/volume] in Serum or Plasma",
+      "id": "obs_478076fe-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "6.4",
+      "units": "g/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Albumin [Mass/volume] in Serum or Plasma",
+      "id": "obs_47807712-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "4.5",
+      "units": "g/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Bilirubin.total [Mass/volume] in Serum or Plasma",
+      "id": "obs_4780771c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "9.6",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
+      "id": "obs_47807730-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "41.1",
+      "units": "U/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+      "id": "obs_47807744-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "12.0",
+      "units": "U/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+      "id": "obs_4780774e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "31.6",
+      "units": "U/L",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Appearance of Urine",
+      "id": "obs_47807762-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Cloudy urine (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Odor of Urine",
+      "id": "obs_47807776-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Urine smell ammoniacal (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Clarity of Urine",
+      "id": "obs_4780778a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Translucent (qualifier value)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Color of Urine",
+      "id": "obs_4780779e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Brown color (qualifier value)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Glucose [Mass/volume] in Urine by Test strip",
+      "id": "obs_478077a8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "1.2",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Glucose [Presence] in Urine by Test strip",
+      "id": "obs_478077bc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Urine glucose test = ++ (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Bilirubin.total [Mass/volume] in Urine by Test strip",
+      "id": "obs_478077d0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "0.8",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Bilirubin.total [Presence] in Urine by Test strip",
+      "id": "obs_478077e4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Finding of bilirubin in urine (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Ketones [Mass/volume] in Urine by Test strip",
+      "id": "obs_478077ee-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "14.2",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Ketones [Presence] in Urine by Test strip",
+      "id": "obs_47807802-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Urine ketone test = ++ (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Specific gravity of Urine by Test strip",
+      "id": "obs_47807816-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "1.0",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "pH of Urine by Test strip",
+      "id": "obs_4780782a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "6.7",
+      "units": "pH",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Protein [Mass/volume] in Urine by Test strip",
+      "id": "obs_47807834-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "128.8",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Protein [Presence] in Urine by Test strip",
+      "id": "obs_47807852-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Urine protein test = ++ (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Nitrite [Presence] in Urine by Test strip",
+      "id": "obs_4780785c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Nitrite not detected in urine (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Hemoglobin [Presence] in Urine by Test strip",
+      "id": "obs_47807870-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Blood not detected in urine (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Leukocyte esterase [Presence] in Urine by Test strip",
+      "id": "obs_47807884-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Urine leukocytes not detected (finding)",
+      "units": "{nominal}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol [Mass/volume] in Serum or Plasma",
+      "id": "obs_4780788e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "303.9",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Triglyceride [Mass/volume] in Serum or Plasma",
+      "id": "obs_478078a2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "143.3",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay",
+      "id": "obs_478078b6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "229.6",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Cholesterol in HDL [Mass/volume] in Serum or Plasma",
+      "id": "obs_478078c0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "45.6",
+      "units": "mg/dL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_478078d4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "146.0",
+      "units": "/uL",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Within the last year  have you been afraid of your partner or ex-partner",
+      "id": "obs_478078e8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+      "id": "obs_478078f2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Are you a refugee",
+      "id": "obs_47807906-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Have you spent more than 2 nights in a row in a jail  prison  detention center  or juvenile correctional facility in past 1 year [PRAPARE]",
+      "id": "obs_4780791a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Stress level",
+      "id": "obs_4780792e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Not at all",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+      "id": "obs_47807938-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "3 to 5 times a week",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Has lack of transportation kept you from medical appointments  meetings  work  or from getting things needed for daily living",
+      "id": "obs_4780794c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+      "id": "obs_47807a28-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Medicine or Any Health Care (Medical  Dental  Mental Health  Vision)",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "What was your best estimate of the total income of all family members from all sources  before taxes  in last year [PhenX]",
+      "id": "obs_47807a50-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "11730",
+      "units": "/a",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Primary insurance",
+      "id": "obs_47807a6e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Private insurance",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Employment status - current",
+      "id": "obs_47807aa0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "I choose not to answer this question",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Highest level of education",
+      "id": "obs_47807abe-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "High school diploma or GED",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Address",
+      "id": "obs_47807ad2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "1094 Ferry Center Apt 22",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Are you worried about losing your housing [PRAPARE]",
+      "id": "obs_47807ae6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_47807afa-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "I have housing",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "How many people are living or staying at this address [#]",
+      "id": "obs_47807b0e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "2.0",
+      "units": "{#}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Preferred language",
+      "id": "obs_47807b22-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "English",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Discharged from the U.S. Armed Forces",
+      "id": "obs_47807b2c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+      "id": "obs_47807b40-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Race",
+      "id": "obs_47807b54-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "White",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Hispanic or Latino",
+      "id": "obs_47807b5e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+      "id": "obs_47807b72-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]",
+      "id": "obs_47807b86-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "4.0",
+      "units": "{score}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "Total score [DAST-10]",
+      "id": "obs_47807b9a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb9d-cc9d8f4f3301",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1990-02-03",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47807ba4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-89d2-83283609dc7d",
+      "value": "322.0",
+      "units": "/uL",
+      "date": "1990-02-12",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_47807bb8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "173.5",
+      "units": "cm",
+      "date": "1990-05-17",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_47807bd6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "2.0",
+      "units": "{score}",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_47807bea-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "88.1",
+      "units": "kg",
+      "date": "1990-05-17",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Ratio]",
+      "id": "obs_47807bfe-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "29.3",
+      "units": "kg/m2",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_47807c12-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "82.0",
+      "units": "mm[Hg]",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_47807c30-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_47807c3a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "93.0",
+      "units": "/min",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_47807c4e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "13.0",
+      "units": "/min",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status",
+      "id": "obs_47807c62-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Ex-smoker (finding)",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Within the last year  have you been afraid of your partner or ex-partner",
+      "id": "obs_47807c6c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+      "id": "obs_47807c80-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Are you a refugee",
+      "id": "obs_47807c94-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Have you spent more than 2 nights in a row in a jail  prison  detention center  or juvenile correctional facility in past 1 year [PRAPARE]",
+      "id": "obs_47807c9e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Stress level",
+      "id": "obs_47807cb2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Not at all",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+      "id": "obs_47807cc6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "3 to 5 times a week",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Has lack of transportation kept you from medical appointments  meetings  work  or from getting things needed for daily living",
+      "id": "obs_47807cd0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+      "id": "obs_47807ce4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Medicine or Any Health Care (Medical  Dental  Mental Health  Vision)",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "What was your best estimate of the total income of all family members from all sources  before taxes  in last year [PhenX]",
+      "id": "obs_47807cf8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "11730",
+      "units": "/a",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Primary insurance",
+      "id": "obs_47807d16-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Private insurance",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Employment status - current",
+      "id": "obs_47807d2a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "Otherwise unemployed but not seeking work (ex: student  retired  disabled  unpaid primary care giver)",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Highest level of education",
+      "id": "obs_47807d34-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "High school diploma or GED",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Address",
+      "id": "obs_47807d48-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "1094 Ferry Center Apt 22",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Are you worried about losing your housing [PRAPARE]",
+      "id": "obs_47807d5c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_47807d70-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "I have housing",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "How many people are living or staying at this address [#]",
+      "id": "obs_47807d84-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "2.0",
+      "units": "{#}",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Preferred language",
+      "id": "obs_47807d98-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "English",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Discharged from the U.S. Armed Forces",
+      "id": "obs_47807da2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+      "id": "obs_47807db6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Race",
+      "id": "obs_47807dca-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "White",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Hispanic or Latino",
+      "id": "obs_47807dd4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "No",
+      "units": NaN,
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "Total score [DAST-10]",
+      "id": "obs_47807df2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-2058-9777a41287c2",
+      "value": "1.0",
+      "units": "{score}",
+      "date": "1990-05-17",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47807dfc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-63b9-1bc79f38d823",
+      "value": "424.0",
+      "units": "/uL",
+      "date": "1990-05-24",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47807e10-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e1fb-e64381232799",
+      "value": "367.0",
+      "units": "/uL",
+      "date": "1990-08-22",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47807e24-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-b4f8-e99bc0c3dc34",
+      "value": "493.0",
+      "units": "/uL",
+      "date": "1990-11-20",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47807e2e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-8404-39f6c344dfc2",
+      "value": "375.0",
+      "units": "/uL",
+      "date": "1991-02-18",
+      "category": "other"
+    },
+    {
+      "description": "Body Height",
+      "id": "obs_47807e42-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "173.5",
+      "units": "cm",
+      "date": "1991-05-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+      "id": "obs_47807e56-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Body Weight",
+      "id": "obs_47807e6a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "89.9",
+      "units": "kg",
+      "date": "1991-05-23",
+      "category": "body_measurement"
+    },
+    {
+      "description": "Body mass index (BMI) [Ratio]",
+      "id": "obs_47807e7e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "29.9",
+      "units": "kg/m2",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Diastolic Blood Pressure",
+      "id": "obs_47807e92-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "79.0",
+      "units": "mm[Hg]",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Systolic Blood Pressure",
+      "id": "obs_47807e9c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "127.0",
+      "units": "mm[Hg]",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Heart rate",
+      "id": "obs_47807eb0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "84.0",
+      "units": "/min",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Respiratory rate",
+      "id": "obs_47807ec4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "14.0",
+      "units": "/min",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Tobacco smoking status",
+      "id": "obs_47807ece-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "Ex-smoker (finding)",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Within the last year  have you been afraid of your partner or ex-partner",
+      "id": "obs_47807eec-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Do you feel physically and emotionally safe where you currently live [PRAPARE]",
+      "id": "obs_47807ef6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Are you a refugee",
+      "id": "obs_47807f0a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Have you spent more than 2 nights in a row in a jail  prison  detention center  or juvenile correctional facility in past 1 year [PRAPARE]",
+      "id": "obs_47807f1e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "Yes",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Stress level",
+      "id": "obs_47807f32-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "A little bit",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "How often do you see or talk to people that you care about and feel close to [PRAPARE]",
+      "id": "obs_47807f46-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "5 or more times a week",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Has lack of transportation kept you from medical appointments  meetings  work  or from getting things needed for daily living",
+      "id": "obs_47807f5a-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]",
+      "id": "obs_47807f6e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "Food",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "What was your best estimate of the total income of all family members from all sources  before taxes  in last year [PhenX]",
+      "id": "obs_47807f82-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "11730",
+      "units": "/a",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Primary insurance",
+      "id": "obs_47807f96-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "Private insurance",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Employment status - current",
+      "id": "obs_47807fa0-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "Full-time work",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Highest level of education",
+      "id": "obs_47807fb4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "High school diploma or GED",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Address",
+      "id": "obs_47807fc8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "1094 Ferry Center Apt 22",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Are you worried about losing your housing [PRAPARE]",
+      "id": "obs_47807fd2-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Housing status",
+      "id": "obs_47807fe6-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "I have housing",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "How many people are living or staying at this address [#]",
+      "id": "obs_47807ffa-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "2.0",
+      "units": "{#}",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Preferred language",
+      "id": "obs_47808004-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "English",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Discharged from the U.S. Armed Forces",
+      "id": "obs_47808018-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Has season or migrant farm work been your or your family's main source of income at any point in past 2 years [PRAPARE]",
+      "id": "obs_4780802c-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Race",
+      "id": "obs_47808040-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "White",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Hispanic or Latino",
+      "id": "obs_47808054-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "No",
+      "units": NaN,
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "Total score [AUDIT-C]",
+      "id": "obs_4780805e-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fe09-dc9d5d648276",
+      "value": "0.0",
+      "units": "{score}",
+      "date": "1991-05-23",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47808072-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-bf2e-266abc904028",
+      "value": "549.0",
+      "units": "/uL",
+      "date": "1991-05-30",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47808086-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-e887-7f31b9da7dd6",
+      "value": "513.0",
+      "units": "/uL",
+      "date": "1991-08-28",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_47808090-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-fc8e-e902122f9ae3",
+      "value": "549.0",
+      "units": "/uL",
+      "date": "1991-11-26",
+      "category": "other"
+    },
+    {
+      "description": "Body temperature",
+      "id": "obs_478080a4-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-cb62-93061e22d6fd",
+      "value": "37.1",
+      "units": "Cel",
+      "date": "1992-01-10",
+      "category": "other"
+    },
+    {
+      "description": "CD3+CD4+ (T4 helper) cells [#/volume] in Blood",
+      "id": "obs_478080b8-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-31f8-d4691133c70f",
+      "value": "362.0",
+      "units": "/uL",
+      "date": "1992-02-24",
+      "category": "other"
+    },
+    {
+      "description": "Cause of Death [US Standard Certificate of Death]",
+      "id": "obs_478080cc-6b73-11f1-9e14-00155d09b6b5",
+      "encounter": "b7e15ab8-7633-df03-95f8-2b24d3b7cbf3",
+      "value": "Acquired immune deficiency syndrome (disorder)",
+      "units": NaN,
+      "date": "1992-06-25",
+      "category": "other"
+    }
+  ]
+}

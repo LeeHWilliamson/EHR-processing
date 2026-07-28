@@ -1,0 +1,31 @@
+{   "HELP": {
+    "prompt": "LIST: structured messages for the AI agent, each message is a dict with keys 'role' and 'content'",
+    "ground_truth_source": "STR: the function whose results will be compared to AI agent's for performance evaluation",
+    "allowed_endpoints": "LIST: api endpoints that are accessible to the agent",
+    "ideal_workflow": "LIST: ordered sequence of API calls that correctly accomplishes the tast, any deviations will reduce performance score",
+    "workflow_evaluation": "STR: the method for assessing whether the ideal workflow was followed",
+    "results_evalutation": "STR: the method for assessing results accuracy"
+},
+    "medication_retrieval_v1": {
+    "prompt": [
+        {
+            "role": "system",
+            "content": "Provide context that applies to the internal workflow. Look to other task jsons for examples" 
+        },
+        {
+            "role": "user",
+            "content": "List specific task instructions such as what data you want, how you want it formatted, workflow specifications (e.g. 'always call get_patient before get_meds'"
+        }
+
+    ],
+    "ground_truth_source": "the function and arguments for generating the task ground_truth, generated automatically",
+    "allowed_endpoints": [
+      "list of backend routes the agent is allowed to access"
+    ],
+    "ideal_workflow": [
+        "Ideal sequence of acts the agent should follow, OPTIONAL"
+    ],
+    "workflow_evaluation": "sequence_match",
+    "results_evaluation": "set_match"
+  }
+}
