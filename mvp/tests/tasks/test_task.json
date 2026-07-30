@@ -1,0 +1,39 @@
+{   "HELP": {
+    "prompt": "LIST: structured messages for the AI agent, each message is a dict with keys 'role' and 'content'",
+    "ground_truth_source": "STR: the function whose results will be compared to AI agent's for performance evaluation",
+    "allowed_endpoints": "LIST: api endpoints that are accessible to the agent",
+    "ideal_workflow": "LIST: ordered sequence of API calls that correctly accomplishes the tast, any deviations will reduce performance score",
+    "workflow_evaluation": "STR: the method for assessing whether the ideal workflow was followed",
+    "results_evalutation": "STR: the method for assessing results accuracy"
+},
+    "test_task": {
+    "prompt": [
+        {
+            "role": "system",
+            "content": "This is the first system prompt and the first prompt overall." 
+        },
+        {
+            "role": "user",
+            "content": "This is the first user prompt and the second prompt overall."
+        },
+        {
+            "role": "user",
+            "content": "This is the second user prompt and the third prompt overall"
+        },
+        {
+            "role": "system",
+            "content": "this is the second system prompt and the 4th and final prompt overall. There should be 2 system prompts and 2 user prompts"
+        }
+
+    ],
+    "ground_truth_source": "N/A",
+    "allowed_endpoints": [
+      "N/A"
+    ],
+    "ideal_workflow": [
+        "N/A"
+    ],
+    "workflow_evaluation": "N/A",
+    "results_evaluation": "N/A"
+  }
+}

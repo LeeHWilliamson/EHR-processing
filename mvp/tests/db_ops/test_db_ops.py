@@ -4,51 +4,95 @@ Currently, our agent tool get_patient takes a patient_id as an argument and quer
 '''
 import json
 import sqlite3
+import pytest
 from pathlib import Path
 from mvp.databases.rebuild_db import rebuild_db
 from mvp.databases.schema_adapters import flat_v1 as flat, normalized_v1 as normalized
 SCHEMAS = ["flat_v1", "normalized_v1"]
 TEST_DATA = Path(__file__).parent.parent / "test_data" / "test_patients"
 
-def test_get_patient():
-    #first we build the dbs
+TOOLS = {
+    "get_patient" : lambda schema, conn, patient_id: schema.get_patient(conn, patient_id),
+    "get_medications" : lambda schema, conn, patient_id: schema.get_medications(conn, patient_id),
+}
+
+@pytest.mark.parametrize(
+        "agent_tool_name",
+        [
+            "get_patient",
+            "get_medications",
+        ],
+)
+
+def test_adapters(agent_tool_name: str):
+
+    #access patient file to insert into db
     test_patient_path = Path(TEST_DATA / "living_patient_1_med.json")
+    with open(test_patient_path, "r") as patient_file:
+        patient = json.load(patient_file)
+        patient_id = patient["patient"]["id"]
+
+    #create databases
+    db_paths = {} #schema as str : path as Path
     for schema in SCHEMAS:
-        db_path = rebuild_db(schema)
+            db_path = rebuild_db(schema)
+            db_paths[schema] = db_path
 
-        conn = sqlite3.connect(db_path)
-        conn.execute("PRAGMA foreign_keys = ON")
+    #run tool in normalized database
+    conn = sqlite3.connect(db_paths["normalized_v1"])
+    conn.execute("PRAGMA foreign_keys = ON")
+    normalized.insert_patient(conn, patient)
+    normalized_result = TOOLS[agent_tool_name](normalized, conn, patient_id)
+    conn.close()
 
-        #we need to insert 1 normal patient
-        with open(test_patient_path, "r") as patient_file:
-            patient = json.load(patient_file)
-            patient_id = patient["patient"]["id"]
-            if schema == "normalized_v1":
-                normalized.insert_patient(conn, patient)
-                normalized_patient_record = normalized.get_patient(conn, patient_id)
-            else: 
-                flat.insert_patient(conn, patient)
-                flat_patient_record = flat.get_patient(conn, patient_id)
-    assert normalized_patient_record == flat_patient_record
+    #run tool in flat database
+    conn = sqlite3.connect(db_paths["flat_v1"])
+    conn.execute("PRAGMA foreign_keys = ON")
+    flat.insert_patient(conn, patient)
+    flat_result = TOOLS[agent_tool_name](flat, conn, patient_id)
+    conn.close()
+
+    assert normalized_result == flat_result
+
+# def test_get_patient():
+#     #first we build the dbs
+#     test_patient_path = Path(TEST_DATA / "living_patient_1_med.json")
+#     for schema in SCHEMAS:
+#         db_path = rebuild_db(schema)
+
+#         conn = sqlite3.connect(db_path)
+#         conn.execute("PRAGMA foreign_keys = ON")
+
+#         #we need to insert 1 normal patient
+#         with open(test_patient_path, "r") as patient_file:
+#             patient = json.load(patient_file)
+#             patient_id = patient["patient"]["id"]
+#             if schema == "normalized_v1":
+#                 normalized.insert_patient(conn, patient)
+#                 normalized_patient_record = normalized.get_patient(conn, patient_id)
+#             else: 
+#                 flat.insert_patient(conn, patient)
+#                 flat_patient_record = flat.get_patient(conn, patient_id)
+#     assert normalized_patient_record == flat_patient_record
 
 
-def test_get_meds():
-    test_patient_path = Path(TEST_DATA / "living_patient_1_med.json")
-    for schema in SCHEMAS:
-        db_path = rebuild_db(schema)
+# def test_get_meds():
+#     test_patient_path = Path(TEST_DATA / "living_patient_1_med.json")
+#     for schema in SCHEMAS:
+#         db_path = rebuild_db(schema)
 
-        conn = sqlite3.connect(db_path)
-        conn.execute("PRAGMA foreign_keys = ON")
+#         conn = sqlite3.connect(db_path)
+#         conn.execute("PRAGMA foreign_keys = ON")
 
-        #we need to insert 1 normal patient
-        with open(test_patient_path, "r") as patient_file:
-            patient = json.load(patient_file)
-            patient_id = patient["patient"]["id"]
-            if schema == "normalized_v1":
-                normalized.insert_patient(conn, patient)
-                normalized_patient_record = normalized.get_medications(conn, patient_id)
-            else: 
-                flat.insert_patient(conn, patient)
-                flat_patient_record = flat.get_medications(conn, patient_id)
-    for record in normalized_patient_record:
-        assert record in flat_patient_record
+#         #we need to insert 1 normal patient
+#         with open(test_patient_path, "r") as patient_file:
+#             patient = json.load(patient_file)
+#             patient_id = patient["patient"]["id"]
+#             if schema == "normalized_v1":
+#                 normalized.insert_patient(conn, patient)
+#                 normalized_patient_record = normalized.get_medications(conn, patient_id)
+#             else: 
+#                 flat.insert_patient(conn, patient)
+#                 flat_patient_record = flat.get_medications(conn, patient_id)
+#     for record in normalized_patient_record:
+#         assert record in flat_patient_record
