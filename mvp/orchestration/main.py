@@ -1,13 +1,13 @@
 # from generate_data.load_patient_gt import run_end_to_end
 import sys
 from pathlib import Path
-from generate_data.load_patient_gt import run_end_to_end
-from .agents.openai_agent import run_workflow
-from .agents.agent_common import run_agent
-from .get_patient_meds import get_meds
-from .calc_output_metrics import calc_metrics
-from .calc_workflow_metrics import analyze_workflow
-from . import load_patients_sqlite3 as load_patients
+from mvp.generation.load_patient_gt import run_end_to_end
+from ..agents.openai_agent import run_workflow
+from ..agents.agent_common import run_agent
+from ..tasks.medication_retrieval_v1.get_patient_meds import get_meds
+from ..evaluation.performance.calc_output_metrics import calc_metrics
+from ..evaluation.workflow.calc_workflow_metrics import analyze_workflow
+from ..databases.db_ops import load_patients_sqlite3 as load_patients
 import json
 import subprocess
 from pathlib import Path

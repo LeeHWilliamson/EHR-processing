@@ -10,7 +10,7 @@ This script will
 
 Our task for the agent will be to return all medications that a patient is currently taking in structured JSON format
 '''
-from .. import api_client
+from ..app import api_client
 import json
 from anthropic import Anthropic
 import os
@@ -106,6 +106,7 @@ def run_agent(system_instructions, task, input_messages, patient = None):
     for tool in TOOLS:
         if tool["name"] in task["allowed_endpoints"]:
             available_tools.append(tool)
+            
     return client.messages.create(
         model="claude-sonnet-5",
         max_tokens=1024,

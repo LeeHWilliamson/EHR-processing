@@ -10,7 +10,7 @@ This script will
 
 Our task for the agent will be to return all medications that a patient is currently taking in structured JSON format
 '''
-from ..app import api_client
+from ..api import api_client
 import json
 from openai import OpenAI
 import os

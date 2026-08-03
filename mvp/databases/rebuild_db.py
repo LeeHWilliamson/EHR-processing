@@ -23,3 +23,7 @@ def rebuild_db(schema: str):
     print(f"{schema} database rebuilt successfully.")
 
     return db_path
+
+if __name__ == "__main__":
+    path = rebuild_db("flat_v1")
+    print(path)

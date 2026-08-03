@@ -7,20 +7,34 @@ import sqlite3
 import pytest
 from pathlib import Path
 from mvp.databases.rebuild_db import rebuild_db
-from mvp.databases.schema_adapters import flat_v1 as flat, normalized_v1 as normalized
+from mvp.databases.schema_adaptors import flat_v1 as flat, normalized_v1 as normalized
 SCHEMAS = ["flat_v1", "normalized_v1"]
 TEST_DATA = Path(__file__).parent.parent / "test_data" / "test_patients"
 
 TOOLS = {
     "get_patient" : lambda schema, conn, patient_id: schema.get_patient(conn, patient_id),
+    "get_allergies" : lambda schema, conn, patient_id: schema.get_allergies(conn, patient_id),
+    "get_careplans" : lambda schema, conn, patient_id: schema.get_careplans(conn, patient_id),
+    "get_conditions" : lambda schema, conn, patient_id: schema.get_conditions(conn, patient_id),
+    "get_devices" : lambda schema, conn, patient_id: schema.get_devices(conn, patient_id),
+    "get_immunizations" : lambda schema, conn, patient_id: schema.get_immunizations(conn, patient_id),
     "get_medications" : lambda schema, conn, patient_id: schema.get_medications(conn, patient_id),
+    "get_observations" : lambda schema, conn, patient_id: schema.get_observations(conn, patient_id),
+    "get_procedures" : lambda schema, conn, patient_id: schema.get_procedures(conn, patient_id),
 }
 
 @pytest.mark.parametrize(
         "agent_tool_name",
         [
             "get_patient",
+            "get_allergies",
+            "get_careplans",
+            "get_conditions",
+            "get_devices",
+            "get_immunizations",
             "get_medications",
+            "get_observations",
+            "get_procedures",
         ],
 )
 

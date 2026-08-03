@@ -4,7 +4,8 @@ They typically rely on decorator functions like
 
 '''
 from fastapi import FastAPI, HTTPException, Request
-from mvp.schema_adapters import flat_v1, normalized_v1
+from mvp.databases.schema_adaptors import flat_v1
+from mvp.databases.schema_adaptors import normalized_v1
 import sqlite3
 from datetime import datetime, timezone
 import json
@@ -96,15 +97,6 @@ def get_patient(patient_id: str, schema: str, request: Request):
         patient = adapter.get_patient(conn, patient_id)
     finally:
         conn.close()
-    # cursor = conn.cursor()
-
-    # cursor.execute(
-    #     "SELECT * FROM patients WHERE id = ?",
-    #     (patient_id,),
-    # )
-    # #id is the primary key that corresponds to a specific patient, so row should only contain 1 record lol
-    # row = cursor.fetchone()
-    # conn.close()
 
     if patient is None:
         log_api_call(
@@ -116,8 +108,6 @@ def get_patient(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="Patient not found")
-    
-    # result = dict(row)
 
     log_api_call(
         schema,
@@ -136,19 +126,15 @@ def get_patient(patient_id: str, schema: str, request: Request):
 def get_patient_encounters(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
     conn = get_connection(schema)
-    cursor = conn.cursor()
-
-    cursor.execute(
-        "SELECT * FROM encounters WHERE patient_id = ?",
-        (patient_id,),
-    )
-    #fetch all the results
-    rows = cursor.fetchall()
-    conn.close()
+    try:
+        encounters = adapter.get_encounters(conn, patient_id)
+    finally:
+        conn.close()
 
     #not all patients have all entities so we should always include this
-    if rows is None:
+    if encounters is None:
         log_api_call(
+            schema,
             request=request,
             endpoint=f"/patients/{patient_id}/encounters",
             method="GET",
@@ -156,19 +142,18 @@ def get_patient_encounters(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No encounters associated with that patient ID")
-    
-    results = [dict(row) for row in rows]
 
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/encounters",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(encounters),
     )
 
-    return results
+    return encounters
 
 #Get list of medications associated with a patient
 @app.get("/patients/{patient_id}/medications")
@@ -181,14 +166,6 @@ def get_patient_medications(patient_id: str, schema: str, request: Request):
         medications = adapter.get_medications(conn, patient_id)
     finally:
         conn.close()
-    # #create cursor object (whatever that is)
-    # cursor = conn.cursor()
-    # #query db
-    # cursor.execute("SELECT * FROM medications WHERE patient_id = ?", (patient_id,),)
-    # #fetch all results
-    # rows = cursor.fetchall()
-    # #close connection
-    # conn.close()
     #log attempt and outcome
     if medications is None:
         log_api_call(
@@ -219,19 +196,15 @@ def get_patient_medications(patient_id: str, schema: str, request: Request):
 @app.get("/patients/{patient_id}/observations")
 def get_patient_observations(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to server
     conn = get_connection(schema)
-    #create cursor
-    cursor = conn.cursor()
-    #query
-    cursor.execute("SELECT * FROM observations WHERE patient_id = ?", (patient_id,),)
-    #fetch results
-    rows = cursor.fetchall()
-    #close connection
-    conn.close()
-    #log failure
-    if rows is None:
+    try:
+        observations = adapter.get_observations(conn, patient_id)
+    finally:
+        conn.close()
+
+    if observations is None:
         log_api_call(
+            schema,
             request=request,
             endpoint=f"/patients/{patient_id}/observations",
             method="GET",
@@ -239,33 +212,31 @@ def get_patient_observations(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No observations associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/observations",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(observations),
     )
-    #return
-    return results
+    return observations
 
 
 @app.get("/patients/{patient_id}/allergies")
 def get_patient_allergies(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to db
     conn = get_connection(schema)
-    cursor = conn.cursor()
+    try:
+        allergies = adapter.get_allergies(conn, patient_id)
+    finally:
+        conn.close()
 
-    #query
-    rows = cursor.execute("SELECT * FROM allergies WHERE patient_id = ?", (patient_id,),)
-
-    if rows is None:
+    if allergies is None:
         log_api_call(
+            schema,
             request=request, 
             endpoint=f"/patients/{patient_id}/allergies",
             method="GET",
@@ -273,31 +244,30 @@ def get_patient_allergies(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No observations associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log_success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/allergies",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(allergies),
     )
-    return results
+    return allergies
 #get patient conditions
 @app.get("/patients/{patient_id}/conditions")
 def get_patient_conditions(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to db
     conn = get_connection(schema)
-    cursor = conn.cursor()
+    try:
+        conditions = adapter.get_conditions(conn, patient_id)
+    finally:
+        conn.close()
 
-    #query
-    rows = cursor.execute("SELECT * FROM conditions WHERE patient_id = ?", (patient_id,),)
-
-    if rows is None:
+    if conditions is None:
         log_api_call(
+            schema,
             request=request, 
             endpoint=f"/patients/{patient_id}/conditions",
             method="GET",
@@ -305,31 +275,30 @@ def get_patient_conditions(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No conditions associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log_success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/conditions",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(conditions),
     )
-    return results
+    return conditions
 #get patient immunizations
 @app.get("/patients/{patient_id}/immunizations")
 def get_patient_immunizations(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to db
     conn = get_connection(schema)
-    cursor = conn.cursor()
+    try:
+        immunizations = adapter.get_immunizations(conn, patient_id)
+    finally:
+        conn.close()
 
-    #query
-    rows = cursor.execute("SELECT * FROM immunizations WHERE patient_id = ?", (patient_id,),)
-
-    if rows is None:
+    if immunizations is None:
         log_api_call(
+            schema,
             request=request, 
             endpoint=f"/patients/{patient_id}/immunizations",
             method="GET",
@@ -337,31 +306,30 @@ def get_patient_immunizations(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No immunizations associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log_success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/immunizations",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(immunizations),
     )
-    return results
+    return immunizations
 #get patient devices
 @app.get("/patients/{patient_id}/devices")
 def get_patient_devices(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to db
     conn = get_connection(schema)
-    cursor = conn.cursor()
+    try:
+        devices = adapter.get_devices(conn, patient_id)
+    finally:
+        conn.close()
 
-    #query
-    rows = cursor.execute("SELECT * FROM devices WHERE patient_id = ?", (patient_id,),)
-
-    if rows is None:
+    if devices is None:
         log_api_call(
+            schema,
             request=request, 
             endpoint=f"/patients/{patient_id}/devices",
             method="GET",
@@ -369,31 +337,30 @@ def get_patient_devices(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No devices associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log_success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/devices",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(devices),
     )
-    return results
+    return devices
 #get patient procedures
 @app.get("/patients/{patient_id}/procedures")
 def get_patient_procedures(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to db
     conn = get_connection(schema)
-    cursor = conn.cursor()
+    try:
+        procedures = adapter.get_procedures(conn, patient_id)
+    finally:
+        conn.close()
 
-    #query
-    rows = cursor.execute("SELECT * FROM procedures WHERE patient_id = ?", (patient_id,),)
-
-    if rows is None:
+    if procedures is None:
         log_api_call(
+            schema,
             request=request, 
             endpoint=f"/patients/{patient_id}/procedures",
             method="GET",
@@ -401,31 +368,30 @@ def get_patient_procedures(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No procedures associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log_success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/procedures",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(procedures),
     )
-    return results
+    return procedures
 #get patient careplans
 @app.get("/patients/{patient_id}/careplans")
 def get_patient_careplans(patient_id: str, schema: str, request: Request):
     adapter = get_adapter(schema)
-    #connect to db
     conn = get_connection(schema)
-    cursor = conn.cursor()
+    try:
+        careplans = adapter.get_careplans(conn, patient_id)
+    finally:
+        conn.close()
 
-    #query
-    rows = cursor.execute("SELECT * FROM careplans WHERE patient_id = ?", (patient_id,),)
-
-    if rows is None:
+    if careplans is None:
         log_api_call(
+            schema,
             request=request, 
             endpoint=f"/patients/{patient_id}/careplans",
             method="GET",
@@ -433,15 +399,14 @@ def get_patient_careplans(patient_id: str, schema: str, request: Request):
             status_code=404,
         )
         raise HTTPException(status_code=404, detail="No careplans associated with that patient ID")
-    #serialize
-    results = [dict(row) for row in rows]
-    #log_success
+
     log_api_call(
+        schema,
         request=request,
         endpoint=f"/patients/{patient_id}/careplans",
         method="GET",
         patient_id=patient_id,
         status_code=200,
-        rows_returned=len(results),
+        rows_returned=len(careplans),
     )
-    return results
+    return careplans

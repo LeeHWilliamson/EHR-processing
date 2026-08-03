@@ -93,3 +93,9 @@ def insert_patient(conn, patient: dict):
 
     conn.commit()
     # conn.close()
+if __name__ == "__main__":
+    with open ("/home/leeha/Projects/EHR-processing/mvp/tests/test_data/test_patients/living_patient_0_meds.json", "r") as patient_file:
+        patient = json.load(patient_file)
+    conn = sqlite3.connect("/home/leeha/tools/sqlite/flat_v1.db")
+    conn.execute("PRAGMA foreign_keys = ON")
+    insert_patient(conn, patient)

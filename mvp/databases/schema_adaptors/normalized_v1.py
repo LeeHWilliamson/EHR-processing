@@ -110,11 +110,91 @@ def get_patient(conn, patient_id: str):
     patient = dict(row)
     return patient
 
+def get_encounters(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM encounters WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_allergies(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM allergies WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_careplans(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM careplans WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_conditions(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM conditions WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_devices(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM devices WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_immunizations(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM immunizations WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
 def get_medications(conn, patient_id: str):
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     cursor.execute(
         "SELECT * FROM medications WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_observations(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM observations WHERE patient_id = ?",
+        (patient_id,),
+    )
+    rows = cursor.fetchall()
+    return [dict(row) for row in rows]
+
+def get_procedures(conn, patient_id: str):
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT * FROM procedures WHERE patient_id = ?",
         (patient_id,),
     )
     rows = cursor.fetchall()
