@@ -94,7 +94,7 @@ def run_workflow(patient_id : str, current_task, analytics):
         file.write(response.model_dump_json(indent=2))
 
         while True:
-            analytics["total_tokens_used"] += response.usage.input_tokens+ response.usage.output_tokens
+            analytics["total_tokens_used"] += response.usage.input_tokens+response.usage.output_tokens
 
             #Anthropic tells us why generation stopped. A tool result should only be
             #sent when the assistant actually stopped to request one.
@@ -139,9 +139,10 @@ def run_workflow(patient_id : str, current_task, analytics):
             file.write(json.dumps(tool_outputs, indent=2))
             print("the message being sent is...", messages)
             response = run_agent(
-                system_instructions,
-                messages,
-                patient_id,
+                system_instructions=system_instructions,
+                task=current_task,
+                input_messages=messages,
+                patient=patient_id,
             )
 
             file.write("\n\n~~~~~NEXT RESPONSE~~~~~\n")

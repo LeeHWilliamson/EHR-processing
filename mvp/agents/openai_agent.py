@@ -90,6 +90,7 @@ def run_workflow(patient_id : str, current_task, analytics):
 
             response = run_agent(
                 input_items=tool_outputs,
+                task=current_task,
                 previous_response_id=response.id,
             )
 

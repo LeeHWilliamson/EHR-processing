@@ -61,7 +61,7 @@ def run_agent(task, curr_agent, patient_id, schema):
     #all tasks are stored in a json, load the entire dict with key = current_task
     
     try:
-        with open(MODULE_DIR / "tasks.json", "r") as file:
+        with open(MODULE_DIR / "tasks" / f"{task}" /f"{task}.json", "r") as file:
             tasks = json.load(file)
             current_task = tasks[task].copy()
     except:

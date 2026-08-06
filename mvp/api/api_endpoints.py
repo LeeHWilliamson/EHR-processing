@@ -4,8 +4,8 @@ They typically rely on decorator functions like
 
 '''
 from fastapi import FastAPI, HTTPException, Request
-from mvp.databases.schema_adapters import flat_v1
-from mvp.databases.schema_adapters import normalized_v1
+from ..databases.schema_adaptors import flat_v1
+from ..databases.schema_adaptors import normalized_v1
 import sqlite3
 from datetime import datetime, timezone
 import json

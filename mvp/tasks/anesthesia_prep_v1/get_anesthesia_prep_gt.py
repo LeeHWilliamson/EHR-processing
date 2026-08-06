@@ -62,6 +62,6 @@ def get_anesthesia_prep(patient_json = None):
     return list(patient_disqualifiers)
 
 if __name__ == "__main__":
-    with open("/home/leeha/Projects/EHR-processing/mvp/tests/test_data/test_patients/deceased_patient.json", "r") as file:
+    with open("/home/leeha/Projects/EHR-processing/mvp/tests/test_data/test_patients/surgery_disqualified.json", "r") as file:
         test_json = json.load(file)
     print(get_anesthesia_prep(test_json))

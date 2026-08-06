@@ -8,9 +8,11 @@ from ..tasks.medication_retrieval_v1.get_patient_meds import get_meds
 from ..evaluation.performance.calc_output_metrics import calc_metrics
 from ..evaluation.workflow.calc_workflow_metrics import analyze_workflow
 from ..databases.db_ops import load_patients_sqlite3 as load_patients
+from ..tasks import retrieve_gt
 import json
 import subprocess
 import time
+import argparse
 import requests
 from datetime import datetime, timezone
 
@@ -34,7 +36,7 @@ def generate_patients():
     )
 def launch_api():
     api_process = subprocess.Popen(
-        ["uvicorn", "mvp.api_endpoints:app", "--reload"],
+        ["uvicorn", "mvp.api.api_endpoints:app", "--reload"],
     )
     time.sleep(5)
     requests.get("http://127.0.0.1:8000/docs")
@@ -42,10 +44,14 @@ def launch_api():
 
 if __name__ == '__main__': 
     print("starting")
-    # generate patients
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--task", type=str, default = "medication_retrieval_v1")
+    args = parser.parse_args()
+    print(f"running {args.task}")
+    # # generate patients
     # print("calling synthea")
     # generate_patients()
-    # assemble patient ground truth
+    # # assemble patient ground truth
     # print("creating patient JSONs")
     # patient_paths = run_end_to_end(input_directory=r'synthea/output/csv', output_directory=r'synthea/output/json')
     
@@ -65,15 +71,16 @@ if __name__ == '__main__':
                     with open(f"{patient_folder_str}/patient.json", "r") as file:
                         patient = json.load(file)
                     #run agent, return analytics_dict and response_text
-                    analytics_dict = run_agent(task = "medication_retrieval_v1", curr_agent = agent, patient_id = patient["patient"]["id"], schema = schema)
+                    analytics_dict = run_agent(task = args.task, curr_agent = agent, patient_id = patient["patient"]["id"], schema = schema)
                     #analyze workflow compared to ideal workflow
                     workflow_metrics = analyze_workflow(analytics_dict)
                     analytics_dict["workflow_metrics"] = workflow_metrics
                     #get patient GT
-                    current_meds_gt = get_meds(patient)
-                    analytics_dict["patient_gt"] = current_meds_gt
+                    gt_dict = retrieve_gt.run(args.task, patient)
+                    # current_meds_gt = get_meds(patient)
+                    analytics_dict["patient_gt"] = gt_dict
                     #compare GT to response_text to calc output accuracy and get list of mistakes, update analytics_dict
-                    output_metrics = calc_metrics(current_meds_gt, analytics_dict["raw_response"])
+                    output_metrics = calc_metrics(gt_dict, analytics_dict["raw_response"])
                     analytics_dict["output_metrics"] = output_metrics
                     # all_analytics[patient["patient"]["id"]] = analytics_dict
                     #output analytics as json

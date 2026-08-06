@@ -11,7 +11,8 @@ def analyze_workflow(agent_analytics_dict):
     workflow_sequence_match = False
     ommitted_steps = set()
     added_steps = set()
-    with open("mvp/tasks.json", "r") as file:
+    task_filepath = Path(f"mvp/tasks/{agent_analytics_dict["task"]}/{agent_analytics_dict["task"]}.json")
+    with open(task_filepath, "r") as file:
         tasks_dict = json.load(file)
     #we definitely want to know if the exact order and tools used matched between agent output and ideal output
     #for that we need to compare the actual lists
