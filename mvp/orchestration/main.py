@@ -10,7 +10,6 @@ from ..evaluation.workflow.calc_workflow_metrics import analyze_workflow
 from ..databases.db_ops import load_patients_sqlite3 as load_patients
 import json
 import subprocess
-from pathlib import Path
 import time
 import requests
 from datetime import datetime, timezone

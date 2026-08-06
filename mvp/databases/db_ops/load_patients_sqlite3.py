@@ -2,10 +2,10 @@ import json
 import sqlite3
 from pathlib import Path
 import traceback
-from .databases.schema_adapters import flat_v1
+from ..schema_adaptors import flat_v1
 from ..rebuild_db import rebuild_db
 # from .insert_patient_sqlite3 import insert_patient
-from .databases.schema_adapters import normalized_v1
+from ..schema_adaptors import normalized_v1
 
 # DB_PATH = "/home/leeha/tools/sqlite/synth_ehr.db"
 # SCHEMA_NAMES = ["normalized_v1", "flat_v1"]

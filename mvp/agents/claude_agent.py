@@ -10,7 +10,6 @@ This script will
 
 Our task for the agent will be to return all medications that a patient is currently taking in structured JSON format
 '''
-from ..app import api_client
 import json
 from anthropic import Anthropic
 import os
@@ -18,6 +17,7 @@ import copy
 from datetime import datetime, timezone
 from uuid import uuid4
 from dotenv import load_dotenv #lets use utilize a .env file for dependency injection (in this case, our OpenAI API key)
+from .agent_tools import CLAUDE_TOOLS as TOOLS, TOOL_MAP
 
 load_dotenv()
 
@@ -25,50 +25,6 @@ client = Anthropic(
     api_key=os.getenv("ANTHROPIC_KEY")
 )
 
-
-'''
-~~~~~~TOOLS~~~~~~~~~~~
-Anthropic format
-'''
-TOOLS = [
-    {
-        "name": "get_patient",
-        "description": "Retrieve demographic information for a patient.",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "patient_id": {
-                    "type": "string",
-                    "description": "A patient's unique identifier."
-                }
-            },
-            "required": ["patient_id"]
-        }
-        
-    },
-    {
-        "name": "get_medications",
-        "description": "Retrieve all medication information associated with a single patient.",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "patient_id": {
-                    "type": "string",
-                    "description": "A patient's unique identifier."
-                }
-            },
-            "required": ["patient_id"]
-        }
-    }
-]
-
-'''
-TOOL MAP
-'''
-TOOL_MAP = {
-    "get_patient": api_client.get_patient,
-    "get_medications": api_client.get_medications,
-}
 
 #Convert task prompt into system instruction + message format expected by Anthropic
 #we are only using this for the initial prompt, so no need for assistant messages

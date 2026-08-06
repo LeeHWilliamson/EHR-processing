@@ -1,6 +1,6 @@
 '''
 This script compares the workflow followed by the agent to the ideal workflow lined out in the tasks's JSON
-input : dictionary output by agent workflow
+input : dictionary output by agent workflow (containing list of strs corresponding to queries run by agent)
 output : bool representing whether agent sequence exactly matched ideal sequence, list of ommitted steps, list of added steps
 '''
 

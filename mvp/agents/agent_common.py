@@ -2,7 +2,7 @@
 This module will serve as the orchestrator for the agents, it will handle calling agents, intializing task reports, 
 processing agent output, exposing tools, and possibly more.
 '''
-from ..app import api_client
+from ..api import api_client
 from .claude_agent import run_workflow as run_claude_agent
 from .openai_agent import run_workflow as run_brobot_agent
 import json

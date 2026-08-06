@@ -7,7 +7,7 @@ import sqlite3
 import pytest
 from pathlib import Path
 from mvp.databases.rebuild_db import rebuild_db
-from mvp.databases.schema_adaptors import flat_v1 as flat, normalized_v1 as normalized
+from mvp.databases.schema_adapters import flat_v1 as flat, normalized_v1 as normalized
 SCHEMAS = ["flat_v1", "normalized_v1"]
 TEST_DATA = Path(__file__).parent.parent / "test_data" / "test_patients"
 

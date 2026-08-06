@@ -1,0 +1,47 @@
+{   "HELP": {
+    "prompt": "LIST: structured messages for the AI agent, each message is a dict with keys 'role' and 'content'",
+    "ground_truth_source": "STR: the function whose results will be compared to AI agent's for performance evaluation",
+    "allowed_endpoints": "LIST: api endpoints that are accessible to the agent",
+    "ideal_workflow": "LIST: ordered sequence of API calls that correctly accomplishes the tast, any deviations will reduce performance score",
+    "workflow_evaluation": "STR: the method for assessing whether the ideal workflow was followed",
+    "results_evalutation": "STR: the method for assessing results accuracy"
+},
+    "anesthesia_prep_v1": {
+    "prompt": [
+         {
+            "role": "system",
+            "content": "You are an AI assistant with access to a synthetic Electronic Health Record API. Use the provided functions whenever you need patient information." 
+        },
+        {
+            "role": "user",
+            "content": "Your task is to determine whether the patient with the following id is eligible for an upcoming surgery."
+        },
+        {
+            "role": "user",
+            "content": "A patient is not eligible for this surgery if they are over 80 years old, or less than 15 years old. Or if they currently take warfarin. Or if they have an allergy to latex. Or if the are diabetic (prediabetic is fine)."
+        },
+        {
+            "role": "user",
+            "content": "If a patient is not eligible for surgery. Return a list of the descriptions of the medications, medical conditions, and allergy descriptions exactly as they are written in the database. The order of the items in the list does not matter. If the patient's age is a disqualifying factor as well include a string in this list, 'too young' if patient is less than 15 years old, 'too old' if patient is > 80."
+        },
+        {
+            "role": "user",
+            "content": "For example, if you find that a patient has diabetes X and takes warfarin, return ['diabetes X', 'warfarin'] or ['warfarin', 'diabetes X']"
+        },
+        {
+            "role": "user",
+            "content": "If a patient is eligible for surgery. Simply return a string saying 'This patient has no conditions that disqualify them from surgery.'"
+        }
+
+    ],
+    "ground_truth_source": "anesthesia_prep_v1_gt",
+    "allowed_endpoints": [
+      "get_patient", "get_medications", "get_encounters", "get_allergies", "get_careplans", "get_devices", "get_conditions", "get_immunizations", "get_medications", "get_procedures", "get_observations" 
+    ],
+    "ideal_workflow": [
+        "get_patient", "get_medications", "get_allergies", "get_conditions"
+    ],
+    "workflow_evaluation": "sequence_match",
+    "results_evaluation": "set_match"
+  }
+}
