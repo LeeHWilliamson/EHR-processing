@@ -13,8 +13,6 @@ Our task for the agent will be to return all medications that a patient is curre
 import json
 from anthropic import Anthropic
 import os
-import copy
-from datetime import datetime, timezone
 from uuid import uuid4
 from dotenv import load_dotenv #lets use utilize a .env file for dependency injection (in this case, our OpenAI API key)
 from .agent_tools import CLAUDE_TOOLS as TOOLS, TOOL_MAP
@@ -31,14 +29,37 @@ client = Anthropic(
 #current task format is designed for OpenAI use, so consists of system and user items
 #anthropic needs system instructions as separate arg
 #all else can just be sent in messages are
-def parse_task(prompt):
-    system_instructions = ""
+def parse_task(prompt, patient_id):
+    """Convert a task prompt to Anthropic's system/messages arguments.
+
+    A task may contain more than one system instruction. Anthropic expects those
+    instructions outside ``messages``, so preserve all of them in their original
+    order. The patient ID is part of the first user instruction and is appended
+    while building a new message list so the reusable task definition is not
+    mutated.
+    """
+    system_items = []
     messages = []
+    patient_id_added = False
+
     for prompt_item in prompt:
-        if prompt_item["role"] == "system":
-            system_instructions = prompt_item["content"]
+        role = prompt_item["role"]
+        content = prompt_item["content"]
+
+        if role == "system":
+            system_items.append(content)
+        elif role == "user":
+            if not patient_id_added:
+                content = f"{content}\n\nPatient ID: {patient_id}"
+                patient_id_added = True
+            messages.append({"role": "user", "content": content})
         else:
-            messages.append({"role" : "user" , "content" : prompt_item["content"]})
+            raise ValueError(f"Unsupported role in task prompt: {role!r}")
+
+    if not patient_id_added:
+        raise ValueError("Task prompt must contain at least one user message")
+
+    system_instructions = "\n\n".join(system_items)
     return system_instructions, messages
 
 '''
@@ -80,9 +101,9 @@ def run_workflow(patient_id : str, current_task, analytics):
     '''
     print(type(current_task))
     print(current_task)
-    system_instructions, initial_prompt = parse_task(current_task["prompt"])
-    #for the initial prompt, we must append the patient ID
-    initial_prompt[0]["content"] = initial_prompt[0]["content"] + patient_id
+    system_instructions, initial_prompt = parse_task(
+        current_task["prompt"], patient_id
+    )
     messages = initial_prompt
     '''
     The input will no longer be a single prompt, it will be the entire conversation history that we build as we go

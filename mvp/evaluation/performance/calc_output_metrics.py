@@ -16,9 +16,9 @@ def parse_agent_output(agent_output = None):
 We want all data to be strs right now for simpler comparison and to deal with totally left-field agent responses
 We also want our data to be ordered so we can compare item by item
 '''
-def process_lists(med_gt_list = None, agent_output = None):
+def process_lists(gt_list = None, agent_output = None):
     #patient GT data will often be numeric, so we need to convert to str
-    med_gt_strs = [str(med) for med in med_gt_list]
+    med_gt_strs = [str(med) for med in gt_list]
     #agent output is always a str so no need to convert that
 
     #we can create a dict of item : frequency for simpler comparisons
@@ -53,13 +53,13 @@ def calc_precision(true_positives: int, agent_actual: list[str], ground_truth: l
         precision = 0
     return precision
 
-def calc_metrics(med_gt_list, agent_output):
-    if med_gt_list is None or agent_output is None:
+def calc_metrics(gt_list, agent_output):
+    if gt_list is None or agent_output is None:
         return "please pass required arguments"
     '''
     If patient json contains no current meds, and agent returns no current meds, return early
     '''
-    if len(med_gt_list) == 0 and "No current meds found." in agent_output: #== "No current meds found.":
+    if len(gt_list) == 0 and "No" in agent_output:
         return {
             "precision": 1,
             "recall": 1,
@@ -68,7 +68,7 @@ def calc_metrics(med_gt_list, agent_output):
             "missed_items" : {}
         }
     #cast gt items to str, remove whitespaces and \n
-    expected = [str(item).strip() for item in med_gt_list]
+    expected = [str(item).strip() for item in gt_list]
     #if line.strip() will result in a Truthy str, then output it
     #.splitlines splits strs along newline chars, smarter than .split("\n")
     actual = [

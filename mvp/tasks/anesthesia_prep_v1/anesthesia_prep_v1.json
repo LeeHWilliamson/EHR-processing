@@ -22,11 +22,11 @@
         },
         {
             "role": "user",
-            "content": "If a patient is not eligible for surgery. Return a list of the descriptions of the medications, medical conditions, and allergy descriptions exactly as they are written in the database. The order of the items in the list does not matter. If the patient's age is a disqualifying factor as well include a string in this list, 'too young' if patient is less than 15 years old, 'too old' if patient is > 80."
+            "content": "If a patient is not eligible for surgery. Return the descriptions of the medications, medical conditions, and allergy descriptions exactly as they are written in the database. The order of the items does not matter. If the patient's age is a disqualifying factor as well include a string saying, 'too young' if patient is less than 15 years old, 'too old' if patient is > 80. Separate each disqualifer with a newline character."
         },
         {
             "role": "user",
-            "content": "For example, if you find that a patient has diabetes X and takes warfarin, return ['diabetes X', 'warfarin'] or ['warfarin', 'diabetes X']"
+            "content": "For example, if you find that a patient has diabetes X and takes warfarin, return 'diabetes X \n warfarin' or 'warfarin \n diabetes X'"
         },
         {
             "role": "user",

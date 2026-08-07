@@ -53,7 +53,7 @@ def get_anesthesia_prep(patient_json = None):
             patient_disqualifiers.add(condition["condition"])
     #check if they are taking a disqualifier medication at this time
     for medication in patient_json["medications"]:
-        if medication["description"] in disqualifiers_master and medication["endDate"]:
+        if medication["description"] in disqualifiers_master and not medication["endDate"]:
             patient_disqualifiers.add(medication["description"])
     #check if they have allergy to latex
     for allergy in patient_json["allergies"]:
@@ -62,6 +62,6 @@ def get_anesthesia_prep(patient_json = None):
     return list(patient_disqualifiers)
 
 if __name__ == "__main__":
-    with open("/home/leeha/Projects/EHR-processing/mvp/tests/test_data/test_patients/surgery_disqualified.json", "r") as file:
+    with open("/home/leeha/Projects/EHR-processing/synthea/output/json/8f903ea6-7e3d-db85-aa08-a70d197b9efc/patient.json", "r") as file:
         test_json = json.load(file)
     print(get_anesthesia_prep(test_json))

@@ -72,3 +72,241 @@
     "missed_items": {}
   }
 }
+{
+  "run_id": "anesthesia_prep_v1-20260807T165849.100299Z-94f1",
+  "task": "anesthesia_prep_v1",
+  "schema": "normalized_v1",
+  "agent": "open_ai",
+  "provider": "Open AI",
+  "model": "gpt-5",
+  "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc",
+  "datetime": "2026-08-07T16:58:49.100299+00:00",
+  "tools_workflow": [
+    "get_patient",
+    "get_medications",
+    "get_allergies",
+    "get_conditions"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": true,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 4,
+  "total_tokens_used": 8972,
+  "total_rows_retrieved": 52,
+  "raw_response": "This patient has no conditions that disqualify them from surgery.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "This patient has no conditions that disqualify them from surgery.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "anesthesia_prep_v1-20260807T165914.224477Z-d1c0",
+  "task": "anesthesia_prep_v1",
+  "schema": "flat_v1",
+  "agent": "open_ai",
+  "provider": "Open AI",
+  "model": "gpt-5",
+  "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc",
+  "datetime": "2026-08-07T16:59:14.224477+00:00",
+  "tools_workflow": [
+    "get_patient",
+    "get_medications",
+    "get_allergies",
+    "get_conditions"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": true,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 4,
+  "total_tokens_used": 8851,
+  "total_rows_retrieved": 52,
+  "raw_response": "This patient has no conditions that disqualify them from surgery.",
+  "patient_gt": [],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "This patient has no conditions that disqualify them from surgery.": 1
+    },
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "anesthesia_prep_v1-20260807T170647.952046Z-cd16",
+  "task": "anesthesia_prep_v1",
+  "schema": "normalized_v1",
+  "agent": "open_ai",
+  "provider": "Open AI",
+  "model": "gpt-5",
+  "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc",
+  "datetime": "2026-08-07T17:06:47.952046+00:00",
+  "tools_workflow": [
+    "get_patient",
+    "get_medications",
+    "get_allergies",
+    "get_conditions"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": true,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 4,
+  "total_tokens_used": 9011,
+  "total_rows_retrieved": 52,
+  "raw_response": "['too old', 'warfarin sodium 5 mg oral tablet', 'diabetes mellitus type 2 (disorder)']",
+  "patient_gt": [
+    "too old",
+    "diabetes mellitus type 2 (disorder)"
+  ],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "['too old', 'warfarin sodium 5 mg oral tablet', 'diabetes mellitus type 2 (disorder)']": 1
+    },
+    "missed_items": {
+      "too old": 1,
+      "diabetes mellitus type 2 (disorder)": 1
+    }
+  }
+}
+{
+  "run_id": "anesthesia_prep_v1-20260807T170713.885428Z-f92b",
+  "task": "anesthesia_prep_v1",
+  "schema": "flat_v1",
+  "agent": "open_ai",
+  "provider": "Open AI",
+  "model": "gpt-5",
+  "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc",
+  "datetime": "2026-08-07T17:07:13.885428+00:00",
+  "tools_workflow": [
+    "get_patient",
+    "get_medications",
+    "get_allergies",
+    "get_conditions"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": true,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 4,
+  "total_tokens_used": 9081,
+  "total_rows_retrieved": 52,
+  "raw_response": "['warfarin sodium 5 mg oral tablet', 'diabetes mellitus type 2 (disorder)', 'too old']",
+  "patient_gt": [
+    "too old",
+    "diabetes mellitus type 2 (disorder)"
+  ],
+  "output_metrics": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "hallucinated_items": {
+      "['warfarin sodium 5 mg oral tablet', 'diabetes mellitus type 2 (disorder)', 'too old']": 1
+    },
+    "missed_items": {
+      "too old": 1,
+      "diabetes mellitus type 2 (disorder)": 1
+    }
+  }
+}
+{
+  "run_id": "anesthesia_prep_v1-20260807T173048.044123Z-8968",
+  "task": "anesthesia_prep_v1",
+  "schema": "normalized_v1",
+  "agent": "open_ai",
+  "provider": "Open AI",
+  "model": "gpt-5",
+  "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc",
+  "datetime": "2026-08-07T17:30:48.044123+00:00",
+  "tools_workflow": [
+    "get_patient",
+    "get_medications",
+    "get_allergies",
+    "get_conditions"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": true,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 4,
+  "total_tokens_used": 9297,
+  "total_rows_retrieved": 52,
+  "raw_response": "too old\nwarfarin sodium 5 mg oral tablet\ndiabetes mellitus type 2 (disorder)",
+  "patient_gt": [
+    "diabetes mellitus type 2 (disorder)",
+    "warfarin sodium 5 mg oral tablet",
+    "too old"
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}
+{
+  "run_id": "anesthesia_prep_v1-20260807T173114.160656Z-0154",
+  "task": "anesthesia_prep_v1",
+  "schema": "flat_v1",
+  "agent": "open_ai",
+  "provider": "Open AI",
+  "model": "gpt-5",
+  "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc",
+  "datetime": "2026-08-07T17:31:14.160656+00:00",
+  "tools_workflow": [
+    "get_patient",
+    "get_medications",
+    "get_allergies",
+    "get_conditions"
+  ],
+  "workflow_metrics": {
+    "workflow_sequence_match": true,
+    "workflow_precision": 1.0,
+    "workflow_recall": 1.0,
+    "added_steps": [],
+    "ommitted_steps": []
+  },
+  "api_calls_made": 4,
+  "total_tokens_used": 9486,
+  "total_rows_retrieved": 52,
+  "raw_response": "too old\nwarfarin sodium 5 mg oral tablet\ndiabetes mellitus type 2 (disorder)",
+  "patient_gt": [
+    "diabetes mellitus type 2 (disorder)",
+    "warfarin sodium 5 mg oral tablet",
+    "too old"
+  ],
+  "output_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "hallucinated_items": {},
+    "missed_items": {}
+  }
+}

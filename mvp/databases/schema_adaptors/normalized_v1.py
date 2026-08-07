@@ -83,7 +83,9 @@ def insert_patient(conn, patient: dict):
     ]
 
     for table in child_tables:
+        print(table)
         for item in patient.get(table, []):
+            print(item)
             row = item.copy()
             row["patient_id"] = patient_id
             row["encounter"] = clean_fk(row["encounter"])
