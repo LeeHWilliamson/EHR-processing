@@ -2601,4 +2601,179 @@ Disqualifiers:
 
 too old
 warfarin sodium 5 mg oral tablet
-diabetes mellitus type 2 (disorder)
+diabetes mellitus type 2 (disorder){
+  "id": "msg_011CduNRQuuthd4z4EmJb6Px",
+  "container": null,
+  "content": [
+    {
+      "id": "toolu_016gE5Hj9jPAD7Sn9HD5192y",
+      "caller": {
+        "type": "direct"
+      },
+      "input": {
+        "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc"
+      },
+      "name": "get_medications",
+      "type": "tool_use"
+    }
+  ],
+  "model": "claude-sonnet-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "tool_use",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 759,
+    "output_tokens": 80,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": null,
+    "service_tier": "standard"
+  }
+}
+
+~~~~~TOOL OUTPUTS~~~~~
+[
+  {
+    "type": "tool_result",
+    "tool_use_id": "toolu_016gE5Hj9jPAD7Sn9HD5192y",
+    "content": "[{\"id\": \"med_39ea5994-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-08d1-61a5878762e2\", \"description\": \"warfarin sodium 5 mg oral tablet\", \"code\": \"2001499\", \"reason\": null, \"startDate\": \"1996-07-03\", \"endDate\": null}, {\"id\": \"med_39ea5a0c-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-0992-420a01c4825f\", \"description\": \"{7 (ethinyl estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Trinessa 28 Day]\", \"code\": \"751905\", \"reason\": null, \"startDate\": \"2016-02-02\", \"endDate\": \"2017-01-27\"}, {\"id\": \"med_39ea5a3e-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-18dd-1017ca7c592d\", \"description\": \"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (inert ingredients 1 MG Oral Tablet) } Pack [Natazia 28 Day]\", \"code\": \"978950\", \"reason\": null, \"startDate\": \"2017-01-27\", \"endDate\": \"2018-01-22\"}, {\"id\": \"med_39ea5a5c-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-6c27-29631168a60e\", \"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"reason\": null, \"startDate\": \"2017-04-04\", \"endDate\": \"2017-04-29\"}, {\"id\": \"med_39ea5a7a-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-55e6-4428957401e5\", \"description\": \"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (inert ingredients 1 MG Oral Tablet) } Pack [Natazia 28 Day]\", \"code\": \"978950\", \"reason\": null, \"startDate\": \"2018-01-22\", \"endDate\": \"2019-01-17\"}, {\"id\": \"med_39ea5a8e-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-ed06-328af3d588cd\", \"description\": \"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (inert ingredients 1 MG Oral Tablet) } Pack [Natazia 28 Day]\", \"code\": \"978950\", \"reason\": null, \"startDate\": \"2020-01-17\", \"endDate\": \"2021-01-11\"}, {\"id\": \"med_39ea5aa2-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-b814-5dcc7e4afb4a\", \"description\": \"Naproxen sodium 220 MG Oral Tablet\", \"code\": \"849574\", \"reason\": null, \"startDate\": \"2020-06-09\", \"endDate\": \"2020-07-22\"}, {\"id\": \"med_39ea5ab6-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-e250-dc16a007f727\", \"description\": \"21 DAY ethinyl estradiol 0.000625 MG/HR / etonogestrel 0.005 MG/HR Vaginal System [NuvaRing]\", \"code\": \"1367439\", \"reason\": null, \"startDate\": \"2021-01-11\", \"endDate\": \"2021-02-23\"}, {\"id\": \"med_39ea5aca-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-5efd-b17a50110634\", \"description\": \"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet\", \"code\": \"562251\", \"reason\": \"Viral sinusitis (disorder)\", \"startDate\": \"2021-05-15\", \"endDate\": \"2021-06-03\"}, {\"id\": \"med_39ea5ade-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-8e62-d4e07d03873b\", \"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2023-05-17\", \"endDate\": \"2023-05-17\"}, {\"id\": \"med_39ea5af2-9281-11f1-a408-00155da586dc\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-ee63-7a74bde410c4\", \"description\": \"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution\", \"code\": \"1043400\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2024-03-19\", \"endDate\": \"2024-04-04\"}]"
+  }
+]
+
+~~~~~NEXT RESPONSE~~~~~
+{
+  "id": "msg_011CduNRcNVDkJMDTR3gHNzW",
+  "container": null,
+  "content": [
+    {
+      "citations": null,
+      "text": "2001499",
+      "type": "text"
+    }
+  ],
+  "model": "claude-sonnet-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3422,
+    "output_tokens": 5,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": null,
+    "service_tier": "standard"
+  }
+}
+
+~~~~~FINAL RESULT~~~~~
+2001499{
+  "id": "msg_011CduNSiVcbRjy5XZAG3iEa",
+  "container": null,
+  "content": [
+    {
+      "signature": "ErcCCokBCBAYAipA8bkFtuRq/TtSrQbfFgIvrIGaCgXZ0v2y1FyJhwiqO66GaNBSRwfyUFS+hgZ+XD4rUj2yKD7ukwMnpdszoYsRezIPY2xhdWRlLXNvbm5ldC01OABCCHRoaW5raW5nWiRjNDc4M2YwYy04YmU1LTRiOTYtOGQwNC0zNzczZmZhZjhlYzYSDEzQASzVpJhih2Z2GxoMcvjAttO8Dr2O9kjVIjAAr81KLoBjoqE+rKHvMC5mhQxxHTsDNsSB/5ueyfCO08rHNy9TQCtcDyjyF7v47b4qWzuDxLUoGgBm2JL9QNlMrknUa/Pg8tOdt7bNECQNHAW8DJNUkue0FDewFnlAmaht6y62naGqY88+U7UWgm1tFsOAspEJwYamFQuNbT16oJ4juGN014UWTo7WVeUYAQ==",
+      "thinking": "",
+      "type": "thinking"
+    },
+    {
+      "id": "toolu_01UXrN2A7CJ3jw1cm3Le8hdV",
+      "caller": {
+        "type": "direct"
+      },
+      "input": {
+        "patient_id": "pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc"
+      },
+      "name": "get_medications",
+      "type": "tool_use"
+    }
+  ],
+  "model": "claude-sonnet-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "tool_use",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 759,
+    "output_tokens": 103,
+    "output_tokens_details": {
+      "thinking_tokens": 22
+    },
+    "server_tool_use": null,
+    "service_tier": "standard"
+  }
+}
+
+~~~~~TOOL OUTPUTS~~~~~
+[
+  {
+    "type": "tool_result",
+    "tool_use_id": "toolu_01UXrN2A7CJ3jw1cm3Le8hdV",
+    "content": "[{\"description\": \"warfarin sodium 5 mg oral tablet\", \"code\": \"2001499\", \"id\": \"med_39ea5994-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-08d1-61a5878762e2\", \"reason\": null, \"startDate\": \"1996-07-03\", \"endDate\": null, \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"{7 (ethinyl estradiol 0.035 MG / norgestimate 0.18 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.215 MG Oral Tablet) / 7 (ethinyl estradiol 0.035 MG / norgestimate 0.25 MG Oral Tablet) / 7 (inert ingredients 1 MG Oral Tablet) } Pack [Trinessa 28 Day]\", \"code\": \"751905\", \"id\": \"med_39ea5a0c-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-0992-420a01c4825f\", \"reason\": null, \"startDate\": \"2016-02-02\", \"endDate\": \"2017-01-27\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (inert ingredients 1 MG Oral Tablet) } Pack [Natazia 28 Day]\", \"code\": \"978950\", \"id\": \"med_39ea5a3e-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-18dd-1017ca7c592d\", \"reason\": null, \"startDate\": \"2017-01-27\", \"endDate\": \"2018-01-22\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"Acetaminophen 325 MG Oral Tablet\", \"code\": \"313782\", \"id\": \"med_39ea5a5c-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-6c27-29631168a60e\", \"reason\": null, \"startDate\": \"2017-04-04\", \"endDate\": \"2017-04-29\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (inert ingredients 1 MG Oral Tablet) } Pack [Natazia 28 Day]\", \"code\": \"978950\", \"id\": \"med_39ea5a7a-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-55e6-4428957401e5\", \"reason\": null, \"startDate\": \"2018-01-22\", \"endDate\": \"2019-01-17\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"{5 (dienogest 2 MG / estradiol valerate 2 MG Oral Tablet) / 17 (dienogest 3 MG / estradiol valerate 2 MG Oral Tablet) / 2 (estradiol valerate 1 MG Oral Tablet) / 2 (estradiol valerate 3 MG Oral Tablet) / 2 (inert ingredients 1 MG Oral Tablet) } Pack [Natazia 28 Day]\", \"code\": \"978950\", \"id\": \"med_39ea5a8e-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-ed06-328af3d588cd\", \"reason\": null, \"startDate\": \"2020-01-17\", \"endDate\": \"2021-01-11\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"Naproxen sodium 220 MG Oral Tablet\", \"code\": \"849574\", \"id\": \"med_39ea5aa2-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-b814-5dcc7e4afb4a\", \"reason\": null, \"startDate\": \"2020-06-09\", \"endDate\": \"2020-07-22\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"21 DAY ethinyl estradiol 0.000625 MG/HR / etonogestrel 0.005 MG/HR Vaginal System [NuvaRing]\", \"code\": \"1367439\", \"id\": \"med_39ea5ab6-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-e250-dc16a007f727\", \"reason\": null, \"startDate\": \"2021-01-11\", \"endDate\": \"2021-02-23\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet\", \"code\": \"562251\", \"id\": \"med_39ea5aca-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-5efd-b17a50110634\", \"reason\": \"Viral sinusitis (disorder)\", \"startDate\": \"2021-05-15\", \"endDate\": \"2021-06-03\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"sodium fluoride 0.0272 MG/MG Oral Gel\", \"code\": \"1535362\", \"id\": \"med_39ea5ade-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-8e62-d4e07d03873b\", \"reason\": \"Patient referral for dental care (procedure)\", \"startDate\": \"2023-05-17\", \"endDate\": \"2023-05-17\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}, {\"description\": \"Acetaminophen 21.7 MG/ML / Dextromethorphan Hydrobromide 1 MG/ML / doxylamine succinate 0.417 MG/ML Oral Solution\", \"code\": \"1043400\", \"id\": \"med_39ea5af2-9281-11f1-a408-00155da586dc\", \"encounter\": \"enc_8f903ea6-7e3d-db85-ee63-7a74bde410c4\", \"reason\": \"Acute bronchitis (disorder)\", \"startDate\": \"2024-03-19\", \"endDate\": \"2024-04-04\", \"patient_id\": \"pat_8f903ea6-7e3d-db85-aa08-a70d197b9efc\"}]"
+  }
+]
+
+~~~~~NEXT RESPONSE~~~~~
+{
+  "id": "msg_011CduNSuRw8DV6Aq5CnF5tG",
+  "container": null,
+  "content": [
+    {
+      "citations": null,
+      "text": "2001499",
+      "type": "text"
+    }
+  ],
+  "model": "claude-sonnet-5",
+  "role": "assistant",
+  "stop_details": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "type": "message",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 3446,
+    "output_tokens": 5,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": null,
+    "service_tier": "standard"
+  }
+}
+
+~~~~~FINAL RESULT~~~~~
+2001499
