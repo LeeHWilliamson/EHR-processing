@@ -48,12 +48,12 @@ if __name__ == '__main__':
     parser.add_argument("--task", type=str, default = "medication_retrieval_v1")
     args = parser.parse_args()
     print(f"running {args.task}")
-    # # # generate patients
-    # print("calling synthea")
-    # generate_patients()
-    # # # assemble patient ground truth
-    # print("creating patient JSONs")
-    # patient_paths = run_end_to_end(input_directory=r'synthea/output/csv', output_directory=r'synthea/output/json')
+    # generate patients
+    print("calling synthea")
+    generate_patients()
+    # assemble patient ground truth
+    print("creating patient JSONs")
+    patient_paths = run_end_to_end(input_directory=r'synthea/output/csv', output_directory=r'synthea/output/json')
     
     #launch app
     print("launching DB")

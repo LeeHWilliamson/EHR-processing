@@ -1,7 +1,7 @@
 # Synth-EHR
 
-## Is your AI agent HIPPA compliant?
-This is somewhat of a trick question. Assigning any all-encompassing assessment to an AI agent in a production setting can be misleading because, as many professionals who have been working with AI agents have found, even the most intelligent models simply cannot promise get it right every time. This is because even the perfect AI agent can be limited by the other aspects of its workflow. The data it's given to work with, the prompt and task that are passed to it, and the tools it has available. Thus, to demonstrate whether an AI agent can be safely and effectively deployed in an enterprise system, these aspects need to be isolated and controlled for as much as the AI agent itself.
+## Is your AI agent HIPAA compliant?
+This is somewhat of a trick question. Assigning any all-encompassing assessment to an AI agent in a production setting can be misleading because, as many professionals who have been working with AI agents have found, even the most intelligent models simply cannot promise to get it right every time. This is because even the perfect AI agent can be limited by the other aspects of its workflow. The data it's given to work with, the prompt and task that are passed to it, and the tools it has available. Thus, to demonstrate whether an AI agent can be safely and effectively deployed in an enterprise system, these aspects need to be isolated and controlled for as much as the AI agent itself.
 
 ## Purpose
 Synth-EHR is an application for evaluating AI Agents, focusing on performance and compliance in clinical settings. This application emphasizes user control over the following aspects of the clinical workflow
@@ -15,7 +15,7 @@ In essence, this application allows the user to easily create the setting they n
 ## At a glance
 This tool is intended to help put medical staff, leadership, compliance officers, and technical staff all on the same page when it comes to discussing risk involved with implementing AI agents for tasks that involve protected medical data. It does this through 3 major design choices
 - Enabling users to recreate their own electronic medical record systems without exposing protected patient health data
-- Generating patient health records using data-based models of disease progression, thus generating realistic records while preserving the exact sequence of events that led to any single event in the patient's health history
+- Generating patient health records using rule-based models of disease progression, thus generating realistic records while preserving the exact sequence of events that led to any single event in the patient's health history
 - Alllowing users from all backgrounds to easily define customized tasks that assess agent performance
 
 This tool allows users to easily create large numbers of realistic patients, organize and distribute patient data across customizable databases, design custom tools for accessing patient data, assign AI agents with data tasks, and intuitively measure and visualize agent accuracy, workflow adherence, token usage, and more.
@@ -31,7 +31,7 @@ Determining both of these points for a single patient can be time-intensive. Doi
 
 This application bridges that gap by using research-backed models of disease progression. Each model used, and each step this model took, in generating a patient is recorded, and this ground truth is contained in a single datastructure for each patient. From this ground truth we then assemble a FHIR-formatted electronic health record, and allow the user to freely modify this record to fit their organization's approach. By assembling patients in this way, we can objectively determine the ideal outcome for a variety of clinical tasks at scale.
 
-### Assessing AI performance in authentic medical contexts (i.e. did the steps the agent followed protect patient privacy?)
+### Assessing AI performance in authentic medical contexts (i.e. does it still work correctly in your environment?)
 As mentioned previously, it is not enough to know that an AI agent is generally capable, it needs to be audited in a controlled setting that closely matches a provider's unique context. Thus, the setting for testing an AI agent must
 - Utilize patient health records that reflect a provider's patient population
 - Format storage and access of these health records in a way that matches the provider's actual setup

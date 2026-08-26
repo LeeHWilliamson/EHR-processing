@@ -49,9 +49,9 @@ def csv_to_record(csv_path=None):
 
 def load_patients(data_directory):
     patients_csv = f"{data_directory}/patients.csv"
-
-    with open(f"schemas/canonical_patient.json") as file:
-        patient_schema = json.load(file) #create dict for each patient, key is patient id, val is all other data
+    print(patients_csv)
+    # with open(f"schemas/canonical_patient.json") as file:
+    #     patient_schema = json.load(file) #create dict for each patient, key is patient id, val is all other data
 
 
     patients_df = pandas.read_csv(patients_csv)
