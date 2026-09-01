@@ -14,7 +14,7 @@ CURR_RUN_DIR = WEBAPP_DIR / "patients" / "current_run"
 '''
 This function will call synthea with all args specified by the user
 '''
-def run_synthea(synthea_path: Path, count: int, state: str, city: str | None = None, min_age: int | None = None, max_age: int | None = None):
+def run_synthea(synthea_path: Path, count: int, state: str, city: str | None = None, min_age: int | None = None, max_age: int | None = None, keep_module_path: Path | None = None):
     print(synthea_path)
     if min_age is None or min_age < 1:
         min_age = 1
@@ -30,6 +30,9 @@ def run_synthea(synthea_path: Path, count: int, state: str, city: str | None = N
     ]
     if city is not None:
         cmd.append(city)
+    if keep_module_path is not None:
+        cmd.append('-k')
+        cmd.append(keep_module_path)
         
     subprocess.run(cmd, cwd = synthea_path, check = True)
     
@@ -45,7 +48,7 @@ def parse_args():
     parser.add_argument("--city", type=str, help = "optional, name of city to sample from")
     parser.add_argument("--min-age", type=int, help = "minimum age of individuals in population (min of 1)")
     parser.add_argument("--max-age", type=int, help = "maximum age of individuals in population (max of 100)")
-
+    parser.add_argument("--keep-module-path", type=Path)
     args = parser.parse_args()
 
     #support user relative paths (i.e. ~) then convert that to an absolute path

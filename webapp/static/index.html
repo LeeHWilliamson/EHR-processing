@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/static/css/main.css">
+<script src="/static/javascript/patient_generator.js" defer></script>
+
+<h1>Synth-EHR Demo</h1>
+<form id="patient-form">
+    <input id="synthea-path" type="text" placeholder="Generator Path">
+    
+    <input id="count" type="number" value="1" min="1">
+
+    <input id="state" type="text" placeholder="State">
+
+    <input id="city" type="text" placeholder="City">
+
+    <input id="min-age" type="number" placeholder="Minimum age">
+
+    <input id="max-age" type="number" placeholder="Maximum age">
+
+    <input id="condition" type="text" placeholder="Condition">
+
+    <button type="submit">Generate Patients</button>
+</form>
+
+<p id="result"></p>
