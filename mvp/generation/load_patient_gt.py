@@ -8,6 +8,7 @@ import json
 import pandas
 import uuid
 import csv
+from pathlib import Path
 #we will use some constant paths for our schemas and datafiles for now, we import all clinical data
 patient_template = 'schemas/patient_template.json'
 patients_output_path = 'sample_data/patients.json'
@@ -214,9 +215,11 @@ def run_end_to_end(input_directory="sample_data", output_directory="patients"):
     for key, value in patients.items():
         # os.mkdir(f"patients/{key}")
         os.makedirs(f"{output_directory}/{key}", exist_ok=True)
-        with open(f"{output_directory}/{key}/patient.json", 'w') as file:
+        output_dir_path = Path(output_directory)
+        path = (output_dir_path / f"{value["patient"]["id"]}.json")
+        with open(path, 'w') as file:
             json.dump(value, file, indent=2)
-        patient_paths.append(f"{output_directory}/{key}/patient.json")
+        patient_paths.append(path)
     return patient_paths
 
 if __name__ == "__main__":
