@@ -214,7 +214,7 @@ def run_end_to_end(input_directory="sample_data", output_directory="patients"):
     patient_paths = []
     for key, value in patients.items():
         # os.mkdir(f"patients/{key}")
-        os.makedirs(f"{output_directory}/{key}", exist_ok=True)
+        # os.makedirs(f"{output_directory}/{key}", exist_ok=True)
         output_dir_path = Path(output_directory)
         path = (output_dir_path / f"{value["patient"]["id"]}.json")
         with open(path, 'w') as file:

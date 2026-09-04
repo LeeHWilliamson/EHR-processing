@@ -23,9 +23,10 @@ def run_synthea(synthea_path: Path, count: int, state: str, city: str | None = N
     if max_age is None or max_age > 100 or max_age < min_age:
         max_age = 100
     #if we have not yet made a keep module for this attribute, make one real quick
-    keep_module_path = (WEBAPP_DIR / "debug_keep_modules" / f"keep_{keep_attribute}.json")
-    if not keep_module_path.exists():
-        keep_module_path = generate_keep_module(keep_attribute)
+    if keep_attribute is not None:
+        keep_module_path = (WEBAPP_DIR / "debug_keep_modules" / f"keep_{keep_attribute}.json")
+        if not keep_module_path.exists():
+            keep_module_path = generate_keep_module(keep_attribute)
 
 
     cmd = [
@@ -37,7 +38,7 @@ def run_synthea(synthea_path: Path, count: int, state: str, city: str | None = N
     ]
     if city is not None:
         cmd.append(city)
-    if keep_module_path is not None:
+    if keep_attribute is not None:
         cmd.append('-k')
         cmd.append(keep_module_path)
         
@@ -55,7 +56,7 @@ def parse_args():
     parser.add_argument("--city", type=str, help = "optional, name of city to sample from")
     parser.add_argument("--min-age", type=int, help = "minimum age of individuals in population (min of 1)")
     parser.add_argument("--max-age", type=int, help = "maximum age of individuals in population (max of 100)")
-    parser.add_argument("--keep-attribute", type=Path)
+    parser.add_argument("--keep-attribute", type=str)
     args = parser.parse_args()
 
     #support user relative paths (i.e. ~) then convert that to an absolute path
@@ -73,23 +74,28 @@ def parse_args():
 
     return args
 
-def generate(args):
-    run_synthea(synthea_path = args.synthea_path,
-                    count = args.count,
-                    state = args.state, 
-                    city = args.city, 
-                    min_age = args.min_age, 
-                    max_age = args.max_age,
-                    keep_attribute= args.keep_attribute)
+def generate(generation_request):
+    run_synthea(synthea_path = generation_request.synthea_path,
+                    count = generation_request.count,
+                    state = generation_request.state, 
+                    city = generation_request.city, 
+                    min_age = generation_request.min_age, 
+                    max_age = generation_request.max_age,
+                    keep_attribute= generation_request.keep_attribute)
     patient_paths = create_simplified_patient_jsons(CURR_RUN_DIR / "csv", CURR_RUN_DIR / "json")
     for path in patient_paths:
-        with open(path, "w") as patient_file:
+        with open(path, "r") as patient_file:
             patient_dict = json.load(patient_file)
-        patient_dict["metadata"] = [args.keep_attribute]
+        patient_dict["metadata"] = [generation_request.keep_attribute] if generation_request.keep_attribute else []
+        with open(path, "w") as patient_file:
+            json.dump(patient_dict, patient_file, indent = 2)
 
-def run():
-    args = parse_args()
-    generate(args)
+def run(generation_request):
+    if generation_request:
+        request_fields = generation_request
+    else:
+        generation_request = parse_args()
+    generate(generation_request)
     
 
 

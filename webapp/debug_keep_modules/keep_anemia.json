@@ -1,0 +1,37 @@
+{
+  "name": "keep_anemia",
+  "remarks": [],
+  "states": {
+    "Initial": {
+      "type": "Initial",
+      "name": "Initial",
+      "conditional_transition": [
+        {
+          "transition": "Keep",
+          "condition": {
+            "condition_type": "Or",
+            "conditions": [
+              {
+                "condition_type": "Attribute",
+                "attribute": "anemia",
+                "operator": "is not nil"
+              }
+            ]
+          }
+        },
+        {
+          "transition": "Terminal"
+        }
+      ]
+    },
+    "Terminal": {
+      "type": "Terminal",
+      "name": "Terminal"
+    },
+    "Keep": {
+      "type": "Terminal",
+      "name": "Keep"
+    }
+  },
+  "gmf_version": 2
+}

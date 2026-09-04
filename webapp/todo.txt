@@ -5,4 +5,24 @@ Store metadata output from patient generation X
 ***Develop GUI for passing params***
 Develop function for generating single patient with keepPatient module
 
-FINISH INCORPORATING METADATA ENTITY IN GENERATED PATIENTS, UPDATE generate_patients.run() so it can handle JSONs
+FINISH INCORPORATING METADATA ENTITY IN GENERATED PATIENTS, UPDATE generate_patients.run() so it can handle JSONsX
+
+Censor data:
+select what fields do not make it from GT -> DB
+- specific entity field
+- entire condition history
+
+Design tools
+
+
+Inject noise:
+jitter observations
+    -randomly
+    -specific obs
+    -that led to specific condition
+shuffle timeline
+    -randomly alter dates
+    -that led to specific condition
+add spurious diagnosis
+alter existing diagnosis
+

@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from ..generate_patients.generate_patients import run_synthea
+from ..generate_patients.generate_patients import run as generate_patients
 
 app = FastAPI()
 '''
@@ -25,7 +25,7 @@ class PatientGenerationRequest(BaseModel): #run synthea
     city: str | None = None
     min_age: int | None = None
     max_age: int | None = None
-    keep_condition: str | None = None
+    keep_attribute: str | None = None
 
 @app.get("/")
 def home():
@@ -34,6 +34,4 @@ def home():
 @app.post("/generate")
 def generate(request: PatientGenerationRequest):
     print(request)
-    run_synthea(request.synthea_path, request.count, 
-                request.state, request.city, request.min_age,
-                request.max_age, request.keep_condition)
+    generate_patients(request)

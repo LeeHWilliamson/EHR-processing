@@ -16,7 +16,7 @@ document
             city: document.getElementById("city").value || null,
             min_age: Number(document.getElementById("min-age").value) || null,
             max_age: Number(document.getElementById("max-age").value) || null,
-            condition: document.getElementById("condition").value || null,
+            keep_attribute: document.getElementById("keep-attribute").value || null,
         };
 
         //fetch is a browser api for making HTTP requests, we send one to our generate route here
