@@ -3,8 +3,13 @@ from fastapi import FastAPI, HTTPException, Request
 #which the browser then interprets
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 from pydantic import BaseModel
 from ..generate_patients.generate_patients import run as generate_patients
+from ..generate_patients.patient_tile import generate_tile_summary
+
+WEBAPP_DIR = Path(__file__).resolve().parent.parent
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "json"
 
 app = FastAPI()
 '''
@@ -27,9 +32,18 @@ class PatientGenerationRequest(BaseModel): #run synthea
     max_age: int | None = None
     keep_attribute: str | None = None
 
+
 @app.get("/")
 def home():
     return FileResponse("webapp/static/index.html")
+
+@app.get("/patients")
+def get_patients():
+    return generate_tile_summary()
+
+# @app.get("/patients/{patient_id}/tile")
+# def get_patient_tile(patient_ids: list[str]):
+#     return generate_tile_summary(patient_ids)
 
 @app.post("/generate")
 def generate(request: PatientGenerationRequest):

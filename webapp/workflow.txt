@@ -1,0 +1,21 @@
+Patient generation
+User generates <= 10 patients which are outputted as JSON objects and rendered as tiles on same page
+user steps:
+    user sets overall settings (count, city, state, age range, how far back medical record should go)
+    user sets how many patients they want with x condition (max 1 condition per patient, can set a condition for each patient if they want)
+generates tile for each patient, organized by keep condition (denoted by colored border with flag text)
+    each tile contains name, gender, birthdate, mousing over creates little extended view that shows this info + patient id and disorders + date ranges
+    each tile also has a button for removing patient, regenerating patient (default settings, same settings, new keep setting), downloading patient
+    clicking on patient tile zooms in on that patient: 
+    brings to a page for that patient
+    page contains condensed JSON (list of all entity entries, each as 1-2 line description, reason)
+    page has option for loading entire JSON
+    stretch goal: patient timeline
+how format data exposure?
+noise injection?
+tool design?
+task design?
+    for demo, we ask for ideal workflow (optional), but we definitely ask user to define some concepts that the AI should pick up on
+agent prompting and calling?
+scoring?
+showing data?

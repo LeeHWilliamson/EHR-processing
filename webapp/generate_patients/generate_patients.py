@@ -86,7 +86,8 @@ def generate(generation_request):
     for path in patient_paths:
         with open(path, "r") as patient_file:
             patient_dict = json.load(patient_file)
-        patient_dict["metadata"] = [generation_request.keep_attribute] if generation_request.keep_attribute else []
+        patient_dict["metadata"] = {}
+        patient_dict["metadata"]["keep_attributes"] = [generation_request.keep_attribute] if generation_request.keep_attribute else []
         with open(path, "w") as patient_file:
             json.dump(patient_dict, patient_file, indent = 2)
 

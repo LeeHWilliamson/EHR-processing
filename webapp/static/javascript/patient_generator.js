@@ -2,7 +2,7 @@
 document
     .getElementById("patient-form") //find by htmlid
     /*
-    .addEventListener creates water for submit event on html doc
+    .addEventListener registers listener for submit event on patient-form element
     then we use => to define a function
     */
     .addEventListener("submit", async (event) => { 
@@ -29,9 +29,52 @@ document
             body: JSON.stringify(body) //convert javascript object to JSON
         });
 
-        const result = await response.json(); //convert response to JSON
+        const result = await response.json(); //parse JSON response body to JavaScript object
 
-            //the response.ok ? is essentially saying 'if response.ok: patients generated else: stringify result'
-        document.getElementById("result").textContent =
-            response.ok ? "Patients generated!" : JSON.stringify(result);
+
+        if (response.ok) {
+            document.getElementById("result").textContent = "Patients generated!";
+            await loadPatients();
+        }
+        else {
+            document.getElementById("result").textContent = JSON.stringify(result);
+        }
     });
+
+async function loadPatients() {
+    const response = await fetch("/patients");
+    
+    if (!response.ok) {
+        console.error("Failed to load patients");
+        return;
+    }
+    
+    const patients = await response.json();
+
+    const tileContainer = document.getElementById("patient-tiles");
+
+    tileContainer.innerHTML = "";
+
+    for (const patient of patients) {
+        const tile = document.createElement("div");
+
+        tile.className = "patient-tile";
+
+        tile.innerHTML = `
+            <h3>${patient.first_name} ${patient.last_name}</h3>
+            <p>DOB: ${patient.dob}</p>
+            <p>Gender: ${patient.gender}</p>
+        
+            <div class="patient-details">
+                <p>Active Conditions: ${patient.conditions}</p>
+                <p>Active Careplans: ${patient.careplans}</p>
+                <p>Current Medications: ${patient.medications}</p>
+                <p>Allergies: ${patient.allergies}</p>
+            </div>
+        `;
+
+        tileContainer.appendChild(tile);
+    }
+}
+
+// loadPatients();

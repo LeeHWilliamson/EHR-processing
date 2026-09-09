@@ -70,6 +70,8 @@ def load_patients(data_directory):
         patients[row.Id]["patient"]["lastName"] = row.LAST
         patients[row.Id]["patient"]["birthdate"] = row.BIRTHDATE
         patients[row.Id]["patient"]["deathdate"] = row.DEATHDATE
+        patients[row.Id]["patient"]["race"] = row.RACE
+        patients[row.Id]["patient"]["ethnicity"] = row.ETHNICITY
         #if patient is not deceased (has no deathdate), record their deathdate as None
         if type(patients[row.Id]["patient"]["deathdate"]) == float:
             patients[row.Id]["patient"]["deathdate"] = None
@@ -103,23 +105,25 @@ def load_fields(input_directory, patients_no_fields):
     if os.path.exists(allergies_csv) and os.path.isfile(allergies_csv):
         allergies_df = pandas.read_csv(allergies_csv)
         for row in allergies_df.itertuples(index=True):
-            allergyID = f"all_{uuid.uuid1()}"
-            # patients[row.PATIENT]["patient"]["entities"].append(allergyID)
-            patients[row.PATIENT]["allergies"].append({"id": allergyID, "start": row.START, "stop" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION})
+            if row.PATIENT in patients:
+                allergyID = f"all_{uuid.uuid1()}"
+                # patients[row.PATIENT]["patient"]["entities"].append(allergyID)
+                patients[row.PATIENT]["allergies"].append({"id": allergyID, "start": row.START, "stop" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION, "reaction" : row.REACTION1, "severity" : row.SEVERITY1})
 
     #load careplans
     careplans_df = pandas.read_csv(careplans_csv)
     for row in careplans_df.itertuples(index=True):
         careplanID = "care_" + row.Id
         # patients[row.PATIENT]["patient"]["entities"].append(careplanID)
-        patients[row.PATIENT]["careplans"].append({"id" : careplanID, "startDate" : row.START, "endDate" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION, "reasonDescription" : row.REASONDESCRIPTION})
+        patients[row.PATIENT]["careplans"].append({"id" : careplanID, "startDate" : row.START, "endDate" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION, "code" : row.CODE, "reasonDescription" : row.REASONDESCRIPTION, "reasonCode" : row.REASONCODE})
 
     #load devices
     devices_df = pandas.read_csv(devices_csv)
     for row in devices_df.itertuples(index=True):
-        devicesID = f"dev_{uuid.uuid1()}"
-        # patients[row.PATIENT]["patient"]["entities"].append(devicesID)
-        patients[row.PATIENT]["devices"].append({"id": devicesID, "startDate" : row.START, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION})
+        if row.PATIENT in patients:
+            devicesID = f"dev_{uuid.uuid1()}"
+            # patients[row.PATIENT]["patient"]["entities"].append(devicesID)
+            patients[row.PATIENT]["devices"].append({"id": devicesID, "startDate" : row.START, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION, "code" : row.CODE})
 
     #load encounters
     encounters_df = pandas.read_csv(encounters_csv)
@@ -130,7 +134,7 @@ def load_fields(input_directory, patients_no_fields):
         endTime = endDateTime[1][:-1]
         encountersID = "enc_" + row.Id
         # patients[row.PATIENT]["patient"]["entities"].append(encountersID)
-        patients[row.PATIENT]["encounters"].append({"id" : encountersID, "type" : row.ENCOUNTERCLASS, "description" : row.DESCRIPTION, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0], "startTime" : startTime, "endTime" : endTime})
+        patients[row.PATIENT]["encounters"].append({"id" : encountersID, "type" : row.ENCOUNTERCLASS, "description" : row.DESCRIPTION, "code" : row.CODE, "reason" : row.REASONDESCRIPTION, "reasonCode" : row.REASONCODE, "startDate" : startDateTime[0], "endDate" : endDateTime[0], "startTime" : startTime, "endTime" : endTime})
 
     #load imaging studies
     if os.path.exists(imaging_studies_csv) and os.path.isfile(imaging_studies_csv):
@@ -155,7 +159,7 @@ def load_fields(input_directory, patients_no_fields):
             endDateTime = [None]
         conditionsID = f"cond_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(conditionsID)
-        patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "id": conditionsID, "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+        patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "code" : row.CODE, "id": conditionsID, "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
         cond_count += 1
 
     #load immunizations
@@ -164,7 +168,7 @@ def load_fields(input_directory, patients_no_fields):
         dateTime = row.DATE.split("T")
         immunizationsID = f"immu_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(immunizationsID)
-        patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "id" : immunizationsID, "date" : dateTime[0], "encounter" : row.ENCOUNTER})
+        patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "code" : row.CODE, "id" : immunizationsID, "date" : dateTime[0], "encounter" : row.ENCOUNTER})
         immu_count += 1
 
     #load medications
@@ -179,7 +183,7 @@ def load_fields(input_directory, patients_no_fields):
             endDateTime = [None]
         medicationsID = f"med_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(medicationsID)
-        patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "code" : str(row.CODE), "id" : medicationsID, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+        patients[row.PATIENT]["medications"].append({"description" : row.DESCRIPTION, "code" : str(row.CODE), "id" : medicationsID, "encounter" : row.ENCOUNTER, "reason" : row.REASONDESCRIPTION, "reasonCODE" : row.REASONCODE, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
         med_count += 1
     #load procedures
     procedures_df = pandas.read_csv(procedures_csv)
@@ -204,9 +208,18 @@ def load_fields(input_directory, patients_no_fields):
             category = "body_measurement"
         else:
             category = "other"
-        patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "id" : observationsID, "encounter" : row.ENCOUNTER, "value" : row.VALUE, "units" : row.UNITS, "date" : dateTime[0], "category" : category})
+        patients[row.PATIENT]["observations"].append({"description" : row.DESCRIPTION, "code" : row.CODE, "id" : observationsID, "encounter" : row.ENCOUNTER, "value" : row.VALUE, "units" : row.UNITS, "unitsType" : row.TYPE, "date" : dateTime[0], "category" : category})
         obs_count += 1
     return patients
+
+def replace_missing(value):
+    """Convert missing scalar values in nested patient data to JSON nulls."""
+    if isinstance(value, dict):
+        return {key: replace_missing(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [replace_missing(item) for item in value]
+    return None if pandas.isna(value) else value
+
 
 def run_end_to_end(input_directory="sample_data", output_directory="patients"):
     patients_no_fields = load_patients(input_directory)
@@ -218,7 +231,7 @@ def run_end_to_end(input_directory="sample_data", output_directory="patients"):
         output_dir_path = Path(output_directory)
         path = (output_dir_path / f"{value["patient"]["id"]}.json")
         with open(path, 'w') as file:
-            json.dump(value, file, indent=2)
+            json.dump(replace_missing(value), file, indent=2, allow_nan=False)
         patient_paths.append(path)
     return patient_paths
 
