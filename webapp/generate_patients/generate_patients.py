@@ -11,7 +11,7 @@ from mvp.generation.load_patient_gt import (
 from webapp.generate_patients.generate_keep_patient import generate_keep_module
 
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-CURR_RUN_DIR = WEBAPP_DIR / "patients" / "current_run"
+CURR_RUN_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients"
 
 '''
 This function will call synthea with all args specified by the user

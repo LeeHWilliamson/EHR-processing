@@ -108,7 +108,7 @@ def load_fields(input_directory, patients_no_fields):
             if row.PATIENT in patients:
                 allergyID = f"all_{uuid.uuid1()}"
                 # patients[row.PATIENT]["patient"]["entities"].append(allergyID)
-                patients[row.PATIENT]["allergies"].append({"id": allergyID, "start": row.START, "stop" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION, "reaction" : row.REACTION1, "severity" : row.SEVERITY1})
+                patients[row.PATIENT]["allergies"].append({"id": allergyID, "startDate": row.START, "endDate" : row.STOP, "encounter" : row.ENCOUNTER, "description" : row.DESCRIPTION, "reaction" : row.REACTION1, "severity" : row.SEVERITY1})
 
     #load careplans
     careplans_df = pandas.read_csv(careplans_csv)
@@ -159,7 +159,7 @@ def load_fields(input_directory, patients_no_fields):
             endDateTime = [None]
         conditionsID = f"cond_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(conditionsID)
-        patients[row.PATIENT]["conditions"].append({"condition" : row.DESCRIPTION, "code" : row.CODE, "id": conditionsID, "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
+        patients[row.PATIENT]["conditions"].append({"description" : row.DESCRIPTION, "code" : row.CODE, "id": conditionsID, "encounter" : row.ENCOUNTER, "startDate" : startDateTime[0], "endDate" : endDateTime[0]})
         cond_count += 1
 
     #load immunizations
@@ -168,7 +168,7 @@ def load_fields(input_directory, patients_no_fields):
         dateTime = row.DATE.split("T")
         immunizationsID = f"immu_{uuid.uuid1()}"
         # patients[row.PATIENT]["patient"]["entities"].append(immunizationsID)
-        patients[row.PATIENT]["immunizations"].append({"name" : row.DESCRIPTION, "code" : row.CODE, "id" : immunizationsID, "date" : dateTime[0], "encounter" : row.ENCOUNTER})
+        patients[row.PATIENT]["immunizations"].append({"description" : row.DESCRIPTION, "code" : row.CODE, "id" : immunizationsID, "date" : dateTime[0], "encounter" : row.ENCOUNTER})
         immu_count += 1
 
     #load medications

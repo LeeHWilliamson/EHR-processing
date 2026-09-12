@@ -7,9 +7,11 @@ from pathlib import Path
 from pydantic import BaseModel
 from ..generate_patients.generate_patients import run as generate_patients
 from ..generate_patients.patient_tile import generate_tile_summary
+# from ..create_tools.query_entities import query_entities
+from ..create_tools.query_current_patients import get_key_field_options, get_fields, query_entities
 
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "json"
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "json"
 
 app = FastAPI()
 '''
@@ -40,6 +42,24 @@ def home():
 @app.get("/patients")
 def get_patients():
     return generate_tile_summary()
+
+@app.get("/patients/entities/current")
+def get_current_entities():
+    return query_entities()
+
+# @app.get("/patients/entities/all")
+# def get_all_entities():
+#     return get_fields()
+
+@app.get("/patients/key_fields")
+def get_possible_key_fields(selected_entities: list[str]):
+    return get_key_field_options(selected_entities)
+
+@app.get("/patients/fields")
+def display_entity_fields(entity: str):
+    return get_fields(entity)
+
+
 
 # @app.get("/patients/{patient_id}/tile")
 # def get_patient_tile(patient_ids: list[str]):

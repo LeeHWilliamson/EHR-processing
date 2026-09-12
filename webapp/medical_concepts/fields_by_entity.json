@@ -1,0 +1,114 @@
+{
+    "_imaging_studies": "imaging studies are excluded as synthea data does not include descriptions",
+    "patient": [
+        "id",
+        "firstName",
+        "lastName",
+        "birthdate",
+        "deathdate",
+        "race",
+        "gender",
+        "ethnicity"
+    ],
+
+"allergies": [
+    "id",
+    "startDate",
+    "endDate",
+    "encounter",
+    "description",
+    "reaction",
+    "severity"
+],
+
+"careplans": [
+    "id",
+    "startDate",
+    "endDate",
+    "encounter",
+    "description",
+    "code",
+    "reasonDescription",
+    "reasonCode"
+],
+
+"devices": [
+    "id",
+    "startDate",
+    "encounter",
+    "description",
+    "code"
+],
+
+"encounters":[
+    "id",
+    "type",
+    "description",
+    "code",
+    "reason",
+    "reasonCode",
+    "startDate",
+    "endDate",
+    "startTime",
+    "endTime"
+],
+
+"imaging_studies":[
+    "id",
+    "date",
+    "encounter",
+    "bodysite",
+    "modality"
+],
+
+"conditions": [
+    "description",
+    "code",
+    "id",
+    "encounter",
+    "startDate",
+    "endDate"
+],
+
+"immunizations":[
+    "description",
+    "code",
+    "id",
+    "date",
+    "encounter"
+],
+
+"medications":[
+    "description",
+    "code",
+    "id",
+    "encounter",
+    "reason",
+    "reasonCode",
+    "startDate",
+    "endDate"
+],
+
+"procedures":[
+    "description",
+    "id",
+    "encounter",
+    "reason",
+    "date",
+    "time"
+],
+"observations":[
+    "description",
+    "code",
+    "id",
+    "encounter",
+    "value",
+    "units",
+    "unitsType",
+    "date",
+    "category"
+],
+"metadata":[
+
+]
+}
