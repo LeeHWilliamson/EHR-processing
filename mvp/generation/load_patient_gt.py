@@ -221,7 +221,7 @@ def replace_missing(value):
     return None if pandas.isna(value) else value
 
 
-def run_end_to_end(input_directory="sample_data", output_directory="patients"):
+def run_end_to_end(input_directory="webapp/patients/current_run/full_patients/csv", output_directory="webapp/patients/current_run/full_patients/json"):
     patients_no_fields = load_patients(input_directory)
     patients = load_fields(input_directory, patients_no_fields)
     patient_paths = []
@@ -237,4 +237,4 @@ def run_end_to_end(input_directory="sample_data", output_directory="patients"):
 
 if __name__ == "__main__":
 
-    run_end_to_end(input_directory="synthea/output/csv", output_directory="synthea/output/json")
+    run_end_to_end(input_directory="webapp/patients/current_run/full_patients/csv", output_directory="webapp/patients/current_run/full_patients/normalized_json")

@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "json"
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "normalized_json"
 ENTITY_FIELDS_FP = WEBAPP_DIR / "medical_concepts" / "fields_by_entity.json"
 
 #discern which entities are actually present in current patient population

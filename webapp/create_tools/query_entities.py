@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "json"
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "normalized_json"
 
 def query_entities():
     all_possible_entities = {"allergies", "conditions", "encounters", "immunizations",

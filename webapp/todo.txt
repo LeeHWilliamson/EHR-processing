@@ -1,28 +1,113 @@
 Decide how to organize synthea output and implement
     -for now, store data in current run directory, later implement cleanup where files get moved to organized DB
     -storing data as simplified JSONs for now to remain compatible with existing modules
-Store metadata output from patient generation X
-***Develop GUI for passing params***
-Develop function for generating single patient with keepPatient module
 
-FINISH INCORPORATING METADATA ENTITY IN GENERATED PATIENTS, UPDATE generate_patients.run() so it can handle JSONsX
 
-Censor data:
-select what fields do not make it from GT -> DB
-- specific entity field
-- entire condition history
+allow option for keeping deceased patients, default to false
+set max width for displayed patient tiles
+set max 10 generated patients at a time
+set notification if patients failed to generate
+
+
+
 
 Design tools
+user decides...
+what entities (from dropdown)
+what key (must be common to all entities)
+what fields for each entity
+
+Tools next steps:
+Finish creating script that creates reference table of tool args for agent
+make sure tools and tool args get stored with current run
+create frontend scripts for creating tools (make sure to include functionality for filtering returned fields)
+create script that actually implements created tools
+create tool that provides AI agent access to reference args
+
+Design Task
+-name Task
+-provide agent instructions
+    -system
+    -user
+Select from task options
+    diagnose condition
+    summarize condition timeline
+    summarize encounter
+provide ideal workflow (optional)
 
 
-Inject noise:
-jitter observations
-    -randomly
-    -specific obs
-    -that led to specific condition
+
+
+
+Define noise:
+jitter observation values
+    -jitter amount
+    -randomly or specific obs (by category, units, description)
+    -specify what % of obs of selected criteria to affect
+    -that led to specific condition (specify condition)
 shuffle timeline
     -randomly alter dates
     -that led to specific condition
 add spurious diagnosis
 alter existing diagnosis
+Censor condition:
+    -just the diagnosis
+    -entire condition history
+Censor data:
+    -randomly or specific entities / fields
+    -specify what % of items pertaining to above criteria to affect
 
+
+Inject noise:
+generate copy of patient 
+carry out noise operations
+create noise file for each patient
+    contains all effected entities: their original values, the noise operation used, and the resulting values
+
+attempt to run task via ideal workflow on gt and noise-injected data
+    -Provide warning if either fails and for how many patients
+
+attempt to algorithmically run task on noise-injected data for patients that passed previous test
+    -Provide warning if either fails and for how many patients
+
+run task for each patient
+
+algorithmically run task
+    diagnose condition: return actual condition and all relevant history. Pass == return correct condition
+    summarize condition history: return ordered timeline containing items related to condition in patient history. Pass == return >95% of possible relevant events
+    summarize encounter: return all events related to that encounter by id. Pass == return all possible items related to encounter
+score results
+workflow adherence
+token usage
+pass/fail
+found items
+missed items
+inaccessible items
+
+summarize results for each patient (just above metrics for each patient)
+
+summarize results overall
+workflow
+    tool_use radial map
+    tool use sequence map (highlight correct path, contain lines for each incorrect path as well)
+    overall workflow adherence %
+    total number of workflow errors
+    total number of sequence errors
+    total number of invalid tool calls
+accuracy
+    task success rate
+    average grade
+    total number of missed items
+        by entity
+        by description
+    
+
+
+
+
+
+future task ideas
+   identify
+        spurious diagnosis
+        missing information
+        observation errors

@@ -8,7 +8,7 @@ from pathlib import Path
 from pydantic import BaseModel
 
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "json"
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "normalized_json"
 class PatientSummaryTile(BaseModel):
     first_name: str
     last_name: str

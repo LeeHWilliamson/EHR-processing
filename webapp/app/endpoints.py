@@ -11,7 +11,7 @@ from ..generate_patients.patient_tile import generate_tile_summary
 from ..create_tools.query_current_patients import get_key_field_options, get_fields, query_entities
 
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "json"
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "normalized_json"
 
 app = FastAPI()
 '''

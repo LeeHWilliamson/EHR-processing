@@ -12,7 +12,7 @@ TOOL_TEMPLATE = {
     "entities_and_fields" : {}
 }
 WEBAPP_DIR = Path(__file__).resolve().parent.parent
-PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "json"
+PATIENTS_DIR = WEBAPP_DIR / "patients" / "current_run" / "full_patients" / "normalized_json"
 TOOL_FP = WEBAPP_DIR / "patients" / "current_run" / "tools.json"
 #we need to create a reference table for each tool, that way if we use a tool such as reason or code, the AGENT can know what possible args exist
 #in cases where two entities have identical field names but not always related field values (e.g. reason exists in medication and procedure)
