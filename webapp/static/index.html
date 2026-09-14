@@ -91,14 +91,14 @@
         <div>
           <p class="eyebrow">Step 2 · Design agent tools</p>
           <!-- <h2>Decide what the agent can retrieve</h2> -->
-          <p>Design the tools the agent can use to request data from to our database. Each tool needs a name, a description, a return type, and a key.</p>
+          <p>Design the tools the agent can use to request data from our patient records. Each tool needs a name, a description, a return type, and a key.</p>
         </div>
         <button id="reset-tools" class="button secondary" type="button">Reset defaults</button>
       </div>
 
       <aside class="lesson">
         <strong>Entities and Fields</strong>
-        <span>Entities refer to resource categories of patient data such as medications, conditions, immunizations, and more. Fields refer to attribute within an entity. For example the 'allergies' entity has fields that include reaction, reaction severity, and more.  </span>
+        <span>Entities refer to categories of patient data such as medications, conditions, immunizations, and more. Fields are attributes within an entity. For example, the 'allergies' entity includes fields such as reaction and reaction severity.</span>
       </aside>
 
       <aside class="lesson">
@@ -142,7 +142,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Step 3 · Design the task</p>
-          <p>For this tutorial, we lock the task type and details as 'Diagnose Condition : Diabetes.' We allow the user to optionally input an ideal workflow, and configure the system and user intstructions.</p>
+          <p>For this tutorial, we lock the task type and details as 'Diagnose Condition: Diabetes.' We allow the user to optionally input an ideal workflow and configure the system and user instructions.</p>
         </div>
       </div>
 
@@ -201,7 +201,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Step 4 · Define noise</p>
-          <p>This step recreates the layer of obscurity that exists between an actual patient, and their electronic health record.
+          <p>This step recreates the layer of obscurity that exists between an actual patient and their electronic health record.
             The noise defined here will be applied to the version of the patient's record that our agent accesses, not the original patient records we generated in step 1.
           </p>
         </div>

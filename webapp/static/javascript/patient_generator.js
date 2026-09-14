@@ -38,19 +38,19 @@ const guideContent = {
   },
   "patient-tiles": {
     title: "Patient tiles",
-    text: "Select the book icon within a tile to view all medical events in a patients lifetime. Select the tile itself to use that patient for previewing the tools we design in the next step.",
+    text: "Select the book icon within a tile to view all medical events in a patient's lifetime. Select the tile itself to use that patient for previewing the tools we design in the next step.",
   },
   tools: {
     title: "Agent toolset",
-    text: "AI agents typically do not have direct access to a database, they are prevented from directly viewing or manipulating patient data. Instead, AI agents can only pass specific data requests via an Application Programming Interface (API). We define those requests here.",
+    text: "In this demo, the AI agent does not have direct access to patient records and cannot view or manipulate them freely. Instead, it makes specific data requests through an Application Programming Interface (API). We define those requests here.",
   },
   "tool-list": {
     title: "Tool definitions",
-    text: "Each row corresponds to 1 tool. A user may create 1-15 tools. Feel free to create a mix of tools that are directly relevant to the task and some that are not, this can lead to varied agent behavior. Note that there is no requirement that the toolset provide access to all patient data. Consider limiting agent tools (e.g. preventing any access to medication data) to see how that affects agent performance.",
+    text: "Each row corresponds to one tool. A user may create 1–15 tools. Feel free to create a mix of tools that are directly relevant to the task and some that are not; this can lead to varied agent behavior. The toolset does not need to provide access to all patient data. Consider limiting agent tools (e.g., preventing access to medication data) to see how that affects agent performance.",
   },
   "tool-name": {
     title: "Tool name",
-    text: "This is the tool name presented to the agent. Each tool must have a unique name. The name of the tool has no impact on agent tool selection.",
+    text: "This is the function name presented to the agent, and each tool must have a unique name. A clear, descriptive name can help the agent infer the tool's purpose, although the description provides more detailed guidance about when to use it.",
   },
   "tool-description": {
     title: "Tool description",
@@ -74,7 +74,7 @@ const guideContent = {
   },
   task: {
     title: "Task design",
-    text: "Task design specifies the decision being evaluated and the instructions the agent receives. Task name, description, type, and Ideal workflow are not exposed to the agent, they are used for data organization and analytics.",
+    text: "Task design specifies the decision being evaluated and the instructions the agent receives. Task name, description, type, and ideal workflow are not exposed to the agent; they are used for data organization and analytics.",
   },
   "ideal-workflow": {
     title: "Ideal workflow",
@@ -86,7 +86,7 @@ const guideContent = {
   },
   "user-instructions": {
     title: "User instructions",
-    text: "User instructions contain the specific diagnostic request. Clear instructions should define the objective without revealing the expected answer. Note that these insctructions determine the agent's goal, and thus you can ask the agent to retrieve any data you like. The metrics at the end of this tutorial, however, assume the task relates to diagnosing diabetes.",
+    text: "User instructions contain the specific diagnostic request. Clear instructions should define the objective without revealing the expected answer. These instructions determine the agent's goal, so you can ask the agent to retrieve any data you like. The metrics at the end of this tutorial, however, assume the task relates to diagnosing diabetes.",
   },
   noise: {
     title: "Data noise",
@@ -94,7 +94,7 @@ const guideContent = {
   },
   "observation-jitter": {
     title: "Observation variation",
-    text: "This variation represents transcription errors that can occur when patient lab results are input to that patient's health record.",
+    text: "This variation simulates measurement and documentation uncertainty by shifting glucose results within a controlled range. The adjustment is deterministic, so the same patient receives the same variation on every run.",
   },
   "condition-censoring": {
     title: "Condition censoring",
@@ -102,7 +102,7 @@ const guideContent = {
   },
   verification: {
     title: "Task verification",
-    text: "Verification checks how censoring direct references to our target condition (diabetes) and the noise injection from step 6 affects our patient records.",
+    text: "Verification checks how baseline censorship of direct references to diabetes and the noise injection from Step 4 affect our patient records.",
   },
   "verification-results": {
     title: "Evidence preservation",
