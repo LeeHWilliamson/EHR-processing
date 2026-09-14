@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "scope": "Type II diabetes tutorial only",
+  "notes": [
+    "These rules classify evidence; they do not determine the ground-truth label.",
+    "The label remains the exact Synthea Type II diabetes condition code 44054006.",
+    "Decision inputs reflect the inspected Synthea metabolic syndrome modules at commit d9d07a6eef91ee5144293b42ab64224d84d124f8."
+  ],
+  "decision_inputs": [
+    {
+      "id": "synthea-a1c-input",
+      "entity": "observations",
+      "codes": ["4548-4"],
+      "selection": {"latest_per_code": 5},
+      "rationale": "The executed Synthea standards-of-care module reads HbA1c when selecting the diagnosis branch."
+    },
+    {
+      "id": "synthea-glucose-input",
+      "entity": "observations",
+      "codes": ["2339-0", "2345-7"],
+      "rationale": "The executed Synthea module reads the Glucose vital sign during its blood-sugar check."
+    },
+    {
+      "id": "synthea-triglyceride-input",
+      "entity": "observations",
+      "codes": ["2571-8"],
+      "rationale": "The executed Synthea module reads triglycerides during its metabolic check."
+    },
+    {
+      "id": "synthea-hdl-input",
+      "entity": "observations",
+      "codes": ["2085-9"],
+      "rationale": "The executed Synthea module reads HDL during its metabolic check."
+    },
+    {
+      "id": "synthea-metabolic-condition-input",
+      "entity": "conditions",
+      "codes": ["38341003", "414915002", "80394007", "302870006", "237602007", "714628002"],
+      "rationale": "The Synthea module evaluates hypertension, obesity, hyperglycemia, hypertriglyceridemia, metabolic syndrome, and prediabetes attributes."
+    }
+  ],
+  "clinical_evidence": [
+    {
+      "id": "clinical-diagnostic-a1c",
+      "class": "diagnostic",
+      "entity": "observations",
+      "codes": ["4548-4"],
+      "rationale": "HbA1c is an accepted test for diabetes and prediabetes."
+    },
+    {
+      "id": "clinical-diagnostic-glucose",
+      "class": "diagnostic",
+      "entity": "observations",
+      "codes": ["1558-6", "2339-0", "2345-7"],
+      "selection": {"latest_per_code": 5},
+      "rationale": "Plasma or blood glucose measurements can support diabetes diagnosis when collection context and confirmation requirements are satisfied."
+    },
+    {
+      "id": "clinical-risk-body-measurement",
+      "class": "risk_context",
+      "entity": "observations",
+      "codes": ["29463-7", "39156-5", "8302-2"],
+      "selection": {"latest_per_code": 3},
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "id": "clinical-risk-condition",
+      "class": "risk_context",
+      "entity": "conditions",
+      "codes": ["38341003", "414915002", "80394007", "302870006", "237602007", "714628002"],
+      "selection": {"latest_per_code": 3},
+      "rationale": "These conditions provide diabetes-related risk or precursor context."
+    },
+    {
+      "id": "clinical-interpretation-caveat",
+      "class": "interpretation_caveat",
+      "entity": "conditions",
+      "description_contains_any": ["anemia", "chronic kidney disease", "pregnancy"],
+      "selection": {"active_only": true, "latest_per_description": 3},
+      "rationale": "These contexts can affect interpretation or choice of diabetes testing."
+    }
+  ],
+  "leakage": [
+    {
+      "id": "explicit-target-language",
+      "entities": ["allergies", "careplans", "conditions", "devices", "encounters", "imaging_studies", "immunizations", "medications", "observations", "procedures"],
+      "fields": ["description", "reason", "reasonDescription"],
+      "regex_any": ["\\bdiabetes\\b", "\\bdiabetic\\b"],
+      "action": "redact_matching_fields",
+      "rationale": "The text explicitly names the target diagnosis or identifies an artifact as diabetic."
+    },
+    {
+      "id": "explicit-target-code",
+      "entities": ["conditions"],
+      "codes": ["44054006"],
+      "action": "remove_record",
+      "rationale": "This is the exact ground-truth Type II diabetes diagnosis code."
+    }
+  ]
+}

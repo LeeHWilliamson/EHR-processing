@@ -1,25 +1,351 @@
-<link rel="stylesheet" href="/static/css/main.css">
-<script src="/static/javascript/patient_generator.js" defer></script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Synth-EHR Guided Tutorial</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <script src="/static/javascript/patient_generator.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#population">Synth-EHR</a>
+    <p>Build a controlled clinical environment for evaluating an AI agent.</p>
+  </header>
 
-<h1>Synth-EHR Demo</h1>
-<form id="patient-form">
-    <input id="synthea-path" type="text" placeholder="Generator Path">
-    
-    <input id="count" type="number" value="1" min="1">
+  <main>
+    <nav class="steps" aria-label="Tutorial progress">
+      <a class="step complete" href="#population"><span>1</span> Population</a>
+      <a class="step complete" href="#tools"><span>2</span> Agent tools</a>
+      <a class="step complete" href="#task"><span>3</span> Task</a>
+      <a class="step complete" href="#noise"><span>4</span> Noise</a>
+      <a class="step active" href="#verification"><span>5</span> Verify</a>
+      <a class="step" href="#agent-run"><span>6</span> Run agent</a>
+      <a class="step" href="#summary"><span>7</span> Summary</a>
+    </nav>
 
-    <input id="state" type="text" placeholder="State">
+    <section id="population" class="panel intro-panel">
+      <div>
+        <p class="eyebrow">Step 1 · Patient population</p>
+        <h1>Ten synthetic patients. No protected health information.</h1>
+        <p>Synthea generated each patient and the clinical history behind them. Select a patient to use while previewing your agent tools.</p>
+      </div>
+      <div id="population-status" class="status" role="status">Loading patients…</div>
+      <div id="patient-tiles" class="patient-groups" aria-live="polite"></div>
+    </section>
 
-    <input id="city" type="text" placeholder="City">
+    <section id="tools" class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Step 2 · Design patient tools</p>
+          <h2>Decide what the agent can retrieve</h2>
+          <p>The agent never reads a patient file directly. Each row below becomes one callable function with an explicit input and return shape.</p>
+        </div>
+        <button id="reset-tools" class="button secondary" type="button">Reset defaults</button>
+      </div>
 
-    <input id="min-age" type="number" placeholder="Minimum age">
+      <aside class="lesson">
+        <strong>Why patient ID?</strong>
+        <span>The default tools all accept the assigned patient ID. During an evaluation, calls for any other patient are rejected and recorded.</span>
+      </aside>
 
-    <input id="max-age" type="number" placeholder="Maximum age">
+      <div class="table-labels" aria-hidden="true">
+        <span>Tool name</span><span>Description</span><span>Return</span><span>By</span><span></span>
+      </div>
+      <div id="tool-list" class="tool-list" aria-live="polite"></div>
 
-    <input id="keep-attribute" type="text" placeholder="Condition">
+      <div class="tool-actions">
+        <button id="add-tool" class="button secondary" type="button">+ Add tool</button>
+        <div class="finalize-actions">
+          <button id="edit-tools" class="button secondary" type="button" disabled>Edit toolset</button>
+          <button id="finalize-tools" class="button primary" type="button">Finalize toolset</button>
+        </div>
+      </div>
+      <div id="tool-status" class="status" role="status"></div>
+    </section>
 
-    <button type="submit">Generate Patients</button>
-</form>
+    <section id="preview" class="panel preview-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Tool preview</p>
+          <h2>See exactly what the agent receives</h2>
+          <p>Preview results use the agent-visible record: explicit target leakage is already removed or redacted.</p>
+        </div>
+      </div>
+      <div class="preview-controls">
+        <label>Assigned patient<select id="preview-patient"></select></label>
+        <label>Tool<select id="preview-tool"></select></label>
+        <label id="preview-argument-wrap">Argument<select id="preview-argument"></select></label>
+        <button id="run-preview" class="button primary" type="button" disabled>Run preview</button>
+      </div>
+      <div id="preview-summary" class="status"></div>
+      <pre id="preview-output" tabindex="0">Choose a patient and tool, then run a preview.</pre>
+    </section>
 
-<p id="result"></p>
+    <section id="task" class="panel task-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Step 3 · Design the task</p>
+          <h2>Define what the agent must decide</h2>
+          <p>This tutorial uses a binary diabetes diagnosis: the agent must answer either present or absent.</p>
+        </div>
+      </div>
 
-<div id="patient-tiles"></div>
+      <div id="task-form" class="task-form">
+        <div class="task-field task-name-field">
+          <label for="task-name">Task name</label>
+          <input id="task-name" maxlength="120" placeholder="Task Name">
+          <small><span id="task-name-count">0</span>/120</small>
+        </div>
+        <div class="task-field task-description-field">
+          <label for="task-description">Description</label>
+          <textarea id="task-description" maxlength="500" placeholder="Description"></textarea>
+          <small><span id="task-description-count">0</span>/500</small>
+        </div>
+        <div class="task-field">
+          <label for="task-type">Task type</label>
+          <select id="task-type"><option value="diagnose_condition">Diagnose Condition</option></select>
+        </div>
+        <div class="task-field">
+          <label for="task-condition">Select condition</label>
+          <select id="task-condition"><option value="diabetes">Diabetes</option></select>
+        </div>
+
+        <div class="workflow-section">
+          <div class="workflow-heading">
+            <div>
+              <h3>Ideal workflow <span>Optional</span></h3>
+              <p>Suggest an ordered sequence of tool calls. This guides evaluation without preventing the agent from choosing another path.</p>
+            </div>
+            <button id="add-workflow-step" class="button secondary" type="button">+ Add tool call</button>
+          </div>
+          <div id="workflow-list" class="workflow-list"></div>
+          <p id="workflow-empty" class="workflow-empty">No ideal workflow configured.</p>
+        </div>
+
+        <div class="task-field instruction-field">
+          <label for="system-instructions">System instructions</label>
+          <textarea id="system-instructions" maxlength="2000" rows="5" placeholder="Instructions that define the agent's role and behavior"></textarea>
+          <small><span id="system-instructions-count">0</span>/2000</small>
+        </div>
+        <div class="task-field instruction-field">
+          <label for="user-instructions">User instructions</label>
+          <textarea id="user-instructions" maxlength="2000" rows="5" placeholder="The diagnostic request given to the agent"></textarea>
+          <small><span id="user-instructions-count">0</span>/2000</small>
+        </div>
+      </div>
+
+      <div class="task-actions">
+        <button id="edit-task" class="button secondary" type="button" disabled>Edit task</button>
+        <button id="finalize-task" class="button primary" type="button">Finalize task</button>
+      </div>
+      <div id="task-status" class="status" role="status"></div>
+    </section>
+
+    <section id="noise" class="panel noise-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Step 4 · Define noise</p>
+          <h2>Translate the patient into an imperfect record</h2>
+          <p>Noise simulates measurement variation and missing clinical information before the agent receives the record.</p>
+        </div>
+        <button id="toggle-noise" class="button danger" type="button">Disable noise</button>
+      </div>
+
+      <aside class="lesson">
+        <strong>Reproducible by design</strong>
+        <span>The same patient record always receives the same jitter, allowing fair comparisons between agent runs.</span>
+      </aside>
+
+      <div id="noise-sources" class="noise-sources">
+        <article class="noise-source">
+          <div class="noise-source-heading"><span>1</span><strong>Observation variation</strong></div>
+          <div class="noise-fields">
+            <label>Noise source<select disabled><option>Jitter Observations</option></select></label>
+            <label>By<select disabled><option>description</option></select></label>
+            <label>Observation<select disabled><option>Glucose [Mass/volume] in Serum or Plasma</option></select></label>
+          </div>
+          <p>Numerical glucose values are adjusted by a deterministic amount within ±10%.</p>
+        </article>
+
+        <article class="noise-source">
+          <div class="noise-source-heading"><span>2</span><strong>Missing diagnosis</strong></div>
+          <div class="noise-fields censor-fields">
+            <label>Noise source<select disabled><option>Censor Condition</option></select></label>
+            <label>Condition<select disabled><option>Prediabetes</option></select></label>
+          </div>
+          <p>Prediabetes condition records are removed from the version available to the agent.</p>
+        </article>
+      </div>
+
+      <div class="noise-actions">
+        <button id="edit-noise" class="button secondary" type="button" disabled>Edit noise</button>
+        <button id="finalize-noise" class="button primary" type="button">Finalize noise</button>
+      </div>
+      <div id="noise-status" class="status" role="status"></div>
+    </section>
+
+    <section id="verification" class="panel verification-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Step 5 · Verify the task</p>
+          <h2>Check whether the evidence survives</h2>
+          <p>Compare evidence identified in each original record with the baseline-censored and noise-injected versions the agent can access.</p>
+        </div>
+        <button id="run-verification" class="button primary" type="button" disabled>Verify task</button>
+      </div>
+      <div class="verification-legend" aria-label="Verification status legend">
+        <span><i class="green"></i> Evidence preserved</span>
+        <span><i class="amber"></i> Evidence modified</span>
+        <span><i class="red"></i> Evidence removed by noise</span>
+        <span><i class="neutral"></i> No expected evidence</span>
+      </div>
+      <div id="verification-status" class="status" role="status">Finalize the noise configuration to verify the task.</div>
+      <div id="verification-results" class="verification-grid"></div>
+    </section>
+
+    <section id="agent-run" class="panel agent-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Step 6 · Run the task</p>
+          <h2>Let the agent investigate every patient</h2>
+          <p>The agent receives your instructions and finalized tools, then independently diagnoses all ten noise-transformed records.</p>
+        </div>
+        <button id="run-agent" class="button primary" type="button" disabled>Run agent</button>
+      </div>
+      <aside class="lesson">
+        <strong>Ten independent runs</strong>
+        <span>Each patient starts with a fresh context. Tool calls and retrieved records are tracked without exposing another patient's results.</span>
+      </aside>
+      <div id="agent-progress" class="agent-progress" hidden>
+        <div class="agent-progress-heading">
+          <strong id="agent-progress-label">Preparing agent run…</strong>
+          <span id="agent-progress-count">0 / 10 patients</span>
+        </div>
+        <progress id="agent-progress-bar" value="0" max="10">0%</progress>
+        <div id="agent-activity" class="agent-activity" role="log" aria-live="polite"></div>
+      </div>
+      <div id="agent-status" class="status" role="status">Finalize the toolset, task, and noise configuration to run the agent.</div>
+      <div id="agent-results" class="agent-grid"></div>
+    </section>
+
+    <section id="summary" class="panel summary-panel">
+      <div class="section-heading summary-heading">
+        <div>
+          <p class="eyebrow">Step 7 · Data summary</p>
+          <h2>Understand how the agent behaved</h2>
+          <p>Review diagnostic performance, evidence retrieval, tool-use paths, and cost for the completed run.</p>
+        </div>
+        <label class="summary-filter">Patients
+          <select id="summary-patient-filter" disabled><option value="all">All patients</option></select>
+        </label>
+      </div>
+      <div id="summary-empty" class="summary-empty">Run the agent to generate the performance summary.</div>
+      <div id="summary-dashboard" hidden>
+        <section class="summary-section">
+          <h3>Accuracy</h3>
+          <div id="accuracy-metrics" class="metric-grid"></div>
+          <div id="summary-patient-results" class="summary-patient-grid"></div>
+        </section>
+
+        <section class="summary-section">
+          <h3>Evidence retrieval</h3>
+          <div id="evidence-metrics" class="metric-grid"></div>
+          <div class="summary-split">
+            <div><h4>Coverage by entity</h4><div id="entity-coverage" class="bar-list"></div></div>
+            <div><h4>Coverage by outcome</h4><div id="outcome-coverage" class="bar-list"></div></div>
+          </div>
+        </section>
+
+        <section class="summary-section">
+          <h3>Agent behavior and cost</h3>
+          <div id="behavior-metrics" class="metric-grid"></div>
+          <div class="summary-split tool-map-layout">
+            <div>
+              <h4>Tool-call path map</h4>
+              <p class="map-help">Darker nodes were called more often. Thicker arrows represent more frequent transitions.</p>
+              <svg id="tool-call-map" class="tool-call-map" viewBox="0 0 700 520" role="img" aria-label="Circular tool-call transition map"></svg>
+            </div>
+            <div>
+              <h4>Exact call sequences</h4>
+              <div id="tool-call-sequences" class="sequence-list"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="patient-reader" class="patient-reader" aria-labelledby="reader-title">
+    <div class="reader-shell">
+      <header class="reader-header">
+        <div>
+          <p class="eyebrow">Patient JSON reader</p>
+          <h2 id="reader-title">Patient record</h2>
+          <p id="reader-subtitle"></p>
+        </div>
+        <button id="close-reader" class="reader-close" type="button" aria-label="Close patient reader">×</button>
+      </header>
+      <div class="reader-toolbar">
+        <button id="open-raw-json" class="button secondary" type="button" disabled>Open raw JSON in new tab</button>
+      </div>
+      <aside id="reader-notice" class="reader-notice"></aside>
+      <div id="reader-status" class="status" role="status"></div>
+      <div id="reader-content" class="reader-content"></div>
+    </div>
+  </dialog>
+
+  <dialog id="verification-reader" class="patient-reader verification-reader" aria-labelledby="verification-reader-title">
+    <div class="reader-shell">
+      <header class="reader-header">
+        <div>
+          <p class="eyebrow">Evidence verification report</p>
+          <h2 id="verification-reader-title">Patient report</h2>
+          <p id="verification-reader-subtitle"></p>
+        </div>
+        <button id="close-verification-reader" class="reader-close" type="button" aria-label="Close verification report">×</button>
+      </header>
+      <div id="verification-reader-summary" class="verification-reader-summary"></div>
+      <div id="verification-reader-content" class="verification-records"></div>
+    </div>
+  </dialog>
+
+  <dialog id="agent-reader" class="patient-reader agent-reader" aria-labelledby="agent-reader-title">
+    <div class="reader-shell">
+      <header class="reader-header">
+        <div>
+          <p class="eyebrow">Agent patient report</p>
+          <h2 id="agent-reader-title">Patient result</h2>
+          <p id="agent-reader-subtitle"></p>
+        </div>
+        <button id="close-agent-reader" class="reader-close" type="button" aria-label="Close agent report">×</button>
+      </header>
+      <div id="agent-reader-diagnosis" class="agent-diagnosis"></div>
+      <div class="record-result-columns">
+        <section>
+          <h3 id="found-records-title">Records found</h3>
+          <div id="agent-found-records" class="agent-record-list"></div>
+        </section>
+        <section>
+          <h3 id="missed-records-title">Records missed</h3>
+          <div id="agent-missed-records" class="agent-record-list"></div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="tool-node-reader" class="tool-node-reader" aria-labelledby="tool-node-title">
+    <div class="tool-node-reader-shell">
+      <header class="reader-header">
+        <div>
+          <p class="eyebrow">Tool-call node</p>
+          <h2 id="tool-node-title">Tool</h2>
+          <p id="tool-node-filter"></p>
+        </div>
+        <button id="close-tool-node-reader" class="reader-close" type="button" aria-label="Close tool node report">×</button>
+      </header>
+      <div id="tool-node-metrics" class="tool-node-metrics"></div>
+    </div>
+  </dialog>
+</body>
+</html>

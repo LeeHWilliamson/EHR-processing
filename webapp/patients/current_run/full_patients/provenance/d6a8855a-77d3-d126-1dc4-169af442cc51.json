@@ -1,0 +1,371 @@
+{
+  "patient_id": "d6a8855a-77d3-d126-1dc4-169af442cc51",
+  "name": "Elia Borer",
+  "has_type_2_diabetes": false,
+  "diagnosis": null,
+  "status": "ready",
+  "module_history": [],
+  "clinical_entry_mappings": [],
+  "causal_records": [],
+  "relevant_records": [],
+  "decision_input_records": [
+    {
+      "entity": "patient",
+      "id": "pat_d6a8855a-77d3-d126-1dc4-169af442cc51",
+      "date": "2005-12-29",
+      "description": "Date of birth",
+      "code": null,
+      "value": "2005-12-29",
+      "units": null,
+      "encounter": null,
+      "classification": "decision_input",
+      "rule_id": "synthea-age-input",
+      "rationale": "The Synthea disease-progression module uses age guards and age-based delays."
+    },
+    {
+      "entity": "patient",
+      "id": "pat_d6a8855a-77d3-d126-1dc4-169af442cc51",
+      "date": null,
+      "description": "Race",
+      "code": null,
+      "value": "white",
+      "units": null,
+      "encounter": null,
+      "classification": "decision_input",
+      "rule_id": "synthea-race-input",
+      "rationale": "The Synthea disease-progression module uses race in its prevalence transition."
+    },
+    {
+      "entity": "conditions",
+      "id": "cond_ce5cc674-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Prediabetes (finding)",
+      "code": "714628002",
+      "value": null,
+      "units": null,
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "decision_input",
+      "rule_id": "synthea-metabolic-condition-input",
+      "rationale": "The Synthea module evaluates hypertension, obesity, hyperglycemia, hypertriglyceridemia, metabolic syndrome, and prediabetes attributes."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a676-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Glucose [Mass/volume] in Blood",
+      "code": "2339-0",
+      "value": "99.6",
+      "units": "mg/dL",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "decision_input",
+      "rule_id": "synthea-glucose-input",
+      "rationale": "The executed Synthea module reads the Glucose vital sign during its blood-sugar check."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a5b8-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "code": "4548-4",
+      "value": "6.1",
+      "units": "%",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "decision_input",
+      "rule_id": "synthea-a1c-input",
+      "rationale": "The executed Synthea standards-of-care module reads HbA1c when selecting the diagnosis branch."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a98c-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Glucose [Mass/volume] in Blood",
+      "code": "2339-0",
+      "value": "66.3",
+      "units": "mg/dL",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "decision_input",
+      "rule_id": "synthea-glucose-input",
+      "rationale": "The executed Synthea module reads the Glucose vital sign during its blood-sugar check."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a8ec-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "code": "4548-4",
+      "value": "6.0",
+      "units": "%",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "decision_input",
+      "rule_id": "synthea-a1c-input",
+      "rationale": "The executed Synthea standards-of-care module reads HbA1c when selecting the diagnosis branch."
+    }
+  ],
+  "diagnostic_evidence_records": [
+    {
+      "entity": "observations",
+      "id": "obs_ce66a2fc-afa1-11f1-aac2-00155df22f44",
+      "date": "2024-03-28",
+      "description": "Body Height",
+      "code": "8302-2",
+      "value": "175.3",
+      "units": "cm",
+      "encounter": "d6a8855a-77d3-d126-6f73-3f54a70bf309",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a32e-afa1-11f1-aac2-00155df22f44",
+      "date": "2024-03-28",
+      "description": "Body Weight",
+      "code": "29463-7",
+      "value": "64.2",
+      "units": "kg",
+      "encounter": "d6a8855a-77d3-d126-6f73-3f54a70bf309",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a342-afa1-11f1-aac2-00155df22f44",
+      "date": "2024-03-28",
+      "description": "Body mass index (BMI) [Ratio]",
+      "code": "39156-5",
+      "value": "20.9",
+      "units": "kg/m2",
+      "encounter": "d6a8855a-77d3-d126-6f73-3f54a70bf309",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "conditions",
+      "id": "cond_ce5cc674-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Prediabetes (finding)",
+      "code": "714628002",
+      "value": null,
+      "units": null,
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-condition",
+      "rationale": "These conditions provide diabetes-related risk or precursor context."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a5cc-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Body Height",
+      "code": "8302-2",
+      "value": "175.4",
+      "units": "cm",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a5f4-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Body Weight",
+      "code": "29463-7",
+      "value": "62.1",
+      "units": "kg",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a608-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Body mass index (BMI) [Ratio]",
+      "code": "39156-5",
+      "value": "20.2",
+      "units": "kg/m2",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a676-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Glucose [Mass/volume] in Blood",
+      "code": "2339-0",
+      "value": "99.6",
+      "units": "mg/dL",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "diagnostic",
+      "rule_id": "clinical-diagnostic-glucose",
+      "rationale": "Plasma or blood glucose measurements can support diabetes diagnosis when collection context and confirmation requirements are satisfied."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a5b8-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-04-03",
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "code": "4548-4",
+      "value": "6.1",
+      "units": "%",
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "diagnostic",
+      "rule_id": "clinical-diagnostic-a1c",
+      "rationale": "HbA1c is an accepted test for diabetes and prediabetes."
+    },
+    {
+      "entity": "conditions",
+      "id": "cond_ce5cc908-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Anemia (disorder)",
+      "code": "271737000",
+      "value": null,
+      "units": null,
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "interpretation_caveat",
+      "rule_id": "clinical-interpretation-caveat",
+      "rationale": "These contexts can affect interpretation or choice of diabetes testing."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a900-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Body Height",
+      "code": "8302-2",
+      "value": "175.5",
+      "units": "cm",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a91e-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Body Weight",
+      "code": "29463-7",
+      "value": "63.5",
+      "units": "kg",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a932-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Body mass index (BMI) [Ratio]",
+      "code": "39156-5",
+      "value": "20.6",
+      "units": "kg/m2",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a98c-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Glucose [Mass/volume] in Blood",
+      "code": "2339-0",
+      "value": "66.3",
+      "units": "mg/dL",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "diagnostic",
+      "rule_id": "clinical-diagnostic-glucose",
+      "rationale": "Plasma or blood glucose measurements can support diabetes diagnosis when collection context and confirmation requirements are satisfied."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a8ec-afa1-11f1-aac2-00155df22f44",
+      "date": "2026-04-09",
+      "description": "Hemoglobin A1c/Hemoglobin.total in Blood",
+      "code": "4548-4",
+      "value": "6.0",
+      "units": "%",
+      "encounter": "d6a8855a-77d3-d126-3709-8b881cba38f9",
+      "classification": "diagnostic",
+      "rule_id": "clinical-diagnostic-a1c",
+      "rationale": "HbA1c is an accepted test for diabetes and prediabetes."
+    }
+  ],
+  "leakage_records": [
+    {
+      "entity": "careplans",
+      "id": "care_d6a8855a-77d3-d126-6997-98a43942c17a",
+      "date": "2025-04-03",
+      "description": "Diabetes self management plan (record artifact)",
+      "code": "735985000",
+      "value": null,
+      "units": null,
+      "encounter": "d6a8855a-77d3-d126-42c7-f9c16e4ab43f",
+      "classification": "target_leakage",
+      "rationale": "The text explicitly names the target diagnosis or identifies an artifact as diabetic.",
+      "action": "redact_matching_fields",
+      "matching_fields": [
+        "description"
+      ],
+      "rule_id": "explicit-target-language"
+    }
+  ],
+  "decision_evidence_overlap": [
+    {
+      "entity": "conditions",
+      "id": "cond_ce5cc674-afa1-11f1-aac2-00155df22f44"
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a5b8-afa1-11f1-aac2-00155df22f44"
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a676-afa1-11f1-aac2-00155df22f44"
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a8ec-afa1-11f1-aac2-00155df22f44"
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce66a98c-afa1-11f1-aac2-00155df22f44"
+    }
+  ],
+  "limitations": [
+    "Decision-input rules cover the inspected metabolic-syndrome modules but do not yet perform a general transitive source-code dependency trace.",
+    "Veteran status is read by Synthea but is absent from the normalized patient schema.",
+    "Clinical evidence rules are diabetes-specific and require human review.",
+    "Glucose records do not reliably state whether the patient was fasting, so fasting-plasma-glucose criteria cannot be inferred from value alone."
+  ],
+  "rules": {
+    "version": 1,
+    "scope": "Type II diabetes tutorial only",
+    "source": "diabetes_evidence_rules.json"
+  },
+  "counts": {
+    "module_transitions": 0,
+    "native_clinical_entries": 0,
+    "matched_clinical_entries": 0,
+    "relevant_normalized_records": 0,
+    "mapping_statuses": {},
+    "relevant_records_by_entity": {},
+    "decision_input_records": 7,
+    "diagnostic_evidence_records": 15,
+    "leakage_records": 1,
+    "decision_evidence_overlap": 5
+  },
+  "source": {
+    "native_json": "Elia_Borer_d6a8855a-77d3-d126-1dc4-169af442cc51.json",
+    "normalized_json": "pat_d6a8855a-77d3-d126-1dc4-169af442cc51.json",
+    "native_sha256": "9cbd8cd1f45d167a7261a01e380e9f15c00111b1b3ab522e65b60186563ef090",
+    "normalized_sha256": "0445e683d00d4eb4234add7e7dcd75f3538f170926cc39d2bc3468f016006783"
+  }
+}

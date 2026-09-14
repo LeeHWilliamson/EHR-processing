@@ -1,0 +1,1 @@
+"""Guided diagnostic task configuration."""

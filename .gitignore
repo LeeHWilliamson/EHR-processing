@@ -16,4 +16,15 @@
 /.env
 /synthea/output_deceased
 /news
-/webapp/patients
+/webapp/patients/*
+!/webapp/patients/current_run/
+/webapp/patients/current_run/*
+!/webapp/patients/current_run/full_patients/
+/webapp/patients/current_run/full_patients/*
+!/webapp/patients/current_run/full_patients/cohort.json
+!/webapp/patients/current_run/full_patients/normalized_json/
+/webapp/patients/current_run/full_patients/normalized_json/*
+!/webapp/patients/current_run/full_patients/normalized_json/*.json
+!/webapp/patients/current_run/full_patients/provenance/
+/webapp/patients/current_run/full_patients/provenance/*
+!/webapp/patients/current_run/full_patients/provenance/*.json

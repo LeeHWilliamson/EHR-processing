@@ -1,0 +1,207 @@
+{
+  "patient_id": "ee88ec73-5b93-ecb5-ff04-ddc315bfef43",
+  "name": "Lisette Reinger",
+  "has_type_2_diabetes": false,
+  "diagnosis": null,
+  "status": "ready",
+  "module_history": [],
+  "clinical_entry_mappings": [],
+  "causal_records": [],
+  "relevant_records": [],
+  "decision_input_records": [
+    {
+      "entity": "patient",
+      "id": "pat_ee88ec73-5b93-ecb5-ff04-ddc315bfef43",
+      "date": "1999-12-27",
+      "description": "Date of birth",
+      "code": null,
+      "value": "1999-12-27",
+      "units": null,
+      "encounter": null,
+      "classification": "decision_input",
+      "rule_id": "synthea-age-input",
+      "rationale": "The Synthea disease-progression module uses age guards and age-based delays."
+    },
+    {
+      "entity": "patient",
+      "id": "pat_ee88ec73-5b93-ecb5-ff04-ddc315bfef43",
+      "date": null,
+      "description": "Race",
+      "code": null,
+      "value": "white",
+      "units": null,
+      "encounter": null,
+      "classification": "decision_input",
+      "rule_id": "synthea-race-input",
+      "rationale": "The Synthea disease-progression module uses race in its prevalence transition."
+    }
+  ],
+  "diagnostic_evidence_records": [
+    {
+      "entity": "observations",
+      "id": "obs_ce671afc-afa1-11f1-aac2-00155df22f44",
+      "date": "2022-03-08",
+      "description": "Body Height",
+      "code": "8302-2",
+      "value": "165.7",
+      "units": "cm",
+      "encounter": "ee88ec73-5b93-ecb5-16c8-680d5488dfd4",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce671b24-afa1-11f1-aac2-00155df22f44",
+      "date": "2022-03-08",
+      "description": "Body Weight",
+      "code": "29463-7",
+      "value": "80.6",
+      "units": "kg",
+      "encounter": "ee88ec73-5b93-ecb5-16c8-680d5488dfd4",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce671b38-afa1-11f1-aac2-00155df22f44",
+      "date": "2022-03-08",
+      "description": "Body mass index (BMI) [Ratio]",
+      "code": "39156-5",
+      "value": "29.4",
+      "units": "kg/m2",
+      "encounter": "ee88ec73-5b93-ecb5-16c8-680d5488dfd4",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce671e4e-afa1-11f1-aac2-00155df22f44",
+      "date": "2022-08-09",
+      "description": "Body Height",
+      "code": "8302-2",
+      "value": "165.7",
+      "units": "cm",
+      "encounter": "ee88ec73-5b93-ecb5-4b12-ec976136ed40",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce671e76-afa1-11f1-aac2-00155df22f44",
+      "date": "2022-08-09",
+      "description": "Body Weight",
+      "code": "29463-7",
+      "value": "80.6",
+      "units": "kg",
+      "encounter": "ee88ec73-5b93-ecb5-4b12-ec976136ed40",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce671e8a-afa1-11f1-aac2-00155df22f44",
+      "date": "2022-08-09",
+      "description": "Body mass index (BMI) [Ratio]",
+      "code": "39156-5",
+      "value": "29.4",
+      "units": "kg/m2",
+      "encounter": "ee88ec73-5b93-ecb5-4b12-ec976136ed40",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce672916-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-03-11",
+      "description": "Body Height",
+      "code": "8302-2",
+      "value": "165.7",
+      "units": "cm",
+      "encounter": "ee88ec73-5b93-ecb5-22c1-d44c69ce1afa",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce67295c-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-03-11",
+      "description": "Body Weight",
+      "code": "29463-7",
+      "value": "82.5",
+      "units": "kg",
+      "encounter": "ee88ec73-5b93-ecb5-22c1-d44c69ce1afa",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    },
+    {
+      "entity": "observations",
+      "id": "obs_ce6729ac-afa1-11f1-aac2-00155df22f44",
+      "date": "2025-03-11",
+      "description": "Body mass index (BMI) [Ratio]",
+      "code": "39156-5",
+      "value": "30.1",
+      "units": "kg/m2",
+      "encounter": "ee88ec73-5b93-ecb5-22c1-d44c69ce1afa",
+      "classification": "risk_context",
+      "rule_id": "clinical-risk-body-measurement",
+      "rationale": "Weight, BMI, and height provide metabolic risk context but do not establish diabetes alone."
+    }
+  ],
+  "leakage_records": [
+    {
+      "entity": "procedures",
+      "id": "proc_ce620238-afa1-11f1-aac2-00155df22f44",
+      "date": "2023-02-07",
+      "description": "Urine screening test for diabetes (procedure)",
+      "code": null,
+      "value": null,
+      "units": null,
+      "encounter": "ee88ec73-5b93-ecb5-3606-56120d90d9be",
+      "classification": "target_leakage",
+      "rationale": "The text explicitly names the target diagnosis or identifies an artifact as diabetic.",
+      "action": "redact_matching_fields",
+      "matching_fields": [
+        "description"
+      ],
+      "rule_id": "explicit-target-language"
+    }
+  ],
+  "decision_evidence_overlap": [],
+  "limitations": [
+    "Decision-input rules cover the inspected metabolic-syndrome modules but do not yet perform a general transitive source-code dependency trace.",
+    "Veteran status is read by Synthea but is absent from the normalized patient schema.",
+    "Clinical evidence rules are diabetes-specific and require human review.",
+    "Glucose records do not reliably state whether the patient was fasting, so fasting-plasma-glucose criteria cannot be inferred from value alone."
+  ],
+  "rules": {
+    "version": 1,
+    "scope": "Type II diabetes tutorial only",
+    "source": "diabetes_evidence_rules.json"
+  },
+  "counts": {
+    "module_transitions": 0,
+    "native_clinical_entries": 0,
+    "matched_clinical_entries": 0,
+    "relevant_normalized_records": 0,
+    "mapping_statuses": {},
+    "relevant_records_by_entity": {},
+    "decision_input_records": 2,
+    "diagnostic_evidence_records": 9,
+    "leakage_records": 1,
+    "decision_evidence_overlap": 0
+  },
+  "source": {
+    "native_json": "Lisette_Reinger_ee88ec73-5b93-ecb5-ff04-ddc315bfef43.json",
+    "normalized_json": "pat_ee88ec73-5b93-ecb5-ff04-ddc315bfef43.json",
+    "native_sha256": "01925516d796ebcf1852dc739248e89bddad18f566859b410e466485822e7016",
+    "normalized_sha256": "af435801273d4bccc54c4d4edf897f39dd399e3a235c714d212c78dd44472c0b"
+  }
+}
