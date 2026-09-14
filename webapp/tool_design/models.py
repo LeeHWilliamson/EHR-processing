@@ -17,7 +17,7 @@ class ToolDefinition(BaseModel):
 
     id: str = Field(pattern=r"^[A-Za-z][A-Za-z0-9_-]{0,63}$")
     name: str = Field(pattern=r"^[A-Za-z][A-Za-z0-9_-]{0,63}$")
-    description: str = Field(min_length=1, max_length=500)
+    description: str = Field(min_length=1, max_length=600)
     key: ToolKey = Field(default_factory=ToolKey)
     returns: dict[str, list[str]]
 

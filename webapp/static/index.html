@@ -24,35 +24,92 @@
       <a class="step" href="#summary"><span>7</span> Summary</a>
     </nav>
 
-    <section id="population" class="panel intro-panel">
-      <div>
-        <p class="eyebrow">Step 1 · Patient population</p>
-        <h1>Ten synthetic patients. No protected health information.</h1>
-        <p>Synthea generated each patient and the clinical history behind them. Select a patient to use while previewing your agent tools.</p>
-      </div>
-      <div id="population-status" class="status" role="status">Loading patients…</div>
-      <div id="patient-tiles" class="patient-groups" aria-live="polite"></div>
-    </section>
+    <aside id="context-guide" class="context-guide" aria-live="polite" hidden>
+      <p class="eyebrow">Context guide</p>
+      <h2 id="context-guide-title">Tip</h2>
+      <p id="context-guide-text">Mouse over elements within each pane to get additional context, instructions, and configuration advice.</p>
+    </aside>
 
-    <section id="tools" class="panel">
+    <aside id="example-banner" class="example-banner" aria-label="Guided example">
+      <div>
+        <strong>First time?</strong>
+        <span>Load a completed example to see how the default configuration carries through to the agent results and analysis.</span>
+      </div>
+      <button id="banner-load-example" class="button primary" type="button">Load Example Run</button>
+      <button id="dismiss-example-banner" class="example-banner-close" type="button" aria-label="Dismiss guided example">&times;</button>
+    </aside>
+
+    <section id="overview" class="panel overview-panel" tabindex="0" data-guide="overview">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Step 2 · Design patient tools</p>
-          <h2>Decide what the agent can retrieve</h2>
-          <p>The agent never reads a patient file directly. Each row below becomes one callable function with an explicit input and return shape.</p>
+          <h1>Agent Evaluation Platform</h1>
+          <p>
+            This webpage demonstrates Synth-EHR, a platform for evaluating medical AI agents. In this tutorial, you can create agent
+            tools for accessing synthetic health records, customize task workflows and agent instructions, inject errors into
+            patient records, run an AI agent, and visualize its accuracy, workflow adherence, and resource usage. We will configure
+            these settings for a nuanced clinical task: identifying patients whose records contain evidence of type 2 diabetes.
+          </p>
+          <p>
+            If this is your first visit, I recommend loading the example run. It provides a clearer picture of how the settings fit together
+            and how adjustments affect agent performance. Otherwise, customize each step to your liking. See whether you can configure the
+            inputs to improve agent performance, limit the amount of irrelevant data retrieved, or even create situations in which the agent
+            does not perform well.
+          </p>
+          <h2>Task: Identify patients with evidence of type 2 diabetes</h2>
+          <p>For this task, we follow a seven-step sequence:</p>
+          <ol class="tutorial-overview">
+            <li>Use a sample of realistic, pregenerated patients, some of whom have diabetes and some of whom do not.</li>
+            <li>Design the tools an AI agent can use to access patient data.</li>
+            <li>Provide task instructions and, optionally, define an ideal sequence of tool calls against which to compare the agent's behavior.</li>
+            <li>Inject noise into the data presented to the agent by manipulating relevant laboratory results and censoring a related diagnosis. Along with tool design, this projects a complete patient record into an imperfect electronic representation.</li>
+            <li>Verify how the noise affected the patient data so that we can interpret agent performance accurately.</li>
+            <li>Run the agent independently for each patient.</li>
+            <li>Analyze the results.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="population" class="panel intro-panel" data-guide="population">
+      <div>
+        <p class="eyebrow">Step 1 · Patient population</p>
+
+        <p>The tiles below represent our patient population. Tiles outlined in purple represent patients that were intentionally generated to develop
+          type 2 diabetes at some point in their lives. Tiles outlined in green represent patients generated under normal settings that may or may not
+          have developed diabetes at some point in their lives.
+        </p>
+        <p>
+          Note: these patients were generated using the Synthea tool by the MITRE Corporation. They do not represent actual people.
+        </p>
+      </div>
+      <div id="population-status" class="status" role="status">Loading patients…</div>
+      <div id="patient-tiles" class="patient-groups" aria-live="polite" data-guide="patient-tiles"></div>
+    </section>
+
+    <section id="tools" class="panel" data-guide="tools">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Step 2 · Design agent tools</p>
+          <!-- <h2>Decide what the agent can retrieve</h2> -->
+          <p>Design the tools the agent can use to request data from to our database. Each tool needs a name, a description, a return type, and a key.</p>
         </div>
         <button id="reset-tools" class="button secondary" type="button">Reset defaults</button>
       </div>
 
       <aside class="lesson">
-        <strong>Why patient ID?</strong>
-        <span>The default tools all accept the assigned patient ID. During an evaluation, calls for any other patient are rejected and recorded.</span>
+        <strong>Entities and Fields</strong>
+        <span>Entities refer to resource categories of patient data such as medications, conditions, immunizations, and more. Fields refer to attribute within an entity. For example the 'allergies' entity has fields that include reaction, reaction severity, and more.  </span>
+      </aside>
+
+      <aside class="lesson">
+        <strong>Returning Multiple Entities</strong>
+        <span>Creating tools that return multiple entities (e.g. 'Medications' and 'Conditions') can improve agent reasoning in some cases, but can also result in an agent accessing a plethora of irrelevant data.</span>
       </aside>
 
       <div class="table-labels" aria-hidden="true">
         <span>Tool name</span><span>Description</span><span>Return</span><span>By</span><span></span>
       </div>
-      <div id="tool-list" class="tool-list" aria-live="polite"></div>
+      <div id="tool-list" class="tool-list" aria-live="polite" data-guide="tool-list"></div>
 
       <div class="tool-actions">
         <button id="add-tool" class="button secondary" type="button">+ Add tool</button>
@@ -64,12 +121,11 @@
       <div id="tool-status" class="status" role="status"></div>
     </section>
 
-    <section id="preview" class="panel preview-panel">
+    <section id="preview" class="panel preview-panel" data-guide="preview">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Tool preview</p>
-          <h2>See exactly what the agent receives</h2>
-          <p>Preview results use the agent-visible record: explicit target leakage is already removed or redacted.</p>
+          <p>Run the tools you've created to see what their returned data looks like.</p>
         </div>
       </div>
       <div class="preview-controls">
@@ -79,15 +135,14 @@
         <button id="run-preview" class="button primary" type="button" disabled>Run preview</button>
       </div>
       <div id="preview-summary" class="status"></div>
-      <pre id="preview-output" tabindex="0">Choose a patient and tool, then run a preview.</pre>
+      <pre id="preview-output" tabindex="0" data-guide="preview-output">Choose a patient and tool, then run a preview.</pre>
     </section>
 
-    <section id="task" class="panel task-panel">
+    <section id="task" class="panel task-panel" data-guide="task">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Step 3 · Design the task</p>
-          <h2>Define what the agent must decide</h2>
-          <p>This tutorial uses a binary diabetes diagnosis: the agent must answer either present or absent.</p>
+          <p>For this tutorial, we lock the task type and details as 'Diagnose Condition : Diabetes.' We allow the user to optionally input an ideal workflow, and configure the system and user intstructions.</p>
         </div>
       </div>
 
@@ -111,7 +166,7 @@
           <select id="task-condition"><option value="diabetes">Diabetes</option></select>
         </div>
 
-        <div class="workflow-section">
+        <div class="workflow-section" data-guide="ideal-workflow">
           <div class="workflow-heading">
             <div>
               <h3>Ideal workflow <span>Optional</span></h3>
@@ -123,12 +178,12 @@
           <p id="workflow-empty" class="workflow-empty">No ideal workflow configured.</p>
         </div>
 
-        <div class="task-field instruction-field">
+        <div class="task-field instruction-field" data-guide="system-instructions">
           <label for="system-instructions">System instructions</label>
           <textarea id="system-instructions" maxlength="2000" rows="5" placeholder="Instructions that define the agent's role and behavior"></textarea>
           <small><span id="system-instructions-count">0</span>/2000</small>
         </div>
-        <div class="task-field instruction-field">
+        <div class="task-field instruction-field" data-guide="user-instructions">
           <label for="user-instructions">User instructions</label>
           <textarea id="user-instructions" maxlength="2000" rows="5" placeholder="The diagnostic request given to the agent"></textarea>
           <small><span id="user-instructions-count">0</span>/2000</small>
@@ -142,23 +197,24 @@
       <div id="task-status" class="status" role="status"></div>
     </section>
 
-    <section id="noise" class="panel noise-panel">
+    <section id="noise" class="panel noise-panel" data-guide="noise">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Step 4 · Define noise</p>
-          <h2>Translate the patient into an imperfect record</h2>
-          <p>Noise simulates measurement variation and missing clinical information before the agent receives the record.</p>
+          <p>This step recreates the layer of obscurity that exists between an actual patient, and their electronic health record.
+            The noise defined here will be applied to the version of the patient's record that our agent accesses, not the original patient records we generated in step 1.
+          </p>
         </div>
         <button id="toggle-noise" class="button danger" type="button">Disable noise</button>
       </div>
 
       <aside class="lesson">
         <strong>Reproducible by design</strong>
-        <span>The same patient record always receives the same jitter, allowing fair comparisons between agent runs.</span>
+        <span>For this tutorial, sources of noise with any random element are standardized to a specific seed. This means that a particular source of noise will have the same effect on a specific patient's health record on any run where the noise source is used.</span>
       </aside>
 
       <div id="noise-sources" class="noise-sources">
-        <article class="noise-source">
+        <article class="noise-source" data-guide="observation-jitter">
           <div class="noise-source-heading"><span>1</span><strong>Observation variation</strong></div>
           <div class="noise-fields">
             <label>Noise source<select disabled><option>Jitter Observations</option></select></label>
@@ -168,13 +224,13 @@
           <p>Numerical glucose values are adjusted by a deterministic amount within ±10%.</p>
         </article>
 
-        <article class="noise-source">
+        <article class="noise-source" data-guide="condition-censoring">
           <div class="noise-source-heading"><span>2</span><strong>Missing diagnosis</strong></div>
           <div class="noise-fields censor-fields">
             <label>Noise source<select disabled><option>Censor Condition</option></select></label>
             <label>Condition<select disabled><option>Prediabetes</option></select></label>
           </div>
-          <p>Prediabetes condition records are removed from the version available to the agent.</p>
+          <!-- <p>Prediabetes condition records are removed from the version available to the agent.</p> -->
         </article>
       </div>
 
@@ -185,15 +241,19 @@
       <div id="noise-status" class="status" role="status"></div>
     </section>
 
-    <section id="verification" class="panel verification-panel">
+    <section id="verification" class="panel verification-panel" data-guide="verification">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Step 5 · Verify the task</p>
-          <h2>Check whether the evidence survives</h2>
-          <p>Compare evidence identified in each original record with the baseline-censored and noise-injected versions the agent can access.</p>
+          <!-- <h2>Check whether the evidence survives</h2> -->
+          <p>Compare evidence identified in each original record with the baseline-censored and noise-injected versions the agent can access. We do this to quantify how much direct evidence of the condition we are diagnosing remains in the EHR.</p>
         </div>
         <button id="run-verification" class="button primary" type="button" disabled>Verify task</button>
       </div>
+      <aside class="lesson">
+          <strong>Task verification</strong>
+          <span>For a detailed explanation of how we quantify the amount of evidence that exists in the patient record before and after noise injection, please see the FAQs.</span>
+      </aside>
       <div class="verification-legend" aria-label="Verification status legend">
         <span><i class="green"></i> Evidence preserved</span>
         <span><i class="amber"></i> Evidence modified</span>
@@ -201,17 +261,20 @@
         <span><i class="neutral"></i> No expected evidence</span>
       </div>
       <div id="verification-status" class="status" role="status">Finalize the noise configuration to verify the task.</div>
-      <div id="verification-results" class="verification-grid"></div>
+      <div id="verification-results" class="verification-grid" data-guide="verification-results"></div>
     </section>
 
-    <section id="agent-run" class="panel agent-panel">
+    <section id="agent-run" class="panel agent-panel" data-guide="agent-run">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Step 6 · Run the task</p>
-          <h2>Let the agent investigate every patient</h2>
+          <!-- <h2>Let the agent investigate every patient</h2> -->
           <p>The agent receives your instructions and finalized tools, then independently diagnoses all ten noise-transformed records.</p>
         </div>
-        <button id="run-agent" class="button primary" type="button" disabled>Run agent</button>
+        <div class="agent-actions">
+          <button id="load-example-run" class="button secondary" type="button">Load example run</button>
+          <button id="run-agent" class="button primary" type="button" disabled>Run agent</button>
+        </div>
       </div>
       <aside class="lesson">
         <strong>Ten independent runs</strong>
@@ -226,14 +289,14 @@
         <div id="agent-activity" class="agent-activity" role="log" aria-live="polite"></div>
       </div>
       <div id="agent-status" class="status" role="status">Finalize the toolset, task, and noise configuration to run the agent.</div>
-      <div id="agent-results" class="agent-grid"></div>
+      <div id="agent-results" class="agent-grid" data-guide="agent-results"></div>
     </section>
 
-    <section id="summary" class="panel summary-panel">
+    <section id="summary" class="panel summary-panel" data-guide="summary">
       <div class="section-heading summary-heading">
         <div>
           <p class="eyebrow">Step 7 · Data summary</p>
-          <h2>Understand how the agent behaved</h2>
+          <!-- <h2>Understand how the agent behaved</h2> -->
           <p>Review diagnostic performance, evidence retrieval, tool-use paths, and cost for the completed run.</p>
         </div>
         <label class="summary-filter">Patients
@@ -242,13 +305,13 @@
       </div>
       <div id="summary-empty" class="summary-empty">Run the agent to generate the performance summary.</div>
       <div id="summary-dashboard" hidden>
-        <section class="summary-section">
+        <section class="summary-section" data-guide="accuracy">
           <h3>Accuracy</h3>
           <div id="accuracy-metrics" class="metric-grid"></div>
           <div id="summary-patient-results" class="summary-patient-grid"></div>
         </section>
 
-        <section class="summary-section">
+        <section class="summary-section" data-guide="evidence-retrieval">
           <h3>Evidence retrieval</h3>
           <div id="evidence-metrics" class="metric-grid"></div>
           <div class="summary-split">
@@ -257,14 +320,14 @@
           </div>
         </section>
 
-        <section class="summary-section">
+        <section class="summary-section" data-guide="agent-behavior">
           <h3>Agent behavior and cost</h3>
           <div id="behavior-metrics" class="metric-grid"></div>
           <div class="summary-split tool-map-layout">
             <div>
               <h4>Tool-call path map</h4>
               <p class="map-help">Darker nodes were called more often. Thicker arrows represent more frequent transitions.</p>
-              <svg id="tool-call-map" class="tool-call-map" viewBox="0 0 700 520" role="img" aria-label="Circular tool-call transition map"></svg>
+              <svg id="tool-call-map" class="tool-call-map" viewBox="0 0 700 520" role="img" aria-label="Circular tool-call transition map" data-guide="tool-call-map"></svg>
             </div>
             <div>
               <h4>Exact call sequences</h4>

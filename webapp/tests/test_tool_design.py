@@ -35,6 +35,16 @@ def test_default_toolset_is_valid_and_uses_patient_id() -> None:
     assert {tool.key.field for tool in toolset.tools} == {"patient_id"}
 
 
+def test_tool_description_has_a_600_character_limit() -> None:
+    with pytest.raises(ValueError):
+        ToolDefinition(
+            id="overlong_description",
+            name="overlong_description",
+            description="x" * 601,
+            returns={"observations": ["description"]},
+        )
+
+
 def test_default_task_is_binary_and_valid() -> None:
     task = default_task()
     assert task.allowed_outcomes == ("present", "absent")

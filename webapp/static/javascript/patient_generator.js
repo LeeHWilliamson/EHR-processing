@@ -18,12 +18,125 @@ const state = {
   noiseFinalized: false,
   verificationResults: null,
   agentResults: null,
+  agentResultSource: null,
 };
 
 const storageKey = "synth-ehr-toolset-v1";
 const taskStorageKey = "synth-ehr-task-v1";
 const noiseStorageKey = "synth-ehr-noise-v1";
+const toolDescriptionMaxLength = 600;
 const byId = (id) => document.getElementById(id);
+
+const guideContent = {
+  overview: {
+    title: "Tip",
+    text: "Hover over elements in this tutorial for additional context, instruction, and configuration tips!",
+  },
+  population: {
+    title: "Patient population",
+    text: "To clearly illustrate the connection between agent input and task outcome, we use a static sample of patients tailored for our task.",
+  },
+  "patient-tiles": {
+    title: "Patient tiles",
+    text: "Select the book icon within a tile to view all medical events in a patients lifetime. Select the tile itself to use that patient for previewing the tools we design in the next step.",
+  },
+  tools: {
+    title: "Agent toolset",
+    text: "AI agents typically do not have direct access to a database, they are prevented from directly viewing or manipulating patient data. Instead, AI agents can only pass specific data requests via an Application Programming Interface (API). We define those requests here.",
+  },
+  "tool-list": {
+    title: "Tool definitions",
+    text: "Each row corresponds to 1 tool. A user may create 1-15 tools. Feel free to create a mix of tools that are directly relevant to the task and some that are not, this can lead to varied agent behavior. Note that there is no requirement that the toolset provide access to all patient data. Consider limiting agent tools (e.g. preventing any access to medication data) to see how that affects agent performance.",
+  },
+  "tool-name": {
+    title: "Tool name",
+    text: "This is the tool name presented to the agent. Each tool must have a unique name. The name of the tool has no impact on agent tool selection.",
+  },
+  "tool-description": {
+    title: "Tool description",
+    text: "The agent reads this description when deciding whether and when to call the tool. Use this field to describe the data the tool retrieves. Be as detailed or concise as you want.",
+  },
+  "tool-returns": {
+    title: "Returned data",
+    text: "Choose the clinical entities and exact fields returned by this tool.",
+  },
+  "tool-key": {
+    title: "Lookup key",
+    text: "This column defines the entity field that is used to retrieve records. We can use any field that is common to all entities returned by this tool. For example, if this tool returns 'procedures' and 'encounters' we can use 'encounter' as the key field to return all procedures and the encounters where they took place.",
+  },
+  preview: {
+    title: "Tool preview",
+    text: "Use this sandbox to inspect exactly what one finalized tool returns for the selected patient before allowing an AI agent to call it.",
+  },
+  "preview-output": {
+    title: "Agent-visible output",
+    text: "This JSON is the information the agent would receive from the selected call.",
+  },
+  task: {
+    title: "Task design",
+    text: "Task design specifies the decision being evaluated and the instructions the agent receives. Task name, description, type, and Ideal workflow are not exposed to the agent, they are used for data organization and analytics.",
+  },
+  "ideal-workflow": {
+    title: "Ideal workflow",
+    text: "This optional ordered list describes a preferred investigation path. If used, the agent's workflow will be scored against the one described here.",
+  },
+  "system-instructions": {
+    title: "System instructions",
+    text: "System instructions establish the agent's role, constraints, and general decision-making behavior. They affect how the agent implements user instructions.",
+  },
+  "user-instructions": {
+    title: "User instructions",
+    text: "User instructions contain the specific diagnostic request. Clear instructions should define the objective without revealing the expected answer. Note that these insctructions determine the agent's goal, and thus you can ask the agent to retrieve any data you like. The metrics at the end of this tutorial, however, assume the task relates to diagnosing diabetes.",
+  },
+  noise: {
+    title: "Data noise",
+    text: "Noise creates a controlled gap between the complete patient history and the imperfect electronic record available to the agent.",
+  },
+  "observation-jitter": {
+    title: "Observation variation",
+    text: "This variation represents transcription errors that can occur when patient lab results are input to that patient's health record.",
+  },
+  "condition-censoring": {
+    title: "Condition censoring",
+    text: "Censoring prediabetes recreates real-world situations where type 2 diabetes is not caught in its early stage. Note that disabling this will make it so the AI agent virtually never fails to correctly detect diabetes.",
+  },
+  verification: {
+    title: "Task verification",
+    text: "Verification checks how censoring direct references to our target condition (diabetes) and the noise injection from step 6 affects our patient records.",
+  },
+  "verification-results": {
+    title: "Evidence preservation",
+    text: "Each tile summarizes whether relevant evidence was preserved, modified, or removed. Open a tile to inspect the record-level changes.",
+  },
+  "agent-run": {
+    title: "Agent evaluation",
+    text: "The agent investigates each patient independently using only the finalized instructions, tools, and noise-transformed record.",
+  },
+  "agent-results": {
+    title: "Patient results",
+    text: "Green tiles indicate correct diagnoses and red tiles indicate incorrect diagnoses or failed runs. Relevant records refer to entity records that relate to type 2 diabetes. For a detailed explanation of how we determine this, please check the FAQs.",
+  },
+  summary: {
+    title: "Evaluation summary",
+    text: "The dashboard combines diagnostic outcomes, evidence retrieval, tool-use behavior, and resource consumption for the completed cohort run.",
+  },
+  accuracy: {
+    title: "Diagnostic accuracy",
+    text: "Accuracy is the share of patients classified correctly against the known labels in the synthetic cohort.",
+  },
+  "evidence-retrieval": {
+    title: "Evidence retrieval",
+    text: "Coverage measures how much relevant evidence appeared in records returned by the agent's tool calls, not how much of the entire chart it retrieved.",
+  },
+  "agent-behavior": {
+    title: "Behavior and cost",
+    text: "These measures describe how the agent investigated the cohort: its tool calls, call sequences, latency, and token usage.",
+  },
+  "tool-call-map": {
+    title: "Tool-call path map",
+    text: "Nodes represent tools and arrows represent transitions between consecutive calls. Darker nodes and thicker arrows indicate more frequent use.",
+  },
+};
 
 async function api(path, options = {}) {
   const response = await fetch(path, options);
@@ -244,7 +357,15 @@ function input(className, value, onChange, multiline = false) {
   const element = document.createElement(multiline ? "textarea" : "input");
   element.value = value;
   element.placeholder = multiline ? "Description" : "Tool Name";
+  let characterCount = null;
+  if (multiline) {
+    element.maxLength = toolDescriptionMaxLength;
+    characterCount = document.createElement("small");
+    characterCount.className = "tool-character-count";
+    characterCount.textContent = `${element.value.length}/${toolDescriptionMaxLength}`;
+  }
   element.addEventListener("input", () => {
+    if (characterCount) characterCount.textContent = `${element.value.length}/${toolDescriptionMaxLength}`;
     onChange(element.value);
     refreshValidationHighlights();
   });
@@ -259,6 +380,7 @@ function input(className, value, onChange, multiline = false) {
     });
   }
   wrapper.append(element);
+  if (characterCount) wrapper.append(characterCount);
   return wrapper;
 }
 
@@ -328,9 +450,12 @@ function renderTools() {
     row.className = "tool-row";
     row.dataset.toolIndex = String(index);
     const name = input("tool-name", tool.name, (value) => { tool.name = value; saveTools(); refreshPreviewTools(); });
+    name.dataset.guide = "tool-name";
     const description = input("tool-description", tool.description, (value) => { tool.description = value; saveTools(); }, true);
+    description.dataset.guide = "tool-description";
     const returns = document.createElement("div");
     returns.className = "tool-returns";
+    returns.dataset.guide = "tool-returns";
     Object.keys(tool.returns).forEach((entity, entityIndex) => {
       if (entityIndex > 0) {
         const conjunction = document.createElement("div");
@@ -355,6 +480,7 @@ function renderTools() {
 
     const keyWrap = document.createElement("div");
     keyWrap.className = "tool-key";
+    keyWrap.dataset.guide = "tool-key";
     const keySelect = document.createElement("select");
     const keys = sharedKeyFields(tool);
     if (!keys.includes(tool.key.field)) tool.key.field = "patient_id";
@@ -479,6 +605,8 @@ function localValidationErrors() {
     if (name) nameGroups.set(name, [...(nameGroups.get(name) || []), toolIndex]);
     if (!tool.description.trim()) {
       errors.push({ scope: "tool", toolIndex, field: "description", message: "Please add a description." });
+    } else if (tool.description.length > toolDescriptionMaxLength) {
+      errors.push({ scope: "tool", toolIndex, field: "description", message: `Descriptions cannot exceed ${toolDescriptionMaxLength} characters.` });
     }
     if (!Object.keys(tool.returns).length) {
       errors.push({ scope: "tool", toolIndex, field: "returns", message: "Choose at least one entity to return." });
@@ -772,6 +900,7 @@ function invalidateVerification() {
 
 function invalidateAgentResults() {
   state.agentResults = null;
+  state.agentResultSource = null;
   const results = byId("agent-results");
   if (results) results.replaceChildren();
   const dashboard = byId("summary-dashboard");
@@ -954,6 +1083,38 @@ function renderAgentState() {
   button.disabled = !ready;
   if (!ready && !state.agentResults) {
     setStatus(byId("agent-status"), "Finalize the toolset, task, and noise configuration to run the agent.");
+  }
+}
+
+function applyAgentResults(result, source = "live") {
+  if (!result || !Array.isArray(result.patients) || !result.summary) {
+    throw new Error("The example run file is not a valid agent result.");
+  }
+  state.agentResults = result;
+  state.agentResultSource = source;
+  renderAgentResults(result);
+  initializeSummary(result);
+}
+
+async function loadExampleRun() {
+  const buttons = [byId("load-example-run"), byId("banner-load-example")].filter(Boolean);
+  buttons.forEach((button) => { button.disabled = true; });
+  try {
+    const result = await api("/static/data/cached-agent-run.json", { cache: "no-cache" });
+    applyAgentResults(result, "example");
+    byId("agent-progress").hidden = true;
+    setStatus(
+      byId("agent-status"),
+      `Prerecorded example loaded · ${result.summary.correct} / ${result.summary.total} patients diagnosed correctly · default configuration · no new API tokens used.`,
+      "success",
+    );
+    return true;
+  } catch (error) {
+    setStatus(byId("agent-status"), `Could not load the example run: ${error.message}`, "error");
+    return false;
+  } finally {
+    buttons.forEach((button) => { button.disabled = false; });
+    renderAgentState();
   }
 }
 
@@ -1390,6 +1551,8 @@ async function runAgent() {
   if (!(state.finalized && state.taskFinalized && state.noiseFinalized)) return;
   invalidateAgentResults();
   byId("run-agent").disabled = true;
+  byId("load-example-run").disabled = true;
+  byId("banner-load-example").disabled = true;
   byId("agent-progress").hidden = false;
   byId("agent-progress-bar").value = 0;
   byId("agent-progress-count").textContent = "0 / 10 patients";
@@ -1439,9 +1602,7 @@ async function runAgent() {
     }
     if (streamError) throw new Error(streamError);
     if (!result) throw new Error("The agent stream ended before returning final results.");
-    state.agentResults = result;
-    renderAgentResults(result);
-    initializeSummary(result);
+    applyAgentResults(result, "live");
     byId("agent-progress-label").textContent = "Agent run complete";
     setStatus(
       byId("agent-status"),
@@ -1451,8 +1612,77 @@ async function runAgent() {
   } catch (error) {
     setStatus(byId("agent-status"), error.message, "error");
   } finally {
+    byId("load-example-run").disabled = false;
+    byId("banner-load-example").disabled = false;
     renderAgentState();
   }
+}
+
+function initializeStepNavigation() {
+  const links = [...document.querySelectorAll(".steps .step")];
+  const entries = links
+    .map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) }))
+    .filter((entry) => entry.section);
+  let scheduled = false;
+
+  function updateActiveStep() {
+    scheduled = false;
+    const marker = window.innerHeight * .32;
+    let active = entries[0];
+    entries.forEach((entry) => {
+      if (entry.section.getBoundingClientRect().top <= marker) active = entry;
+    });
+    entries.forEach((entry) => {
+      const selected = entry === active;
+      entry.link.classList.toggle("active", selected);
+      if (selected) entry.link.setAttribute("aria-current", "step");
+      else entry.link.removeAttribute("aria-current");
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!scheduled) {
+      scheduled = true;
+      window.requestAnimationFrame(updateActiveStep);
+    }
+  }, { passive: true });
+  window.addEventListener("resize", updateActiveStep);
+  updateActiveStep();
+}
+
+function initializeContextGuide() {
+  const guide = byId("context-guide");
+  const title = byId("context-guide-title");
+  const text = byId("context-guide-text");
+  if (!guide || !title || !text) return;
+
+  function guidedElement(element) {
+    return element instanceof Element ? element.closest("[data-guide]") : null;
+  }
+
+  function show(element) {
+    const content = guideContent[element?.dataset.guide];
+    if (!content) {
+      guide.hidden = true;
+      return;
+    }
+    title.textContent = content.title;
+    text.textContent = content.text;
+    guide.hidden = false;
+  }
+
+  function transition(event) {
+    const current = guidedElement(event.target);
+    const next = guidedElement(event.relatedTarget);
+    if (current === next) return;
+    if (next) show(next);
+    else guide.hidden = true;
+  }
+
+  document.addEventListener("mouseover", (event) => show(guidedElement(event.target)));
+  document.addEventListener("mouseout", transition);
+  document.addEventListener("focusin", (event) => show(guidedElement(event.target)));
+  document.addEventListener("focusout", transition);
 }
 
 async function initialize() {
@@ -1487,6 +1717,8 @@ async function initialize() {
     renderTools();
     renderTask();
     renderNoise();
+    initializeStepNavigation();
+    initializeContextGuide();
     byId("preview-tool").addEventListener("change", syncPreviewArgument);
     byId("add-tool").addEventListener("click", () => { state.tools.push(newTool()); renderTools(); });
     byId("finalize-tools").addEventListener("click", finalizeTools);
@@ -1503,6 +1735,13 @@ async function initialize() {
     byId("edit-noise").addEventListener("click", editNoise);
     byId("run-verification").addEventListener("click", runVerification);
     byId("run-agent").addEventListener("click", runAgent);
+    byId("load-example-run").addEventListener("click", loadExampleRun);
+    byId("banner-load-example").addEventListener("click", async () => {
+      if (await loadExampleRun()) byId("example-banner").hidden = true;
+    });
+    byId("dismiss-example-banner").addEventListener("click", () => {
+      byId("example-banner").hidden = true;
+    });
     byId("summary-patient-filter").addEventListener("change", renderSummary);
     byId("close-verification-reader").addEventListener("click", () => byId("verification-reader").close());
     byId("verification-reader").addEventListener("click", (event) => {
