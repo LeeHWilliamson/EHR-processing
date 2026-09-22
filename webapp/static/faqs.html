@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQs · Synth-EHR</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body class="content-page">
+  <header class="site-header">
+    <a class="brand" href="/">Synth-EHR</a>
+    <p class="site-header-copy">Build a controlled clinical environment for evaluating an AI agent.</p>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/tutorial">Tutorial</a>
+      <a href="/faqs" class="active" aria-current="page">FAQs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <p class="eyebrow">Frequently asked questions</p>
+      <h1>How Synth-EHR works</h1>
+      <p class="faq-intro">Use this page to explain the project’s terminology, evaluation choices, and limitations in greater depth than the guided interface allows.</p>
+    </section>
+
+    <section class="faq-list" aria-label="Frequently asked questions">
+      <details class="faq-item" open>
+        <summary>What is Synth-EHR?</summary>
+        <div class="faq-answer"><p>Add your explanation of the project and its intended purpose.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Does this application use real patient data?</summary>
+        <div class="faq-answer"><p>No. The tutorial uses a fixed cohort of synthetic patients generated with Synthea. These records do not represent real people.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How is the correct diagnosis established?</summary>
+        <div class="faq-answer"><p>Ground truth comes from Synthea’s exact type 2 diabetes diagnosis in the complete synthetic record. It is not inferred by the clinical evidence rules.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What counts as relevant evidence?</summary>
+        <div class="faq-answer"><p>Explain the hybrid provenance approach: causal records, reconstructed Synthea decision inputs, and diabetes-specific diagnostic evidence.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What information is hidden from the agent?</summary>
+        <div class="faq-answer"><p>Explain baseline censorship, target-leaking records, and the distinction between the complete record and the agent-visible record.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What noise does the tutorial introduce?</summary>
+        <div class="faq-answer"><p>Explain deterministic glucose variation and the removal of Prediabetes condition records.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>How is evidence coverage calculated?</summary>
+        <div class="faq-answer"><p>Explain that coverage compares relevant record IDs returned through agent tool calls with relevant records available after censorship and noise.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>What are the current limitations?</summary>
+        <div class="faq-answer"><p>Describe the fixed ten-patient cohort, diabetes-specific evidence rules, reconstructed decision inputs, and educational scope of the evaluation.</p></div>
+      </details>
+    </section>
+  </main>
+</body>
+</html>

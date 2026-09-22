@@ -35,6 +35,11 @@ button, select { cursor: pointer; }
 }
 .site-header p { margin: 0; }
 .brand { color: white; font-size: 22px; font-weight: 800; text-decoration: none; }
+.site-header-copy { color: #dcefe8; }
+.site-nav { display: flex; align-items: center; gap: 5px; margin-left: auto; }
+.site-nav a { padding: 7px 11px; border-radius: 7px; color: #dcefe8; font-weight: 700; text-decoration: none; }
+.site-nav a:hover, .site-nav a:focus-visible { background: rgba(255, 255, 255, .11); color: white; }
+.site-nav a.active { background: white; color: var(--green-dark); }
 
 main { width: min(1240px, calc(100% - 40px)); margin: 28px auto 80px; }
 .steps { display: flex; gap: 8px; margin-bottom: 18px; overflow-x: auto; }
@@ -52,7 +57,7 @@ main { width: min(1240px, calc(100% - 40px)); margin: 28px auto 80px; }
 .context-guide { display: none; }
 
 @media (min-width: 1100px) {
-  main {
+  .tutorial-page main {
     width: min(1160px, calc(100% - 220px));
     margin-right: calc(max(18px, (100vw - 1480px) / 2) + 178px);
   }
@@ -64,7 +69,7 @@ main { width: min(1240px, calc(100% - 40px)); margin: 28px auto 80px; }
 }
 
 @media (min-width: 1400px) {
-  main { width: min(1040px, calc(100% - 476px)); }
+  .tutorial-page main { width: min(1040px, calc(100% - 476px)); }
   .context-guide {
     position: fixed; z-index: 20; top: 50%; left: max(18px, calc((100vw - 1480px) / 2)); transform: translateY(-50%);
     display: block; width: 220px; padding: 20px; border: 1px solid #b8d6cb; border-radius: 14px;
@@ -105,6 +110,25 @@ p { margin: 0 0 12px; }
 .tutorial-overview { max-width: 940px; margin: 14px 0 0; padding-left: 24px; }
 .tutorial-overview li { margin: 8px 0; padding-left: 5px; }
 .tutorial-overview li::marker { color: var(--green); font-weight: 800; }
+
+.content-page main { width: min(1040px, calc(100% - 40px)); }
+.page-hero { padding: clamp(34px, 6vw, 72px); background: linear-gradient(135deg, #fff 55%, var(--green-soft)); }
+.page-hero h1 { max-width: 850px; }
+.page-hero .lede { max-width: 760px; margin-top: 18px; font-size: 19px; }
+.page-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+.button-link { display: inline-block; text-decoration: none; }
+.content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.content-card { padding: 25px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.content-card h2 { font-size: 22px; }
+.content-card p:last-child { margin-bottom: 0; }
+.page-note { border-left: 4px solid var(--purple); }
+.faq-intro { max-width: 760px; }
+.faq-list { display: grid; gap: 12px; }
+.faq-item { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.faq-item summary { padding: 17px 20px; cursor: pointer; color: var(--green-dark); font-size: 17px; font-weight: 800; }
+.faq-item summary:hover, .faq-item summary:focus-visible { background: var(--green-soft); }
+.faq-answer { padding: 0 20px 18px; }
+.faq-answer p:last-child { margin-bottom: 0; }
 
 .patient-groups { margin-top: 20px; }
 .patient-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); gap: 12px; }
@@ -336,6 +360,7 @@ pre { max-height: 480px; overflow: auto; padding: 18px; border-radius: 12px; bac
 .reader-entity pre { max-height: none; margin: 0; border-radius: 0 0 9px 9px; }
 
 @media (max-width: 900px) {
+  .content-grid { grid-template-columns: 1fr; }
   .table-labels { display: none; }
   .tool-row { grid-template-columns: 1fr; padding: 18px 0; }
   .tool-row > *::before { display: block; margin-bottom: 4px; color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; }
@@ -358,6 +383,8 @@ pre { max-height: 480px; overflow: auto; padding: 18px; border-radius: 12px; bac
   main { width: min(100% - 22px, 1240px); }
   .site-header { display: block; padding: 16px; }
   .site-header p { margin-top: 4px; font-size: 12px; }
+  .site-nav { flex-wrap: wrap; margin: 12px 0 0; }
+  .site-nav a { flex: 1; min-width: max-content; text-align: center; }
   .panel { padding: 20px 16px; border-radius: 13px; }
   .section-heading { display: block; }
   .example-banner { align-items: stretch; flex-direction: column; gap: 18px; min-height: 210px; padding: 30px 48px 30px 24px; }

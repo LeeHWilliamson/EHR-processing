@@ -5,7 +5,7 @@ from webapp.tool_design.models import Toolset
 class TaskConfigurationError(ValueError):
     pass
 
-
+#ensure the tools included in task actually exist
 def validate_task(task: DiagnosticTask, toolset: Toolset) -> DiagnosticTask:
     tools_by_id = {tool.id: tool for tool in toolset.tools}
     for step_number, step in enumerate(task.ideal_workflow, start=1):

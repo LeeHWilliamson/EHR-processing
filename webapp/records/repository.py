@@ -29,6 +29,7 @@ class PatientRepository:
         return value if value.startswith("pat_") else f"pat_{value}"
 
     @cached_property
+    #finds normalized JSON files and maps patient IDs to file paths.
     def index(self) -> dict[str, Path]:
         index: dict[str, Path] = {}
         for path in sorted(self.normalized_dir.glob("*.json")):
@@ -67,6 +68,7 @@ class PatientRepository:
         with path.open(encoding="utf-8") as handle:
             return json.load(handle)
 
+    #returns a copy of the complete normalized record.
     def load_pristine(self, patient_id: str) -> dict[str, Any]:
         return copy.deepcopy(self._load_pristine_cached(self.canonical_id(patient_id)))
 
@@ -78,6 +80,7 @@ class PatientRepository:
         with path.open(encoding="utf-8") as handle:
             return json.load(handle)
 
+    #returns the patient’s evaluator-only provenance.
     def load_manifest(self, patient_id: str) -> dict[str, Any]:
         return copy.deepcopy(self._load_manifest_cached(self.canonical_id(patient_id)))
 
@@ -89,6 +92,7 @@ class PatientRepository:
         return next((record for record in records if record.get("id") == record_id), None)
 
     @lru_cache(maxsize=10)
+    #removes or redacts explicit answer leakage.
     def _load_agent_visible_cached(self, canonical: str) -> dict[str, Any]:
         patient = self.load_pristine(canonical)
         manifest = self.load_manifest(canonical)
@@ -108,15 +112,18 @@ class PatientRepository:
             patient[entity] = [record for record in patient.get(entity, []) if record.get("id") not in ids]
         return patient
 
+    #returns a safe copy of that baseline record.
     def load_agent_visible(self, patient_id: str) -> dict[str, Any]:
         return copy.deepcopy(self._load_agent_visible_cached(self.canonical_id(patient_id)))
 
+    #applies configured noise to the baseline record.
     def load_noisy_agent_visible(self, patient_id: str, configuration: Any) -> tuple[dict[str, Any], list[dict[str, Any]]]:
         from webapp.noise.service import apply_noise
 
         canonical = self.canonical_id(patient_id)
         return apply_noise(self.load_agent_visible(canonical), canonical, configuration)
 
+    #produces the patient-tile data.
     def summaries(self) -> list[dict[str, Any]]:
         summaries = []
         for patient_id in self.patient_ids():

@@ -76,7 +76,22 @@ class TaskValidationRequest(BaseModel):
 
 @app.get("/", include_in_schema=False)
 async def home() -> FileResponse:
+    return FileResponse(STATIC_DIR / "landing.html")
+
+
+@app.get("/tutorial", include_in_schema=False)
+async def tutorial() -> FileResponse:
     return FileResponse(STATIC_DIR / "index.html")
+
+
+@app.get("/faqs", include_in_schema=False)
+async def faqs() -> FileResponse:
+    return FileResponse(STATIC_DIR / "faqs.html")
+
+
+@app.get("/faq", include_in_schema=False)
+async def faq_alias() -> FileResponse:
+    return FileResponse(STATIC_DIR / "faqs.html")
 
 
 @app.get("/api/health")

@@ -42,7 +42,13 @@ def _expected_records(manifest: dict[str, Any]) -> list[dict[str, Any]]:
                 expected[key]["classifications"].append(classification)
     return sorted(expected.values(), key=lambda item: (item["entity"], item["date"] or "", item["record_id"]))
 
-
+'''
+This function loads the 3 versions of the patient record
+The pristine ground truth, the censored version, and the noise-injected version
+For all relevant records in patient provenance, we
+check if that record was removed or modified by noise (or baseline censor)
+or if it was unchanged
+'''
 def verify_patient(
     patient_id: str,
     configuration: NoiseConfiguration,

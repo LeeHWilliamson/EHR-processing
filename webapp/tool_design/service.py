@@ -17,7 +17,13 @@ class ToolConfigurationError(ValueError):
 class ToolExecutionError(ValueError):
     pass
 
-
+'''
+confirm
+Returned entities really exist in the cohort catalog.
+Selected fields exist.
+Key fields can be used across all returned entities.
+The tool can be compiled and executed safely.
+'''
 def validate_toolset(toolset: Toolset, repository: PatientRepository) -> Toolset:
     catalog = build_catalog(repository)["entities"]
     errors = []
@@ -64,7 +70,7 @@ def argument_references(
                     values.add(str(value))
     return sorted(values)
 
-
+#Builds the dropdown values shown in the preview interface.
 def argument_reference_options(
     tool: ToolDefinition,
     assigned_patient_id: str,
@@ -102,7 +108,10 @@ def argument_reference_options(
         options.append({"value": value, "label": label})
     return options
 
-
+'''
+Calculates allowed argument values across the entire cohort when the toolset is finalized.
+This prevents the available argument dropdown from revealing facts about the currently selected patient.
+'''
 def finalized_argument_vocabularies(
     toolset: Toolset,
     repository: PatientRepository,
@@ -122,7 +131,7 @@ def finalized_argument_vocabularies(
         for tool in toolset.tools
     }
 
-
+#convert tool into OpenAI function schema
 def compile_openai_tool(
     tool: ToolDefinition,
     assigned_patient_id: str,
@@ -139,7 +148,7 @@ def compile_openai_tool(
                 tool.key.field: {
                     "type": "string",
                     "description": f"Exact {tool.key.field} to look up.",
-                    "enum": references,
+                    "enum": references, #this field prevents the agent from requesting another patient before completing the task for current patient
                 }
             },
             "required": [tool.key.field],
@@ -163,7 +172,10 @@ def _evidence_ids(manifest: dict[str, Any]) -> set[tuple[str, str | None]]:
         if record.get("id") is not None
     }
 
-
+'''
+Currently, each tool is simply indexing a JSON
+So we receive the agent request, validate it, return the info, and log what information was accessed
+'''
 def execute_tool(
     tool: ToolDefinition,
     assigned_patient_id: str,
