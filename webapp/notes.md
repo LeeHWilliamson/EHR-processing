@@ -12,3 +12,4 @@ diagnostic_evidence_records these are all patient records that according to the 
 
 ### Fix
 Patient demographic info patient[patient] is not currently accessible by agents
+make sure errors actually give feedback instead of passing

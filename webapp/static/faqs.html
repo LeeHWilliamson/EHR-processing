@@ -20,17 +20,71 @@
   <main>
     <section class="panel">
       <p class="eyebrow">Frequently asked questions</p>
-      <h1>How Synth-EHR works</h1>
-      <p class="faq-intro">Use this page to explain the project’s terminology, evaluation choices, and limitations in greater depth than the guided interface allows.</p>
+      <h1>Frequently Asked Questions</h1>
+      <p class="faq-intro">On this page, I try to clarify the design choices behind this project, some important details about how various features are implemented, and more.</p>
     </section>
 
     <section class="faq-list" aria-label="Frequently asked questions">
       <details class="faq-item" open>
-        <summary>What is Synth-EHR?</summary>
-        <div class="faq-answer"><p>Add your explanation of the project and its intended purpose.</p></div>
+        <summary>What is this project trying to accomplish?</summary>
+        <div class="faq-answer"><p>During my internship with a healthcare provider, I observed meetings focused on implementing enterprise-scale artificial intelligence. A common pattern I noticed was that there was abundant enthusiasm for adopting AI tools, and many departments had real use cases for AI, but it was difficult for those departments to come together on important decisions regarding implementation.</p>
+
+<p>Part of the problem is that an AI tool can touch multiple workflows and areas of responsibility at once. If an AI agent accesses hospital servers, accesses patient medical information, and assists medical staff with diagnosis, then who should be responsible for evaluating it? Information security, compliance staff, or physicians?</p>
+
+<p>The intuitive answer is that all of these groups need to be involved. The harder problem is giving them a way to evaluate the same AI workflow according to their different priorities and discuss the results using a common set of evidence.</p>
+
+<p>That is what I hope to accomplish with this platform. I want to support an interface that benchmarks AI agents in realistic medical contexts, allowing users from different backgrounds to audit the methods an agent used to access and move patient data, the exact information it accessed, and the medical conclusions it reached.</p>
+
+<p>My goal is for Synth-EHR to generate evidence that is useful to the major groups responsible for assessing AI performance and risk, and ultimately make productive discussions about AI implementation easier both within and between healthcare organizations.
+        </p></div>
       </details>
       <details class="faq-item">
-        <summary>Does this application use real patient data?</summary>
+        <summary>How does this platform generate patients?</summary>
+        <div class="faq-answer"><p>This platform generates synthetic patients using Synthea, an open-source patient generator developed by MITRE. Synthea generates individuals using demographic information and population distributions derived from sources such as U.S. Census data. It then simulates each patient's medical history using human-designed models of disease development, detection, progression, and treatment.</p>
+
+<p>These models are designed around clinical knowledge and typically cite the medical literature used in their development. This makes it possible to inspect how and why particular conditions, treatments, and other events appear in a synthetic patient's record.</p>
+
+<p>To learn more about how Synthea generates patients, I recommend visiting the MITRE Synthea website at <a
+  href="https://synthea.mitre.org/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  synthea.mitre.org.
+</a></p>
+
+<p>For this demo, the patient population has been pre-generated to support the diabetes identification task.</p>
+        </p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Why use synthetic patient data?</summary>
+        <div class="faq-answer"><p>The focus of this project is to give healthcare professionals an accessible way to create evidence that facilitates discussion about medical AI. Synthetic patient data offers several advantages for this kind of evaluation.</p>
+
+<p>First, synthetic data allows users to design and run large-scale experiments without exposing protected patient information. It also allows users to intentionally create populations that stress-test an AI agent by presenting it with possible but uncommon combinations of conditions, demographics, and other patient characteristics.</p>
+
+<p>Most importantly, synthetic data allows us to establish patient ground truth at generation time. If we know a patient's complete underlying story before portions of that information are recorded, omitted, altered, or separated across an electronic health record, we can compare an AI agent's behavior against that known truth. This makes it possible to evaluate multiple aspects of AI performance—including medical inference and information retrieval—without first having to manually reconstruct the patient's true state from the EHR itself.</p>
+      </details>
+            <details class="faq-item">
+        <summary>What weaknesses are imposed by synthetic data?</summary>
+        <div class="faq-answer"><p>Synthetic patient data provides a controlled environment with known patient histories and outcomes, but it cannot perfectly reproduce the complexity of real-world health records. Research evaluating Synthea has identified several important limitations.</p>
+
+<p>First, the demographics and disease distributions of a generated population may differ from those observed in real patient populations. Synthetic medical histories can also have less clinical diversity than real-world records, including differences in the variety of conditions, medications, procedures, and combinations of events that appear.</p>
+
+<p>Synthea's rule-based approach can also produce patient histories that are more uniform than real clinical data. For example, patients with the same condition may follow similar paths toward screening, diagnosis, and treatment because their histories are being generated from the same underlying disease model.</p>
+
+<p>Finally, Synthea's clinical modules are manually designed. Individual modules may rely on medical literature that is no longer current, and interactions between modules do not necessarily reproduce the complicated relationships between comorbid conditions found in real patients.</p>
+
+<p>These limitations are important when interpreting results from Synth-EHR. Performance on synthetic patients should not be treated as evidence that an AI system will perform equivalently on real patients. Instead, synthetic data provides a controlled environment where specific behaviors can be tested repeatedly, patient ground truth is known, and failures can be investigated without exposing real patient information.</p>
+<p>This 2019 publication gives highlights both the strength and weaknesses of Synthea data <a
+  href="https://link.springer.com/content/pdf/10.1186/s12911-019-0793-0.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Chen et al.
+</a></p>  
+      </p></div>
+      </details>
+      <!-- <details class="faq-item">
+        <summary>How does this platform assess performance?</summary>
         <div class="faq-answer"><p>No. The tutorial uses a fixed cohort of synthetic patients generated with Synthea. These records do not represent real people.</p></div>
       </details>
       <details class="faq-item">
@@ -57,6 +111,11 @@
         <summary>What are the current limitations?</summary>
         <div class="faq-answer"><p>Describe the fixed ten-patient cohort, diabetes-specific evidence rules, reconstructed decision inputs, and educational scope of the evaluation.</p></div>
       </details>
+      <details class="faq-item">
+        <summary>What are the next steps for this project?</summary>
+        <div class="faq-answer"><p>Describe the fixed ten-patient cohort, diabetes-specific evidence rules, reconstructed decision inputs, and educational scope of the evaluation.</p></div>
+      </details> -->
+      <h3>More topics will be addressed, and a roadmap will be added to this page with the next update on 9/29/2026.</h3>
     </section>
   </main>
 </body>
